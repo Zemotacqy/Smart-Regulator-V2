@@ -69,7 +69,8 @@ async def extract_relations(clauses: List[str]) -> List[ExtractorClauseOutput]:
         result: ExtractorBatchOutput = await call_llm_with_validation(
             model=EXTRACTOR_MODEL,
             messages=messages,
-            response_schema=ExtractorBatchOutput
+            response_schema=ExtractorBatchOutput,
+            num_ctx=8192
         )
         
         ALLOWED_REL_TYPES = {"REFERS_TO", "DEFINES_TERM", "SUBSTITUTES", "INSERTED_BY", "OMITTED_BY"}

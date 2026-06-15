@@ -6,12 +6,22 @@ import structlog
 
 logger = structlog.get_logger()
 
+async def get_document_by_hash(conn: asyncpg.Connection, file_hash: str) -> Optional[Dict[str, Any]]:
+    """
+    Checks if a document with the given file hash exists in the database.
+    """
+    row = await conn.fetchrow(
+        "SELECT doc_id, file_name, title, publish_date, doc_type, is_active, file_hash FROM documents WHERE file_hash = $1",
+        file_hash
+    )
+    return dict(row) if row else None
+
 async def get_document_by_filename(conn: asyncpg.Connection, file_name: str) -> Optional[Dict[str, Any]]:
     """
     Checks if a document with the given file name exists in the database.
     """
     row = await conn.fetchrow(
-        "SELECT doc_id, file_name, title, publish_date, doc_type, is_active FROM documents WHERE file_name = $1",
+        "SELECT doc_id, file_name, title, publish_date, doc_type, is_active, file_hash FROM documents WHERE file_name = $1",
         file_name
     )
     return dict(row) if row else None
@@ -26,23 +36,23 @@ async def delete_document_by_filename(conn: asyncpg.Connection, file_name: str) 
 
 async def insert_document(
     conn: asyncpg.Connection,
+    doc_id: UUID,
     file_name: str,
     title: str,
     publish_date: Optional[date],
-    doc_type: str
-) -> UUID:
+    doc_type: str,
+    file_hash: Optional[str] = None
+) -> None:
     """
-    Inserts a new document record and returns the doc_id.
+    Inserts a new document record.
     """
-    doc_id = await conn.fetchval(
+    await conn.execute(
         """
-        INSERT INTO documents (file_name, title, publish_date, doc_type)
-        VALUES ($1, $2, $3, $4)
-        RETURNING doc_id
+        INSERT INTO documents (doc_id, file_name, title, publish_date, doc_type, file_hash)
+        VALUES ($1, $2, $3, $4, $5, $6)
         """,
-        file_name, title, publish_date, doc_type
+        doc_id, file_name, title, publish_date, doc_type, file_hash
     )
-    return doc_id
 
 async def insert_ast_nodes(
     conn: asyncpg.Connection,

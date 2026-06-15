@@ -59,7 +59,7 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
             text_content=node.text_content
         )
         for node in ctx.reranked_nodes
-        if node.breadcrumb and node.breadcrumb in (ctx.compressed_context or "")
+        if node.breadcrumb and str(node.node_id) in (ctx.compressed_context or "")
     ]
     
     # 1. Format the glossary definitions

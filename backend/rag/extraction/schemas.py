@@ -1,6 +1,14 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from datetime import date
-from typing import Literal, Optional, List
+from typing import Literal, Optional, List, Any
+import structlog
+
+logger = structlog.get_logger()
+
+_ALLOWED_NODE_TYPES = frozenset({
+    "CHAPTER", "SCHEDULE", "SECTION", "SUBSECTION", "CLAUSE", "SUBCLAUSE",
+    "PREAMBLE", "DEFINITION", "BODY_TEXT", "IGNORE"
+})
 
 class ClassifierOutput(BaseModel):
     title: str
@@ -15,11 +23,24 @@ class BoundaryOutput(BaseModel):
     is_boundary_break: bool
     heading_text: Optional[str] = None
 
+    @field_validator("node_type", mode="before")
+    @classmethod
+    def normalize_node_type(cls, v: Any) -> Any:
+        if isinstance(v, str):
+            v_upper = v.strip().upper()
+            if v_upper == "PART":
+                return "CHAPTER"
+            if v_upper not in _ALLOWED_NODE_TYPES:
+                logger.warning("unrecognized_node_type_fallback", original=v)
+                return "BODY_TEXT"
+            return v_upper
+        return v
+
 class RelationItem(BaseModel):
     rel_type: Literal["REFERS_TO", "DEFINES_TERM", "SUBSTITUTES", "INSERTED_BY", "OMITTED_BY"]
     target_text_ref: Optional[str] = None
     context: Optional[str] = None
-    effective_date: Optional[date] = None  # Parse as date if present
+    effective_date: Optional[str] = None  # ISO date string e.g. "2023-07-15"
 
 class ExtractorClauseOutput(BaseModel):
     source_clause_index: int

@@ -74,5 +74,7 @@ def find_english_classifier_window(docling_pages: list[DoclingPage]) -> str:
         start_line_idx = 0
 
     # 3. Return a window of ~2 pages (approx 120 lines or 6000 characters) starting from the English title
+    # To prevent model context overflow, we cap the window at 4000 characters.
     end_line_idx = min(start_line_idx + 120, total_lines)
-    return "\n".join(all_lines[start_line_idx:end_line_idx])
+    window_text = "\n".join(all_lines[start_line_idx:end_line_idx])
+    return window_text[:4000]

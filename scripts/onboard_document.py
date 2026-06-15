@@ -23,18 +23,19 @@ logger = structlog.get_logger()
 async def main():
     parser = argparse.ArgumentParser(description="Onboard/Ingest a regulatory PDF document into the RAG database.")
     parser.add_argument("--file", required=True, help="Path to the PDF document to ingest.")
+    parser.add_argument("--no-dedup", action="store_false", dest="dedup", help="Disable deduplication and force ingestion of duplicate document versions.")
     args = parser.parse_args()
     
     if not os.path.exists(args.file):
         logger.error("file_not_found", path=args.file)
         sys.exit(1)
         
-    logger.info("onboarding_script_started", file=args.file)
+    logger.info("onboarding_script_started", file=args.file, dedup=args.dedup)
     
     # Initialize connection pool
     await init_db_pool()
     try:
-        doc_id = await ingest_document(args.file)
+        doc_id = await ingest_document(args.file, dedup=args.dedup)
         logger.info("onboarding_script_success", file=args.file, doc_id=str(doc_id))
     except Exception as e:
         logger.error("onboarding_script_failed", file=args.file, error=str(e))

@@ -48,6 +48,10 @@ async def detect_boundary(block_text: str) -> BoundaryOutput:
     """
     logger.debug("detecting_boundary_started", text_length=len(block_text))
     
+    # Truncate to prevent context overflow (we only need the start for boundaries)
+    if len(block_text) > 4000:
+        block_text = block_text[:4000] + "... [TRUNCATED]"
+        
     messages = [
         {"role": "system", "content": BOUNDARY_SYSTEM_PROMPT},
         {"role": "user", "content": f"Block text:\n---\n{block_text}\n---\nClassify:"}
@@ -56,23 +60,10 @@ async def detect_boundary(block_text: str) -> BoundaryOutput:
     result: BoundaryOutput = await call_llm_with_validation(
         model=BOUNDARY_MODEL,
         messages=messages,
-        response_schema=BoundaryOutput
+        response_schema=BoundaryOutput,
+        num_ctx=8192
     )
     
-    # Normalize node_type
-    node_type = result.node_type.strip().upper()
-    if node_type == "PART":
-        node_type = "CHAPTER"
-        
-    ALLOWED_NODE_TYPES = {
-        "CHAPTER", "SCHEDULE", "SECTION", "SUBSECTION", "CLAUSE", "SUBCLAUSE",
-        "PREAMBLE", "DEFINITION", "BODY_TEXT", "IGNORE"
-    }
-    
-    if node_type not in ALLOWED_NODE_TYPES:
-        logger.warning("unrecognized_node_type_fallback", original=node_type)
-        node_type = "BODY_TEXT"
-        
     # Normalize level
     level = result.level
     if level is None or not (1 <= level <= 6):
@@ -88,9 +79,8 @@ async def detect_boundary(block_text: str) -> BoundaryOutput:
             "BODY_TEXT": 6,
             "IGNORE": 6
         }
-        level = default_levels.get(node_type, 6)
+        level = default_levels.get(result.node_type, 6)
         
-    result.node_type = node_type
     result.level = level
     
     logger.debug(

@@ -39,7 +39,8 @@ async def call_llm_with_validation(
     messages: List[Dict[str, str]],
     response_schema: Type[BaseModel],
     temperature: float = 0.0,
-    keep_alive: int = 10
+    keep_alive: int = 10,
+    num_ctx: int = None
 ) -> BaseModel:
     """
     Calls Ollama with JSON formatting and validates the response against a Pydantic schema.
@@ -60,6 +61,8 @@ async def call_llm_with_validation(
         LLMClientError: For general Ollama API issues.
     """
     options = {"temperature": temperature}
+    if num_ctx is not None:
+        options["num_ctx"] = num_ctx
     
     # First attempt
     try:

@@ -51,15 +51,45 @@ async def resolve_pending_references() -> None:
             
             target_node_id = None
             
-            # Match strategy 1: Check exact title match in the same document
-            target_node_id = await conn.fetchval(
+            # Match strategy 0: Check match within the parent section hierarchy (relative references)
+            section_id = await conn.fetchval(
                 """
-                SELECT node_id FROM ast_nodes
-                WHERE doc_id = $1 AND title = $2
-                LIMIT 1
+                WITH RECURSIVE ancestors AS (
+                    SELECT node_id, parent_id, level FROM ast_nodes WHERE node_id = $1
+                    UNION ALL
+                    SELECT n.node_id, n.parent_id, n.level FROM ast_nodes n JOIN ancestors a ON n.node_id = a.parent_id
+                )
+                SELECT node_id FROM ancestors WHERE level = 3 LIMIT 1;
                 """,
-                doc_id, target_text_ref
+                source_node_id
             )
+            
+            if section_id:
+                target_node_id = await conn.fetchval(
+                    """
+                    WITH RECURSIVE descendants AS (
+                        SELECT node_id, parent_id, title, level FROM ast_nodes WHERE parent_id = $1
+                        UNION ALL
+                        SELECT n.node_id, n.parent_id, n.title, n.level FROM ast_nodes n JOIN descendants d ON n.parent_id = d.node_id
+                    )
+                    SELECT node_id FROM descendants 
+                    WHERE title = $2 OR title ILIKE $3 OR title ILIKE $4
+                    ORDER BY level ASC
+                    LIMIT 1;
+                    """,
+                    section_id, target_text_ref, f"{target_text_ref}%", f"% {target_text_ref}%"
+                )
+            
+            # Match strategy 1: Check exact title match in the same document
+            if not target_node_id:
+                target_node_id = await conn.fetchval(
+                    """
+                    SELECT node_id FROM ast_nodes
+                    WHERE doc_id = $1 AND title = $2
+                    LIMIT 1
+                    """,
+                    doc_id, target_text_ref
+                )
             
             # Match strategy 2: Check prefix/like title match in the same document (e.g. "Section 4" matches "Section 4. Capital requirement")
             if not target_node_id:

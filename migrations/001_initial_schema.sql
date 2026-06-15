@@ -4,6 +4,7 @@ CREATE EXTENSION IF NOT EXISTS pg_trgm;
 CREATE TABLE IF NOT EXISTS documents (
     doc_id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     file_name       TEXT NOT NULL UNIQUE,
+    file_hash       TEXT UNIQUE,
     title           TEXT NOT NULL,
     publish_date    DATE,
     doc_type        TEXT NOT NULL,   -- Open-ended text; validated at application layer (see Section 4.4)

@@ -54,14 +54,14 @@ def sse_log_processor(logger_inst, method_name: str, event_dict: Dict[str, Any])
         
     return event_dict
 
-async def run_ingestion_task(temp_path: str):
+async def run_ingestion_task(temp_path: str, dedup: bool = True):
     """
     Background task that executes the ingestion pipeline.
     """
-    logger.info("background_ingestion_started", path=temp_path)
+    logger.info("background_ingestion_started", path=temp_path, dedup=dedup)
     try:
         from backend.rag.ingestion.orchestrator import ingest_document
-        doc_id = await ingest_document(temp_path)
+        doc_id = await ingest_document(temp_path, dedup=dedup)
         logger.info("background_ingestion_success", path=temp_path, doc_id=str(doc_id))
     except Exception as e:
         logger.error("background_ingestion_failed", path=temp_path, error=str(e))
@@ -76,13 +76,14 @@ async def run_ingestion_task(temp_path: str):
 @router.post("/admin/ingest")
 async def admin_ingest(
     background_tasks: BackgroundTasks,
-    file: UploadFile = File(..., description="Regulatory PDF to ingest")
+    file: UploadFile = File(..., description="Regulatory PDF to ingest"),
+    dedup: bool = True
 ):
     """
     POST /api/admin/ingest
     Uploads a regulatory PDF and schedules the visual RAG ingestion pipeline in the background.
     """
-    logger.info("admin_ingest_hit", filename=file.filename)
+    logger.info("admin_ingest_hit", filename=file.filename, dedup=dedup)
     
     if not file.filename.lower().endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Only PDF files are supported")
@@ -98,7 +99,7 @@ async def admin_ingest(
             f.write(content)
             
         # Add to background tasks
-        background_tasks.add_task(run_ingestion_task, temp_path)
+        background_tasks.add_task(run_ingestion_task, temp_path, dedup)
         return {"status": "queued", "filename": file.filename}
         
     except Exception as e:

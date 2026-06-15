@@ -74,7 +74,7 @@ async def run_compressor(ctx: QueryPipelineContext) -> QueryPipelineContext:
     # Helper for fallback text construction
     def get_fallback_context() -> str:
         raw_blocks = [
-            f"Source: {node.breadcrumb}\n{node.text_content}"
+            f"Source: {node.breadcrumb} [ID: {node.node_id}]\n{node.text_content}"
             for node in ctx.reranked_nodes
             if node.text_content
         ]
@@ -94,8 +94,8 @@ async def run_compressor(ctx: QueryPipelineContext) -> QueryPipelineContext:
             node = ctx.reranked_nodes[idx]
             if sentences:
                 joined_text = " ".join(sentences)
-                # Form a block with citation prefix
-                compressed_blocks.append(f"Source: {node.breadcrumb}\n{joined_text}")
+                # Form a block with citation prefix and exact node ID
+                compressed_blocks.append(f"Source: {node.breadcrumb} [ID: {node.node_id}]\n{joined_text}")
                 
         ctx.compressed_context = "\n\n".join(compressed_blocks)
         

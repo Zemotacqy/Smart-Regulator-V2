@@ -120,14 +120,14 @@ async def compliance_endpoint(
                     original_query=chunk[:200], # Query expander works best on shorter queries, or we can use chunk prefix
                     doc_filter=uuid_filters
                 )
-                # Overwrite original query with full chunk so stages can access it if needed
-                ctx.original_query = chunk
                 
                 try:
                     ctx = await run_query_expander(ctx)
                     ctx = await run_hybrid_search(ctx)
                     ctx = await run_hop_expander(ctx)
                     ctx = await run_temporal_filter(ctx)
+                    # Overwrite original query with full chunk so reranker and compressor target the entire content
+                    ctx.original_query = chunk
                     ctx = await run_reranker(ctx)
                     ctx = await run_compressor(ctx)
                     
