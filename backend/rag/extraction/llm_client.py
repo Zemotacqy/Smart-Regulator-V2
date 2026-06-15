@@ -38,7 +38,8 @@ async def call_llm_with_validation(
     model: str,
     messages: List[Dict[str, str]],
     response_schema: Type[BaseModel],
-    temperature: float = 0.0
+    temperature: float = 0.0,
+    keep_alive: int = 10
 ) -> BaseModel:
     """
     Calls Ollama with JSON formatting and validates the response against a Pydantic schema.
@@ -49,6 +50,7 @@ async def call_llm_with_validation(
         messages: Conversation history.
         response_schema: The Pydantic model class to validate the JSON against.
         temperature: Sampling temperature (default 0.0 for deterministic outputs).
+        keep_alive: Time in seconds to keep the model loaded in memory after the request.
         
     Returns:
         An instance of response_schema containing the validated data.
@@ -66,7 +68,8 @@ async def call_llm_with_validation(
             model=model,
             messages=messages,
             format="json",
-            options=options
+            options=options,
+            keep_alive=keep_alive
         )
         content = response.message.content
         logger.debug("llm_response_1", content=content)
@@ -106,7 +109,8 @@ async def call_llm_with_validation(
                 model=model,
                 messages=self_heal_messages,
                 format="json",
-                options=options
+                options=options,
+                keep_alive=keep_alive
             )
             heal_content = response.message.content
             logger.debug("llm_response_self_heal", content=heal_content)

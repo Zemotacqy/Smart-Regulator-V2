@@ -130,3 +130,28 @@ async def insert_glossary_entry(
         """,
         term, doc_id, definition, source_node_id
     )
+
+async def get_all_documents(conn: asyncpg.Connection) -> List[Dict[str, Any]]:
+    """
+    Retrieves all documents in the database.
+    """
+    rows = await conn.fetch(
+        "SELECT doc_id, file_name, title, publish_date, doc_type, ingested_at, is_active FROM documents ORDER BY ingested_at DESC"
+    )
+    return [dict(r) for r in rows]
+
+async def get_corpus_stats(conn: asyncpg.Connection) -> Dict[str, Any]:
+    """
+    Retrieves statistics about the document corpus (total docs, total nodes, total relationships, flagged nodes).
+    """
+    doc_count = await conn.fetchval("SELECT COUNT(*) FROM documents")
+    node_count = await conn.fetchval("SELECT COUNT(*) FROM ast_nodes")
+    rel_count = await conn.fetchval("SELECT COUNT(*) FROM relationships")
+    flagged_count = await conn.fetchval("SELECT COUNT(*) FROM ast_nodes WHERE needs_repair = TRUE")
+    return {
+        "doc_count": doc_count,
+        "node_count": node_count,
+        "rel_count": rel_count,
+        "flagged_count": flagged_count
+    }
+

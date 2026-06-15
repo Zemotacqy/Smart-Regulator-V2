@@ -12,4 +12,7 @@ ollama create ifsca-boundary-3b -f modelfiles/Modelfile.boundary
 echo "Creating ifsca-extractor-3b..."
 ollama create ifsca-extractor-3b -f modelfiles/Modelfile.extractor
 
+echo "Creating ifsca-expander-3b..."
+ollama create ifsca-expander-3b -f modelfiles/Modelfile.expander
+
 echo "Modelfiles compiled successfully!"
