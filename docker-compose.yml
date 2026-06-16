@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: sr_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: sr_app
+      POSTGRES_PASSWORD: sr_password
+      POSTGRES_DB: smart_regulator
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./migrations/001_initial_schema.sql:/docker-entrypoint-initdb.d/001_initial_schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sr_app -d smart_regulator"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: sr_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    environment:
+      - OLLAMA_NUM_PARALLEL=4
+      - OLLAMA_KEEP_ALIVE=60m
+      - OLLAMA_FLASH_ATTENTION=1
+
+  backend:
+    build: .
+    container_name: sr_backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+      ollama:
+        condition: service_started
+    environment:
+      DATABASE_URL: postgresql://sr_app:sr_password@db:5432/smart_regulator
+      OLLAMA_HOST: http://ollama:11434
+      LOG_LEVEL: INFO
+    restart: always
+
+volumes:
+  pgdata:
+  ollama_data:

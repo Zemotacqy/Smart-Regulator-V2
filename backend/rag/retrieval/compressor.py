@@ -58,8 +58,11 @@ async def compress_node_text(query: str, text_content: str) -> List[str]:
 async def run_compressor(ctx: QueryPipelineContext) -> QueryPipelineContext:
     """
     Stage E: Context Compression.
-    Calls the extractor model in parallel (with concurrency limit) to compress the text of the top-5 reranked nodes.
-    Constructs the consolidated ctx.compressed_context.
+    
+    TEMPORARY NOTICE: This stage has been temporarily bypassed to save latency.
+    To re-enable context compression:
+    1. Uncomment the try block with `asyncio.gather(*tasks)` and the lines below it.
+    2. Comment out the direct assignment `ctx.compressed_context = get_fallback_context()` and logging line.
     """
     start_time = time.monotonic()
     
@@ -69,9 +72,9 @@ async def run_compressor(ctx: QueryPipelineContext) -> QueryPipelineContext:
         ctx.stage_timings["compressor"] = time.monotonic() - start_time
         return ctx
         
-    logger.info("compressor_start", node_count=len(ctx.reranked_nodes))
+    logger.info("compressor_start_bypassed_temporarily", node_count=len(ctx.reranked_nodes))
     
-    # Helper for fallback text construction
+    # Helper for fallback text construction (uses full node content)
     def get_fallback_context() -> str:
         raw_blocks = [
             f"Source: {node.breadcrumb} [ID: {node.node_id}]\n{node.text_content}"
@@ -80,37 +83,43 @@ async def run_compressor(ctx: QueryPipelineContext) -> QueryPipelineContext:
         ]
         return "\n\n".join(raw_blocks)
         
-    try:
-        # Run compression for all reranked nodes in parallel with semaphore protection
-        tasks = [
-            compress_node_text(ctx.original_query, node.text_content)
-            for node in ctx.reranked_nodes
-        ]
-        compressed_results = await asyncio.gather(*tasks)
-        
-        # Combine the results into a structured format
-        compressed_blocks = []
-        for idx, sentences in enumerate(compressed_results):
-            node = ctx.reranked_nodes[idx]
-            if sentences:
-                joined_text = " ".join(sentences)
-                # Form a block with citation prefix and exact node ID
-                compressed_blocks.append(f"Source: {node.breadcrumb} [ID: {node.node_id}]\n{joined_text}")
-                
-        ctx.compressed_context = "\n\n".join(compressed_blocks)
-        
-        # Fallback if the compression yielded zero content
-        if not ctx.compressed_context.strip():
-            logger.warning("compressor_yielded_empty_context_using_fallback")
-            ctx.compressed_context = get_fallback_context()
-            
-        logger.info("compressor_complete", 
-                    compressed_length=len(ctx.compressed_context),
-                    original_length=sum(len(n.text_content or "") for n in ctx.reranked_nodes))
-                    
-    except Exception as e:
-        logger.error("compressor_failed", error=str(e))
-        ctx.compressed_context = get_fallback_context()
+    # Directly use full uncompressed context (bypassing the SLM extraction)
+    ctx.compressed_context = get_fallback_context()
+    logger.info("compressor_bypassed_using_fallback_context", length=len(ctx.compressed_context))
+
+    # --- TO RE-ENABLE COMPRESSION, UNCOMMENT THE BLOCK BELOW AND COMMENT OUT THE TWO LINES ABOVE ---
+    # try:
+    #     # Run compression for all reranked nodes in parallel with semaphore protection
+    #     tasks = [
+    #         compress_node_text(ctx.original_query, node.text_content)
+    #         for node in ctx.reranked_nodes
+    #     ]
+    #     compressed_results = await asyncio.gather(*tasks)
+    #     
+    #     # Combine the results into a structured format
+    #     compressed_blocks = []
+    #     for idx, sentences in enumerate(compressed_results):
+    #         node = ctx.reranked_nodes[idx]
+    #         if sentences:
+    #             joined_text = " ".join(sentences)
+    #             # Form a block with citation prefix and exact node ID
+    #             compressed_blocks.append(f"Source: {node.breadcrumb} [ID: {node.node_id}]\n{joined_text}")
+    #             
+    #     ctx.compressed_context = "\n\n".join(compressed_blocks)
+    #     
+    #     # Fallback if the compression yielded zero content
+    #     if not ctx.compressed_context.strip():
+    #         logger.warning("compressor_yielded_empty_context_using_fallback")
+    #         ctx.compressed_context = get_fallback_context()
+    #         
+    #     logger.info("compressor_complete", 
+    #                 compressed_length=len(ctx.compressed_context),
+    #                 original_length=sum(len(n.text_content or "") for n in ctx.reranked_nodes))
+    #                 
+    # except Exception as e:
+    #     logger.error("compressor_failed", error=str(e))
+    #     ctx.compressed_context = get_fallback_context()
+    # ------------------------------------------------------------------------------------------------
         
     ctx.stage_timings["compressor"] = time.monotonic() - start_time
     return ctx
