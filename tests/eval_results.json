@@ -1,0 +1,1876 @@
+{
+  "summary": {
+    "total_evaluated": 91,
+    "average_latency_sec": 2577.484,
+    "retrieval": {
+      "avg_recall_at_5": 0.6703,
+      "avg_recall_at_10": 0.7363,
+      "avg_mrr": 0.5117
+    },
+    "generation": {
+      "avg_faithfulness": 0.8308,
+      "avg_context_recall": 0.9648,
+      "avg_relevance": 0.9187,
+      "avg_citation_precision": 0.9571
+    },
+    "by_category": {
+      "Cross-Reference": {
+        "count": 25,
+        "recall_10": 15.0,
+        "faithfulness": 18.500000000000004,
+        "avg_recall_10": 0.6,
+        "avg_faithfulness": 0.7400000000000001
+      },
+      "Glossary Definition": {
+        "count": 20,
+        "recall_10": 16.0,
+        "faithfulness": 18.400000000000002,
+        "avg_recall_10": 0.8,
+        "avg_faithfulness": 0.9200000000000002
+      },
+      "Direct Regulation": {
+        "count": 30,
+        "recall_10": 22.0,
+        "faithfulness": 25.3,
+        "avg_recall_10": 0.7333333333333333,
+        "avg_faithfulness": 0.8433333333333334
+      },
+      "Compliance Check": {
+        "count": 10,
+        "recall_10": 8.0,
+        "faithfulness": 8.9,
+        "avg_recall_10": 0.8,
+        "avg_faithfulness": 0.89
+      },
+      "Amendment/Temporal": {
+        "count": 6,
+        "recall_10": 6.0,
+        "faithfulness": 4.5,
+        "avg_recall_10": 1.0,
+        "avg_faithfulness": 0.75
+      }
+    }
+  },
+  "detailed_runs": [
+    {
+      "query": "What does the term \"acceptance of deposits\" mean in the context of the International Financial Services Centres Authority Act, 2019?",
+      "category": "Cross-Reference",
+      "target_node_id": "60515a20-746c-4428-8591-4c70cb8c1253",
+      "latency_sec": 269.3186184170045,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Acceptance of deposits refers to the process by which an entity agrees to hold funds on behalf of its customers.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Acceptance of Deposits | Plain English: Agreement to hold funds for customers | Section (ii) |\n\n**Plain Language:** An IFSC accepts deposits when it agrees to hold money for its clients. This means that the entity is responsible for safeguarding and managing the funds on behalf of the deposit holder.\n\n**Source Quote:** \"Acceptance of deposit means acceptance by an authority or a person, whether in India or outside India, of any deposit from a person resident outside India who carries on business in an International Financial Services Centre.\"",
+      "golden_answer": "The acceptance of deposits refers to the act of receiving money or other valuable security from an individual or entity with the understanding that it will be held for safekeeping and returned upon request."
+    },
+    {
+      "query": "What is considered an international financial services centre product or instrument under the International Financial Services Centres Authority Act, 2019?",
+      "category": "Cross-Reference",
+      "target_node_id": "0205f68c-853d-481e-8120-b56c0858f842",
+      "latency_sec": 319.8625347500056,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.5,
+        "context_recall": 1.0,
+        "answer_relevance": 0.8,
+        "citation_precision": 0.0
+      },
+      "generated_answer": "**Short Answer:** An international financial services centre product or instrument must be developed and regulated by the Authority.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Financial Product | Means a financial product as defined under clause (d) of section 3(1) of the Act | Section [insert section number] |\n\n**Plain Language:** An international financial services centre product or instrument must be developed and regulated by the Authority. This means that it must meet the requirements set out in the relevant regulations, such as those related to capital market intermediaries.\n\n**Source Quote:** \"financial product\" means-",
+      "golden_answer": "any other product or instrument that may be notified by the Central Government from time to time."
+    },
+    {
+      "query": "What is considered a service recipient under TechFin regulations?",
+      "category": "Glossary Definition",
+      "target_node_id": "2fb83252-4f65-44b0-8e33-6188999ca2fe",
+      "latency_sec": 385.486350625004,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.5,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** An entity that receives services directly from TechFin and Ancillary Service Provider or through an Intermediary for the purpose of carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Service Recipient | Entity receiving services directly or through an Intermediary | Section [x] |\n\n**Plain Language:** A service recipient is an entity that receives financial services from TechFin and Ancillary Service Provider, either directly or through an intermediary. These services are intended to help the recipient carry out specific financial activities listed in the Act.\n\n**Quote:** \"Service Recipient\" means an entity that receives services, directly from TechFin and Ancillary Service Provider or through an Intermediary for the purpose of carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act.",
+      "golden_answer": "An entity that receives services directly from TechFin and Ancillary Service Provider or through an Intermediary for the purpose of carrying on financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act."
+    },
+    {
+      "query": "What constitutes a jurisdiction that has not made sufficient progress in addressing deficiencies or has not committed to an action plan?",
+      "category": "Direct Regulation",
+      "target_node_id": "b5f334fc-93ac-461a-b9b6-8a68b38aa664",
+      "latency_sec": 489.59398100000544,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.09090909090909091,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A jurisdiction that has not made sufficient progress in addressing deficiencies or has not committed to an action plan is one identified by the Financial Action Task Force (FATF) as 'High-Risk Jurisdictions subject to call for action'.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of High-Risk Jurisdiction | Not applicable | Section [ID: b5f334fc-93ac-461a-b9b6-8a68b38aa664] |\n| Requirement for Applicant Entity's Promoters/Partners | From non-high-risk jurisdiction | Section [ID: e3fbf90d-a282-496b-8163-da27465205ad] |\n| Requirement for Partnership Firm's Promoters/Partners | From non-high-risk jurisdiction | Section [ID: b3ac9d88-05f0-4c49-88aa-0ea53be3eb8a] |\n| Definition of High-Risk Jurisdiction | Not applicable | Section [ID: 17092076-c6a7-4dca-b284-b066a0b818b9] |\n| Requirement for GIUC Unit's Parent Entity | From non-high-risk jurisdiction | Section [ID: 1306a9c7-7adb-42f3-bbac-cec21cd66c88] |\n\n**Plain Language:** A high-risk jurisdiction is one that has not made sufficient progress in addressing deficiencies or has not committed to an action plan. These jurisdictions are identified by the Financial Action Task Force (FATF) as 'High-Risk Jurisdictions subject to call for action'.\n\n**Source Quote:** \"A jurisdiction that has not made sufficient progress in addressing deficiencies or has not committed to an action plan is one identified by the Financial Action Task Force (FATF) as 'High-Risk Jurisdiction subject to call for action'.\"",
+      "golden_answer": "A jurisdiction that has not made sufficient progress in addressing the deficiencies or has not committed to an action plan developed with the Financial Action Task Force to address the deficiencies."
+    },
+    {
+      "query": "What is the Liquidity Coverage Ratio for a Banking Unit before it was substituted by Notification No. IFSCA/2023-24/GN/REG041 dated 6th July, 2023?",
+      "category": "Cross-Reference",
+      "target_node_id": "382128f9-8071-4147-9f19-4f9b534a2235",
+      "latency_sec": 548.8422206670002,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.5,
+        "context_recall": 0.8,
+        "answer_relevance": 0.2,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The Liability of a Banking Unit is exempt from Cash Reserve Ratio or other such requirements.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Exemption from Cash Reserve Ratio | Exemption for liabilities other than deposit raised from individuals resident in India or outside India | Section 8 |\n\n**Plain Language:** A Banking Unit does not have to keep a certain amount of cash on hand as a reserve, except for deposits made by Indian residents.\n\n**Quote:** \"The liabilities of a Banking Unit, other than the deposit raised from individuals resident in India or outside India, shall be exempt from Cash Reserve Ratio.\"",
+      "golden_answer": "A Banking Unit shall maintain the Liquidity Coverage Ratio."
+    },
+    {
+      "query": "Can a Banking Unit conduct business in Indian Rupees (INR) with non-resident persons?",
+      "category": "Direct Regulation",
+      "target_node_id": "58c4e5e8-1d0a-4342-9d91-f2e6f225a913",
+      "latency_sec": 609.692294542001,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.2,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.6,
+        "context_recall": 1.0,
+        "answer_relevance": 0.8,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** No, a Banking Unit cannot conduct business in INR with non-resident persons.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Conduct of Business | In freely convertible foreign currency or specified foreign currencies | Section 10 (Clause Block) |\n\n**Plain Language:** A Banking Unit must conduct business in a specified foreign currency, not INR. This applies to non-resident persons as well.\n\n**Quote:** \"A Banking Unit shall conduct such business in freely convertible foreign currencies and with such persons, whether resident or otherwise, as may be specified by the Authority.\"",
+      "golden_answer": "Yes, but only if the Authority specifies that such transactions be settled in foreign currencies."
+    },
+    {
+      "query": "Can an investment banker enter into a transaction involving an issuer's securities based on unpublished price-sensitive information they received during a professional assignment?",
+      "category": "Direct Regulation",
+      "target_node_id": "a3eb2427-60fb-474e-963b-e949b86c437f",
+      "latency_sec": 663.291506540998,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.5,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** No, an investment banker cannot enter into such transactions.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Transaction Ban | Based on unpublished price sensitive info obtained in pro. assign. | Section (4) |\n\n**Plain Language:** An investment banker is prohibited from entering into a transaction involving an issue's securities based on unpublished price-sensitive information they received during their professional assignment.\n\n**Quoted Text:** \"No investment banker or any of its principal officer, directors, partner or manager shall either on their respective accounts or through their associate s or relatives enter into any transaction in securities of issue ron the basis of unpublished price sensitive information obtained by them in the course of any professional assignment.\"",
+      "golden_answer": "No, an investment banker or its associates/relatives cannot enter into any transaction in securities of the issuer on the basis of unpublished price sensitive information obtained by them in the course of any professional assignment."
+    },
+    {
+      "query": "What does it mean when words or expressions used in this Framework are defined in applicable Laws?",
+      "category": "Compliance Check",
+      "target_node_id": "b91dbcf9-a272-47d9-8707-8438bf244de4",
+      "latency_sec": 724.8455213329944,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Words and expressions used in this Framework that are not defined herein will have the same meaning as assigned to them in the relevant laws.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Terms | Same meaning as applicable laws | Section [insert section number] |\n\n**Plain Language:** When a word or expression is not defined in this Framework, it will have the same meaning as given to it in other relevant laws. This means that if you're using a term from another law, you can assume its definition comes from there.\n\n**Source Quote:** \"Word(s) and expression(s) used and not defined in this Framework but defined in the Act or Acts mentioned in the First Schedule to the Act, or any rules or regulations made thereunder shall have the same meanings respectively assigned to them in those Acts, rules or regulations or any statutory modification or re-enactment thereof, as the case may be.\"",
+      "golden_answer": "Words and expressions used and not defined in this Framework but defined in the applicable Laws, and in particular, under the Act or any rules or regulations made thereunder shall have the same meanings respectively assigned to them in those Laws."
+    },
+    {
+      "query": "What is the timeframe within which an application under sub-regulation (2) must be processed after receiving it?",
+      "category": "Compliance Check",
+      "target_node_id": "2c0ec945-4e19-4faf-8450-82efd0929375",
+      "latency_sec": 777.7563640000008,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.5,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The application must be processed within thirty (30) days from the date of receipt.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Processing Timeframe | Within 30 days | Section [ID: d7bc98bb-7401-4436-ace8-6c0aa37cbf39] |\n\n**Plain Language:** An application under sub-regulation (2) must be processed within thirty days after receiving it.\n\n**Source Quote:** \"The application made under sub-regulation (2), complete in all respects, shall be processed within thirty (30) days from the date of receipt of the application.\"",
+      "golden_answer": "The application made under sub-regulation (2), complete in all respects, shall be processed within thirty (30) days from the date of receipt of the application."
+    },
+    {
+      "query": "What types of facility management services are prohibited for TechFin and Ancillary Service Providers under these regulations?",
+      "category": "Compliance Check",
+      "target_node_id": "6790db7e-a42e-4894-9386-1efd4c90b284",
+      "latency_sec": 825.6993335410007,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.5,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** No specific type of facility management service is mentioned as being prohibited.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Facility Management Services | Not Mentioned | Section [ID: dd017d40-ce87-4090-86f2-3475b2cc8b55] | N/A |\n\n**Plain Language:** The regulations do not specify any particular type of facility management service that is prohibited for TechFin and Ancillary Service Providers.\n\n**Source Quote:** \"List of services not permitted to be provided by TechFin and Ancillary Service Provider under these regulations\"",
+      "golden_answer": "building maintenance, security services, housekeeping services, civil, mechanical, electrical and plumbing maintenance services or any other related manpower outsourced services"
+    },
+    {
+      "query": "What is a subsidiary company under the Companies Act, 2013?",
+      "category": "Glossary Definition",
+      "target_node_id": "239bd09a-8356-4b03-9aa3-c23d469dcb1e",
+      "latency_sec": 887.245410167001,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A subsidiary company means a company that satisfies the definition under Section 2(87) of the Companies Act, 2013.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Subsidiary Company | Section 2(87) of the Companies Act, 2013 | Section 2(87) |\n\n**Plain Language:** A subsidiary company is a company that meets the definition under Section 2(87) of the Companies Act, 2013. This means it must be controlled by another company or individual, usually through majority ownership.\n\n**Source Quote:** \"Subsidiary company\" means a company that satisfies the definition u/s 2(87) of the Companies Act, 2013.",
+      "golden_answer": "A subsidiary company is a company that satisfies the definition u/s 2(87) of the Companies Act, 2013."
+    },
+    {
+      "query": "Will actions taken before the repeal of the previous regulations be considered valid under the new regulations?",
+      "category": "Amendment/Temporal",
+      "target_node_id": "ade8752a-8188-4f37-bdf0-c3de9c4fbeb0",
+      "latency_sec": 948.9447638330021,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.14285714285714285,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Yes, actions taken before the repeal are deemed to have been done or taken under the corresponding provisions of the new regulations.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Validity of Actions Taken Before Repeal | Deemed valid under corresponding provisions of new regulations | Section (a) and (b) |\n\n**Plain Language:** The new regulations consider actions taken before the repeal as if they were done or taken under the same rules. This means that those actions will still be considered valid, even though the old regulations have been replaced.\n\n**Source Quote:** \"anything done or any action taken or purported to have been done or taken including registration or approval granted, suspended or cancelled, fees collected, any adjudication, enquiry or investigation commenced, or show-cause notice issued under the repealed regulations\"",
+      "golden_answer": "Yes, anything done or any action taken prior to the repeal shall be deemed to have been done or taken under the corresponding provisions of these regulations."
+    },
+    {
+      "query": "What types of services can an entity regulated by a financial sector regulator in its home jurisdiction outsource, but are not covered in the Schedule?",
+      "category": "Compliance Check",
+      "target_node_id": "048f3b30-00ac-4849-baa5-cf6233f10ca4",
+      "latency_sec": 1070.5363815840028,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.3333333333333333,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Outsourced services that are not covered in this Schedule but are permitted to be outsourced by an entity regulated by any financial sector regulator of its home jurisdiction.\n\n| Rule | Detail | Source Section | Quoted Text |\n|---|---|---|---|\n| Outsourced Services | Not Covered in Schedule | Section [ID: f43cec7a-f3e2-4928-856c-b50f6ffd2fa0] | \"Outsourced services, which are not covered in this Schedule but are permitted to be outsourced by the entity regulated by any financial sector regulator of its home jurisdiction;\" |\n| Outsourced Services | Not Covered in Schedule | Section [ID: 048f3b30-00ac-4849-baa5-cf6233f10ca4] | \"Outsourced services, which are not covered in this Schedule but are permitted to be outsourced by the entity regulated by any financial sector regulator of its home jurisdiction;\" |\n| Outsourced Services | Not Covered in Schedule | Section [ID: ed4d34e6-368c-4551-b4f3-11986c95e209] | \"Outsourced services that are not covered in this Schedule but are permitted to be outsourced by an entity regulated by any financial sector regulator of its home jurisdiction;\" |\n| Outsourced Services | Not Covered in Schedule | Section [ID: dfdc51f0-13f5-44f2-b836-8d2891c7a741] | \"Outsourced services that are not covered in this Schedule but are permitted to be outsourced by an entity regulated by any financial sector regulator of its home jurisdiction;\" |\n| Core Activities | Not Permitted to Outsource | Section [ID: cbae4a88-7243-4d51-832d-82aaff20a58e] | \"(i) Core activities which are not permitted to be outsourced by an entity regulated by any financial sector regulators of home jurisdictions;\" |\n\n**Plain Language:** An entity can outsource services that aren't listed in the Schedule, as long as they're allowed by its home country's financial regulator. However, it cannot outsource core activities.\n\n**Source Quote:** \"Outsourced services which are not covered in this Schedule but are permitted to be outsourced by the entity regulated by any financial sector regulator of its home jurisdiction;\"",
+      "golden_answer": "Outsourced services that are not covered in this Schedule but are permitted to be outsourced by the entity regulated by any financial sector regulator of its home jurisdiction."
+    },
+    {
+      "query": "What is the list of services that are not permitted to be provided by TechFin and Ancillary Service Providers under these regulations?",
+      "category": "Cross-Reference",
+      "target_node_id": "593246d2-30f2-4790-b5e6-16be5c725d9c",
+      "latency_sec": 1114.647356417001,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The list of services not permitted includes those related to issuance of securities, deposits, insurance products, or investment advisory services.\n\n| Rule | Detail | Source |\n|---|---|---|\n| List of Services Not Permitted | Includes issuance of securities, deposits, insurance products, and investment advisory services | Section [ID: dd017d40-ce87-4090-86f2-3475b2cc8b55] |\n\n**Plain Language:** TechFin and Ancillary Service Providers are not allowed to provide certain financial services, such as issuing securities or offering investment advice.\n\n**Quoted Text:** \"List of services not permitted to be provided by TechFin and Ancillary Service Provider under these regulations:\"",
+      "golden_answer": "List of services not permitted to be provided by TechFin and Ancillary Service Provider under these regulations:"
+    },
+    {
+      "query": "What is the timeframe for an applicant to fulfill conditions specified in In-Principle Approval before receiving Limited Use Authorisation?",
+      "category": "Compliance Check",
+      "target_node_id": "7c8b89ac-dd3f-4420-a838-b3b6dded232f",
+      "latency_sec": 1173.1845972909941,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The applicant must fulfill conditions within 30 days or extended by the Authority.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Timeframe for Fulfilling Conditions | Within 30 days or extended by the Authority | Section [ID: 7c8b89ac-dd3f-4420-a838-b3b6dded232f] |\n\n**Plain Language:** An applicant has 30 days to fulfill conditions specified in their In-Principle Approval before receiving Limited Use Authorization. This timeframe may be extended by the Authority if needed.\n\n**Source Quote:** \"One of the conditions of the 'In-Principle Approval' may require the Appplicant to have at least one Testing Partner.\"",
+      "golden_answer": "within thirty (30) days, unless extended by the Authority"
+    },
+    {
+      "query": "What activities are covered under the term ESG Ratings and Data Products Provider (ERDPP)?",
+      "category": "Glossary Definition",
+      "target_node_id": "4641877b-f059-4b11-b757-8587002b935c",
+      "latency_sec": 1225.1752998330048,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.5,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** An ERDPP provides services related to ESG Ratings and Data Products, including independent external review for ESG-labelled bonds listed on recognised stock exchanges.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of ERDPP | Provides services relating to ESG Rating or ESG Data Product | Section (t) |\n\n**Plain Language:** An ERDPP is an entity that provides services related to ESG Ratings and Data Products. This includes providing independent external review for ESG-labelled bonds listed on recognised stock exchanges.\n\n**Source Quote:** \"An ERDPP shall segregate its activities relating to ESG Rating and Data Product from its other activities.\"",
+      "golden_answer": "Providing services relating to independent external review for ESG labelled bonds listed on the recognised stock exchanges in an IFSC."
+    },
+    {
+      "query": "What activities can banking units undertake before July 6, 2023?",
+      "category": "Amendment/Temporal",
+      "target_node_id": "48d38e37-b667-48c3-9a4f-9a97efca5429",
+      "latency_sec": 1291.606405749997,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.3333333333333333,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A Banking Unit may undertake any or all of the activities mentioned under clause (e) of sub-section (1) of Section 3 of the Act and Section 6 of the Banking Regulation Act, 1949.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Activity Limitation | Before July 6, 2023, a Banking Unit could undertake any or all of the activities mentioned under clause (e) of sub-section (1) of Section 3 of the Act and Section 6 of the Banking Regulation Act, 1949. | Section 3(e) of the International Financial Services Centres Authority Act, 2019 and Section 6 of the Banking Regulations Act, 1949 |\n\n**Plain Language:** A Banking Unit could undertake any or all of the activities allowed under the relevant laws before July 6, 2023.\n\n**Quote:** \"A Banking Unit may undertake any or all of the activities mentioned under clause (e) of sub-section (1) of Section 3 of the Act and Section 6 of the Banking Regulation Act, 1949.\"",
+      "golden_answer": "Banking Units may undertake any or all of the activities mentioned under clause (e) of sub-section (1) of Section 3 of the Act or Section 6 of the Banking Regulation Act, 1949, except those expressly prohibited by the Authority."
+    },
+    {
+      "query": "What is the source section referred to in regulation 3(1)(xiii) of the Tech Financing Regulations, 2023?",
+      "category": "Cross-Reference",
+      "target_node_id": "3ad8510e-07e4-4dd8-86ce-52d7b8634d65",
+      "latency_sec": 1320.0378000409983,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.2,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.5,
+        "context_recall": 0.8,
+        "answer_relevance": 0.6,
+        "citation_precision": 0.0
+      },
+      "generated_answer": "**Short Answer:** The source section for regulation 3(1)(xiiii) is not explicitly mentioned in the provided context.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n\n**Plain Language:** The Tech Financing Regulations, 2023 do not provide a specific source section for this regulation.\n\n**Structured Table:** N/A",
+      "golden_answer": "Source Section: [refer regulation 3(1)(xiii)]"
+    },
+    {
+      "query": "What happens to an individual if they are restrained, prohibited or barred from accessing or dealing in financial products or services due to regulatory authority action?",
+      "category": "Cross-Reference",
+      "target_node_id": "c6568b01-d944-4aed-9b82-c85635148249",
+      "latency_sec": 1379.426092374997,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.07142857142857142,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** An individual is not eligible to apply for registration until they satisfy the 'fit and proper' requirements.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Eligibility for Registration | Not applicable until 'fit and proper' criteria met | Section (3) |\n\n**Plain Language:** An individual who has been restrained, prohibited or barred from accessing or dealing in financial products or services due to regulatory authority action is not eligible to apply for registration until they meet the 'fit and proper' requirements.\n\n**Source Quote:** \"Where any person has been declared as not 'fit and proper' by an order of a regulatory authority, such a person shall not be eligible to apply for any registration, until she satisfies the fit and proper criteria.\"",
+      "golden_answer": "An individual is not allowed to access or deal in financial products or services."
+    },
+    {
+      "query": "What does it mean for an intermediary to furnish false or misleading information?",
+      "category": "Glossary Definition",
+      "target_node_id": "93c474bd-d809-4900-b673-51ab35118aa5",
+      "latency_sec": 1424.4119808329997,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.06666666666666667,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** An intermediary must provide accurate and truthful information about itself, including any material facts that could impact a client's decision.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Furnishing False Info | Must be true and not misleading | Section (d) |\n\n**Plain Language:** An intermediary must give correct and honest information about itself, including any important facts that could affect a client's decision.\n\n**Source Quote:** \"furnishes to the Authority information which is false or misleading in any material particular\"",
+      "golden_answer": "An intermediary must provide accurate and truthful information to the Authority."
+    },
+    {
+      "query": "What are the circumstances under which an issuer must provide support for appointing a nominee director by a registered debenture trustee?",
+      "category": "Cross-Reference",
+      "target_node_id": "13507861-8ee4-4467-9edf-7d27090e6270",
+      "latency_sec": 1461.7662041670046,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The issue must provide support if it defaults in payment of interest or default in creating security or redeeming debentures.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Support Requirement | Default in Payment of Interest or Default in Creation of Security/Redeemption of Debentures | Section (f) |\n\n**Plain Language:** An issue must provide support for appointing a nomin",
+      "golden_answer": "In the event of two consecutive defaults in payment of interest or default in creation of security, the issuer shall be obliged to provide all requisite support in this regard, if legally permissible."
+    },
+    {
+      "query": "What is the purpose of a legally enforceable netting arrangement?",
+      "category": "Amendment/Temporal",
+      "target_node_id": "60b33e0d-08f1-4bd4-975c-cb2367334b56",
+      "latency_sec": 1518.753509000002,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.5,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A legally enforceable netting arrangement allows Banking Units to exchange margin in specified foreign currencies or permissible listed debt securities with counterparty entities.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Purpose of Netting Arrangement | Exchange margin in specified foreign currencies/debt securities | Section 43 |\n\n**Plain Language:** A legally enforceable netting arrangement allows Banking Units to exchange margin in specific foreign currencies or debt securities with counterparty entities. This helps them manage their mark-to-market exposure under a legally binding agreement.\n\n**Source Quote:** \"A Banking Unit may exchange margin in the specified foreign currencies or permissible listed debt securities and sovereigns with a counter party Banking Unit or overseas regululated entity for non-centrally cleared over the counter currency, interest rate, credit and commodity derivative contracts to reflect mark to market exposure under a legally enforceable netting arrangement as may be specified by the Authority.\"",
+      "golden_answer": "To reflect mark to market exposure under non-centrally cleared over the counter currency, interest rate, credit and commodity derivative contracts."
+    },
+    {
+      "query": "What is the word that has been substituted for 'ten' by the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2026, effective January 12th, 2026?",
+      "category": "Amendment/Temporal",
+      "target_node_id": "e2c99841-c62a-4598-96fd-4bdef4eed260",
+      "latency_sec": 1571.8750856250044,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.5,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.0,
+        "context_recall": 0.5,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The word substituted for 'ten' is \"nine\".\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Substitution | From ten to nine | Section 5 | \"Substituted for the word 'ten' by the International Financial Services Centre Authority (Capital Market Intermediaries) Regulatiions, 2026 w.e.f. 12 th January, 2026.\" |\n\n**Plain Language:** The regulation changed the word \"ten\" to \"nine,\" effective January 12th, 2026.\n\n**Source Quote:** \"Substituted for the word 'ten' by the International Financial Services Centre Authority (Capital Market Intermediaires) Regulatiions, 2026 w.e.f. 12 th January, 2026.\"",
+      "golden_answer": "the word 'five'"
+    },
+    {
+      "query": "What is the currency of operation for tech financing under the Tech Financing Regulations, 2023?",
+      "category": "Cross-Reference",
+      "target_node_id": "df072078-cbd8-4d41-8657-ce858b08b058",
+      "latency_sec": 1610.4847910000026,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.5,
+        "context_recall": 1.0,
+        "answer_relevance": 0.8,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The currency of operation for tech financing is any of the specified foreign currencies.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Currency of Operation | Any Specified Foreign Currency | Section 11 | \"Currency of operations\" |\n\n**Plain Language:** The tech financing regulations allow for operations in any of the specified foreign currencies.\n\n**Source Quote:** \"Every TechFin and Ancillary Service Provider shall maintain its balance sheet in any of the Specified Foreign Currencies.\"",
+      "golden_answer": "The currency of operation for tech financing under the Tech Financing Regulations, 2023, shall be the currency of the country in which the financial institution is established."
+    },
+    {
+      "query": "What is considered a non-resident under the Foreign Exchange Management Act, 1999?",
+      "category": "Glossary Definition",
+      "target_node_id": "ac17648e-5f0c-4241-8e64-2d54bf709c65",
+      "latency_sec": 1669.323054417,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A non-resident means an individual or entity that is not resident in India.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Non-Resident | Person resident outside India under FEMA Act, 1999 | Section (vi) |\n\n**Plain Language:** A non-resident refers to someone who is not living in India. This includes individuals and entities that are based outside the country.\n\n**Source Quote:** \"Non-resident\" means a 'person resident outside India' under the Foreign Exchange Management Act, 1999 (42 of 1999) and shall also include financial institutions in an International Financial Service Centre;",
+      "golden_answer": "A person resident outside India as defined under the Foreign Exchange Management Act, 1999, including financial institutions in an International Financial Service Centre."
+    },
+    {
+      "query": "How long does the Authority take to process an application for relaxation of strict enforcement of regulations?",
+      "category": "Direct Regulation",
+      "target_node_id": "98fe6301-b52f-4785-ac24-efd7b625e862",
+      "latency_sec": 1713.2596606250008,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.3333333333333333,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The Authority processes applications within thirty days from receipt, including responses to clarifications sought by the Authority.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Processing Time | Within 30 days from date of receipt | Section (1) |\n\n**Plain Language:** The Authority must process an application for relaxation within thirty days, including any responses to clarifications sought by the Authority.\n\n**Quoted Text:** \"The Authority shall process such application within thirty days of the date of receipt of the application complete in all respects.\"",
+      "golden_answer": "The Authority shall process such application within thirty days of the date of receipt of the application complete in all respects."
+    },
+    {
+      "query": "What does a group entity include?",
+      "category": "Glossary Definition",
+      "target_node_id": "a0d50cd7-a0da-461a-a5b7-caf1097cccb1",
+      "latency_sec": 1765.7964213339947,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.2,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A group entity includes an arrangement involving two or more entities related to each other through any of the following relationships.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Group Entities | Includes arrangements involving two or more entities related to each other through any of the following relationships | Section (iv) |\n\n**Plain Language:** A group entity is an arrangement between multiple entities that are connected in some way. This can include parent companies, subsidiaries, branches, or any other legal form.\n\n**Source Quote:** \"Group Entities includes an arrangement involving two or more entities related to each other through any of the following relationships:\"",
+      "golden_answer": "any holding company, subsidiaries, branches or any other entity, in whatever legal form, through which the Parent bank undertakes its operations or permitted activities."
+    },
+    {
+      "query": "What does it mean for a word or expression used in the International Financial Services Centres Authority Act, 2019 but defined in another Act listed in the First Schedule?",
+      "category": "Direct Regulation",
+      "target_node_id": "9c2c61dd-a537-4744-bd90-0d1bce450a12",
+      "latency_sec": 1821.4120566249985,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.9,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Words and expressions not defined in these regulations but defined in the Act or other specified Acts have the same meanings assigned to them.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of 'Act' | Same meaning as in the International Financial Services Centre Authority Act, 2019 (50 of 2019) | Section 3(1)(g) |\n\n**Plain Language:** If a word or expression is used in this Act but not defined here, it will have the same meaning as in another specified Act.\n\n**Source Quote:** \"Words and expressions used and not defined in these regulations but defined in the Act or Acts mentioned in the Fi rs t Schedule to the Act shall have the same meanings respectively assigned to them in those Acts.\"",
+      "golden_answer": "Words and expressions used and not defined in this Act but defined in the Acts specified under column (3) of the First Schedule to this Act shall have the meanings respectively assigned to them in those Acts."
+    },
+    {
+      "query": "What is the source section that defines the list of permitted TechFin services?",
+      "category": "Cross-Reference",
+      "target_node_id": "725d540b-c769-4cd0-9491-c45e1176c7c2",
+      "latency_sec": 1875.7135986249996,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.05555555555555555,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 0.9
+      },
+      "generated_answer": "**Short Answer:** The source section that defines the list of permitted TechFin services is found in Section 3(1)(xiiii).\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Permitted Services | List of permitted TechFin Services | Section 3(1)(xiiii) | \"List of permitted TechFin Services\" |\n\n**Plain Language:** The regulation defines the list of services that a TechFin entity can provide. These services are listed in Section 3(1)(xiiii).\n\n**Source Quote:** \"List of permitted TechFin Services means technology solutions or services provided, directly or indirectly, to aid, help or assist in making arrangements for carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act.\"",
+      "golden_answer": "Source Section: [refer regulation 3(1)(xiii)]"
+    },
+    {
+      "query": "What is the requirement for TechFin and Ancillary Service Provider to be heard before taking action in case of default?",
+      "category": "Cross-Reference",
+      "target_node_id": "6b8ceb37-08d8-432c-90d6-f59bceca523f",
+      "latency_sec": 1924.2597325829993,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.058823529411764705,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The TechFin and Ancillary Service Provider must be given a reasonable opportunity to submit written submissions.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Action in Case of Default | Reasonable opporunity for written submission | Section 1(2) |\n\n**Plain Language:** Before taking action against a default, the Authority must give the TechFin and Ancillary Service Provider a chance to explain their side in writing.\n\n**Quote:** \"No action shall be taken without giving the TechFin and Ancillary Service Provider a reasonable opportunity of being heard by way of written submission.\"",
+      "golden_answer": "No action as referred under sub-regulation (1) shall be taken without giving the TechFin and Ancillary Service Provider, a reasonable opportunity of being heard by way of written submissions."
+    },
+    {
+      "query": "What types of financial services can tech financing companies aid or assist in arranging?",
+      "category": "Compliance Check",
+      "target_node_id": "e2d3a32c-9ca7-42e4-9024-1f049b30b855",
+      "latency_sec": 1977.2734557500007,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.14285714285714285,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.9,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Tech Financing Companies can aid or assist in arranging financial services listed in sub-clauses (i) to (xi) of clause (e) of Section 3 of the Act.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Financial Services Listed | Sub-clauses (i) to (xi) of Clause (e) of Section 3 of the Act | Section 3(e)(i)-(xi) |\n\n**Plain Language:** Tech Financing Companies can help with arranging certain financial services, such as those related to banking, insurance, or investment.\n\n**Quote:** \"The TechFin and Ancillary Services Provider may enter into such arrangements only where the flow of services between the parties is demonstrable and traceable.\"",
+      "golden_answer": "financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act"
+    },
+    {
+      "query": "Can the Authority revoke an applicant's In-Principle Approval if they fail to fulfill the specified conditions for Limited Use Authorisation?",
+      "category": "Compliance Check",
+      "target_node_id": "2077b82f-f1d9-4276-94b6-23fe6fac6ec6",
+      "latency_sec": 2038.9832466669977,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Yes, the Authority may revoke an applicant's In-Principle Approval if they fail to fulfill the specified conditions.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Revocation of In-Principle Approval | If applicant fails to fulfill specified conditions | Section 3(3) |\n\n**Plain Language:** The Authority has the discretion to revoke an applicant's In-Principle Approval if they don't meet the required conditions. This is because the Authority wants to ensure that only eligible entities receive Limited Use Authorisation.\n\n**Quote:** \"If the Appplicant fails to fulfill the specified conditions, the Authority may revoke the 'In -P rinciple Approval' after providing the Applicant an oppor tunity of filing written submission.\"",
+      "golden_answer": "Yes, the Authority may revoke the 'In-Principle Approval' after providing the Applicant an opportunity of filing written submissions."
+    },
+    {
+      "query": "What types of financial products, services, or institutions can be regulated by the International Financial Services Centres Authority under the authority of the Central Government?",
+      "category": "Cross-Reference",
+      "target_node_id": "4d62f9ea-58b7-45d5-b316-d78badf84fb6",
+      "latency_sec": 2102.5514243750004,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.09090909090909091,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The International Financial Services Centre Authority can regulate any financial product, service, or institution that has been notified by the Central Government.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Regulated Entities | Any financial product, service, or institution in an IFSC | Section (b) |\n| Permitted Financial Products, Services, and Institutions | Notified by Central Government | Section (b) |\n| Recommended Entities | Permitted by Central Government | Section (c) |\n| Existing Regulations | Financial products, services, and institutions permitted before this Act | Section (a) |\n\n**Plain Language:** The International Financial Services Centre Authority has the power to regulate any financial product, service, or institution that has been approved by the Central Government. This includes those already being regulated in an IFSC.\n\n**Source Quote:** \"regulating such other financial products, financial services or financial institutions in the International Financial Services Centres as may be notified by the Central Government from time to time;\"",
+      "golden_answer": "financial products, financial services, or financial institutions in the International Financial Services Centres as may be notified by the Central Government from time to time;"
+    },
+    {
+      "query": "What entity is responsible for exercising the powers under section (b) of the Reserve Bank of India Act, 1934?",
+      "category": "Direct Regulation",
+      "target_node_id": "84ca8a45-8944-4fc2-ab93-552774ba4160",
+      "latency_sec": 2155.9210767920013,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.3333333333333333,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The International Financial Services Centre Authority established under sub-section (1) of Section 4 of the Act.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Entity Responsible | International Financial Services Centre Authority | Section (b) of the Reserve Bank of India Act, 1934 |\n\n**Plain Language:** The entity responsible for exercising the powers under section (b) is the International Financial Services Centre Authority. This authority was established under sub-section (1) of Section 4 of the Act.\n\n**Source Quote:** \"The powers exercisable by the Bank under this Act, shall be exercisable by the International Financial Services Centre Authority established under sub-section (1) of section 4 of the International Financial Services Centre Authority Act, 2019,\"",
+      "golden_answer": "The International Financial Services Centres Authority established under sub-section (1) of section 4 of the International Financial Services Centres Authority Act, 2019."
+    },
+    {
+      "query": "Can a person who has been declared as not fit and proper by a regulatory authority still apply for registration?",
+      "category": "Glossary Definition",
+      "target_node_id": "aaaf622c-f7ce-4a48-ba1d-741ce4df8873",
+      "latency_sec": 2205.4176688340012,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.125,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** No, a person who has been declared as not fit and proper cannot apply for registration until they satisfy the required criteria.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Eligibility to Apply for Registration | Not eligible if declared unfit by regulatory authority | Section [insert section number] |\n\n**Plain Language:** A person who has been deemed not fit and proper by a regulatory authority cannot apply for registration until they meet the necessary requirements.\n\n**Quote:** \"Where any person has been declared as not 'fit and proper' by an order of a regulatory authority, such a person shall not be eligible to apply for any registration.\"",
+      "golden_answer": "No, such a person shall not be eligible to apply for any registration until they satisfy the 'fit and proper' requirements."
+    },
+    {
+      "query": "What is considered a regulated financial entity under the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025?",
+      "category": "Glossary Definition",
+      "target_node_id": "53dc0ea7-39b9-44b9-910b-baf905cf3488",
+      "latency_sec": 2263.620662375004,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.1111111111111111,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 0.5
+      },
+      "generated_answer": "**Short Answer:** A regulated financial entity means an issue or service provider set up in India, an IFSC, or any Foreign Jurisdiction.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Regulated Financial Entity | Explained as an issue or service provider set up in India, an IFSC, or any Foreign Jurisdiction | Section [insert section number] |\n\n**Plain Language:** A regulated financial entity is a company that provides financial services and is overseen by a regulatory authority. This can include entities based in India, the International Financial Services Centre (IFSC), or other countries.\n\n**Quote:** \"For any other similar activity, by whatever name called.\"",
+      "golden_answer": "An issuer or service provider set up in India, an IFSC or any Foreign Jurisdiction that is registered, authorised, licensed or regulated by its home jurisdiction for carrying out activities related to asset management, funds management, investment advisory, portfolio management or any other similar activity."
+    },
+    {
+      "query": "What conditions must a parent bank meet when setting up a Representative Office or Global Administrative Office in an International Financial Services Centre (IFSC)?",
+      "category": "Cross-Reference",
+      "target_node_id": "a31d1a94-76b2-41f0-bc3b-c114bcba8f3c",
+      "latency_sec": 2307.748069125002,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.5,
+        "context_recall": 1.0,
+        "answer_relevance": 0.8,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A Parent Bank must obtain a No Object Letter from its home regulator and set up its Representative Office or Global Administrative Office under a suitable mechanism.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Conditions for Setting Up | Obtain No Object Letter from Home Regulator | Section 3 (b) |\n\n**Plain Language:** A Parent Bank must get permission from its home country's regulator before setting up a Representative Office or Global Administrative Office in an IFSC.\n\n**Quote:** \"A Parent Bank shall obtain a No Object Letter from its home regulator regarding setting up of the Banking Unit in the International Financial Services Centre.\"",
+      "golden_answer": "such conditions as may be specified by the Authority."
+    },
+    {
+      "query": "Can a suit be filed against the Central Government or the Authority or its Members, officers or other employees for something they did in bad faith?",
+      "category": "Direct Regulation",
+      "target_node_id": "bf16d2bc-b678-405a-8c60-61c51ed446c6",
+      "latency_sec": 2347.2006159999946,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.5,
+        "context_recall": 0.8,
+        "answer_relevance": 0.6,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Yes, but only if it's related to their actions under this Act.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Eligibility for Suit | Must involve actions under the International Financial Services Centre Authority Act | Section 21 of Indian Penal Code |\n\n**Plain Language:** A suit can be filed against the Central Government, the Authority or its Members, officers, and employees if they acted in bad faith while performing their duties under this Act.\n\n**Source Quote:** \"The Members, officers and employees of the Authority shall be deemed, when acting or purporting to act in pursuance of any of the provisions of this Act, to be public servants within the meaning of section 21 of the Indian Penal Code.\"",
+      "golden_answer": "No"
+    },
+    {
+      "query": "What are the minimum educational qualifications required for a capital market intermediary to be appointed?",
+      "category": "Direct Regulation",
+      "target_node_id": "0d25e376-2dc7-4d04-92c9-ab85b25afa0e",
+      "latency_sec": 2383.339419124997,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.5,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.6,
+        "context_recall": 0.8,
+        "answer_relevance": 0.7,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The principal officer and compliance officer must have a bachelor's degree in any discipline, with at least 3 years of experience in capital markets.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Educational Requirement | Principal Officer/Compliance Officer | Section (2) | \"A capital market intermediary shall ensure that the principal officer and compliance officer meet the following educational qualification requirements:\" |\n\n**Plain Language:** A capital market intermediary must have a qualified principal officer and compliance officer. The principal officer can have any bachelor's degree, while the compliance officer must have at least 3 years of experience in capital markets.\n\n**Source Quote:** \"A capital market intermediary shall ensure that the principal officer and compliance officer meet the following educational qualification requirements:\"",
+      "golden_answer": "A professional qualification or post-graduate degree or post graduate diploma (minimum one year in duration) in finance, law, accountancy, business management, commerce, economics, capital market, banking, insurance, actuarial science, fintech, science, technology, engineering or mathematics from a university or an institution recognised by the Central Government or any State Government or a foreign university or institution or association or a CFA or a FRM."
+    },
+    {
+      "query": "What is the definition of an investment adviser under the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025?",
+      "category": "Cross-Reference",
+      "target_node_id": "1c84b68e-ab34-47cd-9984-b27652b4dbfa",
+      "latency_sec": 2419.013848499999,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.3333333333333333,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** An investment adviser means a person who provides investment advice for consideration and is registered with the Authority.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Investment Adviser | Person providing investment advice for consideration | Section (z) |\n\n**Plain Language:** An investment adviser is someone who gives advice on investments in exchange for payment, and must be registered with the Authority.\n\n**Source Quote:** \"An investment adviser means a person who provides investment advice for consideration and is registered with the Authority.\"",
+      "golden_answer": "An investment adviser means any person who provides investment advice or manages investments on behalf of clients."
+    },
+    {
+      "query": "What is the minimum net worth requirement for an entity seeking registration as a capital market intermediary?",
+      "category": "Direct Regulation",
+      "target_node_id": "5492ca7a-1ed4-4792-b00f-9242c3372434",
+      "latency_sec": 2456.271147708998,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.3333333333333333,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The minimum net worth requirement is separate from other activities outside IFSC or within IFSC under any other regulations. It must be maintained at all times.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Minimum Net Worth Requirement | Separate and additional to other activities | Section (3) |\n\n**Plain Language:** An entity seeking registration as a capital market intermediary must have a minimum net worth that is separate from any other requirements. This requirement applies regardless of whether the activity takes place inside or outside an International Financial Services Centre.\n\n**Quote:** \"The minimum net worth requirements under these regulations shall be separate and in addition to the minimum net worth requirements applicable for other activities outside IFSC or within IFSC under any other regulations.\"",
+      "golden_answer": "An entity must comply with the net worth requirements specified in Schedule I of these regulations, which shall be maintained at all times."
+    },
+    {
+      "query": "What is the purpose of Single Window IT Systems (SWIT) in the context of the IFSCA Limited Use Authorisation as FinTech Sandbox Entity?",
+      "category": "Compliance Check",
+      "target_node_id": "5c99bacd-45fb-41f7-a065-73ac40c57de6",
+      "latency_sec": 2497.5804656249966,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** SWIT facilitates processing applications under this Framework.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Purpose of SWIT | Facilitate processing applications | Section [ID: 233eb824-9713-4da3-811a-0b9921b5b95b] | \"Single Window IT Systems (SWIT) refers to an online platform designed by the Authority\" |\n\n**Plain Language:** SWIT is an online platform created by the Authority to help process applications submitted under this Framework.\n\n**Source Quote:** \"Single Window IT Systems (SWIT) refers to an online platform designed by the Authority, inter-alia ,   to   facilitate   the   processing   of   applications   submit ted by the Applica nts under this Framework;\"",
+      "golden_answer": "to facilitate the processing of applications submitted by Applicants under this Framework"
+    },
+    {
+      "query": "What is the purpose of recovering fines or penalties?",
+      "category": "Direct Regulation",
+      "target_node_id": "1f91240e-56f7-4608-9eec-1a18c27fbe7e",
+      "latency_sec": 2531.017264708993,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.5,
+        "context_recall": 0.8,
+        "answer_relevance": 0.6,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The Authority can collect or realise fines in foreign currency, and may recover expenses from classified persons.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Purpose of Recovery | Fine collection/realisation in foreign currency | Section (5) |\n| Expense Recovery | From classified persons | Section (2) |\n\n**Plain Language:** The Authority can collect or realise fines in foreign currency, and may recover expenses from classified persons.\n\n**Source Quote:** \"The penalities, fine, fees shall be collected or realised in the foreign currency equivalent of the penalty or fine imposed.\"",
+      "golden_answer": "The purpose of recovering fines or penalties is to enforce compliance with provisions of respective Acts specified in the First Schedule."
+    },
+    {
+      "query": "What is the timeframe for an applicant to comply with the regulations after receiving in-principle approval?",
+      "category": "Direct Regulation",
+      "target_node_id": "16180f25-b654-4b99-9e2b-b85495681448",
+      "latency_sec": 2568.111021208002,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The applicant must take necessary steps within 180 days of receipt of in-principle approval.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Compliance Timeframe | Within 180 days of receipt of in-principle approval | Section [ID: 48c5ae da-8d40-483f-998b-20a415a0efcc] |\n\n**Plain Language:** An applicant has 180 days to comply with the regulations after receiving in-principle approval.\n\n**Source Quote:** \"On receipt of in-principle approval, the applicant shall, within a period of one hundred eighty (180) days, unless extended by the Authority, take necessary steps to comply with these regulations and conditions of the in-principle approval.\"",
+      "golden_answer": "An applicant must take necessary steps to comply within 180 days, unless extended by the Authority."
+    },
+    {
+      "query": "What is the requirement for a capital market intermediary (CMI) to disclose its possible conflicts of interest?",
+      "category": "Glossary Definition",
+      "target_node_id": "523d495e-e684-4cd1-a284-d3a2ba21052a",
+      "latency_sec": 2606.607440041,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A CMI must make adequate disclosure of its possible conflict of interest and duties, and put in place a mechanism to resolve any conflict of interest situation.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Conflict of Interest Disclosure | Adequate disclosure required | Section 9 |\n\n**Plain Language:** A CMI must clearly explain any potential conflicts of interest and have a plan to address them.\n\n**Source Quote:** \"A CMI shall avoid conflict of interest and make adequate disclosure of its possible conflict of interest and duties.\"",
+      "golden_answer": "A CMI shall make adequate disclosure of its possible conflict of interest and duties."
+    },
+    {
+      "query": "What is the effect on the Payment and Settlement Systems Act, 2007 when a new section is inserted after section 34A under the International Financial Services Centres Authority Act, 2019?",
+      "category": "Cross-Reference",
+      "target_node_id": "dda50209-04f5-41c9-accb-2988d14409de",
+      "latency_sec": 2642.277094833,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 19
+      },
+      "generation": {
+        "faithfulness": 0.5,
+        "context_recall": 0.8,
+        "answer_relevance": 0.6,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The new section is inserted after section 34A, but no specific effect on the Payment and Settlement Systems Act, 2007 is mentioned.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Effect of New Section Insertion | Not specified | Section [inserted after section 34A] |\n\n**Plain Language:** The new section is inserted after section 34A, but no specific effect on the Payment and Settlement Systems Act, 2007 is mentioned.\n\n**Quoted Text:** \"After section 34A, the following section shall be inserted, namely:-\"",
+      "golden_answer": "The Payment and Settlement Systems Act, 2007 will have a new section inserted after section 34A as per the International Financial Services Centres Authority Act, 2019."
+    },
+    {
+      "query": "What is the purpose of the evaluation criteria for a FinTech Sandbox Entity under the IFSCA (FinTech) Framework for Limited Use Authorisation?",
+      "category": "Cross-Reference",
+      "target_node_id": "52550964-9241-49fd-b7a5-14ea93b56214",
+      "latency_sec": 2675.395621249998,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The evaluation criteria are used to assess whether an idea or product meets the Authority's requirements.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n\n**Plain English:** An FTE must pass certain tests before getting permission from the Authority. These tests include evaluating the proposed idea/product against specific criteria.\n\n**Source Quote:** \"The Fintech Sandbox Entity shall take prior written approval from the Authority to affect any material changes which may have a bearing on the Limited Use Authorisation granted to it.\"",
+      "golden_answer": "To assess the suitability of a FinTech Sandbox Entity for limited use authorisation."
+    },
+    {
+      "query": "What types of services are considered capital market services?",
+      "category": "Glossary Definition",
+      "target_node_id": "464887a5-a097-408e-8694-a4d4e30e0f22",
+      "latency_sec": 2713.9156272919936,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Capital market services include investment advisory and portfolio management services provided by regulated financial entities.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Capital Market Services | Investment Advisory, Portfolio Management Services | Section (c) |\n\n**Plain Language:** A CMI can provide certain types of services to investors in the IFSC. These include investment advice and portfolio management services.\n\n**Source Quote:** \"Capital market services\" shall mean and include investment advisory services, portfolio management services, by whatever name called, provided by a service provider which is a regulat ed financial entity, and such other services as may be specified by the Authority.\"",
+      "golden_answer": "investment advisory services, portfolio management services, and any other services specified by the Authority."
+    },
+    {
+      "query": "What is the minimum retention period for maintaining electronic books of account, records, and documents as a Capital Market Intermediary (CMI) in accordance with the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025?",
+      "category": "Cross-Reference",
+      "target_node_id": "4c69ffcc-7b01-4c81-8f99-801bef5be6d6",
+      "latency_sec": 2750.423405459005,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The minimum retention period is eight years.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Retention Period | Eight Years | Section 1(1) |\n\n**Plain Language:** As a Capital Market Intermediairy (CMI), you must keep electronic records for at least eight years. This is to ensure compliance with the regulations set by the International Financial Services Centre Authority.\n\n**Quote:** \"A CMI shall maintain and preserve the following books of account, records and documents, in electronic retrieval form for a minimum of eight years.\"",
+      "golden_answer": "eight years"
+    },
+    {
+      "query": "What happens to the rules for registering a capital market intermediary when it comes time to renew its registration?",
+      "category": "Direct Regulation",
+      "target_node_id": "e5b29354-eece-4cbb-ad67-1558467d72d8",
+      "latency_sec": 2787.1363710829974,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The provisions of these regulations apply to an application for renewal, wherever applicable.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Renewal Application | Applies to existing registered capital market intermediaries | Section (7) |\n\n**Plain Language Explanation:** When a capital market intermediary wants to continue operating in the IFSC, it must renew its registration. The regulations require that the same rules apply to this renewal application as they do for initial registration. This means that the intermediary must still meet all the requirements and maintain compliance with the Authority's norms.\n\n**Quoted Text:** \"For renewal of registration, these regulations shall apply wherever applicable.\"",
+      "golden_answer": "The provisions of these regulations, as applicable to the grant of registration shall also apply to an application for renewal of registration of a capital market intermediary, wherever applicable."
+    },
+    {
+      "query": "Can capital market products and/or services offered by an issuer or service provider in an IFSC or foreign jurisdiction be distributed to sophisticated investors in India?",
+      "category": "Glossary Definition",
+      "target_node_id": "19f6beb2-595f-4c3d-a64b-64e3d1a8a924",
+      "latency_sec": 2837.5790921249936,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.5,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Yes, but only if the issuer or service provider is set up in IFSC or any foreign jurisdiction.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Distribution to Sophisticated Investors in IFSC or Foreign Jurisdictions | Required for capital market products and/or services offered by an issuer or service provider | Section (1) (b) |\n\n**Plain Language:** An issuer or service provider can distribute its products and services to sophisticated investors in India if it is set up in IFSC or any foreign jurisdiction.\n\n**Quote:** \"The capital market products and/or services offered by any issuer or service provider, respectively, which is set up in IFSC or any foreign jurisdiction may be distributed to sophisticated investors in IFSC or foreign jurisdiction.\"",
+      "golden_answer": "Yes, capital market products and/or services offered by any issuer or service provider set up in IFSC or any foreign jurisdiction may be distributed to sophisticated investors in India."
+    },
+    {
+      "query": "What is the purpose of an IFSCA FinTech Innovation Sandbox?",
+      "category": "Glossary Definition",
+      "target_node_id": "73afaf0d-509c-44e9-b9f4-b00d7a6181be",
+      "latency_sec": 2886.8419270410013,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.9,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The IFSCA FinTech Innovation Sandbox allows limited use authorization for testing proposed ideas, products, or solutions without establishing a physical presence in the International Financial Services Centre.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Purpose of FIS | Limited Use Authorization | Section [ID: 33ae22ab-eb63-4b04-abcA-98097b0e470e] | \"The Fintech Sandbox Entity intendin g to operate under IFSCA FinTech Innovation Sandbox\" |\n\n**Plain Language:** The IFSCA FinTech Innovation Sandbox is designed for entities looking to test their ideas, products, or solutions without having to set up a physical presence in the International Financial Services Centre. This allows them to experiment with new technologies and business models while still being regulated by the International Financial Services Centres Authority (IFSCA).\n\n**Source Quote:** \"The Fintech Sandbox Entity intendin g to operate under IFSCA FinTech Innovation Sandbox\"",
+      "golden_answer": "a testing environment where a FinTech Sandbox Entity can develop and/or test its innovative idea(s)/product(s)/solution(s) in isolation from the live market"
+    },
+    {
+      "query": "Can the Authority form committees of its members and delegate power to them?",
+      "category": "Direct Regulation",
+      "target_node_id": "10c12309-e097-4f46-966a-bb69d79f5132",
+      "latency_sec": 2926.291657667003,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Yes, the Authority can form committees of its members and delegate powers to them.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Delegation of Powers | Section 23(2) | International Financial Services Centre Authority Act, 2019 | \"The Authority may, by a general or special order in writing, also form committee s of the Members and delegate to them the powers and functions of the Authority\" |\n\n**Plain Language:** The Authority has the power to create committees made up of its members and can delegate some of its own powers and responsibilities to those committees.\n\n**Source Quote:** \"The Authority may, by a general or special order in writing, also form committee s of the Members and delegate to them the powers and functions of the Authority\"",
+      "golden_answer": "Yes, the Authority may form committees of its members and delegate to them the powers and functions of the Authority."
+    },
+    {
+      "query": "What is the process for filing an application for recognition under the International Financial Services Centres Authority Act, 2019?",
+      "category": "Cross-Reference",
+      "target_node_id": "7aef03f8-081c-4b3e-a045-96e932d6c265",
+      "latency_sec": 2960.134811625001,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.25,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The application process involves submitting an application to the Authority.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Application Process | Submit an application to the Authority | Section (a) of the International Financial Services Centre Authority Act, 2019 |\n\n**Plain Language:** To file an application for recognition under this Act, you need to submit your application directly to the Authority.\n\n**Quote:** \"The manner of filing an application for recognition or registration or withdrawal of recognition or registration or furnishing of information or reports; (a) the manner of filing an application for recognition or registration or withdrawal of recognition or registration or furnishing of information or reports;\"",
+      "golden_answer": "the manner of filing an application for recognition or registration or withdrawal of recognition or registration"
+    },
+    {
+      "query": "What happens to references to International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2021 in other regulations after they are repealed?",
+      "category": "Direct Regulation",
+      "target_node_id": "37ef4910-f7ea-4ac9-8741-328fab0b65dc",
+      "latency_sec": 2996.196567083003,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.16666666666666666,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** References to the 2021 regulations are deemed to have the reference to the corresponding provisions of these new regulations.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Reference Deemed | After repeal, references in other regulations are deemed to have the reference to the corresponding provisions | Section (1) |\n\n**Plain Language:** When the 2025 regulations replace the 2021 regulations, any references to those old regulations will be considered as referring to the new ones.\n\n**Quote:** \"Any reference therein in any other regulations made, guidelines or circulars issued thereunder by the Authority shall be deemed to have the reference to the corresponding provisions of these regulations.\"",
+      "golden_answer": "Any reference thereto in any other regulations made, guidelines or circulars issued thereunder by the Authority shall be deemed to have the reference to the corresponding provisions of these regulations."
+    },
+    {
+      "query": "What information must a registered credit rating agency include in its written agreement with a client?",
+      "category": "Direct Regulation",
+      "target_node_id": "b62e4964-308e-4c53-97d5-6c1cbbacf80c",
+      "latency_sec": 3036.032905166001,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A registered credit rating agency must include the right and liabilities of each party, as well as the fee to be charged by such agency.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Information Required in Written Agreement | Right and Liabilities, Fee Charged | Section (1) | \"A registered credit rating agency shall enter into a written agreement with each client\" |\n\n**Plain Language:** A registered credit rating agency must include the rights and obligations of both parties, as well as the fee they will charge for their services in any written agreement with a client.\n\n**Source Quote:** \"A registered credit rating agency shall enter into a written agreement with each client\"",
+      "golden_answer": "the right and liabilities of each party and the fee to be charged by such credit rating agency."
+    },
+    {
+      "query": "What is the timeframe for laying a copy of every notification proposed under sub-section (1) before each House of Parliament?",
+      "category": "Direct Regulation",
+      "target_node_id": "76cd794f-3a70-4964-b91b-f6e31a4c14b9",
+      "latency_sec": 3078.7341959170008,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.5,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The timeframe for laying a copy of every notification proposed under sub-section (1) is 30 days.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Timeframe | 30 days | Section (2) of the International Financial Services Centre Authority Act, 2019 > PREAMBLE Block > (b) > (1) |\n\n**Plain Language:** A notification must be published in the Official Gazette and then laid before each House of Parliament for a total period of 30 days. This can happen in one session or multiple successive sessions. If both Houses agree to disapprove the issue, it won't be published.\n\n**Quote:** \"A copy of every notification proposed under sub-section (1) shall be laid before each House of Parliament for a total period of thirty days.\"",
+      "golden_answer": "A total period of thirty days, which may be comprised in one session or in two or more successive sessions."
+    },
+    {
+      "query": "What is the timeframe for notifying the Authority if a TechFin or Ancillary Service Provider's promoter or significant beneficial owner has a home jurisdiction identified as a High-Risk Jurisdiction by FATF?",
+      "category": "Direct Regulation",
+      "target_node_id": "dc3c09ec-791a-4c8a-a090-8158bbfc8b54",
+      "latency_sec": 3129.590176958998,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The TechFin or Ancillary Service Provider must notify the Authority within ten (10) business days from the date of publication by FATF.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Notification Timeframe | Within 10 business days | Section [ID: dc3c09ec-791a-4c8a-a090-8158bbfc8b54] | (iii) |\n\n**Plain Language:** A TechFin or Ancillary Service Provider must inform the Authority if their promoter or significant beneficial owner's home jurisdiction is identified as a High-Risk Jurisdiction by FATF. They have ten business days to do so after the publication of the statement.\n\n**Source Quote:** \"The TechFin and Ancillary Service Provider shall notify the Authority, if any of its promoter's or significant beneficial owner's home jurisdiction is identified in the public statement of Financial Action Task Force (FATF) as 'High-Risk Jurisdiction subject to call for action', within ten (10) business days from the date of publication by FAFT.\"",
+      "golden_answer": "Within ten (10) business days from the date of publication by FATF."
+    },
+    {
+      "query": "What is required of a registered credit rating agency to develop an internal code of conduct for its employees and officers?",
+      "category": "Direct Regulation",
+      "target_node_id": "3f66f176-b0c7-4f73-80eb-8e22d3385f78",
+      "latency_sec": 3174.2706341670055,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A registered credit rating agency must develop its own internal code of conduct governing its operations and setting standards for appropriate employee behavior.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Code of Conduct | Internal code of conduct for governance and employee conduct | Section 10 | Required by registered credit rating agency |\n\n**Plain Language:** A registered credit rating agency needs to create an internal set of rules that outlines how it operates and what is expected from its employees. This helps ensure fairness and appropriate behavior in the rating process.\n\n**Source Quote:** \"A registered credit rating agency shall develoop its own internal code of conduct for governing its internal operations and laying down standards of appropriate conduct for its employees and officers.\"",
+      "golden_answer": "A registered credit rating agency shall develop its own internal code of conduct for governing its internal operations and laying down standards of appropriate conduct for its employees and officers in the carrying out of their duties within the credit rating agency and as a part of the industry."
+    },
+    {
+      "query": "What happens to existing regulations after the repeal and supersession of new ones?",
+      "category": "Amendment/Temporal",
+      "target_node_id": "6e4eeea0-6aeb-4192-a13b-ce691ca8cd56",
+      "latency_sec": 3218.254612292003,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.3333333333333333,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.9,
+        "context_recall": 1.0,
+        "answer_relevance": 0.85,
+        "citation_precision": 0.7
+      },
+      "generated_answer": "**Short Answer:** Existing rights, privileges, obligations, liabilities, penalties, and legal proceedings remain unaffected.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Explanation | Existing regulations continue to apply despite repeal | Section [insert section number] |\n| Quote | \"any right, privilege, obligation or liability acquired, accrued or incured under the repealed regulations\" remains unaffected | Section [insert section number] |\n\n**Plain Language:** When new regulations replace old ones, existing rights and obligations still apply. This means that any legal consequences from previous actions remain in effect as if the old regulations never changed.\n\n**Source Quote:** \"any right, privilege, obligation or liability acquired, accrued or incured under the repealed regulations\" remains unaffected",
+      "golden_answer": "Notwithstanding such repeal and supersession, -"
+    },
+    {
+      "query": "What does it mean to be considered fit and proper for regulatory purposes?",
+      "category": "Glossary Definition",
+      "target_node_id": "6a744f19-4f4f-4c84-aa99-e26c30d00b0b",
+      "latency_sec": 3258.890878166996,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.14285714285714285,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.9,
+        "context_recall": 1.0,
+        "answer_relevance": 0.85,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A person must meet specific requirements to be deemed 'fit and proper' by a regulatory authority.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Fit and Proper | Must satisfy the fit and proper criteria | Section 1 (3) |\n\n**Plain Language:** To be considered fit and proper, an individual must meet certain standards set by a regulatory authority. This means they have the necessary qualifications, experience, and integrity to operate in the financial services sector. If someone has been declared unfit or not a proper person by a regulatory order, they cannot apply for registration until they satisfy these requirements.\n\n**Quote:** \"For the purpose of sub-regulation (1), a person shall be deemed to be a 'fit and proper' if,-\"",
+      "golden_answer": "a person is deemed to be 'fit and proper' if they meet the requirements specified in sub-regulation (1)"
+    },
+    {
+      "query": "What is the requirement for banking units regarding leverage ratio?",
+      "category": "Glossary Definition",
+      "target_node_id": "db1ca14c-5323-41a0-b0f5-aa9cb8d6d123",
+      "latency_sec": 3298.189580541999,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.5,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The Banking Unit must adhere to norms and guidelines relating to leverage ratio as specified by the Authority.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Leverage Ratio Requirement | Must adhere to norms and guidelines | Section 7 (Clause 6) |\n\n**Plain Language:** A Banking Unit must follow the rules set by the Authority for its leverage ratio.\n\n**Source Quote:** \"Banking Unit shall adhere to the norms and guidelines relating to leverage ratio as may be specified by the Authority, from time to time.\"",
+      "golden_answer": "Banking units must adhere to the norms and guidelines relating to leverage ratio as specified by the Authority."
+    },
+    {
+      "query": "What is required for an applicant to be considered as a FinTech Sandbox Entity under the IFSCA (FinTech) Framework for Limited Use Authorisation?",
+      "category": "Cross-Reference",
+      "target_node_id": "a4f81c3b-0967-41f4-94a4-6bd825ef19fe",
+      "latency_sec": 3340.643064875003,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The Applicant must comply with the conditions of 'In-Principle Approval' and operate within specified boundary conditions.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Compliance Requirement | Must comply with 'In-Principle Approval' conditions | Section [ID: 233eb824-9713-4da3-811a-0b9921b5b95b] |\n\n**Plain Language:** To be considered as a FinTech Sandbox Entity, the Applicant must first receive an 'In-Principle Approval' and then operate within specified boundary conditions.\n\n**Quote:** \"The Authority may, on being satisfied that the Appplicant has compli ed with the conditions of 'In -Principle Approval', grant a Limited Use Authorisa tion as FinTech Sandbox Entity (FSSE) to the Applicant.\"",
+      "golden_answer": "An applicant must meet certain criteria, including being a fintech company or startup that has not yet reached profitability, and demonstrating potential for growth and innovation."
+    },
+    {
+      "query": "Can a TechFin and Ancillary Service Provider set up an office in the IFSC or Overseas for a Resident?",
+      "category": "Compliance Check",
+      "target_node_id": "455db3fd-b8c0-4968-9610-9217f8b43786",
+      "latency_sec": 3381.0100331249996,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.058823529411764705,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Yes, but only for limited purposes.\n\n**Plain Language:** A TechFin and Ancillary Service Provider can help set up an office in the IFSC or Overseas for a Resident, but it's limited to that purpose.\n\n**Source Quote:** \"The TechFin and Ancillary Service Provider may also provide the services to a Resident, for the limited purpose of setting up of their office in the IFSC or Oversea.\"\n\n**Table of Key Facts:** None applicable.\n\n**Detailed Rule:** A TechFin and Ancillary Service Provider can help set up an office in the IFSC or Overseas for a Resident, but it's limited to that purpose.",
+      "golden_answer": "Yes, they may also provide services to a Resident for the limited purpose of setting up their office in the IFSC or Overseas."
+    },
+    {
+      "query": "Can a clearing member operate in more than one recognized clearing corporation?",
+      "category": "Glossary Definition",
+      "target_node_id": "96a1dbe3-46a4-4365-a71b-f3def787b007",
+      "latency_sec": 3422.1220480409975,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Yes, a clearing member may be permitted to operate in more than one recognised clearing corporation.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Operating in Multiple RCCs | Permitted for clearing members | Section (b) of the International Financial Services Centres Authority Regulations, 2025 > PREAMBLE Block > CLAUSE Block [ID: 96a1db3-46a4-4365-a71b-f3def787b007] |\n\n**Plain Language:** A clearing member can operate in more than one recognised clearing corporation, but it must be permitted by the Authority.\n\n**Source Quote:** \"A clearing member may be permitted to operate in more than one recognised clearing corporation.\"",
+      "golden_answer": "Yes, a clearing member may be permitted to operate in more than one recognized clearing corporation."
+    },
+    {
+      "query": "What information must I submit to the Authority in order to seek relaxation under sub-regulation (1) of the Global In-House Centres Regulations, 2025?",
+      "category": "Cross-Reference",
+      "target_node_id": "9644cc5c-c21d-4096-838c-4184c54e4565",
+      "latency_sec": 3466.491764709004,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.5,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** You must file an application giving details and grounds for seeking relaxation, along with a non-refundable fee specified by the Authority.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Relaxation Requirement | Application required with details and grounds | Section 1(a) |\n| Fee Requirement | Non-refundable fee as specified by the Authority | Section 1(b) |\n\n**Plain Language:** To seek relaxation under sub-regulation (1), you need to submit an application explaining your request, along with a non-refundable fee set by the Authority.\n\n**Quoted Text:** \"For seeking relaxation under sub-regulation (1), an application giving details and the grounds on which such relaxation has been sought, shall be filed with the Authority along with a non-refunda ble fee as may be specified by the Authority.\"",
+      "golden_answer": "An application giving details and the grounds on which such relaxation has been sought, along with a non-refundable fee as may be specified by the Authority."
+    },
+    {
+      "query": "What types of laws are included in the First Schedule for the purposes of sub-section (1)?",
+      "category": "Cross-Reference",
+      "target_node_id": "13422a6a-5ac7-46f5-9042-65451609d91b",
+      "latency_sec": 3507.3527141670056,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.08333333333333333,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The First Schedule includes financial sector regulators and their respective laws.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Inclusion Criteria | Financial Sector Regulators + Laws Administered by Them | Section 3(1)(g) of the International Financial Services Centre Authority Act, 2019 |\n\n**Plain Language:** The First Schedule lists both financial sector regulators and their associated laws. This means that when a new regulator or law is added to the schedule, it becomes part of the IFSC's jurisdiction.\n\n**Quoted Text:** \"The Central Government may, by notification, amend the First Schedule by including therein any financial sector regulator and the law administered by it, or omitting therefrom any financial sector regulator or any law specified therein.\"",
+      "golden_answer": "the provisions of the respective Acts specified under column (3) of the First Schedule relating to"
+    },
+    {
+      "query": "What is the process for disputing a decision made by a capital market intermediary in the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025?",
+      "category": "Cross-Reference",
+      "target_node_id": "e639e83d-6b97-484d-a5f4-f5878d6e0ed8",
+      "latency_sec": 3539.947581417,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.5,
+        "context_recall": 0.0,
+        "answer_relevance": 0.6,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The dispute resolution process is not explicitly mentioned in the provided regulations.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Dispute Resolution Process | Not Found | Section [insert section number] |\n\n**Plain Language:** Unfortunately, there isn't enough information about how to dispute a decision made by a capital market intermediary in these regulations.\n\n**Quoted Text:** \"For dispute resolution process, no regulation was found in the available corpus.\"",
+      "golden_answer": "A person who is dissatisfied with any decision of a registered capital market intermediary may make a written complaint to the Authority."
+    },
+    {
+      "query": "What is the trigger for updating a capital market intermediary's business continuity plan?",
+      "category": "Cross-Reference",
+      "target_node_id": "9f680d8c-c6a6-489e-8b8e-6afcddc1bcf8",
+      "latency_sec": 3577.1328933749974,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A CMI must update its BCP in the event of any material change to operations, structure, or location.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Trigger for Updating BCP | Material Change to Operations, Structure, or Location | Section (1) |\n\n**Plain Language:** A CMI must update its business continuity plan if there is a significant change in how it operates, its organizational structure, or where it does business.\n\n**Quote:** \"A CMI shall update its business continuity plan in the event of any material change to operations, structure, or location.\"",
+      "golden_answer": "A material change to operations, structure, business, or location."
+    },
+    {
+      "query": "What are ancillary services in the context of tech financing regulations?",
+      "category": "Direct Regulation",
+      "target_node_id": "65af8255-a1a8-4b60-be50-e447bec15bc2",
+      "latency_sec": 3623.4030238749983,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Ancillary Services refer to those that directly or indirectly aid, help, or assist in making arrangements for carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of section 3 of the Act.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Ancillary Services | Directly or indirectly aids, helps, or assists in making arrangements for financial services | Section 3(e)(i)-(xi) |\n\n**Plain Language:** Ancillary Services are those that help with the logistics and support needed to operate various financial services. They don't directly provide these services but play a crucial role in their success.\n\n**Source Quote:** \"Ancil lar y Services means those services which, directly or indirectly, aid, help or assist in making arrangements for carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of section 3 of the Act;\"",
+      "golden_answer": "Ancillary services mean those services that directly or indirectly aid, help, or assist in making arrangements for carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of section 3 of the Act."
+    },
+    {
+      "query": "What happens to an application made to the Authority under the repealed regulations that is already being considered?",
+      "category": "Direct Regulation",
+      "target_node_id": "353bfb7c-6d75-448e-aac9-9bf6503c3dd2",
+      "latency_sec": 3669.7406157079968,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.5,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The application will be deemed to have been made under the corresponding provisions of these new regulations.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Application Under Repealed Regulations | Deemed Made Under Corresponding Provisions | Section (b) |\n\n**Plain Language:** An application already being considered by the Authority is considered as if it were made under the new regulations. This means that the Authority will process and decide on the application based on the rules in place for these new regulations, even though the application was originally submitted under the old repealed regulations.\n\n**Source Quote:** \"For applications made to the Authority under the repealed regulations, prior to such repeal, and pending before it shall be deemed to have been made under the corresponding provisions of these regulations.\"",
+      "golden_answer": "It shall be deemed to have been made under the corresponding provisions of these regulations."
+    },
+    {
+      "query": "What is considered a group entity under the Capital Market Intermediaries Regulations 2025?",
+      "category": "Glossary Definition",
+      "target_node_id": "55ddd366-9677-4a9d-a665-0b62aa13df7f",
+      "latency_sec": 3713.2140910410017,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.05555555555555555,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A group entity consists of an entity within a business group that includes its parent company or legal person exercising control.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Group Entity | Consists of parent company, legal person controlling group | Section [v] |\n\n**Plain Language:** A group entity is an entity within a business group that includes its parent company or legal person exercising control. This means it's part of a larger group with other related entities.\n\n**Source Quote:** \"For the purpose of this regulation, the group entities of a Financial Institution Group shall include arrangements involving two or more entities related to each other through any of the following relationships:\"",
+      "golden_answer": "an entity of a business group that consists of a parent company or of any other type of legal person exercising control over the rest of the group, together with branches and/or subsidiaries."
+    },
+    {
+      "query": "What does a Group entity include?",
+      "category": "Glossary Definition",
+      "target_node_id": "a0d50cd7-a0da-461a-a5b7-caf1097cccb1",
+      "latency_sec": 3763.153279332997,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.25,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A group entity includes an arrangement involving two or more entities related to each other through any of the following relationships.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Group Entity | Includes arrangements involving two or more entities related to each other through any of the following relationships | Section (iv) |\n\n**Plain Language:** A group entity is an arrangement between multiple entities that are connected in some way. This can include parent companies, subsidiaries, branches, or any other legal form.\n\n**Source Quote:** \"Group Entities\" includes an arrangement involving two or more entities related to each other through any of the following relationships:",
+      "golden_answer": "Any holding company, subsidiaries, branches or any other entity, in whatever legal form, through which the Parent bank undertakes its operations or permitted activities."
+    },
+    {
+      "query": "What activities can banking units undertake under the International Financial Services Centres Authority (IFSCA) Regulations, 2020?",
+      "category": "Direct Regulation",
+      "target_node_id": "48d38e37-b667-48c3-9a4f-9a97efca5429",
+      "latency_sec": 3819.439300625003,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A Banking Unit may undertake any or all of the permitted activities mentioned in clause (e) of sub-section (1) of Section 3 of the Act and Section 6 of the Banking Regulation Act, 1949.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Permitted Activities | Any or all of the permitted activities mentioned in clause (e) of sub-section (1) of Section 3 of the Act and Section 6 of the Banking Regulation Act, 1949 | Section 3(1)(e) and Section 6 of the Banking Regulation Act, 1949 |\n\n**Plain Language:** A Banking Unit can undertake any or all of the activities listed in clause (e) of sub-section (1) of Section 3 of the Act and Section 6 of the Banking Regulation Act, 1949. These activities are not explicitly mentioned in the provided context, but they are considered permissible under these regulations.\n\n**Quote:** \"A Banking Unit may undertake any or all the activities mentioned under clause (e) of sub-section (1) of Sectiion 3 of the Act and   Sectiion 6 of the Banking Regulation Act, 1949,\"",
+      "golden_answer": "Banking units may undertake any or all of the activities mentioned under clause (e) of sub-section (1) of Section 3 of the Act or Section 6 of the Banking Regulation Act, 1949, except those expressly prohibited by the Authority."
+    },
+    {
+      "query": "What are the specific malpractices that a registered distributor must avoid?",
+      "category": "Direct Regulation",
+      "target_node_id": "f8c1360f-69c5-4fe7-a13c-1586a2908e5d",
+      "latency_sec": 3867.871354584,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A registered distributor must avoid mis-selling capital market products and services, consider clients' interests, and take all reasonable steps to prevent conflicts of interest.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Malpracticies | Avoid mis-selling | Section 1 |\n| Client Interest | Consider clients' needs | Section 1 |\n| Conflicts of Interest | Take all reasonable steps to avoid | Section 18 |\n\n**Plain Language:** A registered distributor must not sell capital market products in a way that misleads customers, and they need to put their clients' interests first. They also have to take steps to prevent conflicts between what's best for the client and what might benefit them as a distributor.\n\n**Quote:** \"A registered distributor shall avoid malpracticcs, such as mis-selling of capital market products and services.\"",
+      "golden_answer": "mis-selling of capital market products and services"
+    },
+    {
+      "query": "What is considered a Parent Bank under the International Financial Services Centres Authority (Banking) Regulations, 2020?",
+      "category": "Direct Regulation",
+      "target_node_id": "47f204f1-bc6c-47d8-80dc-5a2f25f96e7b",
+      "latency_sec": 3911.1526994160013,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A Foreign Bank or an Indian Bank that intends to set up a Banking Unit in the IFSC.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Parent Bank | Foreign Bank or Indian Bank | Section (j) |\n\n**Plain Language:** Under these regulations, a Parent Bank is either a foreign bank that wants to set up operations in the IFSC or an Indian bank with similar intentions.\n\n**Source Quote:** \"A Parent Bank means a Foreign Bank as defined under sub-regulation (d) or an Indian Bank as defined under sub-regulation (f), or both, that intend to, or has set up a Banking Unit.\"",
+      "golden_answer": "A Foreign Bank as defined under sub-regulation (d), or an Indian Bank as defined under sub-regulation (f), or both."
+    },
+    {
+      "query": "What does it mean for an individual to be disqualified under section (xii) of the Capital Market Intermediaries Regulations, 2025?",
+      "category": "Cross-Reference",
+      "target_node_id": "8ea71e83-a792-49ba-bd07-828530416b4d",
+      "latency_sec": 3952.2602263329973,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.5,
+        "context_recall": 1.0,
+        "answer_relevance": 0.8,
+        "citation_precision": 0.0
+      },
+      "generated_answer": "**Short Answer:** An individual is disqualified if they have been declared not fit and proper by a regulatory authority.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Disqualification Criteria | Not 'fit and proper person' | Section (xi) |\n\n**Plain Language:** An individual must be considered a fit and proper person to work in the capital market intermediary sector. If they are deemed not fit and proper, they will be disqualified from working in this field.\n\n**Quote:** \"Where any person has been declared as not 'fit and proper person' by an order of a regulatory authority, such a person shall not be eligible to apply for any registration.\"",
+      "golden_answer": "any other disqualification as may be specified by the Authority."
+    },
+    {
+      "query": "What are the Boundary Conditions that a FinTech Sandbox Entity must operate within during the Testing Stage?",
+      "category": "Glossary Definition",
+      "target_node_id": "62109a2a-36d9-432d-a13c-d7c3cf3be5cb",
+      "latency_sec": 3995.6257820829996,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The FinTech Sandbox Entity must operate within specified boundary conditions during the Testing Stage.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Boundary Condition | Operate within specified terms and conditions | Section 1(i) |\n\n**Plain Language:** A FinTech Sandbox Entity can only test its products in a controlled environment with certain restrictions during the Testing Stage.\n\n**Source Quote:** \"During the Testing Stage, the FinTech Sandbox Entity shall operate within the Boundary Conditions and other terms and conditions specified by the Authority.\"",
+      "golden_answer": "Boundary Conditions"
+    },
+    {
+      "query": "What are global mobility services (Immigration support services) for students and employees of foreign countries?",
+      "category": "Glossary Definition",
+      "target_node_id": "9e4ffd21-6df3-48c4-b5da-b07043375512",
+      "latency_sec": 4036.028242541004,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.2,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** Global mobility services provide immigration support services to students and employees from foreign countries.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Definition | Immigration support services for students and empoyees | Section [ID] | N/A |\n\n**Plain Language:** Global mobility services provide assistance with immigration-related matters to help students and employees from foreign countries study or work in India.\n\n**Source Quote:** \"Global mobility services (Immigration support services) for students and employees of foreign countries intending to study and work at IFSC respectively;\"",
+      "golden_answer": "Global mobility services (Immigration support services) for students and employees of foreign countries intending to study and work at IFSC respectively."
+    },
+    {
+      "query": "What kind of infrastructure must a registered distributor maintain to support its clients and regulated financial entities?",
+      "category": "Direct Regulation",
+      "target_node_id": "09d46994-c5e6-44b0-841e-abc88b2c31f1",
+      "latency_sec": 4074.0030822080007,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A registered distributor must maintain necessary infrastructure to provide support to its clients and regulators.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Infrastructure Requirement | Necessary infra for client support | Section 14 |\n\n**Plain Language:** A registered distributor needs to have the right systems in place to help both its clients and regulated financial entities.\n\n**Source Quote:** \"A registered distributor shall maintain necessary infra structure to provide support to its clients and regulators.\"",
+      "golden_answer": "necessary infrastructure"
+    },
+    {
+      "query": "Can a person who gives general comments about trends in the financial or securities market be considered as providing information that requires registration under these regulations?",
+      "category": "Direct Regulation",
+      "target_node_id": "4cfc9dcf-1ee1-4f18-9b6b-c9fd34e55fbf",
+      "latency_sec": 4117.884323459002,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.05,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.9,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** No, general comments do not require registration.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Registration Required | For investment advice or dealing with clients | Section 1(y) |\n\n**Plain Language:** A person who gives general comments about trends in the financial or securities market is not required to register under these regulations.\n\n**Quote:** \"General comments do not require registration.\"",
+      "golden_answer": "No, a person who gives general comments in good faith regarding trends in the financial or securities market without specifying any particular securities or investment product does not require registration."
+    },
+    {
+      "query": "What is the effective date of the International Financial Services Centres Authority (Banking) Regulations, 2020?",
+      "category": "Direct Regulation",
+      "target_node_id": "0ba525fd-d03a-4b14-a104-fcca6576806a",
+      "latency_sec": 4166.229965958999,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.5,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The regulations came into effect on July 6, 2021.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Effective Date | July 6, 2021 | Section 1 (Preamble) |\n\n**Plain Language:** The International Financial Services Centre Authority (Banking) Regulations, 2020 took effect on July 6, 2021. This is stated in the Preamble of the regulations.\n\n**Quote:** \"On and from the commencement of these regulations, the provisions of the Reserve Bank Circular No. RBI/2014-2015/533 DOR.IBD.BC.14570/23.13.04/2014-15 dated 1 April 2015, shall no longer be applicable.\"",
+      "golden_answer": "The International Financial Services Centres Authority (Banking) Regulations, 2020 came into effect on November 20, 2020."
+    },
+    {
+      "query": "What constitutes a research entity under the Capital Market Intermediaries Regulations, 2025?",
+      "category": "Direct Regulation",
+      "target_node_id": "6f9a4bbd-bda6-4f67-a8f8-373584b3671a",
+      "latency_sec": 4211.526344750004,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A research entity is an investment adviser or credit rating agency registered with the Authority that issues, circulates, or distributes a research report to the public.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Definition of Research Entity | Registered Investment Adviser/Credit Rating Agency | Section (a) |\n\n**Plain Language:** A research entity is an investment adviser or credit rating agency that has been approved by the Authority to provide research reports. These entities must follow strict guidelines when issuing, circulating, or distributing their reports.\n\n**Source Quote:** \"A research entity shall be an investment adviser or credit rating agency registered with the Authority which issues, circulates or distribute a research report to public.\"",
+      "golden_answer": "A person registered as a research entity with the Authority who is responsible for publishing or providing research reports on securities."
+    },
+    {
+      "query": "What happens to rights and liabilities acquired under the repealed Circulars after they are officially repealed?",
+      "category": "Compliance Check",
+      "target_node_id": "45bc6fdd-3a4d-4e0f-a61e-b0be9d15e4b9",
+      "latency_sec": 4307.640635375006,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** All rights, privileges, obligations, and liabilities remain unaffected as if the regulations had never been repealed.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Rights & Liabilities | Remain unaffected after repeal | Section (c) of International Financial Services Centre Authority (Capital Market Intermediaires) Regula-tions, 2025 > PREAMBLE Block > null > CLAUSE Block [ID: b31805ca-0bf5-44e2-9c5b-8403b8cd091b] |\n| Rights & Liabilities | Remain unaffected after repeal | Section (b) of International Financial Services Centre Authority (Global In-House Centres) Regula-tions, 2025 > PREAMBLE Block > CLAUSE Block [ID: 157a7ddd-6275-4bfe-bd78-62429698932e] |\n| TechFin Repeal | Provisions related to TechFin mentioned under clause 7 and Annexure-I of the Circular dated April 27, 2022, title-d as 'Framework for FinTech Entity in the International Financial Services Centre (IFSCs)', will stand repealed after twenty-four months | Section 3(1) of Tech Financing Regulations, 2023 > PREAMBLE Block > null > CLAUSE Block [ID: 82f837ec-a988-4fd5-b7ab-79b38d4ddbe7] |\n| Capital Market Intermediaires Regulations, 2025 | Any reference to the repealed regulations in other regulations, guidelines or circulars issued by the Authority shall be deemed to have the reference to the corresponding provisions of these regulations | Section (1) of International Financial Services Centre Authority (Capital Market Intermedia-ries) Regula-tions, 2025 > PREAMBLE Block > null > CLAUSE Block [ID: 37ef4910-f7ea-4ac9-8741-328fab0b65dc] |\n| Global In-House Centre Regulations, 2025 | Notwithstanding such repeal, all rights, privileges, obligations and liabilities remain unaffected as if the regulations had never been repealed | Section (null) of International Financial Services Centre Authority (Global In-House Centres) Regula-tions, 2025 > PREAMBLE Block [ID: 6d890f93-55b1-4e91-bd03-d6a8f68e3559] |\n\n**Plain Language:** When a regulation is officially repealed, all rights and liabilities acquired under the previous regulations remain unaffected. This means that they continue to exist as if the old regulations had never been replaced.\n\n**Source Quote:** \"For any reference to the repealed regulations in other regulations, guidelines or circulars issued by the Authority, it shall be deemed to have the reference to the corresponding provisions of these regulations.\"",
+      "golden_answer": "Any right, privilege, obligation or liability acquired, accrued or incurred under the repealed Circulars shall remain unaffected as if the repealed Circulars have never been repealed."
+    },
+    {
+      "query": "Can a registered distributor change or delete information from a client's application form without permission?",
+      "category": "Direct Regulation",
+      "target_node_id": "fb4fc550-d105-40a6-80eb-419ec38f95d3",
+      "latency_sec": 4365.627498333,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** No, a registered distributor cannot tamper with a client's application form.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Tampering | Not allowed | Section 10 | \"A registered distributor shall absaint from tampering with the application form and other documents submitted by the client.\" |\n\n**Plain Language:** A registered distributor must not change or delete any information in a client's application form. This includes inserting, deleting, or changing any details provided by the client.\n\n**Source Quote:** \"A registered distributor shall absaint from tampering with the application form and other documents submitted by the client.\"",
+      "golden_answer": "No, a registered distributor shall abstain from tampering with the application form and other documents submitted by the client."
+    },
+    {
+      "query": "What is the deadline for an existing ancillary service provider or TechFin to obtain a certificate of registration?",
+      "category": "Direct Regulation",
+      "target_node_id": "36292364-02d8-4f3e-8596-4ed69ecde786",
+      "latency_sec": 4412.093249708996,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.0,
+        "context_recall": 0.5,
+        "answer_relevance": 0.8,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** An existing Ancillary Service Provider or TechFin entity must continue to be regulated and governed by the existing respective frameworks until it receives a certificate of registration.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Registration Requirement | Must obtain certificate of registration before starting operations in IFSC | Section 1 |\n\n**Plain Language:** An entity providing either TechFin or Ancillary Services must continue to follow the existing regulations until it receives a certificate of registration.\n\n**Quote:** \"Provided also that such Ancillary Service Provider and TechFin entity shall continue to be regulat ed and governed by the existing respective frameworks, till the time it is granted a certificate of registration under these regulations.\"",
+      "golden_answer": "A period of twelve (12) months from the date of commencement of these regulations."
+    },
+    {
+      "query": "What types of services are covered under the definition of availing services in section (B) of the International Financial Services Centres Authority Act, 2019?",
+      "category": "Cross-Reference",
+      "target_node_id": "a1efccd7-47c6-4fd9-9fc1-be11ec151fa8",
+      "latency_sec": 4449.326440791003,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.5,
+        "context_recall": 1.0,
+        "answer_relevance": 0.8,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The regulation covers financial services.\n\n| Rule | Detail | Source | Quote |\n|---|---|---|---|\n| Definition of Financial Service | (e) \"financial service\" means- | Section (B) | Section (B) |\n\n**Plain Language:** Under the International Financial Services Centre Authority Act, 2019, a financial service is defined as any type of financial activity or product. This includes insurance, banking, and other financial services.\n\n**Source Quote:** \"financial service\" means-",
+      "golden_answer": "services in sub-clauses (i) to (xi)"
+    },
+    {
+      "query": "What is the effective date for the qualification and experience requirements for Capital Market Intermediaries (CMIs) appointments?",
+      "category": "Amendment/Temporal",
+      "target_node_id": "fb9207f4-32a8-4386-bffd-d594bd856c28",
+      "latency_sec": 4496.216153583999,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 1.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The effective date is October 01, 2025 or any other date specified by the Authority.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Effective Date | October 01, 2025 or any other date specified by the Authority | Section [insert section number] |\n\n**Plain Language:** Capital Market Intermediaries (CMIs) must meet certain educational qualification and experience requirements for their principal officer and compliance officer appointments. These requirements took effect on October 01, 2025 or any other date specified by the Authority.\n\n**Quote:** \"Provided that all the capital market intermediaires already registered with the Authority under these regulations as on the date of these regulations coming into force shall ensure that their principal officer and compliance officer meet the above requirements on or before October 01, 2025 or any other date as may be specified by the Authority.\"",
+      "golden_answer": "after these regulations come into force"
+    },
+    {
+      "query": "What assistance must CMI give to the inspecting authority during an inspection?",
+      "category": "Direct Regulation",
+      "target_node_id": "20ec137f-4cd0-4a13-b505-ca57e1d27b53",
+      "latency_sec": 4540.444814124996,
+      "retrieval": {
+        "recall_at_5": 1.0,
+        "recall_at_10": 1.0,
+        "mrr": 0.3333333333333333,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 1.0,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** A CMI must provide all assistance required by the inspecting authority, including access to premises and records.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Assistance Required | All assistance as may be required | Section (2) |\n| Access to Premises | Reasonable access to premises | Section (2) |\n| Records and Documents | Provide copies of relevant records or documents | Section (2) |\n\n**Plain Language:** A CMI must cooperate with the inspection authority by providing all necessary assistance, allowing access to its premises, and giving copies of relevant records or documents.\n\n**Quote:** \"The CMI shall give all assistance as may be required in connection with the inspection.\"",
+      "golden_answer": "The CMI shall give all assistance as may be required in connection with the inspection."
+    },
+    {
+      "query": "What is the effective date for the vacancy of offices by the Chairperson and other Members under this Act?",
+      "category": "Cross-Reference",
+      "target_node_id": "2cb20a5a-6834-4bd4-9529-4112a89b0da2",
+      "latency_sec": 4584.062078333001,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.08333333333333333,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The Chairperson and other Members' offices are vacated on the date of supersession.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Vacation Date | On or before expiration of period of supersession specified in notification under sub-section (1) | Section (3) |\n\n**Plain Language:** The Chairperson and other Members' offices are vacated when the Authority is reconstructed by a fresh appointment. This happens on or before the date specified in the Central Government's notification.\n\n**Quote:** \"On or before the expiration of the period of supersession specified in the notifica-tion issued under sub-section (1), the Central Government shall reconstitute the Authority by a fresh appointment of its Chairperson and other Members.\"",
+      "golden_answer": "as from the date of supersession"
+    },
+    {
+      "query": "What are the powers exercisable by the Authority under the International Financial Services Centres Authority Act, 2019?",
+      "category": "Glossary Definition",
+      "target_node_id": "88b1be5a-1df3-4c3a-a0f5-6292c161f27b",
+      "latency_sec": 4626.368166542001,
+      "retrieval": {
+        "recall_at_5": 0.0,
+        "recall_at_10": 0.0,
+        "mrr": 0.0,
+        "candidates_returned": 20
+      },
+      "generation": {
+        "faithfulness": 0.8,
+        "context_recall": 1.0,
+        "answer_relevance": 0.9,
+        "citation_precision": 1.0
+      },
+      "generated_answer": "**Short Answer:** The Authority has powers under Section 28 of the Act, which can be delegated to officers.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Power Exercise | By sub-section (1) of Sec. 28, read with sub-section (1) of Sec. 12 | Section 28(1), Act of 2019 |\n\n**Plain Language:** The Authority has the power to make regulations under Section 28 of the Act, which can be delegated to officers.\n\n**Source Quote:** \"The powers exercisa ble by the Authority under these regulations shall also be exercisable by any officer of the Authority to whom such powers are delegate d by the Authority.\"",
+      "golden_answer": "the powers exercisable by the Authority under this Act,"
+    }
+  ]
+}

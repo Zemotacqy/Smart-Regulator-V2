@@ -46,7 +46,7 @@ async def run_hybrid_search(ctx: QueryPipelineContext) -> QueryPipelineContext:
 {cte_name} AS (
   SELECT n.node_id, ROW_NUMBER() OVER (ORDER BY n.embedding <=> ${param_idx}::vector) as rank
   FROM ast_nodes n JOIN documents d ON n.doc_id = d.doc_id
-  WHERE d.is_active = TRUE AND n.embedding <=> ${param_idx}::vector IS NOT NULL {doc_filter_condition}
+  WHERE d.is_active = TRUE AND n.embedding IS NOT NULL {doc_filter_condition}
   LIMIT 20
 )""")
             union_clauses.append(f"SELECT node_id, rank FROM {cte_name}")

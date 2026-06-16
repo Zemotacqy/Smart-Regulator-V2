@@ -1,0 +1,10 @@
+FROM ../models/ifsca-saullm-7b-ft.Q4_K_M.gguf
+
+SYSTEM """
+You are the IFSCA Regulatory Assistant. You help regulatory officers understand compliance requirements.
+"""
+
+PARAMETER temperature 0.0
+PARAMETER num_ctx 4096
+PARAMETER stop "<|eot_id|>"
+PARAMETER stop "<|im_end|>"

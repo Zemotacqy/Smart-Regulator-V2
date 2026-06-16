@@ -1,4 +1,5 @@
 import os
+import asyncio
 import time
 from uuid import UUID, uuid4
 from datetime import date
@@ -94,10 +95,12 @@ async def ingest_document(pdf_path: str, dedup: bool = True) -> UUID:
     logger.info("ingest_document_started", file_name=file_name, path=pdf_path, file_hash=file_hash)
     start_time = time.monotonic()
     
-    # 1. Parse PDF using Docling
+    # 1. Parse PDF using Docling — run in thread pool to avoid blocking the event loop
     try:
-        converter = DocumentConverter()
-        result = converter.convert(pdf_path)
+        def _parse_pdf():
+            converter = DocumentConverter()
+            return converter.convert(pdf_path)
+        result = await asyncio.to_thread(_parse_pdf)
         doc = result.document
     except Exception as e:
         logger.error("docling_parsing_failed", file_name=file_name, error=str(e))

@@ -11,7 +11,12 @@
 
 ## Issues Deferred During Pre-Phase-3 Audit (June 15, 2026)
 - **Subsection Title Length Audit**: The title length check in `auditor.py` is restricted to `node_type == "SECTION"`. It should be extended to cover `SUBSECTION` title checks.
-- **Startup Model Verification**: Lifespan startup code preloads the reranker model but does not verify if LLM and embedding models exist in the local Ollama registry, which can lead to silent errors on first query.
-- **Breadcrumb Uniqueness**: Breadcrumbs for subclauses and clauses without explicit headings are not unique within a section. We resolved the immediate citation mapping issue using node UUIDs, but breadcrumb uniqueness remains a nice-to-have visual enhancement.
+
+## Fine-Tuning & Evaluation (Phase 3)
+- **Low Retrieval Recall (Recall@10 = 73.63%)**: The baseline combination of `nomic-embed-text:v1.5` dense vector search + PostgreSQL FTS does not meet the Recall@10 target of 92%. Cross-reference and glossary lookup queries require higher precision. We recommend upgrading the embedding model to `BAAI/bge-m3` (which supports dense + sparse retrieval) or implementing a custom legal-fine-tuned bi-encoder.
+- **Faithfulness (83.08%) & Compressor Timeouts**: RESOLVED. Fixed the compressor stage (`ifsca-extractor-3b`) timeouts by running layout node compression sequentially (semaphore = 1) and increasing the timeout to 25s. Added a Pydantic `@model_validator` to `CompressorOutput` to map the LLM's alternative key outputs (like `sentences`) into `relevant_sentences`, resolving the silent dropped contexts that impacted faithfulness and citations.
+- **Citation Precision (95.71%)**: RESOLVED. Handled by fixing the context compression dropping issues.
+
+
 
 

@@ -43,6 +43,9 @@ def audit_ast_nodes(
         logger.warning("severe_character_loss_detected", loss_ratio=char_loss_ratio)
         
     # 2. Individual node checks
+    # Pre-build a set of all node_ids for O(1) parent validation (Rule C)
+    node_id_set = {n.node_id for n in nodes}
+
     for idx, node in enumerate(nodes):
         # Skip root node
         if node.level == 1:
@@ -61,8 +64,7 @@ def audit_ast_nodes(
             
         # Rule C: Parent UUID must refer to a node in the list
         if node.parent_id:
-            parent_exists = any(n.node_id == node.parent_id for n in nodes)
-            if not parent_exists:
+            if node.parent_id not in node_id_set:
                 node.needs_repair = True
                 logger.error("audit_failed_orphan_node", breadcrumb=node.breadcrumb)
                 

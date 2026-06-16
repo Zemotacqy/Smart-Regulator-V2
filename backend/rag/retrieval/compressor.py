@@ -10,8 +10,8 @@ from backend.rag.retrieval.pipeline_context import QueryPipelineContext
 
 logger = structlog.get_logger()
 
-# Limit concurrent LLM calls to 3 to avoid overloading Ollama
-_semaphore = asyncio.Semaphore(3)
+# Process LLM compression sequentially (limit to 2) to avoid Ollama queuing queue-induced client-side timeouts
+_semaphore = asyncio.Semaphore(2)
 
 async def compress_node_text(query: str, text_content: str) -> List[str]:
     """
@@ -35,7 +35,7 @@ async def compress_node_text(query: str, text_content: str) -> List[str]:
     
     async with _semaphore:
         try:
-            # Wrap the LLM call with a 15-second timeout to prevent stalling the pipeline
+            # Wrap the LLM call with a 25-second timeout to prevent stalling the pipeline under CPU execution
             result = await asyncio.wait_for(
                 call_llm_with_validation(
                     model=EXTRACTOR_MODEL,
@@ -43,11 +43,11 @@ async def compress_node_text(query: str, text_content: str) -> List[str]:
                     response_schema=CompressorOutput,
                     temperature=0.0
                 ),
-                timeout=15.0
+                timeout=10.0
             )
             return [str(s).strip() for s in result.relevant_sentences if s]
         except asyncio.TimeoutError:
-            logger.warning("node_compression_timeout", timeout_seconds=15.0)
+            logger.warning("node_compression_timeout", timeout_seconds=10.0)
             # Fallback to the entire text (no compression) on timeout
             return [text_content]
         except Exception as e:

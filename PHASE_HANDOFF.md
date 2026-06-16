@@ -1,82 +1,39 @@
-# PHASE HANDOFF: PHASE 2 Retrieval Pipeline & API
+# PHASE HANDOFF: PHASE 3 Fine-Tuning & Evaluation
 
-This document outlines the completion status of Phase 2 (Retrieval Pipeline & API) of the Smart Regulator RAG System, detailing the components built, environment configurations, and setup state for the upcoming Phase 3 (Fine-Tuning & Evaluation).
+This document outlines the final completion status of Phase 3 (Fine-Tuning & Evaluation) of the Smart Regulator RAG System, detailing components built, environment configurations, final evaluation results, resolved items, and deferred items.
 
 ---
 
-## 1. PHASE 2 COMPLETION STATUS
+## 1. PHASE 3 COMPLETION STATUS
 
-- **FastAPI Routing Layer**: Implemented a complete asynchronous FastAPI server routing system:
-  - `/api/qa` (GET): Server-Sent Events (SSE) streaming answer generation, timing statistics, and early citation binding.
-  - `/api/compliance` (POST): Extracting text from uploaded PDFs, chunking, retrieving relevant regulation contexts, performing compliance audits, and streaming results as SSE.
-  - `/api/admin/ingest` (POST): Triggering background document ingestion tasks.
-  - `/api/admin/ingest/logs` (GET): SSE logs streaming (supports `follow=false` query parameter to fetch the historical log buffer).
-  - `/api/admin/documents` (GET): Listing all documents.
-  - `/api/admin/stats` (GET): Database corpus stats.
-- **Observability Tracing CLI**: Developed `scripts/debug_pipeline.py` which executes the retrieval pipeline and outputs tracing timing/quality statistics per retrieval stage.
-- **Verification & Testing**:
-  - Created [tests/test_api.py](file:///Users/manish/Downloads/repos/smart-regulator-v2/tests/test_api.py) containing integration tests for all FastAPI endpoints.
-  - Resolved event loop mismatch issues and stream buffering/iterator hangs in test clients.
-  - Verified that all **9 tests** (Ingestion, Retrieval, and API routes) pass successfully together.
+- **Model Quantization & GGUF Conversion**: Updated `scripts/convert_to_gguf.sh` to resolve parameter binding issues (`--adapter-path`) and dynamically clones `llama.cpp` to resolve the `ModuleNotFoundError: No module named 'conversion'` error. Fused SaulLM adapters with the base model, converted to GGUF, and quantized to `Q4_K_M` format.
+- **Ollama Deployment**: Successfully deployed and registered the fine-tuned model `ifsca-saullm-7b-ft:latest` in Ollama using `modelfiles/Modelfile.saullm`.
+- **RAG Pipeline & LLM-as-a-Judge Evaluation**: Ran the full 91-question evaluation runner (`tests/run_eval_judge.py`) using `mistral-nemo:12b` as the judge model.
+- **Compressor & Faithfulness Fixes**: Fixed the `ifsca-extractor-3b` timeouts by processing layout node compression sequentially (semaphore = 1) with an increased 25-second limit. Resolved alternative JSON schema generation issues (where `sentences` was returned instead of `relevant_sentences`) by adding a Pydantic `@model_validator` to `CompressorOutput` to map key variants properly. This successfully restored dropped contexts, improving faithfulness and citation accuracy.
 
 ---
 
 ## 2. FILES CREATED OR MODIFIED
 
-- `backend/main.py` — FastAPI entry point, lifespan, CORS, and reranker pre-loading.
-- `backend/api/__init__.py` — API package indicator.
-- `backend/api/qa.py` — Q&A retrieval-generation streaming SSE endpoint.
-- `backend/api/compliance.py` — Compliance check streaming SSE endpoint.
-- `backend/api/admin.py` — Document management, stats, and log streaming endpoints.
-- `backend/database/queries.py` — Added `get_all_documents` and `get_corpus_stats` helper queries.
-- `backend/rag/extraction/schemas.py` — Added `ComplianceAuditResult` validation schema.
-- `scripts/debug_pipeline.py` — CLI tracing tool.
-- `tests/test_api.py` — API integration test suite.
-- `PHASE_HANDOFF.md` — Complete handoff summary documentation for Phase 2.
+- `/Users/manish/Downloads/repos/smart-regulator-v2/scripts/convert_to_gguf.sh` — Fixed parameters and added automated llama.cpp cloning to prevent module imports errors.
+- `/Users/manish/Downloads/repos/smart-regulator-v2/AGENT_NOTES.md` — Updated with the final evaluation scores, resolved compressor timeouts details, and dense-retrieval limitations.
+- `/Users/manish/Downloads/repos/smart-regulator-v2/PHASE_HANDOFF.md` — Documented Phase 3 completion status and handoff notes.
 
 ---
 
 ## 3. ENVIRONMENT STATE
 
-- **PostgreSQL**: Active local server listening on port `5432` with database `smart_regulator_v2` seeded with `IFSCA ACT.pdf`.
-- **Ollama Service**: Background server listening on port `11434` with registered models:
-  - `nomic-embed-text:v1.5` (Embedding layer)
-  - `ifsca-classifier-3b` (Classifier SLM)
-  - `ifsca-boundary-3b` (Boundary Detector SLM)
-  - `ifsca-extractor-3b` (Relational Extractor SLM)
-  - `ifsca-expander-3b` (Query Expander SLM)
-  - `llama3.2:3b` (Generator fallback)
-- **Environment Variables (`.env` in repo root)**:
-  - `DATABASE_URL=postgresql://manish@localhost/smart_regulator_v2`
-  - `OLLAMA_HOST=http://localhost:11434`
+- **PostgreSQL**: Local server active on `5432` with `smart_regulator_v2` database containing 1,752 AST nodes.
+- **Ollama Service**: Local server active on `11434` with the fine-tuned model `ifsca-saullm-7b-ft:latest` registered and running.
+- **Models Directory**:
+  - LoRA adapters: `models/ifsca-saullm-7b-ft-adapters/`
+  - Base model: `models/Saul-7B-Instruct-v1-4bit/`
+  - Quantized model: `models/ifsca-saullm-7b-ft.Q4_K_M.gguf`
 
 ---
 
 ## 4. KNOWN ISSUES OR DEFERRED ITEMS
 
-The following items are logged in `AGENT_NOTES.md`:
-
-- **Cross-document Reference Parsing**: Reference resolution is currently scoped strictly within the same document context. Global/cross-document link resolution is deferred.
-- **Dense/Sparse Embedding Upgrades**: Currently using `nomic-embed-text:v1.5` as a zero-overhead local baseline. Evaluating upgrading to `BAAI/bge-m3` in Phase 3.
-- **Visual Table Structure Parsing**: Table content is indexed as raw text. Table structure markdown representation parsing is deferred.
-- **Index on glossary(source_node_id)**: Add an index on `glossary(source_node_id)` to optimize glossary term queries by source node and support fast cascade deletions (deferred to future schema migration).
-
----
-
-## 5. PHASE 3 ENTRY CONDITIONS
-
-Before Phase 3 can begin:
-
-1. Phase 2 Human Gate must be officially approved.
-2. Ollama and MLX environment must be configured and running locally on Apple Silicon.
-
----
-
-## 6. PRE-PHASE-3 AUDIT COMPLETION (JUNE 15, 2026)
-
-A comprehensive Pre-Phase-3 codebase and database audit was completed. The following 4 approved non-destructive fixes were successfully applied:
-
-- **`[MAJOR-01]` (Character Loss baseline)**: Updated ingestion orchestrator to compute character loss strictly using English blocks, preventing false positive `needs_repair = TRUE` flags in bilingual documents.
-- **`[MAJOR-02]` (Scoping relative references)**: Upgraded the reference resolver to scope relative section/clause matching to the source node's parent section descendants tree before falling back document-wide.
-- **`[MAJOR-03]` (Compliance query size)**: Fixed the `/api/compliance` routing to pass the short chunk prefix to query expansion and hybrid search, only setting `original_query` to the full text block before reranking and compression.
-- **`[MINOR-02]` (Citation matching precision)**: Embedded the exact node UUID into compressed context metadata blocks, ensuring the generator maps citations precisely rather than matching non-unique breadcrumbs.
+- **Low Dense Retrieval Recall (Recall@10 = 73.63%)**: The baseline combination of `nomic-embed-text:v1.5` dense vector search and PostgreSQL FTS BM25 does not reach the target Recall@10 of 92%. Legal cross-reference and glossary lookup queries require higher-precision dense/sparse matching. Recommend upgrading to `BAAI/bge-m3` or a legal-fine-tuned bi-encoder model.
+- **Subsection Title Length Audit**: The title length checking in `auditor.py` is currently only active for `node_type == "SECTION"`. This check should be extended to cover `SUBSECTION` type nodes.
+- **Breadcrumb Uniqueness**: Breadcrumbs for subclauses and clauses that lack explicit headings are not guaranteed to be unique within a section. Node UUIDs are currently used to guarantee citation mapping precision, but unique breadcrumbs remain a visual enhancement item.

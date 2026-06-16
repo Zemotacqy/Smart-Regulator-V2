@@ -1,0 +1,639 @@
+[
+  {
+    "query": "What are the minimum educational qualifications required for a capital market intermediary to be appointed?",
+    "golden_answer": "A professional qualification or post-graduate degree or post graduate diploma (minimum one year in duration) in finance, law, accountancy, business management, commerce, economics, capital market, banking, insurance, actuarial science, fintech, science, technology, engineering or mathematics from a university or an institution recognised by the Central Government or any State Government or a foreign university or institution or association or a CFA or a FRM.",
+    "target_node_id": "0d25e376-2dc7-4d04-92c9-ab85b25afa0e",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Appointment of Principal Officer, Compliance Officer and other human resources > (2) A capital market intermediary shall... > CLAUSE Block"
+  },
+  {
+    "query": "What is the purpose of the evaluation criteria for a FinTech Sandbox Entity under the IFSCA (FinTech) Framework for Limited Use Authorisation?",
+    "golden_answer": "To assess the suitability of a FinTech Sandbox Entity for limited use authorisation.",
+    "target_node_id": "52550964-9241-49fd-b7a5-14ea93b56214",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > Evaluation Criteria -> IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > Evaluation Criteria"
+  },
+  {
+    "query": "What types of financial services can tech financing companies aid or assist in arranging?",
+    "golden_answer": "financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act",
+    "target_node_id": "e2d3a32c-9ca7-42e4-9024-1f049b30b855",
+    "category": "Compliance Check",
+    "breadcrumb": "Tech Financing Regulations, 2023 > Tech Financing Regulations, 2023 > PREAMBLE Block > CLAUSE Block"
+  },
+  {
+    "query": "What are the Boundary Conditions that a FinTech Sandbox Entity must operate within during the Testing Stage?",
+    "golden_answer": "Boundary Conditions",
+    "target_node_id": "62109a2a-36d9-432d-a13c-d7c3cf3be5cb",
+    "category": "Glossary Definition",
+    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > PREAMBLE Block > Testing Stage > Boundary Conditions"
+  },
+  {
+    "query": "What is the currency of operation for tech financing under the Tech Financing Regulations, 2023?",
+    "golden_answer": "The currency of operation for tech financing under the Tech Financing Regulations, 2023, shall be the currency of the country in which the financial institution is established.",
+    "target_node_id": "df072078-cbd8-4d41-8657-ce858b08b058",
+    "category": "Cross-Reference",
+    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > Fourth Schedule > Currency of operations -> Tech Financing Regulations, 2023 > PREAMBLE Block > Fourth Schedule > Currency of operations"
+  },
+  {
+    "query": "What does it mean for an intermediary to furnish false or misleading information?",
+    "golden_answer": "An intermediary must provide accurate and truthful information to the Authority.",
+    "target_node_id": "93c474bd-d809-4900-b673-51ab35118aa5",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > MISCELLANEOUS > Suspension, cancellation of registration or any other actions > (1) > CLAUSE Block > information"
+  },
+  {
+    "query": "What is the effective date for the qualification and experience requirements for Capital Market Intermediaries (CMIs) appointments?",
+    "golden_answer": "after these regulations come into force",
+    "target_node_id": "fb9207f4-32a8-4386-bffd-d594bd856c28",
+    "category": "Amendment/Temporal",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > Preamble > (4)"
+  },
+  {
+    "query": "What happens to the rules for registering a capital market intermediary when it comes time to renew its registration?",
+    "golden_answer": "The provisions of these regulations, as applicable to the grant of registration shall also apply to an application for renewal of registration of a capital market intermediary, wherever applicable.",
+    "target_node_id": "e5b29354-eece-4cbb-ad67-1558467d72d8",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > CLAUSE Block"
+  },
+  {
+    "query": "What is considered an international financial services centre product or instrument under the International Financial Services Centres Authority Act, 2019?",
+    "golden_answer": "any other product or instrument that may be notified by the Central Government from time to time.",
+    "target_node_id": "0205f68c-853d-481e-8120-b56c0858f842",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > This Act > DEFINITION Block > (vi) -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > This Act > DEFINITION Block > (vi)"
+  },
+  {
+    "query": "What types of facility management services are prohibited for TechFin and Ancillary Service Providers under these regulations?",
+    "golden_answer": "building maintenance, security services, housekeeping services, civil, mechanical, electrical and plumbing maintenance services or any other related manpower outsourced services",
+    "target_node_id": "6790db7e-a42e-4894-9386-1efd4c90b284",
+    "category": "Compliance Check",
+    "breadcrumb": "Tech Financing Regulations, 2023 > Tech Financing Regulations, 2023 > PREAMBLE Block > List of services not permitted to be provided by TechFin and Ancillary Service Provider under these regulations: > CLAUSE Block"
+  },
+  {
+    "query": "What entity is responsible for exercising the powers under section (b) of the Reserve Bank of India Act, 1934?",
+    "golden_answer": "The International Financial Services Centres Authority established under sub-section (1) of section 4 of the International Financial Services Centres Authority Act, 2019.",
+    "target_node_id": "84ca8a45-8944-4fc2-ab93-552774ba4160",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > AMENDMENT TO THE RESERVE BANK OF INDIA ACT, 1934 (2 OF 1934) > Notwithstanding anything contained in any other law for the time being in force > (b)"
+  },
+  {
+    "query": "What are global mobility services (Immigration support services) for students and employees of foreign countries?",
+    "golden_answer": "Global mobility services (Immigration support services) for students and employees of foreign countries intending to study and work at IFSC respectively.",
+    "target_node_id": "9e4ffd21-6df3-48c4-b5da-b07043375512",
+    "category": "Glossary Definition",
+    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > Broking services for leasing activities > Global mobility services (Immigration support services) for students and employees of foreign countries intending to study and work at IFSC respectively; > Global mobility services (Immigration support services)"
+  },
+  {
+    "query": "What is the trigger for updating a capital market intermediary's business continuity plan?",
+    "golden_answer": "A material change to operations, structure, business, or location.",
+    "target_node_id": "9f680d8c-c6a6-489e-8b8e-6afcddc1bcf8",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Business Continuity Plan > (1) > (2) -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Business Continuity Plan"
+  },
+  {
+    "query": "Can a TechFin and Ancillary Service Provider set up an office in the IFSC or Overseas for a Resident?",
+    "golden_answer": "Yes, they may also provide services to a Resident for the limited purpose of setting up their office in the IFSC or Overseas.",
+    "target_node_id": "455db3fd-b8c0-4968-9610-9217f8b43786",
+    "category": "Compliance Check",
+    "breadcrumb": "Tech Financing Regulations, 2023 > Tech Financing Regulations, 2023 > PREAMBLE Block"
+  },
+  {
+    "query": "Can a suit be filed against the Central Government or the Authority or its Members, officers or other employees for something they did in bad faith?",
+    "golden_answer": "No",
+    "target_node_id": "bf16d2bc-b678-405a-8c60-61c51ed446c6",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block"
+  },
+  {
+    "query": "What is the requirement for a capital market intermediary (CMI) to disclose its possible conflicts of interest?",
+    "golden_answer": "A CMI shall make adequate disclosure of its possible conflict of interest and duties.",
+    "target_node_id": "523d495e-e684-4cd1-a284-d3a2ba21052a",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Code of Conduct - All capital market intermediaries > 8. A CMI shall maintain confidentiality with respect to the information about its clients... > CLAUSE Block > conflict of interest"
+  },
+  {
+    "query": "What constitutes a research entity under the Capital Market Intermediaries Regulations, 2025?",
+    "golden_answer": "A person registered as a research entity with the Authority who is responsible for publishing or providing research reports on securities.",
+    "target_node_id": "6f9a4bbd-bda6-4f67-a8f8-373584b3671a",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > DEFINITION Block"
+  },
+  {
+    "query": "What is required for an applicant to be considered as a FinTech Sandbox Entity under the IFSCA (FinTech) Framework for Limited Use Authorisation?",
+    "golden_answer": "An applicant must meet certain criteria, including being a fintech company or startup that has not yet reached profitability, and demonstrating potential for growth and innovation.",
+    "target_node_id": "a4f81c3b-0967-41f4-94a4-6bd825ef19fe",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > Profile of the Applicant -> IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > Profile of the Applicant"
+  },
+  {
+    "query": "What is the timeframe within which an application under sub-regulation (2) must be processed after receiving it?",
+    "golden_answer": "The application made under sub-regulation (2), complete in all respects, shall be processed within thirty (30) days from the date of receipt of the application.",
+    "target_node_id": "2c0ec945-4e19-4faf-8450-82efd0929375",
+    "category": "Compliance Check",
+    "breadcrumb": "Tech Financing Regulations, 2023 > Tech Financing Regulations, 2023 > PREAMBLE Block > sub-regulation (1) > SUBCLAUSE Block"
+  },
+  {
+    "query": "Can the Authority form committees of its members and delegate power to them?",
+    "golden_answer": "Yes, the Authority may form committees of its members and delegate to them the powers and functions of the Authority.",
+    "target_node_id": "10c12309-e097-4f46-966a-bb69d79f5132",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > CLAUSE Block"
+  },
+  {
+    "query": "What is the purpose of an IFSCA FinTech Innovation Sandbox?",
+    "golden_answer": "a testing environment where a FinTech Sandbox Entity can develop and/or test its innovative idea(s)/product(s)/solution(s) in isolation from the live market",
+    "target_node_id": "73afaf0d-509c-44e9-b9f4-b00d7a6181be",
+    "category": "Glossary Definition",
+    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > PREAMBLE Block > DEFINITION Block > FinTech Sandbox Entity"
+  },
+  {
+    "query": "What is the process for disputing a decision made by a capital market intermediary in the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025?",
+    "golden_answer": "A person who is dissatisfied with any decision of a registered capital market intermediary may make a written complaint to the Authority.",
+    "target_node_id": "e639e83d-6b97-484d-a5f4-f5878d6e0ed8",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Dispute Resolution -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Dispute Resolution"
+  },
+  {
+    "query": "What kind of infrastructure must a registered distributor maintain to support its clients and regulated financial entities?",
+    "golden_answer": "necessary infrastructure",
+    "target_node_id": "09d46994-c5e6-44b0-841e-abc88b2c31f1",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Distributors > 14."
+  },
+  {
+    "query": "What happens to rights and liabilities acquired under the repealed Circulars after they are officially repealed?",
+    "golden_answer": "Any right, privilege, obligation or liability acquired, accrued or incurred under the repealed Circulars shall remain unaffected as if the repealed Circulars have never been repealed.",
+    "target_node_id": "45bc6fdd-3a4d-4e0f-a61e-b0be9d15e4b9",
+    "category": "Compliance Check",
+    "breadcrumb": "Tech Financing Regulations, 2023 > Tech Financing Regulations, 2023 > PREAMBLE Block"
+  },
+  {
+    "query": "What is the minimum net worth requirement for an entity seeking registration as a capital market intermediary?",
+    "golden_answer": "An entity must comply with the net worth requirements specified in Schedule I of these regulations, which shall be maintained at all times.",
+    "target_node_id": "5492ca7a-1ed4-4792-b00f-9242c3372434",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Registration with the Authority > Net worth requirements > (1)"
+  },
+  {
+    "query": "What does a Group entity include?",
+    "golden_answer": "Any holding company, subsidiaries, branches or any other entity, in whatever legal form, through which the Parent bank undertakes its operations or permitted activities.",
+    "target_node_id": "a0d50cd7-a0da-461a-a5b7-caf1097cccb1",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > DEFINITION Block > IFSC Banking Unit"
+  },
+  {
+    "query": "How long does the Authority take to process an application for relaxation of strict enforcement of regulations?",
+    "golden_answer": "The Authority shall process such application within thirty days of the date of receipt of the application complete in all respects.",
+    "target_node_id": "98fe6301-b52f-4785-ac24-efd7b625e862",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Power to relax strict enforcement of the regulations > (1) > CLAUSE Block"
+  },
+  {
+    "query": "What happens to an individual if they are restrained, prohibited or barred from accessing or dealing in financial products or services due to regulatory authority action?",
+    "golden_answer": "An individual is not allowed to access or deal in financial products or services.",
+    "target_node_id": "c6568b01-d944-4aed-9b82-c85635148249",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Fit and proper requirements > (1) > CLAUSE Block -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > (vii)"
+  },
+  {
+    "query": "What does it mean when words or expressions used in this Framework are defined in applicable Laws?",
+    "golden_answer": "Words and expressions used and not defined in this Framework but defined in the applicable Laws, and in particular, under the Act or any rules or regulations made thereunder shall have the same meanings respectively assigned to them in those Laws.",
+    "target_node_id": "b91dbcf9-a272-47d9-8707-8438bf244de4",
+    "category": "Compliance Check",
+    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > PREAMBLE Block > DEFINITION Block > CLAUSE Block > DEFINITION Block"
+  },
+  {
+    "query": "What is the timeframe for notifying the Authority if a TechFin or Ancillary Service Provider's promoter or significant beneficial owner has a home jurisdiction identified as a High-Risk Jurisdiction by FATF?",
+    "golden_answer": "Within ten (10) business days from the date of publication by FATF.",
+    "target_node_id": "dc3c09ec-791a-4c8a-a090-8158bbfc8b54",
+    "category": "Direct Regulation",
+    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > Code of Conduct for the TechFin and Ancillary Service Provider > CLAUSE Block"
+  },
+  {
+    "query": "What is considered a regulated financial entity under the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025?",
+    "golden_answer": "An issuer or service provider set up in India, an IFSC or any Foreign Jurisdiction that is registered, authorised, licensed or regulated by its home jurisdiction for carrying out activities related to asset management, funds management, investment advisory, portfolio management or any other similar activity.",
+    "target_node_id": "53dc0ea7-39b9-44b9-910b-baf905cf3488",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > DEFINITION Block > regulated financial entity"
+  },
+  {
+    "query": "What is the effective date of the International Financial Services Centres Authority (Banking) Regulations, 2020?",
+    "golden_answer": "The International Financial Services Centres Authority (Banking) Regulations, 2020 came into effect on November 20, 2020.",
+    "target_node_id": "0ba525fd-d03a-4b14-a104-fcca6576806a",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block"
+  },
+  {
+    "query": "What is the source section that defines the list of permitted TechFin services?",
+    "golden_answer": "Source Section: [refer regulation 3(1)(xiii)]",
+    "target_node_id": "725d540b-c769-4cd0-9491-c45e1176c7c2",
+    "category": "Cross-Reference",
+    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > SECOND > [refer regulation 3(1)(xiii)] -> Tech Financing Regulations, 2023 > PREAMBLE Block > THE FIRST SCHEDULE > [refer regulation 3(1)(xiii)]"
+  },
+  {
+    "query": "What is the purpose of Single Window IT Systems (SWIT) in the context of the IFSCA Limited Use Authorisation as FinTech Sandbox Entity?",
+    "golden_answer": "to facilitate the processing of applications submitted by Applicants under this Framework",
+    "target_node_id": "5c99bacd-45fb-41f7-a065-73ac40c57de6",
+    "category": "Compliance Check",
+    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > PREAMBLE Block > DEFINITION Block > DEFINITION Block"
+  },
+  {
+    "query": "What happens to an application made to the Authority under the repealed regulations that is already being considered?",
+    "golden_answer": "It shall be deemed to have been made under the corresponding provisions of these regulations.",
+    "target_node_id": "353bfb7c-6d75-448e-aac9-9bf6503c3dd2",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > null > CLAUSE Block"
+  },
+  {
+    "query": "What is considered a non-resident under the Foreign Exchange Management Act, 1999?",
+    "golden_answer": "A person resident outside India as defined under the Foreign Exchange Management Act, 1999, including financial institutions in an International Financial Service Centre.",
+    "target_node_id": "ac17648e-5f0c-4241-8e64-2d54bf709c65",
+    "category": "Glossary Definition",
+    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > CLAUSE Block > DEFINITION Block > person resident outside India"
+  },
+  {
+    "query": "What is the purpose of recovering fines or penalties?",
+    "golden_answer": "The purpose of recovering fines or penalties is to enforce compliance with provisions of respective Acts specified in the First Schedule.",
+    "target_node_id": "1f91240e-56f7-4608-9eec-1a18c27fbe7e",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > (2) > CLAUSE Block"
+  },
+  {
+    "query": "What does it mean for an individual to be disqualified under section (xii) of the Capital Market Intermediaries Regulations, 2025?",
+    "golden_answer": "any other disqualification as may be specified by the Authority.",
+    "target_node_id": "8ea71e83-a792-49ba-bd07-828530416b4d",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > (xii) -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > (xii)"
+  },
+  {
+    "query": "What types of services can an entity regulated by a financial sector regulator in its home jurisdiction outsource, but are not covered in the Schedule?",
+    "golden_answer": "Outsourced services that are not covered in this Schedule but are permitted to be outsourced by the entity regulated by any financial sector regulator of its home jurisdiction.",
+    "target_node_id": "048f3b30-00ac-4849-baa5-cf6233f10ca4",
+    "category": "Compliance Check",
+    "breadcrumb": "Tech Financing Regulations, 2023 > Tech Financing Regulations, 2023 > PREAMBLE Block > SCHEDULE Block"
+  },
+  {
+    "query": "What is the deadline for an existing ancillary service provider or TechFin to obtain a certificate of registration?",
+    "golden_answer": "A period of twelve (12) months from the date of commencement of these regulations.",
+    "target_node_id": "36292364-02d8-4f3e-8596-4ed69ecde786",
+    "category": "Direct Regulation",
+    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block"
+  },
+  {
+    "query": "What types of services are considered capital market services?",
+    "golden_answer": "investment advisory services, portfolio management services, and any other services specified by the Authority.",
+    "target_node_id": "464887a5-a097-408e-8694-a4d4e30e0f22",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > CLAUSE Block > capital market services"
+  },
+  {
+    "query": "What are the specific malpractices that a registered distributor must avoid?",
+    "golden_answer": "mis-selling of capital market products and services",
+    "target_node_id": "f8c1360f-69c5-4fe7-a13c-1586a2908e5d",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Distributors > A registered distributor shall avoid malpractices..."
+  },
+  {
+    "query": "What types of services are covered under the definition of availing services in section (B) of the International Financial Services Centres Authority Act, 2019?",
+    "golden_answer": "services in sub-clauses (i) to (xi)",
+    "target_node_id": "a1efccd7-47c6-4fd9-9fc1-be11ec151fa8",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > This Act > DEFINITION Block > (B) -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > PREAMBLE Block > (C)"
+  },
+  {
+    "query": "Can the Authority revoke an applicant's In-Principle Approval if they fail to fulfill the specified conditions for Limited Use Authorisation?",
+    "golden_answer": "Yes, the Authority may revoke the 'In-Principle Approval' after providing the Applicant an opportunity of filing written submissions.",
+    "target_node_id": "2077b82f-f1d9-4276-94b6-23fe6fac6ec6",
+    "category": "Compliance Check",
+    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > DEFINITION Block"
+  },
+  {
+    "query": "What does it mean for a word or expression used in the International Financial Services Centres Authority Act, 2019 but defined in another Act listed in the First Schedule?",
+    "golden_answer": "Words and expressions used and not defined in this Act but defined in the Acts specified under column (3) of the First Schedule to this Act shall have the meanings respectively assigned to them in those Acts.",
+    "target_node_id": "9c2c61dd-a537-4744-bd90-0d1bce450a12",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > PREAMBLE Block > DEFINITION Block > DEFINITION Block"
+  },
+  {
+    "query": "What is a subsidiary company under the Companies Act, 2013?",
+    "golden_answer": "A subsidiary company is a company that satisfies the definition u/s 2(87) of the Companies Act, 2013.",
+    "target_node_id": "239bd09a-8356-4b03-9aa3-c23d469dcb1e",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > Subsidiary company > Companies Act, 2013"
+  },
+  {
+    "query": "What constitutes a jurisdiction that has not made sufficient progress in addressing deficiencies or has not committed to an action plan?",
+    "golden_answer": "A jurisdiction that has not made sufficient progress in addressing the deficiencies or has not committed to an action plan developed with the Financial Action Task Force to address the deficiencies.",
+    "target_node_id": "b5f334fc-93ac-461a-b9b6-8a68b38aa664",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > Notification No. IFSCA/GN/2025/003 dated 11th April 2025 > SCHEDULE Block > DEFINITION Block > CLAUSE Block > SUBCLAUSE Block"
+  },
+  {
+    "query": "What is the Liquidity Coverage Ratio for a Banking Unit before it was substituted by Notification No. IFSCA/2023-24/GN/REG041 dated 6th July, 2023?",
+    "golden_answer": "A Banking Unit shall maintain the Liquidity Coverage Ratio.",
+    "target_node_id": "382128f9-8071-4147-9f19-4f9b534a2235",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PRUDENTIAL REGULATORY REQUIREMENTS > Substituted vide Notification No. IFSCA/2023-24/GN/REG041 dated 6 th July, 2023. > (1) -> International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > Substituted vide Notification No. IFSCA/2023-24/GN/REG041 dated 6 th July, 2023."
+  },
+  {
+    "query": "What is the timeframe for an applicant to fulfill conditions specified in In-Principle Approval before receiving Limited Use Authorisation?",
+    "golden_answer": "within thirty (30) days, unless extended by the Authority",
+    "target_node_id": "7c8b89ac-dd3f-4420-a838-b3b6dded232f",
+    "category": "Compliance Check",
+    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > DEFINITION Block"
+  },
+  {
+    "query": "What activities can banking units undertake under the International Financial Services Centres Authority (IFSCA) Regulations, 2020?",
+    "golden_answer": "Banking units may undertake any or all of the activities mentioned under clause (e) of sub-section (1) of Section 3 of the Act or Section 6 of the Banking Regulation Act, 1949, except those expressly prohibited by the Authority.",
+    "target_node_id": "48d38e37-b667-48c3-9a4f-9a97efca5429",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > OPERATIONAL REQUIREMENTS > Reporting requirements > CLAUSE Block"
+  },
+  {
+    "query": "Can capital market products and/or services offered by an issuer or service provider in an IFSC or foreign jurisdiction be distributed to sophisticated investors in India?",
+    "golden_answer": "Yes, capital market products and/or services offered by any issuer or service provider set up in IFSC or any foreign jurisdiction may be distributed to sophisticated investors in India.",
+    "target_node_id": "19f6beb2-595f-4c3d-a64b-64e3d1a8a924",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > (c) > CLAUSE Block > Foreign Jurisdiction"
+  },
+  {
+    "query": "Can a Banking Unit conduct business in Indian Rupees (INR) with non-resident persons?",
+    "golden_answer": "Yes, but only if the Authority specifies that such transactions be settled in foreign currencies.",
+    "target_node_id": "58c4e5e8-1d0a-4342-9d91-f2e6f225a913",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PRUDENTIAL REGULATORY REQUIREMENTS > Substituted vide Notification No. IFSCA/2023-24/GN/REG041 dated 6 th July, 2023. > 10. Currency for conducting business > CLAUSE Block"
+  },
+  {
+    "query": "What information must I submit to the Authority in order to seek relaxation under sub-regulation (1) of the Global In-House Centres Regulations, 2025?",
+    "golden_answer": "An application giving details and the grounds on which such relaxation has been sought, along with a non-refundable fee as may be specified by the Authority.",
+    "target_node_id": "9644cc5c-c21d-4096-838c-4184c54e4565",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority (Global In-House Centres) Regulations, 2025 > PREAMBLE Block > Power to Relax Strict Enforcement of the Regulations -> International Financial Services Centres Authority (Global In-House Centres) Regulations, 2025 > PREAMBLE Block > sub-regulation (1)"
+  },
+  {
+    "query": "What information must a registered credit rating agency include in its written agreement with a client?",
+    "golden_answer": "the right and liabilities of each party and the fee to be charged by such credit rating agency.",
+    "target_node_id": "b62e4964-308e-4c53-97d5-6c1cbbacf80c",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Credit rating agencies > CLAUSE Block"
+  },
+  {
+    "query": "What is the requirement for banking units regarding leverage ratio?",
+    "golden_answer": "Banking units must adhere to the norms and guidelines relating to leverage ratio as specified by the Authority.",
+    "target_node_id": "db1ca14c-5323-41a0-b0f5-aa9cb8d6d123",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PRUDENTIAL REGULATORY REQUIREMENTS > Substituted vide Notification No. IFSCA/2023-24/GN/REG041 dated 6 th July, 2023. > CLAUSE Block > Leverage Ratio"
+  },
+  {
+    "query": "What is the timeframe for an applicant to comply with the regulations after receiving in-principle approval?",
+    "golden_answer": "An applicant must take necessary steps to comply within 180 days, unless extended by the Authority.",
+    "target_node_id": "16180f25-b654-4b99-9e2b-b85495681448",
+    "category": "Direct Regulation",
+    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block"
+  },
+  {
+    "query": "What is the process for filing an application for recognition under the International Financial Services Centres Authority Act, 2019?",
+    "golden_answer": "the manner of filing an application for recognition or registration or withdrawal of recognition or registration",
+    "target_node_id": "7aef03f8-081c-4b3e-a045-96e932d6c265",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > (2) > (a) -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > THE FIRST SCHEDULE"
+  },
+  {
+    "query": "What conditions must a parent bank meet when setting up a Representative Office or Global Administrative Office in an International Financial Services Centre (IFSC)?",
+    "golden_answer": "such conditions as may be specified by the Authority.",
+    "target_node_id": "a31d1a94-76b2-41f0-bc3b-c114bcba8f3c",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > DEFINITION Block > CLAUSE Block -> International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > 27 [A Parent Bank may set up its Representative Office or Global Administrative Office in IFSC under a suitable mechanism, subject to such conditions as may be specified by the Authority.]"
+  },
+  {
+    "query": "What does it mean to be considered fit and proper for regulatory purposes?",
+    "golden_answer": "a person is deemed to be 'fit and proper' if they meet the requirements specified in sub-regulation (1)",
+    "target_node_id": "6a744f19-4f4f-4c84-aa99-e26c30d00b0b",
+    "category": "Glossary Definition",
+    "breadcrumb": "Tech Financing Regulations, 2023 > FIT AND PROPER REQUIREMENTS AND CODE OF CONDUCT > Fit and Proper requirements > DEFINITION Block > CLAUSE Block > fit and proper"
+  },
+  {
+    "query": "What are ancillary services in the context of tech financing regulations?",
+    "golden_answer": "Ancillary services mean those services that directly or indirectly aid, help, or assist in making arrangements for carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of section 3 of the Act.",
+    "target_node_id": "65af8255-a1a8-4b60-be50-e447bec15bc2",
+    "category": "Direct Regulation",
+    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > Objectives > DEFINITION Block > CLAUSE Block"
+  },
+  {
+    "query": "What is the definition of an investment adviser under the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025?",
+    "golden_answer": "An investment adviser means any person who provides investment advice or manages investments on behalf of clients.",
+    "target_node_id": "1c84b68e-ab34-47cd-9984-b27652b4dbfa",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > PREAMBLE Block > Investment advisers -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > PREAMBLE Block > Investment advisers"
+  },
+  {
+    "query": "What is the effective date for the vacancy of offices by the Chairperson and other Members under this Act?",
+    "golden_answer": "as from the date of supersession",
+    "target_node_id": "2cb20a5a-6834-4bd4-9529-4112a89b0da2",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > CLAUSE Block -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > This Act"
+  },
+  {
+    "query": "What is considered a group entity under the Capital Market Intermediaries Regulations 2025?",
+    "golden_answer": "an entity of a business group that consists of a parent company or of any other type of legal person exercising control over the rest of the group, together with branches and/or subsidiaries.",
+    "target_node_id": "55ddd366-9677-4a9d-a665-0b62aa13df7f",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > Notification No. IFSCA/GN/2025/003 dated 11th April 2025 > SCHEDULE Block > DEFINITION Block > CLAUSE Block > DEFINITION Block > group entity"
+  },
+  {
+    "query": "What is required of a registered credit rating agency to develop an internal code of conduct for its employees and officers?",
+    "golden_answer": "A registered credit rating agency shall develop its own internal code of conduct for governing its internal operations and laying down standards of appropriate conduct for its employees and officers in the carrying out of their duties within the credit rating agency and as a part of the industry.",
+    "target_node_id": "3f66f176-b0c7-4f73-80eb-8e22d3385f78",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > DEFINITION Block"
+  },
+  {
+    "query": "What is the list of services that are not permitted to be provided by TechFin and Ancillary Service Providers under these regulations?",
+    "golden_answer": "List of services not permitted to be provided by TechFin and Ancillary Service Provider under these regulations:",
+    "target_node_id": "593246d2-30f2-4790-b5e6-16be5c725d9c",
+    "category": "Cross-Reference",
+    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > CLAUSE Block -> Tech Financing Regulations, 2023 > PREAMBLE Block > List of services not permitted to be provided by TechFin and Ancillary Service Provider under these regulations:"
+  },
+  {
+    "query": "What is the requirement for TechFin and Ancillary Service Provider to be heard before taking action in case of default?",
+    "golden_answer": "No action as referred under sub-regulation (1) shall be taken without giving the TechFin and Ancillary Service Provider, a reasonable opportunity of being heard by way of written submissions.",
+    "target_node_id": "6b8ceb37-08d8-432c-90d6-f59bceca523f",
+    "category": "Cross-Reference",
+    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > Action in case of default > CLAUSE Block -> Tech Financing Regulations, 2023 > PREAMBLE Block > sub-regulation (1)"
+  },
+  {
+    "query": "What does a group entity include?",
+    "golden_answer": "any holding company, subsidiaries, branches or any other entity, in whatever legal form, through which the Parent bank undertakes its operations or permitted activities.",
+    "target_node_id": "a0d50cd7-a0da-461a-a5b7-caf1097cccb1",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > DEFINITION Block > Home Regulator"
+  },
+  {
+    "query": "Can a registered distributor change or delete information from a client's application form without permission?",
+    "golden_answer": "No, a registered distributor shall abstain from tampering with the application form and other documents submitted by the client.",
+    "target_node_id": "fb4fc550-d105-40a6-80eb-419ec38f95d3",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Distributors > 10. A registered distributor shall abstain from tampering with the application form and other documents submitted by the client..."
+  },
+  {
+    "query": "What types of financial products, services, or institutions can be regulated by the International Financial Services Centres Authority under the authority of the Central Government?",
+    "golden_answer": "financial products, financial services, or financial institutions in the International Financial Services Centres as may be notified by the Central Government from time to time;",
+    "target_node_id": "4d62f9ea-58b7-45d5-b316-d78badf84fb6",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > POWERS AND FUNCTIONS OF AUTHORITY > (b) -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > Grants by Central Government"
+  },
+  {
+    "query": "What is the purpose of a legally enforceable netting arrangement?",
+    "golden_answer": "To reflect mark to market exposure under non-centrally cleared over the counter currency, interest rate, credit and commodity derivative contracts.",
+    "target_node_id": "60b33e0d-08f1-4bd4-975c-cb2367334b56",
+    "category": "Amendment/Temporal",
+    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > Netting Arrangement > CLAUSE Block"
+  },
+  {
+    "query": "What types of laws are included in the First Schedule for the purposes of sub-section (1)?",
+    "golden_answer": "the provisions of the respective Acts specified under column (3) of the First Schedule relating to",
+    "target_node_id": "13422a6a-5ac7-46f5-9042-65451609d91b",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > (2) > (4) -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > THE FIRST SCHEDULE"
+  },
+  {
+    "query": "Can an investment banker enter into a transaction involving an issuer's securities based on unpublished price-sensitive information they received during a professional assignment?",
+    "golden_answer": "No, an investment banker or its associates/relatives cannot enter into any transaction in securities of the issuer on the basis of unpublished price sensitive information obtained by them in the course of any professional assignment.",
+    "target_node_id": "a3eb2427-60fb-474e-963b-e949b86c437f",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Investment Bankers > (1) > CLAUSE Block"
+  },
+  {
+    "query": "What is the minimum retention period for maintaining electronic books of account, records, and documents as a Capital Market Intermediary (CMI) in accordance with the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025?",
+    "golden_answer": "eight years",
+    "target_node_id": "4c69ffcc-7b01-4c81-8f99-801bef5be6d6",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > GENERAL OBLIGATIONS AND RESPONSIBILITIES > Code of Conduct > Maintenance of books of account, records and other documents > (1) -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > A CMI may file an application with the Authority for surrender of its registration:"
+  },
+  {
+    "query": "What is the effect on the Payment and Settlement Systems Act, 2007 when a new section is inserted after section 34A under the International Financial Services Centres Authority Act, 2019?",
+    "golden_answer": "The Payment and Settlement Systems Act, 2007 will have a new section inserted after section 34A as per the International Financial Services Centres Authority Act, 2019.",
+    "target_node_id": "dda50209-04f5-41c9-accb-2988d14409de",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > AMENDMENT TO THE PAYMENT AND SETTLEMENT SYSTEMS ACT, 2007 > Following -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > PREAMBLE Block > Insertion of new section after section 34A"
+  },
+  {
+    "query": "Will actions taken before the repeal of the previous regulations be considered valid under the new regulations?",
+    "golden_answer": "Yes, anything done or any action taken prior to the repeal shall be deemed to have been done or taken under the corresponding provisions of these regulations.",
+    "target_node_id": "ade8752a-8188-4f37-bdf0-c3de9c4fbeb0",
+    "category": "Amendment/Temporal",
+    "breadcrumb": "International Financial Services Centres Authority (Global In-House Centres) Regulations, 2025 > PREAMBLE Block > CLAUSE Block"
+  },
+  {
+    "query": "What is considered a Parent Bank under the International Financial Services Centres Authority (Banking) Regulations, 2020?",
+    "golden_answer": "A Foreign Bank as defined under sub-regulation (d), or an Indian Bank as defined under sub-regulation (f), or both.",
+    "target_node_id": "47f204f1-bc6c-47d8-80dc-5a2f25f96e7b",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > DEFINITION Block > CLAUSE Block"
+  },
+  {
+    "query": "Can a clearing member operate in more than one recognized clearing corporation?",
+    "golden_answer": "Yes, a clearing member may be permitted to operate in more than one recognized clearing corporation.",
+    "target_node_id": "96a1dbe3-46a4-4365-a71b-f3def787b007",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > CLAUSE Block > clearing member"
+  },
+  {
+    "query": "What is the source section referred to in regulation 3(1)(xiii) of the Tech Financing Regulations, 2023?",
+    "golden_answer": "Source Section: [refer regulation 3(1)(xiii)]",
+    "target_node_id": "3ad8510e-07e4-4dd8-86ce-52d7b8634d65",
+    "category": "Cross-Reference",
+    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > THIRD SCHEDULE > [refer regulation 3(1)(xiii)] -> Tech Financing Regulations, 2023 > PREAMBLE Block > THE FIRST SCHEDULE > [refer regulation 3(1)(xiii)]"
+  },
+  {
+    "query": "What happens to existing regulations after the repeal and supersession of new ones?",
+    "golden_answer": "Notwithstanding such repeal and supersession, -",
+    "target_node_id": "6e4eeea0-6aeb-4192-a13b-ce691ca8cd56",
+    "category": "Amendment/Temporal",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > null > CLAUSE Block"
+  },
+  {
+    "query": "Can a person who gives general comments about trends in the financial or securities market be considered as providing information that requires registration under these regulations?",
+    "golden_answer": "No, a person who gives general comments in good faith regarding trends in the financial or securities market without specifying any particular securities or investment product does not require registration.",
+    "target_node_id": "4cfc9dcf-1ee1-4f18-9b6b-c9fd34e55fbf",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > Inserted by the International Financial Services Centres Authority (Capital Market Intermediaries) (Amendment) Regulations, 2026 w.e.f. 12 th January, 2026. > CLAUSE Block"
+  },
+  {
+    "query": "Can a person who has been declared as not fit and proper by a regulatory authority still apply for registration?",
+    "golden_answer": "No, such a person shall not be eligible to apply for any registration until they satisfy the 'fit and proper' requirements.",
+    "target_node_id": "aaaf622c-f7ce-4a48-ba1d-741ce4df8873",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority (Global In-House Centres) Regulations, 2025 > PREAMBLE Block > DEFINITION Block > fit and proper"
+  },
+  {
+    "query": "What does the term \"acceptance of deposits\" mean in the context of the International Financial Services Centres Authority Act, 2019?",
+    "golden_answer": "The acceptance of deposits refers to the act of receiving money or other valuable security from an individual or entity with the understanding that it will be held for safekeeping and returned upon request.",
+    "target_node_id": "60515a20-746c-4428-8591-4c70cb8c1253",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > This Act > DEFINITION Block > CLAUSE Block -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > This Act > DEFINITION Block > (ii)"
+  },
+  {
+    "query": "What is the word that has been substituted for 'ten' by the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2026, effective January 12th, 2026?",
+    "golden_answer": "the word 'five'",
+    "target_node_id": "e2c99841-c62a-4598-96fd-4bdef4eed260",
+    "category": "Amendment/Temporal",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > Preamble > CLAUSE Block"
+  },
+  {
+    "query": "What assistance must CMI give to the inspecting authority during an inspection?",
+    "golden_answer": "The CMI shall give all assistance as may be required in connection with the inspection.",
+    "target_node_id": "20ec137f-4cd0-4a13-b505-ca57e1d27b53",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > INSPECTION > CLAUSE Block"
+  },
+  {
+    "query": "What activities are covered under the term ESG Ratings and Data Products Provider (ERDPP)?",
+    "golden_answer": "Providing services relating to independent external review for ESG labelled bonds listed on the recognised stock exchanges in an IFSC.",
+    "target_node_id": "4641877b-f059-4b11-b757-8587002b935c",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > Notification No. IFSCA/GN/2025/003 dated 11th April 2025 > SCHEDULE Block > DEFINITION Block > ESG Ratings and Data Products Provider (ERDPP)"
+  },
+  {
+    "query": "What are the circumstances under which an issuer must provide support for appointing a nominee director by a registered debenture trustee?",
+    "golden_answer": "In the event of two consecutive defaults in payment of interest or default in creation of security, the issuer shall be obliged to provide all requisite support in this regard, if legally permissible.",
+    "target_node_id": "13507861-8ee4-4467-9edf-7d27090e6270",
+    "category": "Cross-Reference",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Custodians > Debenture trustees > (1) > CLAUSE Block -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Custodians > 4. A registered debenture trustee shall make reasonable efforts to avoid misrepresentation and ensure that the information provided to the debenture holders is not misleading."
+  },
+  {
+    "query": "What happens to references to International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2021 in other regulations after they are repealed?",
+    "golden_answer": "Any reference thereto in any other regulations made, guidelines or circulars issued thereunder by the Authority shall be deemed to have the reference to the corresponding provisions of these regulations.",
+    "target_node_id": "37ef4910-f7ea-4ac9-8741-328fab0b65dc",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > null > CLAUSE Block > SUBCLAUSE Block"
+  },
+  {
+    "query": "What activities can banking units undertake before July 6, 2023?",
+    "golden_answer": "Banking Units may undertake any or all of the activities mentioned under clause (e) of sub-section (1) of Section 3 of the Act or Section 6 of the Banking Regulation Act, 1949, except those expressly prohibited by the Authority.",
+    "target_node_id": "48d38e37-b667-48c3-9a4f-9a97efca5429",
+    "category": "Amendment/Temporal",
+    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > OPERATIONAL REQUIREMENTS > Reporting requirements > CLAUSE Block"
+  },
+  {
+    "query": "What is the timeframe for laying a copy of every notification proposed under sub-section (1) before each House of Parliament?",
+    "golden_answer": "A total period of thirty days, which may be comprised in one session or in two or more successive sessions.",
+    "target_node_id": "76cd794f-3a70-4964-b91b-f6e31a4c14b9",
+    "category": "Direct Regulation",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > (b) > (1)"
+  },
+  {
+    "query": "What is considered a service recipient under TechFin regulations?",
+    "golden_answer": "An entity that receives services directly from TechFin and Ancillary Service Provider or through an Intermediary for the purpose of carrying on financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act.",
+    "target_node_id": "2fb83252-4f65-44b0-8e33-6188999ca2fe",
+    "category": "Glossary Definition",
+    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > CLAUSE Block > DEFINITION Block > Service Recipient"
+  },
+  {
+    "query": "What are the powers exercisable by the Authority under the International Financial Services Centres Authority Act, 2019?",
+    "golden_answer": "the powers exercisable by the Authority under this Act,",
+    "target_node_id": "88b1be5a-1df3-4c3a-a0f5-6292c161f27b",
+    "category": "Glossary Definition",
+    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > AMENDMENT TO THE INSURANCE ACT, 1938 > Notwithstanding anything contained in any other law for the time being in force > Authority"
+  }
+]

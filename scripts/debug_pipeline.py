@@ -4,6 +4,7 @@ import os
 import sys
 import time
 from uuid import UUID, uuid4
+from typing import Optional
 import structlog
 
 # Add project root to python path so backend can be imported
@@ -136,7 +137,6 @@ def main():
     parser.add_argument("--doc-id", required=False, help="Optional document ID (UUID) to filter by.")
     args = parser.parse_args()
     
-    from typing import Optional
     asyncio.run(debug_pipeline(args.query, args.doc_id))
 
 if __name__ == "__main__":

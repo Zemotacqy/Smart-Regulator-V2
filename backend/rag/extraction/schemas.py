@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 from datetime import date
 from typing import Literal, Optional, List, Any
 import structlog
@@ -51,6 +51,21 @@ class QueryExpansionOutput(BaseModel):
 
 class CompressorOutput(BaseModel):
     relevant_sentences: List[str] = Field(default_factory=list, description="List of exact relevant sentences extracted from the source text.")
+
+    @model_validator(mode="before")
+    @classmethod
+    def handle_sentences_alias(cls, data: Any) -> Any:
+        if isinstance(data, dict):
+            if "relevant_sentences" not in data or not data["relevant_sentences"]:
+                if "sentences" in data and isinstance(data["sentences"], list):
+                    sentences = []
+                    for item in data["sentences"]:
+                        if isinstance(item, str):
+                            sentences.append(item)
+                        elif isinstance(item, dict) and "text" in item:
+                            sentences.append(item["text"])
+                    data["relevant_sentences"] = sentences
+        return data
 
 class ComplianceAuditResult(BaseModel):
     status: Literal["COMPLIANT", "NON_COMPLIANT", "NEEDS_REVIEW"]

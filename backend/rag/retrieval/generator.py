@@ -47,8 +47,24 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
     """
     start_time = time.monotonic()
     
-    # Populate citations immediately based on reranked nodes present in compressed context
-    # This prevents loss of citations in case of mid-stream connection drops or exceptions.
+    # Identify which reranked nodes contributed content to the compressed context.
+    # The compressed context format is: "Source: {breadcrumb} [ID: {node_id}]\n{text}"
+    # We check for the node_id UUID string directly in the compressed context.
+    # If the context is empty (e.g. all compressor calls timed out), fall back
+    # to all reranked nodes so citations are never silently empty.
+    compressed = ctx.compressed_context or ""
+    if compressed.strip():
+        cited_node_ids = {
+            node.node_id
+            for node in ctx.reranked_nodes
+            if str(node.node_id) in compressed
+        }
+        # If the string check yields nothing (e.g. format mismatch), fall back to all reranked
+        if not cited_node_ids:
+            cited_node_ids = {node.node_id for node in ctx.reranked_nodes}
+    else:
+        cited_node_ids = {node.node_id for node in ctx.reranked_nodes}
+
     ctx.source_citations = [
         SourceCitation(
             node_id=node.node_id,
@@ -56,10 +72,11 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
             file_name=node.file_name or "Unknown",
             breadcrumb=node.breadcrumb,
             title=node.title,
-            text_content=node.text_content
+            text_content=node.text_content,
+            verbatim_quote=(node.text_content[:200].strip() if node.text_content else None)
         )
         for node in ctx.reranked_nodes
-        if node.breadcrumb and str(node.node_id) in (ctx.compressed_context or "")
+        if node.node_id in cited_node_ids and node.breadcrumb
     ]
     
     # 1. Format the glossary definitions

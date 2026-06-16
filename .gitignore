@@ -8,3 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+
+# data files
+data/
+models/
+*.log

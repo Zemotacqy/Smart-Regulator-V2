@@ -756,7 +756,9 @@ python scripts/fine_tune_mlx.py \
   --lora-targets q_proj v_proj \
   --learning-rate 1e-5 \
   --epochs 3 \
-  --batch-size 4 \
+  --batch-size 2 \
+  --grad-checkpoint \
+  --max-seq-length 1024 \
   --output models/ifsca-saullm-7b-ft-adapters
 ```
 
