@@ -67,6 +67,13 @@ class CompressorOutput(BaseModel):
                     data["relevant_sentences"] = sentences
         return data
 
+class CompressedNodeItem(BaseModel):
+    node_index: int = Field(..., description="The 0-based index of the node in the input list.")
+    relevant_sentences: List[str] = Field(default_factory=list, description="List of exact relevant sentences extracted from this node's text.")
+
+class BatchedCompressorOutput(BaseModel):
+    nodes: List[CompressedNodeItem] = Field(default_factory=list)
+
 class ComplianceAuditResult(BaseModel):
     status: Literal["COMPLIANT", "NON_COMPLIANT", "NEEDS_REVIEW"]
     section: Optional[str] = Field(default=None, description="The regulation section or clause referenced (e.g. Section 4(1)).")

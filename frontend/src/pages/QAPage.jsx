@@ -8,13 +8,25 @@ export default function QAPage({ documents, setCitations, setRightPanelOpen }) {
   const [isStreaming, setIsStreaming] = useState(false);
   
   const messagesEndRef = useRef(null);
+  const chatContainerRef = useRef(null);
+  const shouldScrollRef = useRef(true);
 
-  // Auto scroll to bottom
+  // Auto scroll to bottom, but only if the user is near the bottom or shouldScroll is active
   useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (chatContainerRef.current && shouldScrollRef.current) {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages]);
+
+  const handleScroll = () => {
+    if (chatContainerRef.current) {
+      const container = chatContainerRef.current;
+      // If user is within 100px of the bottom, keep auto-scroll active.
+      // If they scroll up past this threshold, disable auto-scroll to give them flexibility.
+      const isAtBottom = container.scrollHeight - container.scrollTop - container.clientHeight <= 100;
+      shouldScrollRef.current = isAtBottom;
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,6 +53,7 @@ export default function QAPage({ documents, setCitations, setRightPanelOpen }) {
     setMessages((prev) => [...prev, userMsg, botMsgPlaceholder]);
     setQuery('');
     setIsStreaming(true);
+    shouldScrollRef.current = true;
 
     // Build URL with query params
     let url = `/api/qa?query=${encodeURIComponent(userMsg.text)}`;
@@ -152,7 +165,11 @@ export default function QAPage({ documents, setCitations, setRightPanelOpen }) {
   return (
     <div className="page-container" style={{ height: '100%', display: 'flex', flexDirection: 'column', padding: '24px 32px' }}>
       {/* Scrollable conversation history */}
-      <div style={{ flexGrow: 1, overflowY: 'auto', marginBottom: '24px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+      <div 
+        ref={chatContainerRef}
+        onScroll={handleScroll}
+        style={{ flexGrow: 1, overflowY: 'auto', marginBottom: '24px', display: 'flex', flexDirection: 'column', gap: '20px' }}
+      >
         {messages.length === 0 ? (
           <div style={{
             display: 'flex',

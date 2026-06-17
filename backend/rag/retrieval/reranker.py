@@ -74,6 +74,11 @@ async def run_reranker(ctx: QueryPipelineContext) -> QueryPipelineContext:
         scored_nodes.sort(key=lambda x: x.score if x.score is not None else -999999.0, reverse=True)
         ctx.reranked_nodes = scored_nodes[:5]
         
+        # If the top candidate's score is below -3.0, discard all nodes as irrelevant
+        if ctx.reranked_nodes and ctx.reranked_nodes[0].score is not None and ctx.reranked_nodes[0].score < -3.0:
+            logger.info("reranker_all_nodes_below_threshold_clearing", top_score=ctx.reranked_nodes[0].score)
+            ctx.reranked_nodes = []
+            
         logger.info("reranking_complete", top_scores=[node.score for node in ctx.reranked_nodes])
         
     except Exception as e:

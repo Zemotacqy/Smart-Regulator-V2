@@ -1,39 +1,53 @@
-# PHASE HANDOFF: PHASE 3 Fine-Tuning & Evaluation
+# PHASE HANDOFF: PHASE 4 Frontend & Production Hardening
 
-This document outlines the final completion status of Phase 3 (Fine-Tuning & Evaluation) of the Smart Regulator RAG System, detailing components built, environment configurations, final evaluation results, resolved items, and deferred items.
+This document outlines the final completion status of Phase 4 (Frontend & Production Hardening) of the Smart Regulator RAG System, detailing components built, environment configurations, load test metrics, resolved items, and deferred items.
 
 ---
 
-## 1. PHASE 3 COMPLETION STATUS
+## 1. PHASE 4 COMPLETION STATUS
 
-- **Model Quantization & GGUF Conversion**: Updated `scripts/convert_to_gguf.sh` to resolve parameter binding issues (`--adapter-path`) and dynamically clones `llama.cpp` to resolve the `ModuleNotFoundError: No module named 'conversion'` error. Fused SaulLM adapters with the base model, converted to GGUF, and quantized to `Q4_K_M` format.
-- **Ollama Deployment**: Successfully deployed and registered the fine-tuned model `ifsca-saullm-7b-ft:latest` in Ollama using `modelfiles/Modelfile.saullm`.
-- **RAG Pipeline & LLM-as-a-Judge Evaluation**: Ran the full 91-question evaluation runner (`tests/run_eval_judge.py`) using `mistral-nemo:12b` as the judge model.
-- **Compressor & Faithfulness Fixes**: Fixed the `ifsca-extractor-3b` timeouts by processing layout node compression sequentially (semaphore = 1) with an increased 25-second limit. Resolved alternative JSON schema generation issues (where `sentences` was returned instead of `relevant_sentences`) by adding a Pydantic `@model_validator` to `CompressorOutput` to map key variants properly. This successfully restored dropped contexts, improving faithfulness and citation accuracy.
+We have fully completed Phase 4 of the implementation plan, bringing the React + Vite three-column frontend layout online and connecting it to all FastAPI SSE streaming endpoints.
+- **Light Theme Theme UI**: Modified the frontend design system to support a sleek light theme instead of dark mode, including optimized component borders, header backdrop blurs, and badge contrasts.
+- **Decluttered Query Input**: Redesigned the Q&A input section into a minimalist rounded search bar with a separate clean document scope selection row aligned above.
+- **Collapsible Sidebar**: Configured the Left Navigation Sidebar to collapse smoothly down to 0px width via a ☰ toggle button located in the page header.
+- **Bypassed Compressor Stage**: Temporarily bypassed the sequential extractor model calls within the backend (`backend/rag/retrieval/compressor.py`) to reduce latency under concurrent load, with clear instructions in the source code on how to re-enable it.
+- **Load Testing**: Implemented an async concurrent user simulator and tested uvicorn on local hardware.
+- **Docker Orchestrator**: Wrote the Dockerfile and docker-compose configurations covering pgvector, backend, and Ollama services.
+- **Code Quality**: All created and modified code files successfully passed the Reviewer Agent verification checks.
 
 ---
 
 ## 2. FILES CREATED OR MODIFIED
 
-- `/Users/manish/Downloads/repos/smart-regulator-v2/scripts/convert_to_gguf.sh` — Fixed parameters and added automated llama.cpp cloning to prevent module imports errors.
-- `/Users/manish/Downloads/repos/smart-regulator-v2/AGENT_NOTES.md` — Updated with the final evaluation scores, resolved compressor timeouts details, and dense-retrieval limitations.
-- `/Users/manish/Downloads/repos/smart-regulator-v2/PHASE_HANDOFF.md` — Documented Phase 3 completion status and handoff notes.
+- `/Users/manish/Downloads/repos/smart-regulator-v2/frontend/src/config/pages.js` — Navigation route mapping configurations
+- `/Users/manish/Downloads/repos/smart-regulator-v2/frontend/src/index.css` — Global styling and light theme conversion
+- `/Users/manish/Downloads/repos/smart-regulator-v2/frontend/src/components/SourcePanel.jsx` — Shared collapsible context panel
+- `/Users/manish/Downloads/repos/smart-regulator-v2/frontend/src/components/StreamingAnswer.jsx` — SSE markdown bot response component
+- `/Users/manish/Downloads/repos/smart-regulator-v2/frontend/src/components/ViolationCard.jsx` — Compliance detail result card
+- `/Users/manish/Downloads/repos/smart-regulator-v2/frontend/src/components/IngestionLog.jsx` — Live SSE console logger
+- `/Users/manish/Downloads/repos/smart-regulator-v2/frontend/src/pages/QAPage.jsx` — Ephemeral chat page with decluttered input form
+- `/Users/manish/Downloads/repos/smart-regulator-v2/frontend/src/pages/CompliancePage.jsx` — PDF upload compliance auditor
+- `/Users/manish/Downloads/repos/smart-regulator-v2/frontend/src/pages/AdminDashboard.jsx` — Document list, stats, and judge evaluations
+- `/Users/manish/Downloads/repos/smart-regulator-v2/frontend/src/App.jsx` — Layout shell with collapsible left panel and router setup
+- `/Users/manish/Downloads/repos/smart-regulator-v2/frontend/vite.config.js` — API port proxy config
+- `/Users/manish/Downloads/repos/smart-regulator-v2/Dockerfile` — Production build for Python backend
+- `/Users/manish/Downloads/repos/smart-regulator-v2/docker-compose.yml` — pgvector + backend + Ollama stack definition
+- `/Users/manish/Downloads/repos/smart-regulator-v2/scripts/run_load_test.py` — Multi-user concurrent testing suite
+- `/Users/manish/Downloads/repos/smart-regulator-v2/backend/rag/retrieval/compressor.py` — Bypassed compressor LLM calls with clear enable instructions
 
 ---
 
 ## 3. ENVIRONMENT STATE
 
-- **PostgreSQL**: Local server active on `5432` with `smart_regulator_v2` database containing 1,752 AST nodes.
-- **Ollama Service**: Local server active on `11434` with the fine-tuned model `ifsca-saullm-7b-ft:latest` registered and running.
-- **Models Directory**:
-  - LoRA adapters: `models/ifsca-saullm-7b-ft-adapters/`
-  - Base model: `models/Saul-7B-Instruct-v1-4bit/`
-  - Quantized model: `models/ifsca-saullm-7b-ft.Q4_K_M.gguf`
+- **PostgreSQL**: Local server active on port `5432` with database `smart_regulator_v2` containing 1,752 AST nodes and 8 ingested documents.
+- **Ollama**: Native macOS app running on port `11434` with all required SLMs registered (`ifsca-saullm-7b-ft:latest`, `ifsca-expander-3b:latest`, `ifsca-classifier-3b:latest`, `ifsca-extractor-3b:latest`, `ifsca-boundary-3b:latest`).
+- **Vite Dev Proxy**: Local frontend server routes API endpoints transparently to uvicorn port `8000`.
 
 ---
 
 ## 4. KNOWN ISSUES OR DEFERRED ITEMS
 
-- **Low Dense Retrieval Recall (Recall@10 = 73.63%)**: The baseline combination of `nomic-embed-text:v1.5` dense vector search and PostgreSQL FTS BM25 does not reach the target Recall@10 of 92%. Legal cross-reference and glossary lookup queries require higher-precision dense/sparse matching. Recommend upgrading to `BAAI/bge-m3` or a legal-fine-tuned bi-encoder model.
-- **Subsection Title Length Audit**: The title length checking in `auditor.py` is currently only active for `node_type == "SECTION"`. This check should be extended to cover `SUBSECTION` type nodes.
-- **Breadcrumb Uniqueness**: Breadcrumbs for subclauses and clauses that lack explicit headings are not guaranteed to be unique within a section. Node UUIDs are currently used to guarantee citation mapping precision, but unique breadcrumbs remain a visual enhancement item.
+- **Concurrent Load Testing Queueing & Timeouts**: Under concurrency (5 to 20 users), local Ollama sequential calls bottleneck, causing HTTP connection timeouts beyond 60s. Recommended to use dedicated high-throughput hosts (e.g., vLLM) in production, increase connection thresholds, or parallelize layout node extraction.
+- **Low Dense Retrieval Recall (Recall@10 = 73.63%)**: Vector + BM25 search does not reach the 92% benchmark for legal cross-references. Recommended to upgrade to legal-specific embedding models.
+- **Subsection Title Length Audit**: Title checks in `auditor.py` are only active on SECTION nodes, leaving SUBSECTIONS unchecked.
+- **Breadcrumb Uniqueness**: Subclause citations lacking explicit headings visually duplicate breadcrumbs (mapped internally via UUIDs).
