@@ -13,3 +13,6 @@ wheels/
 data/
 models/
 *.log
+
+# Agent Used Directories
+scratch/
