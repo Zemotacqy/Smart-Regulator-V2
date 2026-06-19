@@ -50,6 +50,7 @@ class QueryPipelineContext:
 
     # Populated by Stage E (Compressor)
     compressed_context: str = ""
+    overflow_batches: List[List[NodeCandidate]] = field(default_factory=list)
 
     # Populated by Stage F (Generator)
     answer_text: str = ""

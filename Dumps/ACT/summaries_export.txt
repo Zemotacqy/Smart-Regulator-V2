@@ -1,0 +1,585 @@
+===== Chunk ID: ifsca_act_section_1_sub_0 =====
+Section 1 of the International Financial Services Centres Authority Act, 2019, formally establishes the short title of the legislation as the "International Financial Services Centres Authority Act, 2019."
+
+===== Chunk ID: ifsca_act_section_1_sub_1 =====
+Section 1(2) empowers the Central Government to appoint commencement dates for the Act or its specific provisions via notification in the Official Gazette. It further stipulates that references to the "commencement of this Act" within any provision must be construed according to the specific date appointed for that provision.
+
+===== Chunk ID: ifsca_act_section_1_sub_2 =====
+Section 1 mandates that any reference to the commencement of this Act shall be interpreted as a reference to the specific date on which the relevant provision comes into force.
+
+===== Chunk ID: ifsca_act_section_2_sub_0 =====
+Section 2 mandates the application of this Act to International Financial Services Centres (IFSCs) established pursuant to section 18 of the Special Economic Zones Act, 2005.
+
+===== Chunk ID: ifsca_act_section_3_sub_0 =====
+Section 3(1) defines "appropriate regulator" as any financial sector regulator listed in the First Schedule and defines "Authority" as the International Financial Services Centres Authority established under Section 4(1).
+
+===== Chunk ID: ifsca_act_section_3_sub_1 =====
+Section 3 defines "financial institution" as a unit operating within an International Financial Services Centre providing services for "financial products," which are defined to include securities, insurance contracts, and deposits.
+
+===== Chunk ID: ifsca_act_section_3_sub_2 =====
+Section 3(e) defines the scope of regulated instruments to include securities, insurance contracts, deposits, credit arrangements, and non-immediate foreign currency contracts, alongside any additional products notified by the Central Government.
+
+===== Chunk ID: ifsca_act_section_3_sub_3 =====
+Section 3(e) defines "financial service" as activities including the buying, selling, or subscribing to financial products, deposit acceptance, asset safeguarding and management, insurance contract execution, and the exercise of rights associated with financial products.
+
+===== Chunk ID: ifsca_act_section_3_sub_4 =====
+Section 3 defines the scope of regulated financial activities to include investment scheme establishment, underwriting, credit reporting, payment processing, financial advice, solicitation, and the maintenance of ownership records. This provision encompasses all services related to financial products, including the arrangement of services and the management of associated rights.
+
+===== Chunk ID: ifsca_act_section_3_sub_5 =====
+Section 3 defines "foreign currency" by reference to Section 2(m) of the Foreign Exchange Management Act, 1999, and establishes the formal definition of an "International Financial Services Centre" alongside the scope of regulated solicitation and notified services.
+
+===== Chunk ID: ifsca_act_section_3_sub_6 =====
+Section 3 defines "Services Centre" as an International Financial Services Centre established under section 18 of the Special Economic Zones Act, 2005, and defines "Member," "notification," and "prescribed" for the purposes of the Authority.
+
+===== Chunk ID: ifsca_act_section_3_sub_7 =====
+Section 3 defines "prescribed" as rules established by the Central Government under this Act and "regulations" as those formulated by the Authority pursuant to this Act.
+
+===== Chunk ID: ifsca_act_section_3_sub_8 =====
+Section 3(2) mandates that any terms not defined within this Act shall adopt the meanings assigned to them in the corresponding Acts listed in column (3) of the First Schedule.
+
+===== Chunk ID: ifsca_act_section_4_sub_0 =====
+Section 4(1) mandates that the Central Government establish the International Financial Services Centres Authority (IFSCA) via official notification to administer the provisions of the Act.
+
+===== Chunk ID: ifsca_act_section_4_sub_1 =====
+Section 4(2) establishes the Authority as a body corporate with perpetual succession, a common seal, and the legal capacity to enter contracts, manage movable and immovable property, and sue or be sued in its own name.
+
+===== Chunk ID: ifsca_act_section_4_sub_2 =====
+Section 4(3) mandates that the Authority’s head office be located at a site determined by Central Government notification, while Section 4(4) authorizes the establishment of additional domestic or international offices subject to prior Central Government approval.
+
+===== Chunk ID: ifsca_act_section_5_sub_0 =====
+Section 5(1) mandates that the Authority consist of a Chairperson and ex officio Members nominated by the Reserve Bank of India, the Securities and Exchange Board of India, and the Insurance Regulatory and Development Authority, all appointed by the Central Government.
+
+===== Chunk ID: ifsca_act_section_5_sub_1 =====
+Section 5 specifies the composition of the Board, including ex officio members from the Securities and Exchange Board of India, the Insurance Regulatory and Development Authority of India, and the Pension Fund Regulatory and Development Authority. It further mandates the nomination of two members from the Ministry of Finance by the Central Government.
+
+===== Chunk ID: ifsca_act_section_5_sub_2 =====
+Section 5 mandates that the governing body include one ex officio member from the Ministry of Finance nominated by the Central Government and two additional members appointed by the Central Government based on the recommendations of a Selection Committee.
+
+===== Chunk ID: ifsca_act_section_5_sub_3 =====
+Section 5(2) mandates that the Chairperson must be a whole-time Member, while granting the Central Government the discretion to appoint other Members under clause (d) of sub-section (1) as either whole-time or part-time.
+
+===== Chunk ID: ifsca_act_section_5_sub_4 =====
+Section 5(3) mandates that Members must possess ability, integrity, and standing, demonstrated through expertise in financial sectors or specialized knowledge in law, finance, economics, accountancy, administration, or other disciplines deemed relevant.
+
+===== Chunk ID: ifsca_act_section_5_sub_5 =====
+Section 5 grants the Central Government the discretionary power to designate any additional discipline as useful to the Authority, thereby expanding the scope of applicable expertise or functions.
+
+===== Chunk ID: ifsca_act_section_5_sub_6 =====
+Section 5(4) mandates that the Central Government shall prescribe the composition and manner of constitution for the Selection Committee referenced in clause (d) of sub-section (1).
+
+===== Chunk ID: ifsca_act_section_6_sub_0 =====
+Section 6(1) establishes a three-year term for the Chairperson and Members, allowing for re-appointment, subject to a mandatory retirement age of sixty-five years for the Chairperson.
+
+===== Chunk ID: ifsca_act_section_6_sub_1 =====
+Section 6 establishes age-based eligibility thresholds for service, prohibiting individuals from serving as a whole-time member after attaining age 62 or in other specified capacities after attaining age 65.
+
+===== Chunk ID: ifsca_act_section_6_sub_2 =====
+Section 6(2) mandates that the salaries, allowances, and service conditions for non-ex officio Members shall be determined by prescribed regulations.
+
+===== Chunk ID: ifsca_act_section_6_sub_3 =====
+Under Section 6(3), a Member may vacate their office by providing the Central Government with at least three months' written notice or by being removed pursuant to the procedures established in Section 7.
+
+===== Chunk ID: ifsca_act_section_6_sub_4 =====
+Section 6(4) prohibits non-ex officio Members from accepting employment with the Central or State Governments for two years post-tenure without prior approval from the Central Government.
+
+===== Chunk ID: ifsca_act_section_6_sub_5 =====
+Section 6 specifies eligibility for employment, permitting appointments within Government entities (Central or State) and financial institutions located in International Financial Services Centres.
+
+===== Chunk ID: ifsca_act_section_7_sub_0 =====
+Section 7 authorizes the Central Government to remove a Member from office if they are adjudged insolvent, become physically or mentally incapable of performing duties, or are convicted of an offense involving moral turpitude.
+
+===== Chunk ID: ifsca_act_section_7_sub_1 =====
+Section 7(d)-(e) establishes grounds for disqualification or removal of a Member if they acquire financial or other interests prejudicial to their functions or abuse their position to the detriment of the public interest. These provisions also incorporate a condition regarding the Central Government's opinion on matters involving moral turpitude.
+
+===== Chunk ID: ifsca_act_section_7_sub_2 =====
+Section 7 mandates that a Member may only be removed from office under clauses (d) or (e) for being detrimental to public interest after being granted a reasonable opportunity to be heard. This provision establishes a mandatory procedural due process requirement for the removal of Members.
+
+===== Chunk ID: ifsca_act_section_8_sub_0 =====
+Section 8(1) mandates that the Authority must conduct meetings according to regulations specifying the time, location, and procedural rules, including quorum requirements for the transaction of business.
+
+===== Chunk ID: ifsca_act_section_8_sub_1 =====
+Under Section 8(2), if the Chairperson is unable to attend a meeting of the Authority, the Members present must elect one of their own to preside over that meeting.
+
+===== Chunk ID: ifsca_act_section_8_sub_2 =====
+Section 8(3) mandates that Authority meeting decisions require a majority vote of members present, with the Chairperson or presiding officer holding a casting vote in the event of an equality of votes.
+
+===== Chunk ID: ifsca_act_section_8_sub_3 =====
+Under Section 8(4), any Member of the Authority must disclose in writing the nature of any direct or indirect interest in a matter scheduled for consideration at a meeting immediately upon becoming aware of the relevant circumstances.
+
+===== Chunk ID: ifsca_act_section_8_sub_4 =====
+Under Section 8, a Member of the Authority must disclose the nature of their interest in any matter before the Authority, which must be recorded in the proceedings. Upon such disclosure, the Member is prohibited from participating in any deliberation or decision regarding that specific matter.
+
+===== Chunk ID: ifsca_act_section_9_sub_0 =====
+Section 9 stipulates that acts or proceedings of the Authority remain valid notwithstanding any vacancies, defects in the Authority's constitution, or irregularities in the appointment of any Member.
+
+===== Chunk ID: ifsca_act_section_10_sub_0 =====
+Section 10 grants the Chairperson authority over the general superintendence and direction of all administrative matters concerning the Authority.
+
+===== Chunk ID: ifsca_act_section_11_sub_0 =====
+Section 11(1) grants the Authority the legal power to appoint necessary officers and employees to ensure the efficient discharge of its statutory functions under the Act.
+
+===== Chunk ID: ifsca_act_section_11_sub_1 =====
+Section 11(2) mandates that the salaries, allowances, and service conditions for officers and employees appointed under Section 11(1) must be determined and specified through formal regulations.
+
+===== Chunk ID: ifsca_act_section_12_sub_0 =====
+Section 12(1) mandates the Authority to develop and regulate financial products, services, and institutions within International Financial Services Centres (IFSCs) through measures it deems appropriate, subject to the provisions of the Act.
+
+===== Chunk ID: ifsca_act_section_12_sub_1 =====
+Section 12(2)(a) empowers the Authority to regulate financial products, services, and institutions operating within an International Financial Services Centre (IFSC) that received prior authorization.
+
+===== Chunk ID: ifsca_act_section_12_sub_2 =====
+Section 12 authorizes the regulator to oversee financial products, services, and institutions within International Financial Services Centres (IFSCs), while preserving the validity of services permitted by any regulator prior to the commencement of this Act.
+
+===== Chunk ID: ifsca_act_section_12_sub_3 =====
+Section 12 authorizes the Central Government to notify specific Financial Services Centres and empowers the relevant authority to recommend additional financial products, services, and institutions for operation within an International Financial Services Centre (IFSC).
+
+===== Chunk ID: ifsca_act_section_12_sub_4 =====
+Section 12(d) authorizes the Central Government to prescribe additional functions for the Financial Services Centre beyond those explicitly defined. This provision grants the government regulatory power to expand the operational scope and mandate of the Centre as required.
+
+===== Chunk ID: ifsca_act_section_13_sub_0 =====
+Section 13(1) mandates that, notwithstanding any other prevailing laws, all regulatory powers granted to the authorities listed in column (2) of the First Schedule under their respective Acts (column 3) remain exercisable.
+
+===== Chunk ID: ifsca_act_section_13_sub_1 =====
+Section 13 mandates that the International Financial Services Centres Authority (IFSCA) exercises the powers specified in column (3) of the Schedule regarding the regulation of financial products, financial services, and financial institutions within International Financial Services Centres.
+
+===== Chunk ID: ifsca_act_section_13_sub_2 =====
+Section 13(2) empowers the Central Government to amend the First Schedule via notification to include or omit specific financial sector regulators and their respective administered laws.
+
+===== Chunk ID: ifsca_act_section_13_sub_3 =====
+Section 13 authorizes the amendment of the First Schedule to include or omit specific regulators and laws upon the official publication of a notification. This provision establishes the legal mechanism for updating the scope of regulatory oversight through formal administrative notice.
+
+===== Chunk ID: ifsca_act_section_13_sub_4 =====
+Section 13(3) mandates that every notification issued under sub-section (2) must be laid before each House of Parliament for legislative oversight.
+
+===== Chunk ID: ifsca_act_section_13_sub_5 =====
+Section 13(4) mandates that the filing procedures for recognition, registration, withdrawal, and information reporting must adhere to the specific provisions of the Acts listed in column (3) of the First Schedule.
+
+===== Chunk ID: ifsca_act_section_13_sub_6 =====
+Section 13 authorizes the procedures for the inspection, investigation, and prosecution of offences, including the settlement of civil and administrative proceedings, the compounding or adjudication of penalties, and the furnishing of information or reports.
+
+===== Chunk ID: ifsca_act_section_13_sub_7 =====
+Section 13(c) authorizes the determination or settlement of fees, fines, penalties, or punishments resulting from the contravention of provisions under specified Acts, including actions taken during inspections, investigations, adjudications, or related appeals.
+
+===== Chunk ID: ifsca_act_section_13_sub_8 =====
+Section 13 mandates that the provisions and enforcement mechanisms for fines and penalties under the Acts listed in the First Schedule shall apply *mutatis mutandis* to financial products, services, and institutions regulated under this Act.
+
+===== Chunk ID: ifsca_act_section_13_sub_9 =====
+Section 13 governs the regulatory oversight and application of legal provisions concerning products, financial services, and financial institutions as defined under their respective governing Acts.
+
+===== Chunk ID: ifsca_act_section_13_sub_10 =====
+Section 13(5) mandates that all penalties, fines, fees, and settlement amounts must be collected or realized in the foreign currency equivalent of the original amount imposed.
+
+===== Chunk ID: ifsca_act_section_13_sub_11 =====
+Section 13 mandates that the foreign currency equivalent to Indian rupees for penalty or fine calculations must be determined using the Reserve Bank of India’s notified exchange rate on the date the order is issued.
+
+===== Chunk ID: ifsca_act_section_13_sub_12 =====
+Section 13(6) mandates that all penalties and fines collected under this Act must be credited to the Consolidated Fund of India in Indian rupees.
+
+===== Chunk ID: ifsca_act_section_13_sub_13 =====
+Section 13(7) empowers the Authority to establish regulations defining the procedural manner for executing its functions to ensure compliance with the provisions of Section 13.
+
+===== Chunk ID: ifsca_act_section_14_sub_0 =====
+Under Section 14, the Central Government is authorized to provide grants to the Authority for the purposes of the Act, subject to due appropriation by Parliament through law.
+
+===== Chunk ID: ifsca_act_section_15_sub_0 =====
+Section 15(1) establishes the International Financial Services Centres Authority Fund, mandating that all grants, fees, charges, and other authorized sums received by the Authority under the Act be credited to this Fund.
+
+===== Chunk ID: ifsca_act_section_15_sub_1 =====
+Section 15 authorizes the Central Government to determine the specific sources from which the Authority may derive its funding or financial resources.
+
+===== Chunk ID: ifsca_act_section_15_sub_2 =====
+Section 15(2) mandates that the Authority’s Fund be utilized exclusively for covering the salaries, allowances, and remuneration of its Members and staff, as well as operational expenses incurred in the discharge of its statutory functions under this Act.
+
+===== Chunk ID: ifsca_act_section_16_sub_0 =====
+Section 16(1) mandates that the Authority maintain proper accounts and records, and prepare an annual statement of accounts in a form prescribed by the Central Government in consultation with the Comptroller and Auditor-General of India.
+
+===== Chunk ID: ifsca_act_section_16_sub_1 =====
+Section 16(2) mandates that the Authority’s accounts be audited by the Comptroller and Auditor-General of India at specified intervals, with the Authority bearing all associated audit expenditures.
+
+===== Chunk ID: ifsca_act_section_16_sub_2 =====
+Section 16(3) grants the Comptroller and Auditor-General (CAG) of India and their appointees the same rights, privileges, and authority during the audit of the Authority’s accounts as the CAG possesses under their general statutory powers.
+
+===== Chunk ID: ifsca_act_section_16_sub_3 =====
+Section 16 grants the Comptroller and Auditor-General of India the authority to audit the Authority’s accounts, including the power to demand production of books, vouchers, and documents and to inspect any of the Authority's offices.
+
+===== Chunk ID: ifsca_act_section_16_sub_4 =====
+Section 16(4) mandates that the Authority’s annual accounts, certified by the Comptroller and Auditor-General of India (CAG) or their appointee, must be submitted alongside the audit report to the Central Government for presentation before Parliament.
+
+===== Chunk ID: ifsca_act_section_16_sub_5 =====
+Section 16 mandates that the Government must submit the specified documents or reports to both Houses of Parliament for formal presentation.
+
+===== Chunk ID: ifsca_act_section_17_sub_0 =====
+Section 17(1) mandates that the Authority establish a Performance Review Committee, comprising at least two Authority Members, to evaluate whether the Authority’s exercise of powers and functions adheres to applicable laws and the provisions of this Act.
+
+===== Chunk ID: ifsca_act_section_17_sub_1 =====
+Section 17 mandates that the Authority must perform its functions under the Act by ensuring regulations promote transparency and governance best practices while maintaining reasonable management of operational risks.
+
+===== Chunk ID: ifsca_act_section_17_sub_2 =====
+Section 17(2) mandates that the Performance Review Committee conduct an annual review and submit findings to the Authority, which must then forward the report and any subsequent action taken to the Central Government.
+
+===== Chunk ID: ifsca_act_section_17_sub_3 =====
+Section 17 mandates the submission of a report to the Central Government within a three-month period following the date of its receipt.
+
+===== Chunk ID: ifsca_act_section_17_sub_4 =====
+Section 17(3) mandates that the Performance Review Committee establish a reporting system for the public to submit allegations regarding the Authority's non-adherence to applicable laws, misappropriation of resources, or abuse of powers.
+
+===== Chunk ID: ifsca_act_section_17_sub_5 =====
+Section 17 defines actionable misconduct for Authority Members or employees, specifically encompassing the abuse of powers and the non-compliance with any formal decision issued by the Authority.
+
+===== Chunk ID: ifsca_act_section_17_sub_6 =====
+Section 17(4) mandates that the Authority must establish regulations defining the information requirements for the Performance Review Committee and ensuring the provision of adequate resources for the committee to fulfill its statutory functions.
+
+===== Chunk ID: ifsca_act_section_18_sub_0 =====
+Section 18 mandates that the Authority maintain a universally accessible electronic repository for the publication of all its regulations and orders. This provision establishes the legal requirement for the Authority to ensure public digital access to its official regulatory instruments.
+
+===== Chunk ID: ifsca_act_section_18_sub_1 =====
+Section 18(3) mandates that the Authority conduct an annual quality review of the website or repository against international best practices and publish these findings within its annual report.
+
+===== Chunk ID: ifsca_act_section_19_sub_0 =====
+Under Section 19(1), the Authority is mandated to submit returns, statements, and particulars concerning development and regulation programs to the Central Government in the prescribed form, manner, and timeframe directed by the government.
+
+===== Chunk ID: ifsca_act_section_19_sub_1 =====
+Section 19 authorizes the Central Government to mandate and regulate development programmes for units operating within International Financial Services Centres (IFSCs).
+
+===== Chunk ID: ifsca_act_section_19_sub_2 =====
+Under Section 19(2), the Authority must submit a comprehensive annual report to the Central Government within ninety days of the financial year's end, detailing its activities, policies, and programs.
+
+===== Chunk ID: ifsca_act_section_19_sub_3 =====
+Section 19 mandates the reporting of an entity's activities, policies, and programmes conducted throughout the preceding financial year.
+
+===== Chunk ID: ifsca_act_section_19_sub_4 =====
+Under Section 19(3), the report received pursuant to sub-section (2) must be laid before each House of Parliament as soon as practicable following its receipt.
+
+===== Chunk ID: ifsca_act_section_20_sub_0 =====
+Section 20 mandates that all financial service transactions within an International Financial Services Centre must be conducted in foreign currencies specified by regulations, subject to consultation with the Central Government.
+
+===== Chunk ID: ifsca_act_section_21_sub_0 =====
+Section 21(1) mandates that the Authority must comply with all written policy directions issued by the Central Government while exercising its powers or performing its functions under this Act.
+
+===== Chunk ID: ifsca_act_section_21_sub_1 =====
+Section 21 mandates that the Authority must be granted a reasonable opportunity to express its views before any formal direction is issued under this sub-section.
+
+===== Chunk ID: ifsca_act_section_21_sub_2 =====
+Under Section 21(2), the Central Government holds final authority to determine whether a specific matter constitutes a question of policy.
+
+===== Chunk ID: ifsca_act_section_22_sub_0 =====
+Section 22(1) empowers the Central Government to intervene if the Authority is unable to discharge its statutory functions due to circumstances beyond its control or has persistently defaulted in complying with the Act.
+
+===== Chunk ID: ifsca_act_section_22_sub_1 =====
+Section 22 authorizes the Central Government to intervene if the Authority persistently defaults in complying with statutory directions or discharging its mandated duties, specifically where such default adversely impacts the Authority's financial position.
+
+===== Chunk ID: ifsca_act_section_22_sub_2 =====
+Under Section 22, the Central Government is empowered to supersede the Authority via notification if its financial position or administration has deteriorated, or if such action is deemed necessary in the public interest, provided the reasons for supersession are explicitly specified.
+
+===== Chunk ID: ifsca_act_section_22_sub_3 =====
+Under Section 22, the Central Government may supersede the Authority for a period not exceeding six months via notification, provided the Authority is granted a reasonable opportunity to submit representations prior to such action.
+
+===== Chunk ID: ifsca_act_section_22_sub_4 =====
+Section 22 establishes the legal authority of the Authority to issue formal representations, defining the scope and validity of such statements.
+
+===== Chunk ID: ifsca_act_section_22_sub_5 =====
+Under Section 22(2), the publication of a notification superseding the Authority mandates that the Chairperson and all Members vacate their offices effective immediately. Consequently, all powers, functions, and duties previously held by the Authority are transferred as prescribed by the Act.
+
+===== Chunk ID: ifsca_act_section_22_sub_6 =====
+Under Section 22, until the Authority is reconstituted pursuant to sub-section (3), the Central Government is empowered to designate specific persons to exercise the powers and discharge the duties of the Authority, including the management of all properties owned or controlled by it.
+
+===== Chunk ID: ifsca_act_section_22_sub_7 =====
+Under Section 22(c), all properties owned or controlled by the Authority vest in the Central Government until the Authority is reconstituted pursuant to sub-section (3).
+
+===== Chunk ID: ifsca_act_section_22_sub_8 =====
+Under Section 22(3), the Central Government must reconstitute the Authority by appointing a new Chairperson and Members on or before the expiration of the supersession period specified in the sub-section (1) notification.
+
+===== Chunk ID: ifsca_act_section_22_sub_9 =====
+Section 22(2)(a) stipulates that a person who has vacated their office is not disqualified from reappointment to that same position.
+
+===== Chunk ID: ifsca_act_section_22_sub_10 =====
+Under Section 22(4), the Central Government is mandated to submit a copy of the notification issued under sub-section (1) and a comprehensive report of all actions taken pursuant to it before both Houses of Parliament as soon as practicable.
+
+===== Chunk ID: ifsca_act_section_23_sub_0 =====
+Section 23(1) empowers the Authority to delegate its powers and functions under the Act to any Member or officer via general or special written order, subject to specified conditions, excluding the powers granted under section 28.
+
+===== Chunk ID: ifsca_act_section_23_sub_1 =====
+Under Section 23(2), the Authority is empowered to establish committees of its Members and delegate specific powers and functions to them through general or special written orders, subject to governing regulations.
+
+===== Chunk ID: ifsca_act_section_24_sub_0 =====
+Section 24 designates all Members, officers, and employees of the Authority as "public servants" under Section 21 of the Indian Penal Code whenever they act or purport to act in pursuance of this Act.
+
+===== Chunk ID: ifsca_act_section_25_sub_0 =====
+Section 25 provides statutory immunity from suits, prosecutions, or legal proceedings for the Central Government, the Authority, and its personnel regarding actions taken or intended in good faith under this Act.
+
+===== Chunk ID: ifsca_act_section_26_sub_0 =====
+Section 26 grants the Authority a comprehensive exemption from all forms of taxation, including income tax under the Income-tax Act, 1961, regarding its income, services, profits, or gains, notwithstanding any contrary provisions in existing laws.
+
+===== Chunk ID: ifsca_act_section_27_sub_0 =====
+Section 27(1) empowers the Central Government to enact rules via notification for the purpose of implementing the provisions of this Act.
+
+===== Chunk ID: ifsca_act_section_27_sub_1 =====
+Section 27(2) empowers the relevant authority to prescribe rules regarding the composition and constitution of the Selection Committee established under Section 5(4), as well as the determination of salaries and related terms.
+
+===== Chunk ID: ifsca_act_section_27_sub_2 =====
+Section 27 empowers the relevant authority to prescribe regulations concerning the salaries, allowances, and service conditions of Members under Section 6(2), additional functions under Section 12(2)(d), and the standardized form for maintaining accounts.
+
+===== Chunk ID: ifsca_act_section_27_sub_3 =====
+Section 27 empowers the governing authority to prescribe the specific forms and manners for maintaining accounts and records under Section 16(1), as well as the submission of returns, statements, and particulars required under Section 19(1).
+
+===== Chunk ID: ifsca_act_section_27_sub_4 =====
+Section 27 authorizes the prescription of specific regulatory requirements, including the form for the annual report of activities, policies, and programmes mandated under Section 19(2), as well as any other matters designated for regulatory oversight.
+
+===== Chunk ID: ifsca_act_section_28_sub_0 =====
+Section 28(1) empowers the Authority to issue notifications establishing regulations that are consistent with the Act and its underlying rules to facilitate the implementation of the Act's provisions.
+
+===== Chunk ID: ifsca_act_section_28_sub_1 =====
+Section 28(2)(a) empowers the relevant authority to establish regulations governing the scheduling, location, and procedural rules for conducting business at meetings convened under Section 28(1).
+
+===== Chunk ID: ifsca_act_section_28_sub_2 =====
+Section 28 authorizes the Authority to establish regulations governing meeting procedures under Section 8(1), employee compensation and service conditions under Section 11(2), and the operational framework for performing its statutory functions.
+
+===== Chunk ID: ifsca_act_section_28_sub_3 =====
+Section 28 authorizes the establishment of regulations governing the performance of functions under Section 13(7), the procedures for providing information to the Performance Review Committee pursuant to Section 17(4), and the maintenance of universally accessible electronic information repositories.
+
+===== Chunk ID: ifsca_act_section_28_sub_4 =====
+Section 28 defines the regulatory scope for the Authority, specifically regarding the repository of electronic information under Section 18(1), the designation of foreign currencies for financial services in International Financial Services Centres under Section 20, and the delegation of the Authority's powers and functions.
+
+===== Chunk ID: ifsca_act_section_28_sub_5 =====
+Section 28(h) authorizes the Authority to specify additional matters through regulations, supplementing the delegation powers established under Section 23(2).
+
+===== Chunk ID: ifsca_act_section_29_sub_0 =====
+Section 29 mandates that all rules and regulations made under this Act must be laid before each House of Parliament for a total period of thirty days, whether in a single session or across successive sessions.
+
+===== Chunk ID: ifsca_act_section_29_sub_1 =====
+Under Section 29, rules or regulations are subject to parliamentary oversight, whereby both Houses may modify or annul them if such action is taken before the expiry of the session immediately following the session or successive sessions in which they were laid.
+
+===== Chunk ID: ifsca_act_section_29_sub_2 =====
+Section 29 mandates that if a rule or regulation is modified or annulled by the competent authority, the change applies prospectively without invalidating any actions previously taken under the original provision. This ensures the preservation of legal acts performed prior to the modification or annulment.
+
+===== Chunk ID: ifsca_act_section_30_sub_0 =====
+Section 30 establishes the overriding effect of this Act, mandating that its provisions prevail notwithstanding any inconsistencies in other contemporary laws or legal instruments.
+
+===== Chunk ID: ifsca_act_section_31_sub_0 =====
+Section 31(1) empowers the Central Government, via notification, to direct the application of provisions, rules, regulations, or orders from any other Central Act to the subject matter of this Act, excluding provisions related to the rulemaking process itself.
+
+===== Chunk ID: ifsca_act_section_31_sub_1 =====
+Section 31 specifies that rules or regulations issued under the notification either exclude or include financial products, services, and institutions operating within an International Financial Services Centre (IFSC).
+
+===== Chunk ID: ifsca_act_section_31_sub_2 =====
+Section 31 authorizes the government to apply, via notification, specific financial laws to products, services, or institutions within an International Financial Services Centre (IFSC), subject to defined exceptions, modifications, and adaptations.
+
+===== Chunk ID: ifsca_act_section_31_sub_3 =====
+Section 31(2) mandates that any notification proposed under sub-section (1) must be laid in draft before both Houses of Parliament for a total period of thirty days, spanning one or more successive sessions, prior to issuance.
+
+===== Chunk ID: ifsca_act_section_31_sub_4 =====
+Under Section 31, a notification remains subject to parliamentary oversight, whereby both Houses of Parliament may disapprove or modify the notification before the expiry of the session immediately following the session or successive sessions in which it was laid. If both Houses agree to such disapproval or modification, the notification shall not be issued or shall take effect only in the modified form.
+
+===== Chunk ID: ifsca_act_section_31_sub_5 =====
+Under Section 31, the issuance of a notification is contingent upon the agreement of both Houses of Parliament, requiring either the withholding of the notification or its issuance only in a mutually agreed-upon modified form.
+
+===== Chunk ID: ifsca_act_section_32_sub_0 =====
+Section 32(1) empowers the Central Government to issue orders in the Official Gazette to resolve difficulties in implementing the Act, provided such provisions remain consistent with the Act's existing requirements.
+
+===== Chunk ID: ifsca_act_section_32_sub_1 =====
+Section 32 prohibits the issuance of any order for the removal of difficulties after the expiration of a five-year period following the commencement of the Act.
+
+===== Chunk ID: ifsca_act_section_32_sub_2 =====
+Section 32(2) mandates that every order issued under this section must be laid before each House of Parliament as soon as practicable after its enactment.
+
+===== Chunk ID: ifsca_act_section_33_sub_0 =====
+Section 33 mandates that the enactments listed in the Second Schedule be amended according to the specific provisions set forth therein.
+
+===== Chunk ID: ifsca_act_section_34_sub_0 =====
+Section 34 validates all rules, regulations, and notifications issued under Central Acts concerning financial products, financial services, or financial institutions, provided they pertain to matters within the scope of the relevant legislative framework.
+
+===== Chunk ID: ifsca_act_section_34_sub_1 =====
+Section 34 establishes that existing rules, regulations, or notifications remain valid and are deemed issued under this Act, provided they concern matters governed by this Act and are not inconsistent with its provisions. This clause ensures legal continuity by retroactively applying the Act's authority to pre-existing regulatory instruments as if the Act were in force at the time of their issuance.
+
+===== Chunk ID: ifsca_act_section_34_sub_2 =====
+Section 34 mandates that rules and notifications issued prior to the Act's commencement remain in force as if enacted under this Act, continuing until explicitly superseded by subsequent regulations or notifications.
+
+===== Chunk ID: ifsca_act_first_schedule_sub_0 =====
+The First Schedule, referenced by sections 3(1)(a) and 13(1), (2), and (4), designates the Reserve Bank of India as the appropriate regulator for the Reserve Bank of India Act, 1934 (2 of 1934).
+
+===== Chunk ID: ifsca_act_first_schedule_sub_1 =====
+The First Schedule of the Act lists specific financial statutes, including the Banking Regulation Act, 1949, the Deposit Insurance and Credit Guarantee Corporation Act, 1961, the Foreign Exchange Management Act, 1999, and the Credit Information Companies (Regulation) Act, 2005. These entries define the legislative framework governing banking, credit, and foreign exchange regulation.
+
+===== Chunk ID: ifsca_act_first_schedule_sub_2 =====
+The First Schedule lists the Government Securities Act, 2006 (38 of 2006), the Payment and Settlement Systems Act, 2007 (51 of 2007), and the Securities and Exchange Board of India (SEBI) established under the Securities and Exchange Board of India Act, 1992 (15 of 1992). These entities and statutes are formally designated within the scope of the First Schedule.
+
+===== Chunk ID: ifsca_act_first_schedule_sub_3 =====
+The First Schedule lists the Securities Contracts (Regulation) Act, 1956 (42 of 1956), the Securities and Exchange Board of India Act, 1992 (15 of 1992), and the Depositories Act, 1996 (22 of 1996) as the governing statutes.
+
+===== Chunk ID: ifsca_act_first_schedule_sub_4 =====
+The First Schedule lists the Depositories Act, 1996 (22 of 1996), the Insurance Act, 1938 (4 of 1938), and the Insurance Regulatory and Development Authority Act, 1999 (41 of 1999) as governing statutes.
+
+===== Chunk ID: ifsca_act_first_schedule_sub_5 =====
+The First Schedule lists the Insurance Act, 1938 (4 of 1938), the General Insurance Business (Nationalisation) Act, 1972 (57 of 1972), and the Insurance Regulatory and Development Authority Act, 1999 (41 of 1999) as the governing statutes for the insurance sector.
+
+===== Chunk ID: ifsca_act_first_schedule_sub_6 =====
+The First Schedule identifies the Pension Fund Regulatory and Development Authority (PFRDA), constituted under the Pension Fund Regulatory and Development Authority Act, 2013 (23 of 2013), as a regulated entity.
+
+===== Chunk ID: ifsca_act_second_schedule_part_i_sub_0 =====
+The Second Schedule, Part I, amends the Reserve Bank of India Act, 1934 (2 of 1934) by inserting section 57A into the existing legislative framework.
+
+===== Chunk ID: ifsca_act_second_schedule_part_i_sub_1 =====
+Under the Second Schedule, Part I, the Bank’s powers under this Act are explicitly excluded from application to any International Financial Services Centre established pursuant to section 18(1) of the Special Economic Zones Act, 2005, notwithstanding any conflicting provisions in other prevailing laws.
+
+===== Chunk ID: ifsca_act_second_schedule_part_i_sub_2 =====
+Under the Second Schedule, Part I of the Special Economic Zones Act, 2005, the International Financial Services Centres Authority (IFSCA), established under section 4(1) of the International Financial Services Centres Authority Act, 2019, is granted regulatory powers over financial products and financial services within the specified zones.
+
+===== Chunk ID: ifsca_act_second_schedule_part_i_sub_3 =====
+The Second Schedule, Part I, defines the scope of permissible financial products, financial services, and financial institutions authorized to operate within International Financial Services Centres (IFSCs).
+
+===== Chunk ID: ifsca_act_second_schedule_part_ii_sub_0 =====
+The Second Schedule, Part II, amends the Insurance Act, 1938 (4 of 1938) by inserting section 118A into the existing legislative framework.
+
+===== Chunk ID: ifsca_act_second_schedule_part_ii_sub_1 =====
+Under the Second Schedule, Part II, the Authority’s powers under this Act are explicitly excluded from application to any International Financial Services Centre established pursuant to section 18(1) of the Special Economic Zones Act, 2005, notwithstanding any conflicting provisions in other prevailing laws.
+
+===== Chunk ID: ifsca_act_second_schedule_part_ii_sub_2 =====
+Under the Second Schedule, Part II, the International Financial Services Centres Authority (IFSCA), established per section 4(1) of the International Financial Services Centres Authority Act, 2019, is granted regulatory powers over financial products and services within Special Economic Zones as defined by the Special Economic Zones Act, 2005.
+
+===== Chunk ID: ifsca_act_second_schedule_part_ii_sub_3 =====
+Second Schedule, Part II, governs the regulation of financial products, financial services, and financial institutions authorized to operate within International Financial Services Centres (IFSCs).
+
+===== Chunk ID: ifsca_act_second_schedule_part_iii_sub_0 =====
+The Second Schedule, Part III, amends the Banking Regulation Act, 1949 (10 of 1949) by inserting Section 51A after Section 51.
+
+===== Chunk ID: ifsca_act_second_schedule_part_iii_sub_1 =====
+Under the Second Schedule, Part III, the Reserve Bank of India’s regulatory powers under this Act are explicitly excluded from application to any International Financial Services Centre (IFSC) established pursuant to section 18(1) of the Special Economic Zones Act, 2005, notwithstanding any conflicting provisions in other prevailing laws.
+
+===== Chunk ID: ifsca_act_second_schedule_part_iii_sub_2 =====
+The International Financial Services Centres Authority (IFSCA), established under Section 4(1) of the International Financial Services Centres Authority Act, 2019, is granted regulatory powers over financial products and services as referenced in Section 18 of the Special Economic Zones Act, 2005.
+
+===== Chunk ID: ifsca_act_second_schedule_part_iii_sub_3 =====
+The Second Schedule, Part III, governs the regulation of financial products, financial services, and financial institutions authorized to operate within International Financial Services Centres (IFSCs).
+
+===== Chunk ID: ifsca_act_second_schedule_part_iv_sub_0 =====
+Second Schedule, Part IV amends the Securities Contracts (Regulation) Act, 1956 (42 of 1956) by inserting section 29B following section 29A. This amendment establishes the legislative framework for the addition of new regulatory provisions within the Act.
+
+===== Chunk ID: ifsca_act_second_schedule_part_iv_sub_1 =====
+Under the Second Schedule, Part IV, the Securities and Exchange Board of India (SEBI) is explicitly prohibited from exercising its powers within an International Financial Services Centre established under section 18(1) of the Special Economic Zones Act, 2005, notwithstanding any conflicting provisions in other prevailing laws.
+
+===== Chunk ID: ifsca_act_second_schedule_part_iv_sub_2 =====
+The International Financial Services Centres Authority, established under section 4(1) of the International Financial Services Centres Authority Act, 2019, is empowered to exercise the regulatory functions specified in section 18(1) of the Special Economic Zones Act, 2005.
+
+===== Chunk ID: ifsca_act_second_schedule_part_iv_sub_3 =====
+The Second Schedule, Part IV of the Authority Act, 2019, grants the Authority regulatory jurisdiction over financial products, financial services, and financial institutions operating within International Financial Services Centres (IFSCs).
+
+===== Chunk ID: ifsca_act_second_schedule_part_v_sub_0 =====
+Part V of the Second Schedule amends the Deposit Insurance and Credit Guarantee Corporation Act, 1961 (47 of 1961) by inserting section 43A into the principal Act.
+
+===== Chunk ID: ifsca_act_second_schedule_part_v_sub_1 =====
+Under Second Schedule, Part V, the Reserve Bank’s powers under this Act are explicitly excluded from application to any International Financial Services Centre established pursuant to section 18(1) of the Special Economic Zones Act, 2005, notwithstanding any conflicting provisions in other prevailing laws.
+
+===== Chunk ID: ifsca_act_second_schedule_part_v_sub_2 =====
+The International Financial Services Centres Authority (IFSCA), established under Section 4(1) of the International Financial Services Centres Authority Act, 2019, is empowered to exercise regulatory authority over financial products and services as referenced in Section 18 of the Special Economic Zones Act, 2005.
+
+===== Chunk ID: ifsca_act_second_schedule_part_v_sub_3 =====
+Second Schedule, Part V, governs the regulation of financial products, financial services, and financial institutions authorized to operate within International Financial Services Centres (IFSCs).
+
+===== Chunk ID: ifsca_act_second_schedule_part_vi_sub_0 =====
+Section 38A is inserted into the General Insurance Business (Nationalisation) Act, 1972 (57 of 1972) via Part VI of the Second Schedule to establish new statutory provisions governing the nationalized insurance sector.
+
+===== Chunk ID: ifsca_act_second_schedule_part_vi_sub_1 =====
+Under the Second Schedule, Part VI, the Insurance Regulatory and Development Authority of India (IRDAI) lacks regulatory jurisdiction over International Financial Services Centres (IFSCs) established pursuant to section 18(1) of the Act, notwithstanding any conflicting provisions in other prevailing laws.
+
+===== Chunk ID: ifsca_act_second_schedule_part_vi_sub_2 =====
+The International Financial Services Centres Authority, established under Section 4(1) of the International Financial Services Centres Authority Act, 2019, is empowered to exercise functions related to entities set up under Section 18(1) of the Special Economic Zones Act, 2005.
+
+===== Chunk ID: ifsca_act_second_schedule_part_vi_sub_3 =====
+The Second Schedule, Part VI of the Centres Authority Act, 2019, grants the International Financial Services Centres Authority regulatory jurisdiction over financial products, financial services, and financial institutions operating within International Financial Services Centres.
+
+===== Chunk ID: ifsca_act_second_schedule_part_vii_sub_0 =====
+Part VII of the Second Schedule amends the Securities and Exchange Board of India Act, 1992 (15 of 1992) by inserting section 28C into the existing legislative framework.
+
+===== Chunk ID: ifsca_act_second_schedule_part_vii_sub_1 =====
+Under the Second Schedule, Part VII, the Board’s powers under this Act are explicitly excluded from application to any International Financial Services Centre established pursuant to section 18(1) of the Special Economic Zones Act, 2005, notwithstanding any conflicting provisions in other prevailing laws.
+
+===== Chunk ID: ifsca_act_second_schedule_part_vii_sub_2 =====
+Under the Second Schedule, Part VII of the Special Economic Zones Act, 2005, the International Financial Services Centres Authority (established under Section 4(1) of the International Financial Services Centres Authority Act, 2019) is granted regulatory powers over financial products and financial services within the specified zones.
+
+===== Chunk ID: ifsca_act_second_schedule_part_vii_sub_3 =====
+Second Schedule, Part VII defines the scope of permissible financial products, financial services, and financial institutions authorized to operate within International Financial Services Centres (IFSCs).
+
+===== Chunk ID: ifsca_act_second_schedule_part_viii_sub_0 =====
+Section 23G is inserted into the Depositories Act, 1996 (22 of 1996) via Part VIII of the Second Schedule to establish new regulatory provisions for depositories.
+
+===== Chunk ID: ifsca_act_second_schedule_part_viii_sub_1 =====
+Under the Second Schedule, Part VIII, the Board’s powers under this Act are explicitly excluded from application to any International Financial Services Centre established pursuant to section 18(1) of the Special Economic Zones Act, 2005, notwithstanding any conflicting provisions in other prevailing laws.
+
+===== Chunk ID: ifsca_act_second_schedule_part_viii_sub_2 =====
+Under the Second Schedule, Part VIII of the Special Economic Zones Act, 2005, the International Financial Services Centres Authority (IFSCA), established under section 4(1) of the International Financial Services Centres Authority Act, 2019, is granted regulatory powers over financial products and financial services within the designated zones.
+
+===== Chunk ID: ifsca_act_second_schedule_part_viii_sub_3 =====
+Second Schedule, Part VIII, defines the scope of financial products, financial services, and financial institutions permitted to operate within International Financial Services Centres (IFSCs).
+
+===== Chunk ID: ifsca_act_second_schedule_part_ix_sub_0 =====
+Part IX of the Second Schedule amends the Insurance Regulatory and Development Authority Act, 1999 (41 of 1999) by inserting section 23A into the existing legislative framework.
+
+===== Chunk ID: ifsca_act_second_schedule_part_ix_sub_1 =====
+Under Second Schedule, Part IX, the Authority’s powers under this Act are explicitly excluded from application to any International Financial Services Centre established pursuant to section 18(1) of the Special Economic Zones Act, 2005, notwithstanding any conflicting provisions in other prevailing laws.
+
+===== Chunk ID: ifsca_act_second_schedule_part_ix_sub_2 =====
+Under the Second Schedule, Part IX, the International Financial Services Centres Authority (IFSCA), established per Section 4(1) of the International Financial Services Centres Authority Act, 2019, is granted regulatory powers over financial products and services within Special Economic Zones as defined by the Special Economic Zones Act, 2005.
+
+===== Chunk ID: ifsca_act_second_schedule_part_ix_sub_3 =====
+Second Schedule, Part IX governs the regulation of financial products, financial services, and financial institutions authorized to operate within International Financial Services Centres (IFSCs).
+
+===== Chunk ID: ifsca_act_second_schedule_part_x_sub_0 =====
+Part X of the Second Schedule amends the Foreign Exchange Management Act, 1999 (42 of 1999) by inserting section 44A into the principal Act.
+
+===== Chunk ID: ifsca_act_second_schedule_part_x_sub_1 =====
+Under Second Schedule, Part X, the Reserve Bank’s powers under this Act are explicitly excluded from application to any International Financial Services Centre established pursuant to section 18(1) of the Special Economic Zones Act, 2005, notwithstanding any conflicting provisions in other prevailing laws.
+
+===== Chunk ID: ifsca_act_second_schedule_part_x_sub_2 =====
+Under the Second Schedule, Part X, the International Financial Services Centres Authority (IFSCA), established via section 4(1) of the International Financial Services Centres Authority Act, 2019, is granted regulatory powers over financial products and services, superseding or supplementing authorities under section 18 of the Special Economic Zones Act, 2005.
+
+===== Chunk ID: ifsca_act_second_schedule_part_x_sub_3 =====
+Second Schedule, Part X, governs the regulation of financial products, financial services, and financial institutions authorized to operate within International Financial Services Centres (IFSCs).
+
+===== Chunk ID: ifsca_act_second_schedule_part_xi_sub_0 =====
+The Second Schedule, Part XI, amends the Credit Information Companies (Regulation) Act, 2005 (30 of 2005) by inserting Section 33A into the existing legislative framework.
+
+===== Chunk ID: ifsca_act_second_schedule_part_xi_sub_1 =====
+Under the Second Schedule, Part XI, the Reserve Bank’s powers under this Act are explicitly excluded from application to any International Financial Services Centre established pursuant to section 18(1) of the Special Economic Zones Act, 2005, notwithstanding any conflicting provisions in other prevailing laws.
+
+===== Chunk ID: ifsca_act_second_schedule_part_xi_sub_2 =====
+The International Financial Services Centres Authority, established under section 4(1) of the International Financial Services Centres Authority Act, 2019, is empowered to exercise regulatory authority over financial products and services within Special Economic Zones as defined by section 18 of the Special Economic Zones Act, 2005.
+
+===== Chunk ID: ifsca_act_second_schedule_part_xi_sub_3 =====
+Second Schedule, Part XI governs the regulation of financial products, financial services, and financial institutions authorized to operate within International Financial Services Centres (IFSCs).
+
+===== Chunk ID: ifsca_act_second_schedule_part_xii_sub_0 =====
+Part XII of the Second Schedule amends the Government Securities Act, 2006 (38 of 2006) by inserting section 31A into the existing legislative framework.
+
+===== Chunk ID: ifsca_act_second_schedule_part_xii_sub_1 =====
+Under the Second Schedule, Part XII, the Bank’s regulatory powers under this Act are explicitly excluded from application to any International Financial Services Centre established pursuant to section 18(1) of the Special Economic Zones Act, 2005.
+
+===== Chunk ID: ifsca_act_second_schedule_part_xii_sub_2 =====
+Under the Second Schedule, Part XII, the International Financial Services Centres Authority (IFSCA), established under Section 4(1) of the International Financial Services Centres Authority Act, 2019, is granted regulatory powers over financial products and financial services within Special Economic Zones as defined by the Special Economic Zones Act, 2005.
+
+===== Chunk ID: ifsca_act_second_schedule_part_xii_sub_3 =====
+Second Schedule, Part XII defines the scope of financial products, financial services, and financial institutions permitted to operate within International Financial Services Centres (IFSCs).
+
+===== Chunk ID: ifsca_act_second_schedule_part_xiii_sub_0 =====
+Part XIII of the Second Schedule amends the Payment and Settlement Systems Act, 2007 (51 of 2007) by inserting section 34B into the existing legislative framework.
+
+===== Chunk ID: ifsca_act_second_schedule_part_xiii_sub_1 =====
+Under the Second Schedule, Part XIII, the Reserve Bank’s powers under this Act are explicitly excluded from application to International Financial Services Centres established pursuant to section 18(1) of the Special Economic Zones Act, 2005, notwithstanding any conflicting provisions in other prevailing laws.
+
+===== Chunk ID: ifsca_act_second_schedule_part_xiii_sub_2 =====
+The International Financial Services Centres Authority, established under Section 4(1) of the International Financial Services Centres Authority Act, 2019, is granted regulatory powers over financial products and services within Special Economic Zones pursuant to Section 18 of the Special Economic Zones Act, 2005.
+
+===== Chunk ID: ifsca_act_second_schedule_part_xiii_sub_3 =====
+Second Schedule, Part XIII governs the regulation of financial products, financial services, and financial institutions authorized to operate within International Financial Services Centres (IFSCs).
+
+===== Chunk ID: ifsca_act_second_schedule_part_xiv_sub_0 =====
+Second Schedule, Part XIV amends the Pension Fund Regulatory and Development Authority Act, 2013 (23 of 2013) by inserting section 50A to establish new regulatory provisions.
+
+===== Chunk ID: ifsca_act_second_schedule_part_xiv_sub_1 =====
+Under the Second Schedule, Part XIV, the Authority’s powers under this Act are explicitly excluded from application to any International Financial Services Centre established pursuant to section 18(1) of the Special Economic Zones Act, 2005, notwithstanding any conflicting provisions in other prevailing laws.
+
+===== Chunk ID: ifsca_act_second_schedule_part_xiv_sub_2 =====
+Under the Second Schedule, Part XIV, the International Financial Services Centres Authority (IFSCA), established per section 4(1) of the International Financial Services Centres Authority Act, 2019, is granted regulatory powers over financial products and services within Special Economic Zones as defined by the Special Economic Zones Act, 2005.
+
+===== Chunk ID: ifsca_act_second_schedule_part_xiv_sub_3 =====
+Second Schedule, Part XIV governs the regulation of financial products, financial services, and financial institutions authorized to operate within International Financial Services Centres (IFSCs).
+

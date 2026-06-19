@@ -1,0 +1,255 @@
+[
+    {
+        "id": "banking_section_1",
+        "content": "(1) These regulations may be called the International Financial Services Centres Authority (Banking) Regulations, 2020. (2) These Regulations shall come into force from 18th November, 2020",
+        "metadata": {
+            "contained_section": "Section 1",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 0
+        }
+    },
+    {
+        "id": "banking_section_2",
+        "content": "(1) In these regulations, unless the context otherwise requires, - (a) “Act” means the International Financial Services Centres Authority Act, 2019 (50 of 2019); (b) “Authority” means the International Financial Services Centres Authority established under sub-section (1) of Section 4 of the Act; (c) “Banking Unit” or “BU” means a financial institution under clause (c ) of sub-section (1) of Section 3 of the Act that is licensed or permitted by the Authority to undertake permissible activities under these regulations; (d) “Foreign Bank” means a banking company incorporated or established outside India; (da) “Global Administrative Office” or “GAO” means a financial institution set up by its Parent Bank in IFSC for undertaking any one or more of the following activities, namely: (i) managing, administering, or coordinating operations of the Parent Bank or any of the Group entities either in IFSC or outside IFSC; (ii) providing support services to Parent Bank or any of the Group entities for execution of the permitted activities either in IFSC or outside IFSC Provided that the activities pertaining to a jurisdiction outside IFSC shall be subject to the directions and instructions of the relevant regulator in the said jurisdiction. (db) “Group entities” means any holding company, subsidiaries, branches or any other entity, in whatever legal form, through which the Parent bank undertakes its operations or permitted activities. (ea) “Home Regulator” means the regulatory authority that is responsible for regulating the Parent Bank in the jurisdiction where the Parent Bank is incorporated, licensed or established; (eb) “IFSC Banking Company” or “IBC” means a Banking Unit licensed or permitted by the Authority to operate in an IFSC as a subsidiary company of the Parent Bank. (ec) “IFSC Banking Unit” or “IBU” means a Banking Unit licensed or permitted by the Authority to operate in an IFSC as a branch of the Parent Bank. (f) “Indian Bank” means any bank incorporated or established under any Act, and includes a wholly owned subsidiary of a foreign bank incorporated in India, but does not include a co-operative bank; (h) “INR” means the Indian currency called the Indian Rupee; (i) “International Financial Services Centre” or “IFSC” shall have the same meaning as assigned to it under section clause (g) of sub-section (1) of Section 3 of the Act (j) “Parent Bank” means a Foreign Bank as defined under sub-regulation (d) or an Indian Bank as defined under sub-regulation (f), or both, that intends to, or has set up a Banking Unit or Representative Office or Regional Administrative Office; (la) “Referral services” means an activity in which a BU, pursuant to an arrangement with a financial product or financial service provider, refers its clients or the clients of its Parent Bank as potential customers (or \"leads\"), to such financial product or financial service provider for providing them the financial product(s) or financial service(s). (lb) “Representative Office” or “RO” means a financial institution set up by its Parent Bank in IFSC for undertaking any one or more of the following activities, namely: i. marketing of financial products; ii. collection of data; iii. carrying out of outreach operations. (m) “Reserve Bank” means Reserve Bank of India established under the Reserve Bank of India Act, 1934 (2 of 1934); (n) “Securities and Exchange Board” means Securities and Exchange Board of India established under the Securities and Exchange Board of India Act, 1992 (15 of 1992); (na) “Specified foreign currencies” means currencies as specified in the First Schedule to these regulations. (o) “Stock Exchange” means a stock-exchange recognised by the Authority; (oa) “Subsidiary company” means a company that satisfies the definition u/s 2(87) of the Companies Act, 2013. (ob) “Support services” shall mean the ancillary activities and processes required for execution of the permitted activities. (p) “USD” means United States Dollar. (2) Words and expressions used and not defined in these regulations but defined in the Act or Acts mentioned in the First Schedule to the Act, or any rules or regulations made thereunder shall have the same meanings respectively assigned to them in those Acts, rules or regulations or any statutory modification or re-enactment thereto, as the case may be.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1
+        }
+    },
+    {
+        "id": "banking_section_3",
+        "content": "(1) Indian Banks and Foreign Banks shall require licence or permission from the Authority to set up a Banking Unit in an International Financial Services Centre. (1A) A Banking unit may be set up in an IFSC as an: a) IFSC Banking Unit or IBU; or b) IFSC Banking Company or IBC provided that a Parent Bank who has already set up an IBU in an IFSC, may be permitted to convert the same to an IBC, with the prior approval of the Authority, subject to such conditions as may be specified by the Authority. (2) An application for setting up a Banking Unit shall be made by the Parent Bank in the form and manner as specified by the Authority. (2A) The application filed under regulation 3(2) can be withdrawn by the Parent Bank at any time before the grant of the license or permission by the Authority. (3) The applicant shall satisfy the following requirements for grant of licence or permission by the Authority to set up an IFSC Banking Unit: (a) The Parent Bank shall provide necessary capital for the IBU, subject to a minimum of USD 20 million or such other level of capital that may be specified by the Authority. Such capital shall be maintained at the Parent Bank in the manner as specified by the Authority. (b) The Parent Bank shall obtain a No Objection Letter from its home regulator regarding setting up of the Banking Unit in the IFSC as a branch of the Parent Bank; (c) The Parent Bank shall submit an undertaking that it shall provide liquidity to its IBU whenever needed for the operations of the IBU (d) Any other requirement as may be specified by the Authority. (3A) The applicant shall satisfy the following requirements for grant of licence or permission by the Authority to set up an IFSC Banking Company: (a) The Parent Bank shall provide necessary capital for the IBC, subject to a minimum of USD 50 million or such other level of capital that may be specified by the Authority. Such capital shall be calculated and shall be maintained as specified by the Authority. (b) The Parent Bank shall obtain a No Objection Letter from its Home Regulator regarding setting up of the Banking Unit in the IFSC as a Subsidiary company of the Parent Bank. (c) Any other condition that the Authority may specify. (4) A Foreign Bank, not having its presence in India, wishing to set up a Banking Unit in an IFSC, shall comply with such additional requirements as may be specified by the Authority. (5) After considering an application for setting up a Banking Unit, the Authority may grant licence or permission to the applicant subject to such conditions as provided under these regulations or such other conditions as it may deem fit. (6) Where the Authority is of the opinion that licence or permission cannot be granted, it may give thirty days’ time to the applicant, setting out the grounds based on which it cannot grant licence or permission, to enable the applicant to make written submissions, if any. (7) After considering the submissions under sub-regulation (6) made by the applicant to the Authority, if the Authority is not satisfied, it may reject the application and shall communicate the same to the applicant in writing with reasons, not later than thirty days. (8) [***] (9) A Parent Bank may set up its Representative Office or Global Administrative Office in IFSC under a suitable mechanism, subject to such conditions as may be specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2
+        }
+    },
+    {
+        "id": "banking_section_4",
+        "content": "(1) Banking Units, whether operating as an IBU or an IBC, shall adhere to the norms and guidelines as may be specified by the Authority, from time to time. (2) Banking Units operating as an IBU shall also comply with the directions and instructions issued by the Home Regulator of its Parent Bank, unless otherwise specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 4",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 3
+        }
+    },
+    {
+        "id": "banking_section_5",
+        "content": "(1) A Banking Unit shall maintain the Liquidity Coverage Ratio as may be specified by the Authority. Provided that in the case of an IBU the Liquidity Coverage Ratio may be maintained by the Parent Bank with the prior approval of the Authority. (2) Net Stable Funding Ratio shall be made applicable to a Banking Unit as and when determined by the Authority and shall be maintained by a Banking Unit Provided that in the case of an IBU, the Net Stable Funding Ratio may be maintained by the Parent Bank with the prior approval of the Authority.",
+        "metadata": {
+            "contained_section": "Section 5",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 4
+        }
+    },
+    {
+        "id": "banking_section_6",
+        "content": "Banking Unit shall adhere to the norms and guidelines relating to leverage ratio as may be specified by the Authority, from time to time.",
+        "metadata": {
+            "contained_section": "Section 6",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 5
+        }
+    },
+    {
+        "id": "banking_section_7",
+        "content": "Banking Unit shall adhere to the norms and guidelines relating to exposure ceiling as may be specified by the Authority, from time to time.",
+        "metadata": {
+            "contained_section": "Section 7",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 6
+        }
+    },
+    {
+        "id": "banking_section_8",
+        "content": "(1) The liabilities of an IBU, other than the deposits raised from individuals resident in India or outside India shall be exempted from Cash Reserve Ratio or such other requirements as may be specified by the Authority. (2) The deposits raised by an IBU from individuals resident in India or outside India shall be subject to such Reserve Ratios as may be specified by the Authority. (3) An IBC shall maintain such reserves and in such manner as are mandated under the Banking Regulation Act, 1949 and the Reserve Bank of India, 1934",
+        "metadata": {
+            "contained_section": "Section 8",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[\"Banking Regulation Act, 1949\", \"Reserve Bank of India, 1934\"]",
+            "chunk_index": 7
+        }
+    },
+    {
+        "id": "banking_section_9",
+        "content": "Lender of Last Resort support shall not be available to a Banking Unit.",
+        "metadata": {
+            "contained_section": "Section 9",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 8
+        }
+    },
+    {
+        "id": "banking_section_10",
+        "content": "A Banking Unit shall conduct such business in the specified foreign currencies and with such persons, whether resident or otherwise, as may be specified by the Authority. Provided that a Banking Unit may be permitted to conduct such business in INR with such persons, whether resident or otherwise, as may be specified by the Authority, subject to settlement of the financial transaction in relation to such business in the specified foreign currencies.",
+        "metadata": {
+            "contained_section": "Section 10",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 9
+        }
+    },
+    {
+        "id": "banking_section_11",
+        "content": "(1) Banking Units may open accounts in the specified foreign currencies for individuals and corporate or institutional entities, resident in India or outside India, subject to such conditions as may be specified by the Authority. (2) Individuals who are person resident in India are permitted to open, hold and maintain accounts in the specified foreign currencies, with a Banking Unit, for undertaking transactions connected with or arising from any permissible current or capital account transaction or a combination of both as specified in the Liberalised Remittance Scheme (LRS) of the Reserve Bank.",
+        "metadata": {
+            "contained_section": "Section 11",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[\"Liberalised Remittance Scheme (LRS) of the Reserve Bank\"]",
+            "chunk_index": 10
+        }
+    },
+    {
+        "id": "banking_section_12",
+        "content": "(1) Cash transactions in foreign currency accounts shall not be permitted. (2) An account in the specified foreign currencies may be opened, held and maintained with a Banking Unit in the form of current or savings or term deposit in cases where the account holder is an individual, and in the form of current or term deposit in all other cases, subject to such conditions as may be specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 12",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 11
+        }
+    },
+    {
+        "id": "banking_section_13",
+        "content": "(1) A Banking Unit may undertake any or all the activities mentioned under clause (e) of sub-section (1) of Section 3 of the Act and Section 6 of the Banking Regulation Act, 1949, except those which are expressly prohibited either by the Home Regulator of the Parent Bank or by the Authority, subject to compliance with such terms and conditions or guidelines as may be specified by the Authority, including matters relating to design, execution and risk management. (2) For the removal of doubts, it is hereby declared that the activity of providing “Referral services” is a permitted activity under these regulations.",
+        "metadata": {
+            "contained_section": "Section 13",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[\"clause (e) of sub-section (1) of Section 3 of the Act\", \"Section 6 of the Banking Regulation Act, 1949\"]",
+            "chunk_index": 12
+        }
+    },
+    {
+        "id": "banking_section_14",
+        "content": "14. Know Your Customer and Anti-Money Laundering measures applicable to a Banking unit [A Banking Unit shall follow the Anti Money Laundering, Counter-Terrorist Financing and Know Your Customer Guidelines issued by the Authority.]",
+        "metadata": {
+            "contained_section": "Section 14",
+            "contained_chapter": "Chapter V - Know Your Customer and Anti-Money Laundering",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 13
+        }
+    },
+    {
+        "id": "banking_section_15",
+        "content": "(1) A Banking Unit shall be required to furnish information relating to their operations to the Authority, from time to time, and in such manner and form, as may be specified by the Authority. contract for the difference between an exchange rate agreed before and the actual spot rate at maturity, with the spot rate being taken as the domestic rate or a market determined rate and such contract being settled with a single payment in a foreign currency. (7) Operate as a Foreign Portfolio Investor: (a) If the Parent Bank of a Banking Unit is registered with Securities and Exchange Board as a Foreign Portfolio Investor, such Banking Unit may carry on activities as a Foreign Portfolio Investor in the IFSC without any separate registration requirement from the Authority but subject to filing an intimation with the Authority in the form and manner as specified by the Authority; (b) If the Parent Bank of a Banking Unit is not registered with Securities and Exchange Board, such Banking Unit may carry on activities as a Foreign Portfolio Investor in IFSC after obtaining registration from the Authority in the form and manner as specified by the Authority; (c) Such Foreign Portfolio Investor may offer Segregated Nominee Account Structure for routing orders of foreign investors; (8) Function as a trading member for trading in interest rate or currency derivatives or as a professional clearing member for clearing and settlements in any derivative segment. (2) A Banking Unit shall submit reports to the Authority in US Dollar, unless otherwise specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 15",
+            "contained_chapter": "Chapter VI - OPERATIONAL REQUIREMENTS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 14
+        }
+    },
+    {
+        "id": "banking_section_16",
+        "content": "A Banking Unit shall maintain its books of accounts, records and documents in the specified foreign currencies, as may be declared at the time of making an application under Regulation 3.",
+        "metadata": {
+            "contained_section": "Section 16",
+            "contained_chapter": "Chapter VI - OPERATIONAL REQUIREMENTS",
+            "doc_name": "banking",
+            "references": "[\"Regulation 3\"]",
+            "chunk_index": 15
+        }
+    },
+    {
+        "id": "banking_section_17",
+        "content": "(1) A Banking Unit shall be permitted to have an INR account out of the specified foreign currencies to defray their administrative and statutory expenses, and for such other purposes as may be specified by the Authority. (2) A Banking Unit shall maintain separate nostro accounts with correspondent banks, distinct from nostro accounts maintained by other branches of the same Parent Bank in India.",
+        "metadata": {
+            "contained_section": "Section 17",
+            "contained_chapter": "Chapter VI - OPERATIONAL REQUIREMENTS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 16
+        }
+    },
+    {
+        "id": "banking_section_18",
+        "content": "Deposits of a Banking Unit may be insured subject to applicability of and to the extent provided under the Deposit Insurance and Credit Guarantee Corporation Act, 1961 and any rules or regulations made thereunder.",
+        "metadata": {
+            "contained_section": "Section 18",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[\"Deposit Insurance and Credit Guarantee Corporation Act, 1961\"]",
+            "chunk_index": 17
+        }
+    },
+    {
+        "id": "banking_section_19",
+        "content": "A Banking Unit may exchange margins in the specified foreign currencies or permissible listed debt securities and sovereigns with a counter party Banking Unit or overseas regulated entity for non-centrally cleared over the counter currency, interest rate, credit and commodity derivative contracts to reflect mark to market exposure under a legally enforceable netting arrangement as may be specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 19",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 18
+        }
+    },
+    {
+        "id": "banking_section_20",
+        "content": "For the purposes of implementation of these regulations and matters incidental thereto, or in order to facilitate and regulate financial services relating to banking and investment activities in an International Financial Services Centre, the Authority may specify norms, procedures, processes, manners or provide relaxations, by way of guidelines or circulars.",
+        "metadata": {
+            "contained_section": "Section 20",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 19
+        }
+    },
+    {
+        "id": "banking_section_21",
+        "content": "(1) If the Parent Bank applicant or the Banking Unit fail to fulfil the conditions subject to which the licence under Regulation 3 has been granted, the Authority may withdraw the licence, after giving an opportunity of thirty days to the Banking Unit to make its submissions, if any. (2) Without prejudice to the above, the Authority may take any other action as it deems fit, under the Act.",
+        "metadata": {
+            "contained_section": "Section 21",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[\"Regulation 3\"]",
+            "chunk_index": 20
+        }
+    },
+    {
+        "id": "banking_section_22",
+        "content": "(1) On and from the commencement of these regulations, the provisions of the Reserve Bank Circular No. RBI/2014-2015/533 DOR.IBD.BC.14570/23.13.04/2014-15 dated 1 April 2015, shall no longer be applicable. (2) Notwithstanding the above, anything done, or any action taken or purported to have been done or taken in respect of the circular mentioned in sub-regulation (1) shall be deemed to have been done or taken under the corresponding provisions of these regulations. (3) A Banking Unit operating in the International Financial Services Centre prior to the notification of these regulations, shall comply with additional requirements, if any, introduced by these regulations, within a period of three months from the date of notification of these regulations or within such extended time as may be specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 22",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 21
+        }
+    },
+    {
+        "id": "banking_schedule",
+        "content": "THE FIRST SCHEDULE [See Section 20 of the Act and regulation 2(1)(na)] SPECIFIED FOREIGN CURRENCIES i. US Dollar (USD) ii. Euro (EUR) iii. Japanese Yen (JPY) iv. UK Pound Sterling (GBP) v. Canadian Dollar (CAD) vi. Australian Dollar (AUD) vii. Swiss Franc (CHF) viii. Hong Kong Dollar (HKD) ix. Singapore Dollar (SGD) x. UAE Dirham (AED) xi. Russian Rouble (RUB)",
+        "metadata": {
+            "contained_section": "Schedule",
+            "contained_chapter": "The First Schedule",
+            "doc_name": "banking",
+            "references": "[\"Section 20 of the Act\", \"regulation 2(1)(na)\"]",
+            "chunk_index": 22
+        }
+    }
+]

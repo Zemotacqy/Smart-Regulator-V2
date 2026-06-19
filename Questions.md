@@ -27,6 +27,17 @@ ESR
 - What is the provision for getting considered for promotion.
 - What are all leave options given to employees?
 
+Fund Management
+
+- There is a venture capital firm who wants to invest in 3 IFSC entities or startups, $100 million, 100 million yen and 100 million INR and trying to buy 56% of stakes in each startup. Does it violate any kind of regulations?
+  - FME Section 23(1)
+- Failed here as conversion rates change. Use 99 mil sterling pounds.
+- Frontend: Thinking, Analysing, merging kind of keywords
+
+# Things to take care of
+
+- Test at Boundary Conditions. - Agentic Workflows for dynamic conversion
+
 - Mandatory Documents
   IFSCA Act
   Banking
@@ -48,7 +59,8 @@ Comments:
 [x] Debug why the Codebase isn't working with custom SLM - 1 hr.
 [x] Make a shot 2 pager PDF document
 [x] POC on deriving parent relationships
-[ ] Apply the POC in the main architecture.
+[x] Apply the POC in the main architecture.
+**Did not work**
 
 - Check E2E, run evals
 

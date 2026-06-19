@@ -52,19 +52,19 @@ async def qa_endpoint(
             # Stage B: Hybrid Search
             ctx = await run_hybrid_search(ctx)
             
-            # Stage C: Hop Expander
+            # Stage C: Hop Expander (Hierarchical Section Rollup)
             ctx = await run_hop_expander(ctx)
             
-            # Stage D: Temporal Filter
+            # Guard: Temporal Filter (between C and D — removes substituted/omitted nodes)
             ctx = await run_temporal_filter(ctx)
             
-            # Stage E: Reranker
+            # Stage D: Reranker (Prompt-Baked SLM)
             ctx = await run_reranker(ctx)
             
-            # Stage F: Compressor
+            # Stage E: Bounded Context Assembler (replaces SLM compressor)
             ctx = await run_compressor(ctx)
             
-            # Stage G: Generator (streams tokens)
+            # Stage F: Generator with Map-Reduce overflow handling (streams tokens)
             async for token in run_generator(ctx):
                 yield f"event: token\ndata: {json.dumps({'token': token})}\n\n"
                 

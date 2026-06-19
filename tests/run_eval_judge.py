@@ -145,6 +145,7 @@ async def process_single_eval(
     ollama_client: AsyncClient,
     judge_model: str,
     item: Dict[str, Any],
+    pipeline_semaphore: asyncio.Semaphore,
     judge_semaphore: asyncio.Semaphore
 ) -> Dict[str, Any]:
     """
@@ -155,6 +156,7 @@ async def process_single_eval(
         ollama_client (AsyncClient): Ollama async client.
         judge_model (str): Judge model name.
         item (Dict[str, Any]): A single golden dataset item.
+        pipeline_semaphore (asyncio.Semaphore): Pipeline concurrency controller.
         judge_semaphore (asyncio.Semaphore): Judge concurrency controller.
         
     Returns:
@@ -168,7 +170,8 @@ async def process_single_eval(
     start_time = time.monotonic()
     
     # 1. Run pipeline
-    ctx = await run_pipeline_for_query(query)
+    async with pipeline_semaphore:
+        ctx = await run_pipeline_for_query(query)
     latency = time.monotonic() - start_time
     
     # 2. Compute Retrieval Metrics (Recall & MRR)
@@ -225,6 +228,7 @@ async def main() -> None:
     parser.add_argument("--dataset", type=str, default="tests/golden_dataset.json", help="Golden dataset JSON path.")
     parser.add_argument("--judge-model", type=str, default="mistral-nemo:12b", help="Ollama model to use as Judge.")
     parser.add_argument("--concurrency", type=int, default=4, help="Concurrency limit for judge calls.")
+    parser.add_argument("--pipeline-concurrency", type=int, default=1, help="Concurrency limit for pipeline runs (highly recommended to keep at 1 or 2 for local Ollama).")
     parser.add_argument("--limit", type=int, default=0, help="Limit number of evaluation items (0 for all).")
     parser.add_argument("--output", type=str, default="tests/eval_results.json", help="Detailed results output path.")
     args = parser.parse_args()
@@ -247,10 +251,11 @@ async def main() -> None:
     await init_db_pool()
     
     ollama_client = AsyncClient(host=OLLAMA_HOST)
+    pipeline_semaphore = asyncio.Semaphore(args.pipeline_concurrency)
     judge_semaphore = asyncio.Semaphore(args.concurrency)
     
     tasks = [
-        process_single_eval(ollama_client, args.judge_model, item, judge_semaphore)
+        process_single_eval(ollama_client, args.judge_model, item, pipeline_semaphore, judge_semaphore)
         for item in dataset
     ]
     

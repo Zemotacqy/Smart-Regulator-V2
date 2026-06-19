@@ -1,0 +1,1330 @@
+[
+    {
+        "id": "banking_section_1_sub_0",
+        "content": "(1) These regulations may be called the International Financial Services Centres Authority (Banking) Regulations, 2020. (2) These Regulations shall come into force from 18th November, 2020",
+        "summary": "The International Financial Services Centres Authority (Banking) Regulations, 2020, establish the regulatory framework effective from 18th November, 2020.",
+        "metadata": {
+            "contained_section": "Section 1",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 0,
+            "parent_chunk_id": "banking_section_1",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 1,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_0",
+        "content": "(1) In these regulations, unless the context otherwise requires, - (a) “Act” means the International Financial Services Centres Authority Act, 2019 (50 of 2019); (b) “Authority” means the International Financial Services Centres Authority established under sub-section (1) of Section 4 of the Act;",
+        "summary": "Defines 'Act' as the International Financial Services Centres Authority Act, 2019, and 'Authority' as the body established under Section 4(1) of said Act.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_1",
+        "content": "under sub-section (1) of Section 4 of the Act; (c) “Banking Unit” or “BU” means a financial institution under clause (c ) of sub-section (1) of Section 3 of the Act that is licensed or permitted by the Authority to undertake permissible activities under these regulations; (d) “Foreign Bank” means a",
+        "summary": "Defines 'Banking Unit' (BU) as a financial institution under Section 3(1)(c) of the Act, licensed by the Authority to conduct permissible banking activities.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_2",
+        "content": "these regulations; (d) “Foreign Bank” means a banking company incorporated or established outside India; (da) “Global Administrative Office” or “GAO” means a financial institution set up by its Parent Bank in IFSC for undertaking any one or more of the following activities, namely: (i) managing,",
+        "summary": "Defines 'Foreign Bank' as a banking company incorporated outside India and 'Global Administrative Office' (GAO) as a financial institution established by a Parent Bank in an IFSC for specific operational management.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 2,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_3",
+        "content": "the following activities, namely: (i) managing, administering, or coordinating operations of the Parent Bank or any of the Group entities either in IFSC or outside IFSC; (ii) providing support services to Parent Bank or any of the Group entities for execution of the permitted activities either in",
+        "summary": "Specifies that a Global Administrative Office (GAO) manages, administers, or coordinates operations and provides support services for a Parent Bank or its Group entities within or outside the IFSC.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 3,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_4",
+        "content": "execution of the permitted activities either in IFSC or outside IFSC Provided that the activities pertaining to a jurisdiction outside IFSC shall be subject to the directions and instructions of the relevant regulator in the said jurisdiction",
+        "summary": "Mandates that activities performed by a Global Administrative Office (GAO) in jurisdictions outside the IFSC remain subject to the regulatory oversight of the relevant foreign regulator.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 4,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_5",
+        "content": "(db) “Group entities” means any holding company, subsidiaries, branches or any other entity, in whatever legal form, through which the Parent bank undertakes its operations or permitted activities",
+        "summary": "Defines 'Group entities' as any holding company, subsidiary, branch, or legal entity through which a Parent Bank conducts its operations or permitted activities.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 5,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_6",
+        "content": "(ea) “Home Regulator” means the regulatory authority that is responsible for regulating the Parent Bank in the jurisdiction where the Parent Bank is incorporated, licensed or established; (eb) “IFSC Banking Company” or “IBC” means a Banking Unit licensed or permitted by the Authority to operate in",
+        "summary": "Defines 'Home Regulator' as the authority overseeing the Parent Bank in its jurisdiction of incorporation, and 'IFSC Banking Company' (IBC) as a subsidiary Banking Unit licensed by the Authority.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 6,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_7",
+        "content": "or permitted by the Authority to operate in an IFSC as a subsidiary company of the Parent Bank",
+        "summary": "Clarifies that an 'IFSC Banking Company' (IBC) is a Banking Unit operating within an IFSC specifically as a subsidiary of a Parent Bank.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 7,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_8",
+        "content": "(ec) “IFSC Banking Unit” or “IBU” means a Banking Unit licensed or permitted by the Authority to operate in an IFSC as a branch of the Parent Bank",
+        "summary": "Defines 'IFSC Banking Unit' (IBU) as a Banking Unit licensed by the Authority to operate within an IFSC as a branch of a Parent Bank.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 8,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_9",
+        "content": "(f) “Indian Bank” means any bank incorporated or established under any Act, and includes a wholly owned subsidiary of a foreign bank incorporated in India, but does not include a co-operative bank; (h) “INR” means the Indian currency called the Indian Rupee; (i) “International Financial Services",
+        "summary": "Section 2 defines 'Indian Bank' as any bank incorporated under an Act, including foreign bank subsidiaries in India but excluding co-operative banks, and defines 'INR' as the Indian Rupee.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 9,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_10",
+        "content": "Rupee; (i) “International Financial Services Centre” or “IFSC” shall have the same meaning as assigned to it under section clause (g) of sub-section (1) of Section 3 of the Act (j) “Parent Bank” means a Foreign Bank as defined under sub-regulation (d) or an Indian Bank as defined under",
+        "summary": "Section 2 defines 'International Financial Services Centre' (IFSC) by reference to Section 3(1)(g) of the Act and defines 'Parent Bank' as a Foreign Bank or Indian Bank establishing a Banking Unit, Representative Office, or Regional Administrative Office.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 10,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_11",
+        "content": "(d) or an Indian Bank as defined under sub-regulation (f), or both, that intends to, or has set up a Banking Unit or Representative Office or Regional Administrative Office; (la) “Referral services” means an activity in which a BU, pursuant to an arrangement with a financial product or financial",
+        "summary": "Section 2 defines 'Parent Bank' as a Foreign or Indian Bank operating a Banking Unit, Representative Office, or Regional Administrative Office, and defines 'Referral services' as an arrangement to refer clients to financial product or service providers.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 11,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_12",
+        "content": "arrangement with a financial product or financial service provider, refers its clients or the clients of its Parent Bank as potential customers (or \"leads\"), to such financial product or financial service provider for providing them the financial product(s) or financial service(s)",
+        "summary": "Section 2 defines 'Referral services' as the act of a Banking Unit (BU) or its Parent Bank referring potential customer leads to financial product or service providers for the provision of such products or services.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 12,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_13",
+        "content": "(lb) “Representative Office” or “RO” means a financial institution set up by its Parent Bank in IFSC for undertaking any one or more of the following activities, namely: i. marketing of financial products; ii. collection of data; iii. carrying out of outreach operations",
+        "summary": "Section 2 defines 'Representative Office' (RO) as a financial institution established by a Parent Bank in an IFSC to perform marketing of financial products, data collection, or outreach operations.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 13,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_14",
+        "content": "carrying out of outreach operations. (m) “Reserve Bank” means Reserve Bank of India established under the Reserve Bank of India Act, 1934 (2 of 1934); (n) “Securities and Exchange Board” means Securities and Exchange Board of India established under the Securities and Exchange Board of India Act,",
+        "summary": "Section 2 defines 'Reserve Bank' as the Reserve Bank of India established under the Reserve Bank of India Act, 1934, and 'Securities and Exchange Board' as the board established under the Securities and Exchange Board of India Act, 1992.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 14,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_15",
+        "content": "the Securities and Exchange Board of India Act, 1992 (15 of 1992); (na) “Specified foreign currencies” means currencies as specified in the First Schedule to these regulations",
+        "summary": "Section 2 defines 'Specified foreign currencies' as those currencies explicitly listed in the First Schedule to these regulations.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 15,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_16",
+        "content": "(o) “Stock Exchange” means a stock-exchange recognised by the Authority; (oa) “Subsidiary company” means a company that satisfies the definition u/s 2(87) of the Companies Act, 2013",
+        "summary": "Section 2 defines 'Stock Exchange' as an exchange recognized by the Authority and 'Subsidiary company' as defined under Section 2(87) of the Companies Act, 2013.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 16,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_17",
+        "content": "(ob) “Support services” shall mean the ancillary activities and processes required for execution of the permitted activities. (p) “USD” means United States Dollar",
+        "summary": "Section 2 defines 'Support services' as ancillary activities and processes necessary for executing permitted activities, and 'USD' as the United States Dollar.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 17,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_18",
+        "content": "(p) “USD” means United States Dollar. (2) Words and expressions used and not defined in these regulations but defined in the Act or Acts mentioned in the First Schedule to the Act, or any rules or regulations made thereunder shall have the same meanings respectively assigned to them in those Acts,",
+        "summary": "Section 2 defines 'USD' as the United States Dollar and establishes that any terms not defined in these regulations shall carry the meanings assigned to them in the Act, the First Schedule to the Act, or related rules and regulations.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 18,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_2_sub_19",
+        "content": "respectively assigned to them in those Acts, rules or regulations or any statutory modification or re-enactment thereto, as the case may be.",
+        "summary": "Section 2 mandates that terms used in the regulations retain the definitions assigned to them in relevant Acts, rules, or statutory modifications.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "banking",
+            "references": "[\"International Financial Services Centres Authority Act, 2019\", \"sub-section (1) of Section 4 of the Act\", \"clause (c) of sub-section (1) of Section 3 of the Act\", \"sub-regulation (d)\", \"sub-regulation (f)\", \"section clause (g) of sub-section (1) of Section 3 of the Act\", \"Reserve Bank of India Act, 1934\", \"Securities and Exchange Board of India Act, 1992\", \"First Schedule to these regulations\", \"section 2(87) of the Companies Act, 2013\", \"First Schedule to the Act\"]",
+            "chunk_index": 1,
+            "parent_chunk_id": "banking_section_2",
+            "sub_chunk_index": 19,
+            "total_sub_chunks": 20,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_0",
+        "content": "(1) Indian Banks and Foreign Banks shall require licence or permission from the Authority to set up a Banking Unit in an International Financial Services Centre",
+        "summary": "Section 3(1) requires Indian and Foreign Banks to obtain a license or permission from the Authority to establish a Banking Unit within an International Financial Services Centre (IFSC).",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_1",
+        "content": "(1A) A Banking unit may be set up in an IFSC as an: a) IFSC Banking Unit or IBU; or b) IFSC Banking Company or IBC provided that a Parent Bank who has already set up an IBU in an IFSC, may be permitted to convert the same to an IBC, with the prior approval of the Authority, subject to such",
+        "summary": "Section 3(1A) defines Banking Units in an IFSC as either an IFSC Banking Unit (IBU) or an IFSC Banking Company (IBC), allowing for the conversion of an IBU to an IBC subject to Authority approval.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_2",
+        "content": "prior approval of the Authority, subject to such conditions as may be specified by the Authority",
+        "summary": "The establishment or conversion of a Banking Unit is subject to prior approval and specific conditions mandated by the Authority.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 2,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_3",
+        "content": "(2) An application for setting up a Banking Unit shall be made by the Parent Bank in the form and manner as specified by the Authority. (2A) The application filed under regulation 3(2) can be withdrawn by the Parent Bank at any time before the grant of the license or permission by the Authority",
+        "summary": "Section 3(2) and 3(2A) stipulate that Parent Banks must apply for Banking Unit establishment in the prescribed manner and retain the right to withdraw the application prior to the grant of a license.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 3,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_4",
+        "content": "(3) The applicant shall satisfy the following requirements for grant of licence or permission by the Authority to set up an IFSC Banking Unit: (a) The Parent Bank shall provide necessary capital for the IBU, subject to a minimum of USD 20 million or such other level of capital that may be specified",
+        "summary": "Section 3(3)(a) requires a Parent Bank to provide a minimum capital of USD 20 million, or an amount specified by the Authority, for the establishment of an IBU.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 4,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_5",
+        "content": "such other level of capital that may be specified by the Authority",
+        "summary": "The Authority reserves the right to specify and adjust the minimum capital requirements for the establishment of an IBU.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 5,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_6",
+        "content": "Such capital shall be maintained at the Parent Bank in the manner as specified by the Authority",
+        "summary": "The Parent Bank is required to maintain the specified capital for the IBU in the manner prescribed by the Authority.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 6,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_7",
+        "content": "(b) The Parent Bank shall obtain a No Objection Letter from its home regulator regarding setting up of the Banking Unit in the IFSC as a branch of the Parent Bank; (c) The Parent Bank shall submit an undertaking that it shall provide liquidity to its IBU whenever needed for the operations of the",
+        "summary": "Section 3(3)(b) and (c) require the Parent Bank to obtain a No Objection Letter from its home regulator and provide a formal undertaking to supply liquidity to the IBU for its operations.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 7,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_8",
+        "content": "its IBU whenever needed for the operations of the IBU (d) Any other requirement as may be specified by the Authority",
+        "summary": "Section 3(3)(d) grants the Authority the power to impose additional requirements for the licensing of an IBU beyond those explicitly listed.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 8,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_9",
+        "content": "(3A) The applicant shall satisfy the following requirements for grant of licence or permission by the Authority to set up an IFSC Banking Company: (a) The Parent Bank shall provide necessary capital for the IBC, subject to a minimum of USD 50 million or such other level of capital that may be",
+        "summary": "Section 3(3A)(a) mandates that an applicant for an IFSC Banking Company (IBC) must secure a minimum capital of USD 50 million or an amount specified by the Authority from the Parent Bank.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 9,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_10",
+        "content": "or such other level of capital that may be specified by the Authority",
+        "summary": "The Authority retains the power to specify and adjust the required capital levels for an IFSC Banking Company.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 10,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_11",
+        "content": "Such capital shall be calculated and shall be maintained as specified by the Authority. (b) The Parent Bank shall obtain a No Objection Letter from its Home Regulator regarding setting up of the Banking Unit in the IFSC as a Subsidiary company of the Parent Bank",
+        "summary": "Capital maintenance must adhere to Authority specifications, and the Parent Bank must obtain a No Objection Letter from its Home Regulator to establish an IFSC Banking Unit as a subsidiary.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 11,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_12",
+        "content": "(c) Any other condition that the Authority may specify. (4) A Foreign Bank, not having its presence in India, wishing to set up a Banking Unit in an IFSC, shall comply with such additional requirements as may be specified by the Authority",
+        "summary": "Section 3(3)(c) and 3(4) grant the Authority power to impose additional conditions on applicants and require foreign banks without prior Indian presence to meet specific regulatory requirements for IFSC Banking Units.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 12,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_13",
+        "content": "(5) After considering an application for setting up a Banking Unit, the Authority may grant licence or permission to the applicant subject to such conditions as provided under these regulations or such other conditions as it may deem fit",
+        "summary": "Section 3(5) authorizes the Authority to grant licenses or permissions for Banking Units subject to regulatory conditions or any additional terms deemed necessary.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 13,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_14",
+        "content": "(6) Where the Authority is of the opinion that licence or permission cannot be granted, it may give thirty days’ time to the applicant, setting out the grounds based on which it cannot grant licence or permission, to enable the applicant to make written submissions, if any",
+        "summary": "Under Section 3(6), if the Authority intends to deny a license, it must provide the applicant with thirty days' notice and the grounds for refusal to allow for written submissions.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 14,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_15",
+        "content": "(7) After considering the submissions under sub-regulation (6) made by the applicant to the Authority, if the Authority is not satisfied, it may reject the application and shall communicate the same to the applicant in writing with reasons, not later than thirty days",
+        "summary": "Section 3(7) mandates that if the Authority remains unsatisfied after reviewing an applicant's submissions, it must issue a written rejection with reasons within thirty days.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 15,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_3_sub_16",
+        "content": "(8) [***] (9) A Parent Bank may set up its Representative Office or Global Administrative Office in IFSC under a suitable mechanism, subject to such conditions as may be specified by the Authority.",
+        "summary": "Section 3(9) permits a Parent Bank to establish a Representative Office or Global Administrative Office in an IFSC, subject to conditions specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter II - SETTING UP OF A BANKING UNIT",
+            "doc_name": "banking",
+            "references": "[\"regulation 3(2)\", \"sub-regulation (6)\"]",
+            "chunk_index": 2,
+            "parent_chunk_id": "banking_section_3",
+            "sub_chunk_index": 16,
+            "total_sub_chunks": 17,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_4_sub_0",
+        "content": "(1) Banking Units, whether operating as an IBU or an IBC, shall adhere to the norms and guidelines as may be specified by the Authority, from time to time",
+        "summary": "Section 4(1) requires all Banking Units (IBU or IBC) to comply with norms and guidelines issued by the Authority.",
+        "metadata": {
+            "contained_section": "Section 4",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 3,
+            "parent_chunk_id": "banking_section_4",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_4_sub_1",
+        "content": "(2) Banking Units operating as an IBU shall also comply with the directions and instructions issued by the Home Regulator of its Parent Bank, unless otherwise specified by the Authority.",
+        "summary": "Section 4(2) mandates that Banking Units operating as an IBU must comply with directions from their Parent Bank's Home Regulator, unless the Authority specifies otherwise.",
+        "metadata": {
+            "contained_section": "Section 4",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 3,
+            "parent_chunk_id": "banking_section_4",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_5_sub_0",
+        "content": "(1) A Banking Unit shall maintain the Liquidity Coverage Ratio as may be specified by the Authority. Provided that in the case of an IBU the Liquidity Coverage Ratio may be maintained by the Parent Bank with the prior approval of the Authority",
+        "summary": "Section 5(1) mandates that a Banking Unit maintain a Liquidity Coverage Ratio as specified by the Authority, with an exception allowing an IBU to maintain this ratio through its Parent Bank subject to prior Authority approval.",
+        "metadata": {
+            "contained_section": "Section 5",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 4,
+            "parent_chunk_id": "banking_section_5",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_5_sub_1",
+        "content": "(2) Net Stable Funding Ratio shall be made applicable to a Banking Unit as and when determined by the Authority and shall be maintained by a Banking Unit Provided that in the case of an IBU, the Net Stable Funding Ratio may be maintained by the Parent Bank with the prior approval of the Authority.",
+        "summary": "Section 5(2) requires Banking Units to maintain a Net Stable Funding Ratio as determined by the Authority, permitting IBUs to fulfill this requirement via the Parent Bank upon receiving prior Authority approval.",
+        "metadata": {
+            "contained_section": "Section 5",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 4,
+            "parent_chunk_id": "banking_section_5",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_6_sub_0",
+        "content": "Banking Unit shall adhere to the norms and guidelines relating to leverage ratio as may be specified by the Authority, from time to time.",
+        "summary": "Section 6 requires Banking Units to comply with all leverage ratio norms and guidelines periodically specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 6",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 5,
+            "parent_chunk_id": "banking_section_6",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 1,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_7_sub_0",
+        "content": "Banking Unit shall adhere to the norms and guidelines relating to exposure ceiling as may be specified by the Authority, from time to time.",
+        "summary": "Section 7 mandates that Banking Units adhere to exposure ceiling norms and guidelines as periodically specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 7",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 6,
+            "parent_chunk_id": "banking_section_7",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 1,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_8_sub_0",
+        "content": "(1) The liabilities of an IBU, other than the deposits raised from individuals resident in India or outside India shall be exempted from Cash Reserve Ratio or such other requirements as may be specified by the Authority",
+        "summary": "Section 8(1) exempts IBU liabilities, excluding deposits from individuals resident in or outside India, from Cash Reserve Ratio and other requirements specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 8",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[\"Banking Regulation Act, 1949\", \"Reserve Bank of India, 1934\"]",
+            "chunk_index": 7,
+            "parent_chunk_id": "banking_section_8",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 3,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_8_sub_1",
+        "content": "(2) The deposits raised by an IBU from individuals resident in India or outside India shall be subject to such Reserve Ratios as may be specified by the Authority",
+        "summary": "Section 8(2) subjects deposits raised by an IBU from individuals resident in or outside India to Reserve Ratios as specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 8",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[\"Banking Regulation Act, 1949\", \"Reserve Bank of India, 1934\"]",
+            "chunk_index": 7,
+            "parent_chunk_id": "banking_section_8",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 3,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_8_sub_2",
+        "content": "(3) An IBC shall maintain such reserves and in such manner as are mandated under the Banking Regulation Act, 1949 and the Reserve Bank of India, 1934",
+        "summary": "Section 8(3) requires an IBC to maintain reserves in accordance with the mandates of the Banking Regulation Act, 1949 and the Reserve Bank of India Act, 1934.",
+        "metadata": {
+            "contained_section": "Section 8",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[\"Banking Regulation Act, 1949\", \"Reserve Bank of India, 1934\"]",
+            "chunk_index": 7,
+            "parent_chunk_id": "banking_section_8",
+            "sub_chunk_index": 2,
+            "total_sub_chunks": 3,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_9_sub_0",
+        "content": "Lender of Last Resort support shall not be available to a Banking Unit.",
+        "summary": "Section 9 explicitly prohibits Banking Units from accessing Lender of Last Resort support.",
+        "metadata": {
+            "contained_section": "Section 9",
+            "contained_chapter": "Chapter III - Prudential Regulatory Requirements",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 8,
+            "parent_chunk_id": "banking_section_9",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 1,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_10_sub_0",
+        "content": "A Banking Unit shall conduct such business in the specified foreign currencies and with such persons, whether resident or otherwise, as may be specified by the Authority",
+        "summary": "Section 10 restricts Banking Units to conducting business in specified foreign currencies with persons, resident or otherwise, as designated by the Authority.",
+        "metadata": {
+            "contained_section": "Section 10",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 9,
+            "parent_chunk_id": "banking_section_10",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_10_sub_1",
+        "content": "Provided that a Banking Unit may be permitted to conduct such business in INR with such persons, whether resident or otherwise, as may be specified by the Authority, subject to settlement of the financial transaction in relation to such business in the specified foreign currencies.",
+        "summary": "Section 10 permits Banking Units to conduct business in INR with specified persons, provided that the associated financial transactions are settled in specified foreign currencies.",
+        "metadata": {
+            "contained_section": "Section 10",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 9,
+            "parent_chunk_id": "banking_section_10",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_11_sub_0",
+        "content": "(1) Banking Units may open accounts in the specified foreign currencies for individuals and corporate or institutional entities, resident in India or outside India, subject to such conditions as may be specified by the Authority",
+        "summary": "Section 11(1) authorizes Banking Units to open foreign currency accounts for resident and non-resident individuals and entities, subject to Authority-specified conditions.",
+        "metadata": {
+            "contained_section": "Section 11",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[\"Liberalised Remittance Scheme (LRS) of the Reserve Bank\"]",
+            "chunk_index": 10,
+            "parent_chunk_id": "banking_section_11",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 3,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_11_sub_1",
+        "content": "(2) Individuals who are person resident in India are permitted to open, hold and maintain accounts in the specified foreign currencies, with a Banking Unit, for undertaking transactions connected with or arising from any permissible current or capital account transaction or a combination of both as",
+        "summary": "Section 11(2) permits persons resident in India to maintain foreign currency accounts with Banking Units for permissible current or capital account transactions.",
+        "metadata": {
+            "contained_section": "Section 11",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[\"Liberalised Remittance Scheme (LRS) of the Reserve Bank\"]",
+            "chunk_index": 10,
+            "parent_chunk_id": "banking_section_11",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 3,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_11_sub_2",
+        "content": "account transaction or a combination of both as specified in the Liberalised Remittance Scheme (LRS) of the Reserve Bank.",
+        "summary": "Foreign currency account transactions for residents are governed by the Liberalised Remittance Scheme (LRS) of the Reserve Bank of India.",
+        "metadata": {
+            "contained_section": "Section 11",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[\"Liberalised Remittance Scheme (LRS) of the Reserve Bank\"]",
+            "chunk_index": 10,
+            "parent_chunk_id": "banking_section_11",
+            "sub_chunk_index": 2,
+            "total_sub_chunks": 3,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_12_sub_0",
+        "content": "(1) Cash transactions in foreign currency accounts shall not be permitted",
+        "summary": "Section 12(1) explicitly prohibits cash transactions within foreign currency accounts held at Banking Units.",
+        "metadata": {
+            "contained_section": "Section 12",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 11,
+            "parent_chunk_id": "banking_section_12",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 3,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_12_sub_1",
+        "content": "(2) An account in the specified foreign currencies may be opened, held and maintained with a Banking Unit in the form of current or savings or term deposit in cases where the account holder is an individual, and in the form of current or term deposit in all other cases, subject to such conditions",
+        "summary": "Section 12(2) defines permissible account types as current, savings, or term deposits for individuals, and current or term deposits for other entities, subject to Authority conditions.",
+        "metadata": {
+            "contained_section": "Section 12",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 11,
+            "parent_chunk_id": "banking_section_12",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 3,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_12_sub_2",
+        "content": "in all other cases, subject to such conditions as may be specified by the Authority.",
+        "summary": "The opening and maintenance of foreign currency accounts at Banking Units remain subject to specific terms and conditions mandated by the Authority.",
+        "metadata": {
+            "contained_section": "Section 12",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 11,
+            "parent_chunk_id": "banking_section_12",
+            "sub_chunk_index": 2,
+            "total_sub_chunks": 3,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_13_sub_0",
+        "content": "(1) A Banking Unit may undertake any or all the activities mentioned under clause (e) of sub-section (1) of Section 3 of the Act and Section 6 of the Banking Regulation Act, 1949, except those which are expressly prohibited either by the Home Regulator of the Parent Bank or by the Authority,",
+        "summary": "Section 13(1) empowers Banking Units to conduct activities under Section 3(1)(e) of the Act and Section 6 of the Banking Regulation Act, 1949, unless prohibited by the Parent Bank's Home Regulator or the Authority.",
+        "metadata": {
+            "contained_section": "Section 13",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[\"clause (e) of sub-section (1) of Section 3 of the Act\", \"Section 6 of the Banking Regulation Act, 1949\"]",
+            "chunk_index": 12,
+            "parent_chunk_id": "banking_section_13",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 3,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_13_sub_1",
+        "content": "Regulator of the Parent Bank or by the Authority, subject to compliance with such terms and conditions or guidelines as may be specified by the Authority, including matters relating to design, execution and risk management",
+        "summary": "Banking Unit activities are subject to Authority guidelines regarding design, execution, and risk management protocols.",
+        "metadata": {
+            "contained_section": "Section 13",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[\"clause (e) of sub-section (1) of Section 3 of the Act\", \"Section 6 of the Banking Regulation Act, 1949\"]",
+            "chunk_index": 12,
+            "parent_chunk_id": "banking_section_13",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 3,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_13_sub_2",
+        "content": "(2) For the removal of doubts, it is hereby declared that the activity of providing “Referral services” is a permitted activity under these regulations.",
+        "summary": "Section 13(2) clarifies that the provision of 'Referral services' is a legally permitted activity for Banking Units.",
+        "metadata": {
+            "contained_section": "Section 13",
+            "contained_chapter": "Chapter IV - PERMISSIBLE ACTIVITIES",
+            "doc_name": "banking",
+            "references": "[\"clause (e) of sub-section (1) of Section 3 of the Act\", \"Section 6 of the Banking Regulation Act, 1949\"]",
+            "chunk_index": 12,
+            "parent_chunk_id": "banking_section_13",
+            "sub_chunk_index": 2,
+            "total_sub_chunks": 3,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_14_sub_0",
+        "content": "14. Know Your Customer and Anti-Money Laundering measures applicable to a Banking unit [A Banking Unit shall follow the Anti Money Laundering, Counter-Terrorist Financing and Know Your Customer Guidelines issued by the Authority.]",
+        "summary": "Section 14 mandates that Banking Units must strictly adhere to the Anti-Money Laundering (AML), Counter-Terrorist Financing (CTF), and Know Your Customer (KYC) guidelines issued by the Authority.",
+        "metadata": {
+            "contained_section": "Section 14",
+            "contained_chapter": "Chapter V - Know Your Customer and Anti-Money Laundering",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 13,
+            "parent_chunk_id": "banking_section_14",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 1,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_15_sub_0",
+        "content": "(1) A Banking Unit shall be required to furnish information relating to their operations to the Authority, from time to time, and in such manner and form, as may be specified by the Authority",
+        "summary": "Under Section 15(1), a Banking Unit must furnish operational information to the Authority in the specified manner and form as required.",
+        "metadata": {
+            "contained_section": "Section 15",
+            "contained_chapter": "Chapter VI - OPERATIONAL REQUIREMENTS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 14,
+            "parent_chunk_id": "banking_section_15",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 7,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_15_sub_1",
+        "content": "contract for the difference between an exchange rate agreed before and the actual spot rate at maturity, with the spot rate being taken as the domestic rate or a market determined rate and such contract being settled with a single payment in a foreign currency",
+        "summary": "This provision defines a contract for difference based on the variance between an agreed exchange rate and the actual spot rate at maturity, settled via a single foreign currency payment.",
+        "metadata": {
+            "contained_section": "Section 15",
+            "contained_chapter": "Chapter VI - OPERATIONAL REQUIREMENTS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 14,
+            "parent_chunk_id": "banking_section_15",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 7,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_15_sub_2",
+        "content": "(7) Operate as a Foreign Portfolio Investor: (a) If the Parent Bank of a Banking Unit is registered with Securities and Exchange Board as a Foreign Portfolio Investor, such Banking Unit may carry on activities as a Foreign Portfolio Investor in the IFSC without any separate registration requirement",
+        "summary": "Section 15(7)(a) permits a Banking Unit to operate as a Foreign Portfolio Investor (FPI) in the IFSC without separate registration if its Parent Bank is already registered with the Securities and Exchange Board.",
+        "metadata": {
+            "contained_section": "Section 15",
+            "contained_chapter": "Chapter VI - OPERATIONAL REQUIREMENTS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 14,
+            "parent_chunk_id": "banking_section_15",
+            "sub_chunk_index": 2,
+            "total_sub_chunks": 7,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_15_sub_3",
+        "content": "without any separate registration requirement from the Authority but subject to filing an intimation with the Authority in the form and manner as specified by the Authority; (b) If the Parent Bank of a Banking Unit is not registered with Securities and Exchange Board, such Banking Unit may carry on",
+        "summary": "Banking Units whose Parent Bank is not registered with the Securities and Exchange Board must file an intimation with the Authority to operate as a Foreign Portfolio Investor.",
+        "metadata": {
+            "contained_section": "Section 15",
+            "contained_chapter": "Chapter VI - OPERATIONAL REQUIREMENTS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 14,
+            "parent_chunk_id": "banking_section_15",
+            "sub_chunk_index": 3,
+            "total_sub_chunks": 7,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_15_sub_4",
+        "content": "Exchange Board, such Banking Unit may carry on activities as a Foreign Portfolio Investor in IFSC after obtaining registration from the Authority in the form and manner as specified by the Authority; (c) Such Foreign Portfolio Investor may offer Segregated Nominee Account Structure for routing",
+        "summary": "Banking Units without Parent Bank registration with the Securities and Exchange Board must obtain registration from the Authority to act as a Foreign Portfolio Investor and may offer a Segregated Nominee Account Structure.",
+        "metadata": {
+            "contained_section": "Section 15",
+            "contained_chapter": "Chapter VI - OPERATIONAL REQUIREMENTS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 14,
+            "parent_chunk_id": "banking_section_15",
+            "sub_chunk_index": 4,
+            "total_sub_chunks": 7,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_15_sub_5",
+        "content": "Segregated Nominee Account Structure for routing orders of foreign investors; (8) Function as a trading member for trading in interest rate or currency derivatives or as a professional clearing member for clearing and settlements in any derivative segment",
+        "summary": "Banking Units are authorized to function as trading members for interest rate or currency derivatives and as professional clearing members for derivative segment settlements.",
+        "metadata": {
+            "contained_section": "Section 15",
+            "contained_chapter": "Chapter VI - OPERATIONAL REQUIREMENTS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 14,
+            "parent_chunk_id": "banking_section_15",
+            "sub_chunk_index": 5,
+            "total_sub_chunks": 7,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_15_sub_6",
+        "content": "(2) A Banking Unit shall submit reports to the Authority in US Dollar, unless otherwise specified by the Authority.",
+        "summary": "Section 15(2) mandates that Banking Units submit all reports to the Authority in US Dollars, unless the Authority specifies an alternative currency.",
+        "metadata": {
+            "contained_section": "Section 15",
+            "contained_chapter": "Chapter VI - OPERATIONAL REQUIREMENTS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 14,
+            "parent_chunk_id": "banking_section_15",
+            "sub_chunk_index": 6,
+            "total_sub_chunks": 7,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_16_sub_0",
+        "content": "A Banking Unit shall maintain its books of accounts, records and documents in the specified foreign currencies, as may be declared at the time of making an application under Regulation 3.",
+        "summary": "Section 16 requires Banking Units to maintain books of accounts, records, and documents in the specific foreign currencies declared during the Regulation 3 application process.",
+        "metadata": {
+            "contained_section": "Section 16",
+            "contained_chapter": "Chapter VI - OPERATIONAL REQUIREMENTS",
+            "doc_name": "banking",
+            "references": "[\"Regulation 3\"]",
+            "chunk_index": 15,
+            "parent_chunk_id": "banking_section_16",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 1,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_17_sub_0",
+        "content": "(1) A Banking Unit shall be permitted to have an INR account out of the specified foreign currencies to defray their administrative and statutory expenses, and for such other purposes as may be specified by the Authority",
+        "summary": "Section 17(1) permits Banking Units to hold an INR account, funded by specified foreign currencies, to cover administrative and statutory expenses as authorized.",
+        "metadata": {
+            "contained_section": "Section 17",
+            "contained_chapter": "Chapter VI - OPERATIONAL REQUIREMENTS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 16,
+            "parent_chunk_id": "banking_section_17",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_17_sub_1",
+        "content": "(2) A Banking Unit shall maintain separate nostro accounts with correspondent banks, distinct from nostro accounts maintained by other branches of the same Parent Bank in India.",
+        "summary": "Section 17(2) requires Banking Units to maintain nostro accounts with correspondent banks that are distinct from those held by other branches of the same Parent Bank in India.",
+        "metadata": {
+            "contained_section": "Section 17",
+            "contained_chapter": "Chapter VI - OPERATIONAL REQUIREMENTS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 16,
+            "parent_chunk_id": "banking_section_17",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_18_sub_0",
+        "content": "Deposits of a Banking Unit may be insured subject to applicability of and to the extent provided under the Deposit Insurance and Credit Guarantee Corporation Act, 1961 and any rules or regulations made thereunder.",
+        "summary": "Section 18 stipulates that deposits of a Banking Unit are insurable under the Deposit Insurance and Credit Guarantee Corporation Act, 1961, subject to its rules and regulations.",
+        "metadata": {
+            "contained_section": "Section 18",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[\"Deposit Insurance and Credit Guarantee Corporation Act, 1961\"]",
+            "chunk_index": 17,
+            "parent_chunk_id": "banking_section_18",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 1,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_19_sub_0",
+        "content": "A Banking Unit may exchange margins in the specified foreign currencies or permissible listed debt securities and sovereigns with a counter party Banking Unit or overseas regulated entity for non-centrally cleared over the counter currency, interest rate, credit and commodity derivative contracts",
+        "summary": "Section 19 permits Banking Units to exchange margins in specified foreign currencies, listed debt securities, or sovereigns with counterparty Banking Units or overseas regulated entities for non-centrally cleared OTC derivative contracts.",
+        "metadata": {
+            "contained_section": "Section 19",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 18,
+            "parent_chunk_id": "banking_section_19",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_19_sub_1",
+        "content": "rate, credit and commodity derivative contracts to reflect mark to market exposure under a legally enforceable netting arrangement as may be specified by the Authority.",
+        "summary": "Section 19 mandates that margin exchanges for currency, interest rate, credit, and commodity derivatives must reflect mark-to-market exposure under a legally enforceable netting arrangement specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 19",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 18,
+            "parent_chunk_id": "banking_section_19",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_20_sub_0",
+        "content": "For the purposes of implementation of these regulations and matters incidental thereto, or in order to facilitate and regulate financial services relating to banking and investment activities in an International Financial Services Centre, the Authority may specify norms, procedures, processes,",
+        "summary": "Section 20 empowers the Authority to specify norms, procedures, and processes to implement regulations and facilitate financial services related to banking and investment activities in an International Financial Services Centre.",
+        "metadata": {
+            "contained_section": "Section 20",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 19,
+            "parent_chunk_id": "banking_section_20",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_20_sub_1",
+        "content": "may specify norms, procedures, processes, manners or provide relaxations, by way of guidelines or circulars.",
+        "summary": "Section 20 authorizes the Authority to issue guidelines or circulars to establish manners of operation or provide regulatory relaxations.",
+        "metadata": {
+            "contained_section": "Section 20",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 19,
+            "parent_chunk_id": "banking_section_20",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_21_sub_0",
+        "content": "(1) If the Parent Bank applicant or the Banking Unit fail to fulfil the conditions subject to which the licence under Regulation 3 has been granted, the Authority may withdraw the licence, after giving an opportunity of thirty days to the Banking Unit to make its submissions, if any",
+        "summary": "Section 21(1) allows the Authority to withdraw a Banking Unit's licence for failure to meet Regulation 3 conditions, provided the unit is granted a thirty-day window to submit a response.",
+        "metadata": {
+            "contained_section": "Section 21",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[\"Regulation 3\"]",
+            "chunk_index": 20,
+            "parent_chunk_id": "banking_section_21",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_21_sub_1",
+        "content": "(2) Without prejudice to the above, the Authority may take any other action as it deems fit, under the Act.",
+        "summary": "Section 21(2) grants the Authority the power to take any additional actions deemed fit under the Act, without prejudice to the licence withdrawal process.",
+        "metadata": {
+            "contained_section": "Section 21",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[\"Regulation 3\"]",
+            "chunk_index": 20,
+            "parent_chunk_id": "banking_section_21",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_22_sub_0",
+        "content": "(1) On and from the commencement of these regulations, the provisions of the Reserve Bank Circular No. RBI/2014-2015/533 DOR.IBD.BC.14570/23.13.04/2014-15 dated 1 April 2015, shall no longer be applicable",
+        "summary": "Section 22(1) declares the Reserve Bank Circular No. RBI/2014-2015/533 dated 1 April 2015 inapplicable upon the commencement of these regulations.",
+        "metadata": {
+            "contained_section": "Section 22",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 21,
+            "parent_chunk_id": "banking_section_22",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 4,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_22_sub_1",
+        "content": "(2) Notwithstanding the above, anything done, or any action taken or purported to have been done or taken in respect of the circular mentioned in sub-regulation (1) shall be deemed to have been done or taken under the corresponding provisions of these regulations",
+        "summary": "Section 22(2) provides a savings clause, ensuring that actions taken under the superseded 2015 Reserve Bank Circular are deemed valid under the corresponding provisions of these regulations.",
+        "metadata": {
+            "contained_section": "Section 22",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 21,
+            "parent_chunk_id": "banking_section_22",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 4,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_22_sub_2",
+        "content": "(3) A Banking Unit operating in the International Financial Services Centre prior to the notification of these regulations, shall comply with additional requirements, if any, introduced by these regulations, within a period of three months from the date of notification of these regulations or",
+        "summary": "Section 22(3) requires Banking Units operating in an International Financial Services Centre prior to these regulations to comply with any new additional requirements within three months of notification.",
+        "metadata": {
+            "contained_section": "Section 22",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 21,
+            "parent_chunk_id": "banking_section_22",
+            "sub_chunk_index": 2,
+            "total_sub_chunks": 4,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_section_22_sub_3",
+        "content": "the date of notification of these regulations or within such extended time as may be specified by the Authority.",
+        "summary": "Section 22 establishes the compliance timeline for these regulations, requiring action by the date of notification or within an extended period specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 22",
+            "contained_chapter": "Chapter VII - MISCELLANEOUS",
+            "doc_name": "banking",
+            "references": "[]",
+            "chunk_index": 21,
+            "parent_chunk_id": "banking_section_22",
+            "sub_chunk_index": 3,
+            "total_sub_chunks": 4,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_schedule_sub_0",
+        "content": "THE FIRST SCHEDULE [See Section 20 of the Act and regulation 2(1)(na)] SPECIFIED FOREIGN CURRENCIES i. US Dollar (USD) ii. Euro (EUR) iii. Japanese Yen (JPY) iv. UK Pound Sterling (GBP) v. Canadian Dollar (CAD) vi. Australian Dollar (AUD) vii. Swiss Franc (CHF) viii. Hong Kong Dollar (HKD) ix",
+        "summary": "The First Schedule, pursuant to Section 20 of the Act and regulation 2(1)(na), defines the list of specified foreign currencies including USD, EUR, JPY, GBP, CAD, AUD, CHF, and HKD.",
+        "metadata": {
+            "contained_section": "Schedule",
+            "contained_chapter": "The First Schedule",
+            "doc_name": "banking",
+            "references": "[\"Section 20 of the Act\", \"regulation 2(1)(na)\"]",
+            "chunk_index": 22,
+            "parent_chunk_id": "banking_schedule",
+            "sub_chunk_index": 0,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    },
+    {
+        "id": "banking_schedule_sub_1",
+        "content": "Hong Kong Dollar (HKD) ix. Singapore Dollar (SGD) x. UAE Dirham (AED) xi. Russian Rouble (RUB)",
+        "summary": "This portion of the First Schedule continues the list of specified foreign currencies, explicitly including the Singapore Dollar (SGD), UAE Dirham (AED), and Russian Rouble (RUB).",
+        "metadata": {
+            "contained_section": "Schedule",
+            "contained_chapter": "The First Schedule",
+            "doc_name": "banking",
+            "references": "[\"Section 20 of the Act\", \"regulation 2(1)(na)\"]",
+            "chunk_index": 22,
+            "parent_chunk_id": "banking_schedule",
+            "sub_chunk_index": 1,
+            "total_sub_chunks": 2,
+            "is_sub_chunk": "true"
+        }
+    }
+]

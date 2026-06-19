@@ -35,12 +35,13 @@ log_error()   { echo -e "${RED}[ERROR]${NC} $*"; }
 # ---------------------------------------------------------------------------
 # Model definitions: parallel arrays of (model_name, modelfile_path)
 # ---------------------------------------------------------------------------
-MODEL_NAMES=("ifsca-classifier-3b" "ifsca-boundary-3b" "ifsca-extractor-3b" "ifsca-expander-3b")
+MODEL_NAMES=("ifsca-classifier-3b" "ifsca-boundary-3b" "ifsca-extractor-3b" "ifsca-expander-3b" "ifsca-reranker-3b")
 MODEL_FILES=(
     "${MODELFILES_DIR}/Modelfile.classifier"
     "${MODELFILES_DIR}/Modelfile.boundary"
     "${MODELFILES_DIR}/Modelfile.extractor"
     "${MODELFILES_DIR}/Modelfile.expander"
+    "${MODELFILES_DIR}/Modelfile.reranker"
 )
 
 SAUL_MODEL_NAME="ifsca-saullm-7b-ft"

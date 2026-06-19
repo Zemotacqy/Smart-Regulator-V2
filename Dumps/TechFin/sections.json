@@ -1,0 +1,266 @@
+[
+    {
+        "id": "techfin_section_1",
+        "content": "1) These regulations shall be called the International Financial Services Centres Authority (TechFin and Ancillary Services) Regulations, 2025. 2) These regulations shall come into force from the date of their publication in the Official Gazette.",
+        "metadata": {
+            "contained_section": "Section 1",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "techfin",
+            "references": "[]",
+            "chunk_index": 0
+        }
+    },
+    {
+        "id": "techfin_section_2",
+        "content": "These regulations are aimed at providing a regulatory framework for TechFins and Ancillary Services Providers for making arrangements for carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of section 3 of the International Financial Services Centres Authority Act, 2019 (50 of 2019).",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "techfin",
+            "references": "[\"sub-clauses (i) to (xi) of clause (e) of sub-section (1) of section 3 of the International Financial Services Centres Authority Act, 2019 (50 of 2019)\"]",
+            "chunk_index": 1
+        }
+    },
+    {
+        "id": "techfin_section_3",
+        "content": "1) In these regulations, unless the context otherwise requires, the terms defined herein shall bear the meanings as assigned to them below and their cognate expressions and variations shall be construed accordingly: - (i). “Act” means the International Financial Services Centres Authority Act, 2019 (50 of 2019); (ii). “Ancillary Services” means those services which, directly or indirectly, aid, help or assist in making arrangements for carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub- section (1) of section 3 of the Act; (iii). “Authority” means the International Financial Services Centres Authority established under sub-section (1) of section 4 of the Act; (iv). “Group Entities” includes an arrangement involving two or more entities related to each other through any of the following relationships: (a) parent- subsidiary (as per Ind-AS 110/AS 21); (b) joint venture (as per Ind-AS 28/AS 27); (c) associate (as per Ind-AS 28/AS 23); (d) common brand name; (e) investment in equity shares/capital contribution of 20 per cent and above; or (f) part of a network; Explanation .- For the purpose of this clause, ‘network’ shall mean a larger structure of a group of firms that have come together for mutual benefits by pooling resources, showcase their combined strength and have uniform policies, technology and collaterals, and showcase themselves as one big unit, with one lead firm acting on behalf of the member-firms. (v). “Inspecting Authority” means one or more persons appointed by the Authority to undertake inspection of a TechFin and Ancillary Service Provider; (vi). “Intermediaries”, for the purposes of these regulations, refers to entities that obtain services from a TechFin and Ancillary Services Provider for delivering services to a Service Recipient directly without any layers: - Explanations. - (a) The TechFin and Ancillary Services Provider may enter into such arrangements only where the flow of services between the parties is demonstrable and traceable. (b) The TechFin and Ancillary Services Provider must ensure that the services it delivers to the Intermediary and the services the Intermediary delivers to the Service Recipient, are both intended to facilitate carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act by the Service Recipient. (vii). “International Financial Services Centre (IFSC)” shall have the same meaning as assigned to it under clause (g) of sub-section (1) of Section 3 of the Act; (viii). “Non-resident” means a ‘person resident outside India’ as defined under the Foreign Exchange Management Act, 1999 (42 of 1999) and shall also include financial institutions in an International Financial Service Centre; (ix). “Resident” means a ‘person resident in India’ as defined under the Foreign Exchange Management Act, 1999 (42 of 1999); (x). “Service Recipient” means an entity that receives services, directly from TechFin and Ancillary Service Provider or through an Intermediary for the purpose of carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act; (xi). \"Single Window IT Systems (SWIT)” refers to an online platform specified by the Authority, to facilitate the processing of applications submitted by the applicants for obtaining certificate of registration under these regulations; (xii). “Specified Foreign Currency” means the currencies specified in the First Schedule of the International Financial Services Centres Authority (Banking) Regulations, 2020, as amended from time to time; (xiii). “TechFin and Ancillary Service Provider” means an entity which has been granted registration under these regulations for providing one or more of the Ancillary Services or TechFin Services, specified in the First and Second Schedule, respectively, directly or indirectly, to aid, help or assist in making arrangements for carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act; Explanation. - For removal of doubts, it is hereby clarified that the TechFin and Ancillary Service Providers registered under these regulations shall not undertake any of the services specified in the Third Schedule. (xiv). “TechFin Services” means technology solutions or services provided, directly or indirectly, to aid, help or assist in making arrangements for carrying on any of the financial services listed in sub- clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act. 2) Words and expressions used and not defined in these regulations but defined in the Act or Acts mentioned in the First Schedule to the Act, or the Companies Act, 2013 (18 of 2013), or the Limited Liability Partnership Act, 2008 (6 of 2009), or any rules or regulations made thereunder shall have the same meanings respectively assigned to them in those Acts, rules, regulations or any statutory modification or re-enactment thereto, as the case may be.",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter I - Preliminary",
+            "doc_name": "techfin",
+            "references": "[\"International Financial Services Centres Authority Act, 2019 (50 of 2019)\", \"sub-clauses (i) to (xi) of clause (e) of sub-section (1) of section 3 of the Act\", \"sub-section (1) of section 4 of the Act\", \"Ind-AS 110/AS 21\", \"Ind-AS 28/AS 27\", \"Ind-AS 28/AS 23\", \"clause (g) of sub-section (1) of Section 3 of the Act\", \"Foreign Exchange Management Act, 1999 (42 of 1999)\", \"First Schedule of the International Financial Services Centres Authority (Banking) Regulations, 2020\", \"First Schedule\", \"Second Schedule\", \"Third Schedule\", \"First Schedule to the Act\", \"Companies Act, 2013 (18 of 2013)\", \"Limited Liability Partnership Act, 2008 (6 of 2009)\"]",
+            "chunk_index": 2
+        }
+    },
+    {
+        "id": "techfin_section_4",
+        "content": "1) An entity desirous of providing either TechFin or Ancillary Services or both, shall not commence its operations in the IFSC unless a certificate of registration is granted by the Authority to it in accordance with these regulations: Provided that an existing ancillary service provider authorised under Circular dated February 10, 2021, as amended from time to time, titled as “Framework for enabling Ancillary services at International Financial Services Centres” (hereinafter referred to as “existing Ancillary Service Provider”), or an existing TechFin authorised under Circular dated April 27, 2022, titled as “Framework for FinTech Entity in the International Financial Services Centres” (hereinafter referred to as “existing TechFin”), shall within a period of twelve (12) months from the date of commencement of these regulations, obtain a certificate of registration under these regulations; Provided further that where an existing Ancillary Service Provider or TechFin entity is unable to obtain the certificate of registration within the period specified above, on an application made by the entity, the Chairperson of the Authority may, for reasons recorded in writing, grant an extension beyond twelve (12) months, but not exceeding twenty-four (24) months in aggregate; Provided also that such Ancillary Service Provider and TechFin entity shall continue to be regulated and governed by the existing respective frameworks, till the time it is granted a certificate of registration under these regulations. 2) The Authority may, upon receipt of a declaration from the existing Ancillary Services Provider or TechFin entity, certifying the compliance with the requirements specified under these regulations, and on being satisfied with such declaration, issue a certificate of registration.",
+        "metadata": {
+            "contained_section": "Section 4",
+            "contained_chapter": "Chapter II - REGISTRATION",
+            "doc_name": "techfin",
+            "references": "[\"Circular dated February 10, 2021\", \"Circular dated April 27, 2022\"]",
+            "chunk_index": 3
+        }
+    },
+    {
+        "id": "techfin_section_5",
+        "content": "1) The applicant shall be an entity incorporated as a company or limited liability partnership in the IFSC, or a branch of a company or of a limited liability partnership incorporated outside the IFSC, or in any other form as may be permitted by the Authority: Provided that a partnership firm registered under the Indian Partnership Act, 1932, wherein all its partners are members of professional body or institute constituted under any Act of Parliament, shall also be eligible to make an application under these regulations. 2) All the promoters or partners of the applicant entity shall be from a jurisdiction which has not been identified in the public statement of Financial Action Task Force (FATF) as “High-Risk Jurisdictions subject to call for action”.",
+        "metadata": {
+            "contained_section": "Section 5",
+            "contained_chapter": "Chapter II - REGISTRATION",
+            "doc_name": "techfin",
+            "references": "[\"Indian Partnership Act, 1932\"]",
+            "chunk_index": 4
+        }
+    },
+    {
+        "id": "techfin_section_6",
+        "content": "1) An applicant desirous of obtaining certificate of registration as TechFin and Ancillary Services Provider shall submit the application to the Authority through SWIT, along with the requisite documents and application fees, in the manner specified by the Authority. 2) After considering the application, if the Authority is of the opinion that the certificate of registration cannot be granted due to certain deficiencies, it shall communicate the same to the applicant, advising it to rectify those deficiencies within thirty (30) days from the date of communication, failing which the application shall be liable to be rejected: Provided that no application shall be rejected without giving the applicant a reasonable opportunity of being heard by way of written submissions. 3) On consideration of the application, the Authority may grant in-principle approval to the applicant, subject to such conditions as deemed fit. 4) On receipt of in-principle approval, the applicant shall, within a period of one hundred eighty (180) days, unless extended by the Authority, take necessary steps to comply with these regulations and conditions of the in-principle approval. 5) On being satisfied that the applicant has fulfilled the conditions of the in-principle approval, the Authority may grant a certificate of registration, subject to such conditions as it deemed fit. 6) The certificate of registration granted under these regulations shall be valid, unless suspended or cancelled by the Authority or voluntarily surrendered by the TechFin and Ancillary Service Provider in accordance with these regulations: Provided, the voluntary surrender of certificate of registration shall be effective only after its acceptance by the Authority. 7) The TechFin and Ancillary Service Provider shall immediately furnish to the Authority of any material changes, having bearing on the certificate of registration granted to it including any change in the information or particulars previously furnished.",
+        "metadata": {
+            "contained_section": "Section 6",
+            "contained_chapter": "Chapter II - REGISTRATION",
+            "doc_name": "techfin",
+            "references": "[]",
+            "chunk_index": 5
+        }
+    },
+    {
+        "id": "techfin_section_7",
+        "content": "7. Fit and Proper requirements 1) The TechFin and Ancillary Services Provider shall ensure that the entity and its principal officer, compliance officer, directors/ partners/ designated partners, and controlling shareholders are ‘fit and proper’ persons, at all times. 2) For the purpose of sub-regulation (1), a person shall be deemed to be a ‘fit and proper’ if,- (i). such a person has a record of fairness and integrity, including but not limited to- (a) financial integrity; (b) good reputation and character; and (c) honesty. (ii). such a person has not incurred any of the following disqualifications: a) the person has been convicted by a court of law for any offence involving moral turpitude or any economic offence or any offence, under the Act or Acts mentioned in the First Schedule of the Act, in last five (5) years; b) charge sheet has been filed against such person by any Indian or foreign enforcement agency in matters concerning economic offences and is pending; c) charges have been framed by a court of law or an equivalent institution in matters concerning economic offences; d) a recovery proceeding has been initiated against the person by a statutory body or financial regulatory authority and is pending; e) an order has been passed against the person for malfeasance; f) the person has been declared an undischarged insolvent; g) An order, restraining, prohibiting or debarring the person from accessing, providing or dealing in financial product (s) or financial service (s), has been passed by any regulatory authority, in any matter concerning financial services market and such order is in force; h) any other order , which has a material bearing on the financial services market, has been passed against the person by the Authority or any other regulatory authority, and a period of three (3) years from the date of the order has not elapsed’; Explanation. - For the purpose of this sub-clause, the decision to determine materiality shall be with the Authority; i) the person has been found to be of unsound mind by a court of competent jurisdiction and the finding is in force; j) the person is financially not sound or has been categorized as a wilful defaulter; k) the person has been declared a fugitive economic offender; or l) any other disqualification as may be specified by the Authority. 3) Where any person has been declared as not ‘fit and proper’ by an order of a regulatory authority, such a person shall not be eligible to apply for any registration, until such person satisfies the ‘fit and proper’ requirements.",
+        "metadata": {
+            "contained_section": "Section 7",
+            "contained_chapter": "Chapter III - FIT AND PROPER REQUIREMENTS AND CODE OF CONDUCT",
+            "doc_name": "techfin",
+            "references": "[\"First Schedule of the Act\"]",
+            "chunk_index": 6
+        }
+    },
+    {
+        "id": "techfin_section_8",
+        "content": "8. Code of Conduct The TechFin and Ancillary Service Provider shall abide by the Code of Conduct specified in the Fourth Schedule.",
+        "metadata": {
+            "contained_section": "Section 8",
+            "contained_chapter": "Chapter III - FIT AND PROPER REQUIREMENTS AND CODE OF CONDUCT",
+            "doc_name": "techfin",
+            "references": "[\"Fourth Schedule\"]",
+            "chunk_index": 7
+        }
+    },
+    {
+        "id": "techfin_section_9",
+        "content": "9. Appointment or Designation (1) The TechFin and Ancillary Service Provider shall appoint a principal officer or designate one of its existing officers as a principal officer, who shall be responsible for its overall activities: Provided that in the case of a TechFin and Ancillary Service Provider providing services exclusively to its Group Entities located in the IFSC, the appointment of a principal officer is optional subject to the approval of the Authority. (2) The TechFin and Ancillary Service Provider shall appoint a compliance officer or designate one of its existing officers as a compliance officer, who shall be responsible for the compliance of policies, procedures, maintenance of records, implementation of the requirements under these regulations, other applicable laws, and reports to the Board of Directors or head of the organisation, as the case may be. (3) The principal officer and compliance officer shall be full-time employees of TechFin and Ancillary Service Provider and shall be based out of the IFSC.",
+        "metadata": {
+            "contained_section": "Section 9",
+            "contained_chapter": "Chapter IV - REQUIREMENT OF PRINCIPAL OFFICER AND COMPLIANCE OFFICER",
+            "doc_name": "techfin",
+            "references": "[]",
+            "chunk_index": 8
+        }
+    },
+    {
+        "id": "techfin_section_10",
+        "content": "1) The TechFin and Ancillary Service Provider may provide the services only to an Intermediary or a Service Recipient, who is a Non-resident and from a jurisdiction which has not been identified in the public statement of Financial Action Task Force (FATF) as “High-Risk Jurisdiction subject to call for action”. 2) Notwithstanding anything contained in sub-regulation (1), the TechFin and Ancillary Service Provider may also provide the services to a Resident, for the limited purpose of setting up of their office in the IFSC or Overseas.",
+        "metadata": {
+            "contained_section": "Section 10",
+            "contained_chapter": "Chapter V - INTERMEDIARIES AND SERVICE RECIPIENTS",
+            "doc_name": "techfin",
+            "references": "[\"sub-regulation (1)\"]",
+            "chunk_index": 9
+        }
+    },
+    {
+        "id": "techfin_section_11",
+        "content": "1) The TechFin and Ancillary Service Provider shall carry out its operation in any of the Specified Foreign Currency: Provided that the TechFin and Ancillary Service Provider may open an INR account to defray its administrative and statutory expenses and for such other purposes as may be permitted under the applicable laws. 2) Every TechFin and Ancillary Service Provider shall maintain its balance sheet in any of the Specified Foreign Currencies.",
+        "metadata": {
+            "contained_section": "Section 11",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "techfin",
+            "references": "[]",
+            "chunk_index": 10
+        }
+    },
+    {
+        "id": "techfin_section_12",
+        "content": "1) The TechFin and Ancillary Service Provider shall furnish information relating to its operations to the Authority, in such manner, interval and form, as may be specified by the Authority. 2) Any financial reporting by the TechFin and Ancillary Service Provider to the Authority shall be in US Dollar, unless otherwise specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 12",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "techfin",
+            "references": "[]",
+            "chunk_index": 11
+        }
+    },
+    {
+        "id": "techfin_section_13",
+        "content": "1) The Authority, for reasons to be recorded in writing, may in the interest of the development of the financial services market in the IFSC, relax the strict enforcement of any requirements of these regulations. 2) For seeking relaxation under sub-regulation (1), an application giving details and the grounds on which such relaxation has been sought, shall be filed with the Authority along with a non-refundable fee as may be specified by the Authority. 3) The application made under sub-regulation (2), complete in all respects, shall be processed within thirty (30) days from the date of receipt of the application, including responses to clarifications sought by the Authority, and the reasons for acceptance or refusal of the relaxations sought by the applicant shall be recorded in writing.",
+        "metadata": {
+            "contained_section": "Section 13",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "techfin",
+            "references": "[\"sub-regulation (1)\", \"sub-regulation (2)\"]",
+            "chunk_index": 12
+        }
+    },
+    {
+        "id": "techfin_section_14",
+        "content": "In order to remove any difficulty in the interpretation or application of the provisions of these regulations, the Authority may issue directions through guidance notes or circulars.",
+        "metadata": {
+            "contained_section": "Section 14",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "techfin",
+            "references": "[]",
+            "chunk_index": 13
+        }
+    },
+    {
+        "id": "techfin_section_15",
+        "content": "For the purposes of implementation of these regulations and matters incidental thereto, the Authority may specify norms, procedures, processes, additional requirements, etc. by way of circulars or guidelines or directions.",
+        "metadata": {
+            "contained_section": "Section 15",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "techfin",
+            "references": "[]",
+            "chunk_index": 14
+        }
+    },
+    {
+        "id": "techfin_section_16",
+        "content": "The TechFin and Ancillary Service Provider shall pay the annual fees, and any other fees as may be specified by the Authority from time to time.",
+        "metadata": {
+            "contained_section": "Section 16",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "techfin",
+            "references": "[]",
+            "chunk_index": 15
+        }
+    },
+    {
+        "id": "techfin_section_17",
+        "content": "The Authority may call for any information, documents or records from the TechFin and Ancillary Service Provider and it shall be the duty of the TechFin and Ancillary Service Provider to submit the same within the specified time.",
+        "metadata": {
+            "contained_section": "Section 17",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "techfin",
+            "references": "[]",
+            "chunk_index": 16
+        }
+    },
+    {
+        "id": "techfin_section_18",
+        "content": "The Authority, may suo motu or upon receipt of information or complaint, appoint one or more persons as Inspecting Authority to, inter-alia, undertake the inspection of books of accounts, records, documents, infrastructure, procedures and systems of a TechFin and Ancillary Service Provider.",
+        "metadata": {
+            "contained_section": "Section 18",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "techfin",
+            "references": "[]",
+            "chunk_index": 17
+        }
+    },
+    {
+        "id": "techfin_section_19",
+        "content": "1) The Authority may initiate any action, as it may deem fit, in case a TechFin and Ancillary Service Provider contravenes any of the provisions of these regulations, circulars, guidelines or directions issued thereunder. 2) No action as referred under sub-regulation (1) shall be taken without giving the TechFin and Ancillary Service Provider, a reasonable opportunity of being heard by way of written submissions.",
+        "metadata": {
+            "contained_section": "Section 19",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "techfin",
+            "references": "[\"sub-regulation (1)\"]",
+            "chunk_index": 18
+        }
+    },
+    {
+        "id": "techfin_section_20",
+        "content": "1) On and from the commencement of these regulations, the Circular dated February 10, 2021 as amended from time to time, titled as “Framework for enabling Ancillary services at International Financial Services Centres” and any other circulars issued thereunder, shall stand repealed after twenty-four (24) months from the commencement of these regulations. 2) The provisions related to TechFin mentioned under clause 7 and Annexure-I of the Circular dated April 27, 2022, titled as “Framework for FinTech Entity in the International Financial Services Centres (IFSCs)”, shall stand repealed after twenty-four (24) months from the commencement of these regulations. 3) Notwithstanding such repeal, the existing Ancillary Service Providers and TechFin entities authorised under the respective aforementioned Circulars shall continue to be governed by them, till the receipt of certificate of registration under these regulations or up to twelve (12) months from the commencement of these regulations, unless extended, whichever is earlier. 4) Notwithstanding such repeal, the previous operation of the repealed Circulars or anything done or suffered thereunder, any right, privilege, obligation or liability acquired, accrued or incurred under the repealed Circulars, any penalty, incurred in respect of any violation committed against the repealed Circulars, or any investigation, legal proceeding or remedy in respect of any such right, privilege, obligation, liability, penalty as aforesaid, shall remain unaffected as if the repealed Circulars have never been repealed.",
+        "metadata": {
+            "contained_section": "Section 20",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "techfin",
+            "references": "[]",
+            "chunk_index": 19
+        }
+    },
+    {
+        "id": "techfin_schedule",
+        "content": "THE FIRST SCHEDULE [refer regulation 3(1)(xiii)] List of permitted Ancillary Services: (i). Actuarial services; (ii). Advisory services; (iii). Assets management support services; (iv). Auditing services; (v). Business process outsourcing; (vi). Compliance management support services covering assessment of internal control system, integrated reporting, financial reporting, non-financial reporting, corporate sustainability reporting, board reporting, annual report, other regulatory reporting; (vii). Customer care support services; (viii). Enterprise governance related support services namely, assessment of the corporate governance principles, assessment of board effectiveness, board processes, board committees, preparation and review of corporate policies & disclosures, performance evaluation of board and management, review of related party transactions, execution of shareholders’ rights; (ix). Fund administration services including fund accounting; (x). Human resource & payroll processing; (xi). Insolvency professional services and liquidation related support services; (xii). Knowledge process outsourcing; (xiii). Legal process outsourcing; (xiv). Legal services; (xv). Management consulting services; (xvi). Marketing support services; (xvii). Outsourced services, which are not covered in this Schedule but are permitted to be outsourced by the entity regulated by any financial sector regulator of its home jurisdiction; (xviii). Risk management related services, namely providing support services to risk identification, risk analysis, risk measurement, risk mitigation, risk elimination, support to internal audit, risk audit, risk related disclosures; (xix). Secretarial services; (xx). Broking services for leasing activities permitted in the IFSC; (xxi). Supply chain management support; (xxii). Trusteeship services including facility agent functions, except debenture trustee services permitted under the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025; (xxiii). Valuation services; (xxiv). Voice broking for banking services; (xxv). Family office support services; (xxvi). Global mobility services (Immigration support services) for students and employees of foreign countries intending to study and work at IFSC respectively; (xxvii). Centre of excellence / offshore development centre/ financial capability centre to provide research and development support services (excluding R&D support in technology); skill development, training and certification services to employees working in the IFSC and individuals/entities from foreign country; (xxviii). Any other services as may be permitted by the Authority from time to time.",
+        "metadata": {
+            "contained_section": "Schedule",
+            "contained_chapter": "The First Schedule",
+            "doc_name": "techfin",
+            "references": "[\"regulation 3(1)(xiii)\", \"International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025\"]",
+            "chunk_index": 20
+        }
+    },
+    {
+        "id": "techfin_schedule_1",
+        "content": "THE SECOND SCHEDULE [refer regulation 3(1)(xiii)] List of permitted TechFin Services: (i). Accelerators; (ii). Agri Tech; (iii). Big data & analytics; (iv). Climate, Green and/or Sustainable Tech; (v). Cloud computing services; (vi). Cyber security, cyber security architecture and cyber risk management services; (vii). Application development and maintenance; (viii). Automation and robotic process automation; (ix). Enterprise resource planning (ERP) systems; (x). Implementation of enterprise Governance, Risk and Compliance (eGRC) software platforms; (xi). Information Technology infrastructure & cloud insurance; (xii). Management of IT infrastructure and technology services associated with payment system ecosystem; (xiii). Outsourced services, which are not covered in this Schedule but are permitted to be outsourced by the entity regulated by any financial sector regulator of its home jurisdiction; (xiv). Regulatory Tech; (xv). Services and operations related to data centres; (xvi). Solutions or services provided by leveraging: a. Artificial Intelligence or Machine Learning, b. Biometrics or Chatbots, c. Digital Identity /KYC/AML/CFT, d. Fraud detection/prevention, e. Distributed Ledger Technology (DLT), f. Internet of Things (IoT), g. Longevity finance, h. Metaverse including Augmented Reality (AR) and /or Virtual Reality (VR), i. Quantum tech, j. Web 3.0. (xvii). Space Tech; (xviii). Supervisory Technology; (xix). Technology solution aiding trade finance; (xx). Technology solution supporting digital banking; (xxi). Technology solutions including IT related development, enhancement, maintenance and support services; (xxii). Tokenization support services; (xxiii). Centre of excellence, Offshore development centre, Technology capability centre to provide R & D support in technology; (xxiv). Any other services as may be permitted by the Authority from time to time.",
+        "metadata": {
+            "contained_section": "Schedule",
+            "contained_chapter": "The Second Schedule",
+            "doc_name": "techfin",
+            "references": "[\"regulation 3(1)(xiii)\"]",
+            "chunk_index": 21
+        }
+    },
+    {
+        "id": "techfin_schedule_2",
+        "content": "THE THIRD SCHEDULE [refer regulation 3(1)(xiii)] List of services not permitted to be provided by TechFin and Ancillary Service Provider under these regulations: (i) Core activities which are not permitted to be outsourced by an entity regulated by any financial sector regulators of home jurisdictions; (ii) Activities which are regulated under any regulations or framework issued by IFSCA; (iii) Facility management services which inter-alia includes building maintenance, security services, housekeeping services, civil, mechanical, electrical and plumbing maintenance services or any other related manpower outsourced services; (iv) Transport and logistic services, construction related services, and management of physical assets; and (v) Any other services which, in the opinion of the Authority, do not constitute making arrangements for carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of section (3) of the Act.",
+        "metadata": {
+            "contained_section": "Schedule",
+            "contained_chapter": "The Third Schedule",
+            "doc_name": "techfin",
+            "references": "[\"regulation 3(1)(xiii)\", \"sub-clauses (i) to (xi) of clause (e) of sub-section (1) of section (3) of the Act\"]",
+            "chunk_index": 22
+        }
+    },
+    {
+        "id": "techfin_schedule_3",
+        "content": "Code of Conduct for the TechFin and Ancillary Service Provider: (i). The TechFin and Ancillary Service Provider shall ensure compliance with the requirements prescribed in the relevant rules issued by the Central Government and in any regulations, guidelines, circulars or instructions as may be issued from time to time by the Authority or any concerned regulators or authorities. (ii). The TechFin and Ancillary Service Provider shall inform the Authority of any material change in the information or particulars previously furnished, which have a bearing on the certificate of registration granted by the Authority. (iii). The TechFin and Ancillary Service Provider shall notify the Authority, if any of its promoter’s or significant beneficial owner’s home jurisdiction is identified in the public statement of Financial Action Task Force (FATF) as “High-Risk Jurisdiction subject to call for action ”, within ten (10) business days from the date of publication by FATF. (iv). The TechFin and Ancillary Service Provider shall deploy adequate manpower and infrastructure in the IFSC, commensurate with its business operations. (v). The TechFin and Ancillary Service Provider shall seek registration or authorisation, as the case may be, separately under the appropriate regulations or framework issued by the Authority for undertaking regulated activities in the IFSC.",
+        "metadata": {
+            "contained_section": "Schedule",
+            "contained_chapter": "The Fourth Schedule",
+            "doc_name": "techfin",
+            "references": "[\"regulation (8)\"]",
+            "chunk_index": 23
+        }
+    }
+]

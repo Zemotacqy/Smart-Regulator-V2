@@ -244,7 +244,7 @@ CREATE OR REPLACE TRIGGER trg_ast_nodes_tsvector
 | **Relation Extraction** | `ifsca-extractor-3b` (Llama 3.2 3B Q4_K_M) | CPU · Ollama | 2.2 GB RAM | 10-clause batching keeps throughput high |
 | **Text Embedding** | `nomic-embed-text:v1.5` | CPU · Ollama | 280 MB RAM | 8k context (NTK interpolation), bi-encoder, Ollama-native. Phase 3: evaluate BGE-M3 |
 | **Query Expansion** | `ifsca-expander-3b` (Llama 3.2 3B Q4_K_M) | CPU · Ollama | 2.2 GB RAM | Fast 3-variant expansion; no GPU needed |
-| **Cross-Encoder Rerank** | `ms-marco-MiniLM-L-6-v2` (ONNX via fastembed) | CPU · Python | 90 MB RAM | Torch-free ONNX inference; identical accuracy to PyTorch; no 200MB torch binary |
+| **Cross-Encoder Rerank** | `ifsca-reranker-3b` (Llama 3.2 3B Q4_K_M) | CPU · Ollama | 2.2 GB RAM | Baked SLM reranking; parallel batches of 5 candidates, 2,000-char previews |
 | **Context Compression** | `ifsca-extractor-3b` (reused) | CPU · Ollama | Shared | Sentence extraction is a pure filtering task |
 | **Primary Q&A** | `ifsca-saullm-7b-ft` (SaulLM-7B-Instruct + RAFT QLoRA) | **GPU · Ollama** | 5.5 GB VRAM at 4k ctx | Legal pretraining (30B legal tokens) + RAFT fine-tune; `num_ctx 4096` keeps within 6GB VRAM |
 | **Eval / Testing** | `mistral-nemo:12b` | Mac M4 Air | 8 GB Unified | LLM-as-a-Judge evaluator; larger reasoning model for golden dataset scoring |
@@ -606,8 +606,8 @@ Rank 3: "Schedule I. List of permissible foreign currencies"
 - `Rank 2` has a `DEFINES_TERM` edge → definition is inlined into the context block.
 - Temporal filter: no `SUBSTITUTES` edge on Rank 1 → node is current, no swap needed.
 
-**Stage D — Cross-Encoder Reranking (`ms-marco-MiniLM-L6-v2`):**
-Re-scores all expanded context nodes against the original query. Final top-5 nodes selected.
+**Stage D — Prompt-Baked SLM Reranking (`ifsca-reranker-3b`):**
+Re-scores candidate nodes in parallel batches of size 5 using `ifsca-reranker-3b`. Candidate previews are expanded to 2,000 characters to prevent context truncation. Model output is parsed defensively using a flat string-key mapping (`"0"`, `"1"`, ...) with list/array format normalization. Top-4 final nodes are selected.
 
 **Stage E — Context Compression (`ifsca-extractor-3b`):**
 Input: "Section 4(1) full text (450 tokens)" + query.
@@ -872,12 +872,7 @@ pypdf==4.2.0               # PDF page text extraction (pre-filter only)
                            # Techfin/GIC may contain Hindi headers/titles).
 
 # ── AI / Local Inference ──────────────────────────────────────────────────────
-ollama==0.2.1              # Async Ollama API client (classifier, boundary, extractor, generator)
-fastembed==0.3.6           # Torch-free cross-encoder reranking via ONNX Runtime.
-                           # Eliminates torch (~200MB CPU binary) from the production image.
-                           # Usage: from fastembed.rerank.cross_encoder import TextCrossEncoder
-                           # model = TextCrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
-                           # scores = model.rerank(query, candidate_texts)
+ollama==0.2.1              # Async Ollama API client (classifier, boundary, extractor, reranker, generator)
 
 # ── Logging & Observability ───────────────────────────────────────────────────
 structlog==24.2.0          # Structured JSON logging
@@ -890,7 +885,7 @@ httpx==0.27.0              # Async HTTP client for integration tests
 ```
 
 > [!NOTE]
-> **Why fastembed instead of sentence-transformers?** The `CrossEncoder` class in `sentence-transformers` is a PyTorch-native implementation — it pulls in `torch` (~200MB CPU binary) as a hard dependency even when no GPU is used. `fastembed` provides the identical `ms-marco-MiniLM-L-6-v2` cross-encoder via ONNX Runtime, with zero torch dependency, similar latency on CPU, and a much smaller footprint. For the Mac M4 Air dev environment only (where torch is already installed for MLX fine-tuning), either library works.
+> **Transition to SLM Reranking:** The CPU-based `ms-marco-MiniLM-L-6-v2` ONNX cross-encoder was replaced with a prompt-baked `ifsca-reranker-3b` model hosted on Ollama. This leverages zero-shot regulatory knowledge and eliminates Python-side cross-encoder dependencies completely.
 
 ### 9.2 — Idempotency Contracts Per Stage
 
@@ -1097,7 +1092,7 @@ smart-regulator-v2/
 │           ├── hybrid_search.py            # HNSW + tsvector BM25 via RRF in SQL
 │           ├── hop_expander.py             # Parent chain + REFERS_TO + DEFINES_TERM SQL
 │           ├── temporal_filter.py          # Applies SUBSTITUTES/OMITTED_BY temporal rules
-│           ├── reranker.py                 # ms-marco-MiniLM-L6-v2 cross-encoder
+│           ├── reranker.py                 # ifsca-reranker-3b prompt-baked SLM
 │           ├── compressor.py               # ifsca-extractor-3b sentence extraction
 │           └── generator.py               # ifsca-saullm-7b-ft SSE streaming
 │
@@ -1355,9 +1350,9 @@ python scripts/debug_pipeline.py \
   Inlined glossary: "Permitted Currency" → [definition text]
   SUBSTITUTES check: Section 4(1) has no active substitution
 
-[Stage D: Reranker] (28ms)
-  ms-marco-MiniLM-L6-v2 re-scores 20 expanded nodes
-  Top-5 selected: node_ids=[8fa7b2a6, 3c21d5a0, 2b18e3f7, ...]
+[Stage D: Reranker] (225ms)
+  ifsca-reranker-3b re-scores 10 candidates in parallel batches
+  Top-4 selected: node_ids=[8fa7b2a6, 3c21d5a0, 2b18e3f7, ...]
 
 [Stage E: Compressor] (183ms)
   Input tokens: ~2,100 (5 nodes × avg 420 tokens)
@@ -1386,7 +1381,7 @@ cat logs/app.log | jq 'select(.event == "corpus_resolution_complete") | {resolve
 ### 14.3 — Diagnose Low Recall
 1. Run `debug_pipeline.py` — check if the golden answer node appears in Stage B candidates.
 2. If **not in Stage B**: embedding or FTS retrieval failure. Try increasing `ef_search` (`SET hnsw.ef_search = 150`) and re-run. If it appears then, raise the default in `config.py`.
-3. If **in Stage B but not Stage D**: the cross-encoder reranker demoted it. Inspect the `ms-marco-MiniLM-L6-v2` scores. If the node is genuinely relevant but poorly ranked, it indicates the expanded context (Stage C) added too much noise — investigate `hop_expander.py`.
+3. If **in Stage B but not Stage D**: the SLM reranker demoted it. Inspect the `ifsca-reranker-3b` output scores and reasoning. If a relevant node scored poorly, verify that its content preview (up to 2,000 characters) contains the necessary keywords/clauses, or tune the domain signals in the reranker Modelfile.
 4. If **in Stage D but not in final answer**: the compressor may have removed the critical sentence. Check Stage E output directly. Tighten the compression prompt.
 
 ### 14.4 — Debug Ingestion Failures

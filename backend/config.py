@@ -8,7 +8,7 @@ load_dotenv()
 
 logger = structlog.get_logger()
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://manish@localhost/smart_regulator_v2")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://manish@localhost/smart_regulator_v3")
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
 # Model configuration
@@ -18,8 +18,12 @@ EXTRACTOR_MODEL = os.getenv("EXTRACTOR_MODEL", "ifsca-extractor-3b")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "nomic-embed-text:v1.5")
 EXPANDER_MODEL = os.getenv("EXPANDER_MODEL", "ifsca-expander-3b")
 GENERATOR_MODEL = os.getenv("GENERATOR_MODEL", "ifsca-saullm-7b-ft")
-RERANK_MODEL = os.getenv("RERANK_MODEL", "cross-encoder/ms-marco-MiniLM-L-6-v2")
+RERANKER_SLM_MODEL = os.getenv("RERANKER_SLM_MODEL", "ifsca-reranker-3b")
 EVAL_MODEL = os.getenv("EVAL_MODEL", "mistral-nemo:12b")
+
+# Context budget constraints
+MAX_CONTEXT_CHARS = 12000
+MAX_SINGLE_SECTION_CHARS = 4000
 
 # Known document types for validation — self-expanding, persisted across restarts
 # Sidecar JSON lives in the data/ directory alongside training assets.

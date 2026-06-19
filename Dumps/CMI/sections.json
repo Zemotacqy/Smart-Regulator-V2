@@ -1,0 +1,552 @@
+[
+    {
+        "id": "cmi_section_0",
+        "content": "In exercise of the powers conferred by sub-section (1) of Section 28 read with sub-section (1) of Section 12 and sub-section (1) of Section 13 of the International Financial Services Centres Authority Act, 2019; Section 30 read with Section 28C of the Securities and Exchange Board of India Act, 1992; and Section 25 read with Section 23G of the Depositories Act, 1996, the International Financial Services Centres Authority hereby makes the following regulations, namely:-",
+        "metadata": {
+            "contained_section": "Section 0",
+            "contained_chapter": "",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 0
+        }
+    },
+    {
+        "id": "cmi_section_1",
+        "content": "(1) These regulations may be called the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025. (2) These regulations shall come into force on and from the date of their publication in the Official Gazette.",
+        "metadata": {
+            "contained_section": "Section 1",
+            "contained_chapter": "Chapter I - PRELIMINARY",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 1
+        }
+    },
+    {
+        "id": "cmi_section_2",
+        "content": "2. Objective. These regulations provide the regulatory framework for registration, regulation and supervision of capital market intermediaries operating in international financial services centres in India with the objectives of protecting the interests of investors and maintaining the integrity of the securities market.",
+        "metadata": {
+            "contained_section": "Section 2",
+            "contained_chapter": "Chapter I - PRELIMINARY",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 2
+        }
+    },
+    {
+        "id": "cmi_section_3",
+        "content": "(1) In these regulations, unless the context otherwise requires, the terms defined herein shall bear the meanings as assigned to them below, and their cognate expressions shall be construed accordingly, - (a) \"Act\" means the International Financial Services Centres Authority Act, 2019 (50 of 2019); (b) \"associate\" in relation to a person shall include another person: (i) who, directly or indirectly, by himself, or in combination with other persons, exercises control over the first person; (ii) who holds control of at least twenty percent of the total voting power of the first person; (iii) who is a holding company or a subsidiary company of the first person; (iv) who is a relative of the first person; (v) who is a member of a Hindu Undivided Family wherein the first is also a member; or (vi) such other cases where the Authority is of the view that a person shall be considered as an associate based on the facts and factors including the extent of control, independence, conflict of interest; (c) \"Authority\" or \"IFSCA\" means the International Financial Services Centres Authority established under sub-section (1) of section 4 of the Act; (d) \"banker to an issue\" means a bank carrying out banking related activities in an issue; (e) \"Banking Unit\" shall have the same meaning as assigned to it under clause (c) of sub-regulation (1) of regulation 2 of the International Financial Services Centres Authority (Banking) Regulations, 2020; (f) \"body corporate\" shall have the meaning assigned to it under clause (11) of section 2 of the Companies Act, 2013 (18 of 2013); (g) \"broker dealer\" means a person which is in the business of buying and selling securities and other permitted financial products for its own account or on behalf of its customers and includes a trading member of a recognised stock exchange, and is registered as a broker dealer with the Authority under these regulations; (h) \"capital market intermediary (CMI)\" means an intermediary registered or authorised with the Authority under these regulations; (i) \"clearing member\" means a person having clearing and settlement rights in a recognised clearing corporation and is registered as a clearing member with the Authority under these regulations; (j) \"compliance officer\" means any senior officer, designated so and reporting to the board of directors or the governing body, as the case may be, who is capable of understanding the financial statements and the requirements for legal and regulatory compliances under these regulations and all applicable legal and regulatory requirements for the activities of the capital market intermediary in the IFSC, including compliance of policies, procedures, maintenance of records, risk management, and implementation of the applicable code of conduct specified in these regulations; (k) \"control\" shall include the right to appoint majority of the directors or to control the management or policy decisions exercisable by a person or persons acting individually or in concert, directly or indirectly, including by virtue of their shareholding or management rights or shareholders agreements or voting agreements or in any other manner, including by holding interest, whether direct or indirect, to the extent of more than fifty per cent (50%) of voting rights or interest: Provided that a director or officer of an entity shall not be considered to be in control over such entity, merely by virtue of holding such position; ...",
+        "metadata": {
+            "contained_section": "Section 3",
+            "contained_chapter": "Chapter I - PRELIMINARY",
+            "doc_name": "cmi",
+            "references": "[\"clause (g) of sub-section (1) of section 3 of the Act\", \"clause (51) of section 2 of the Companies Act, 2013\", \"section 3 of the Securities and Exchange Board of India Act, 1992\", \"First Schedule to the Act\", \"Companies Act, 2013\"]",
+            "chunk_index": 3
+        }
+    },
+    {
+        "id": "cmi_section_4",
+        "content": "(1) A unit in IFSC desirous of undertaking any of the below mentioned activities shall obtain a certificate of registration from the Authority: (a) Broker dealer; (b) Clearing member; (c) Credit rating agency; (d) Custodian; (e) Debenture Trustee; (f) Depository participant; (g) Distributor; (h) ESG Ratings and Data Products Provider; (i) Investment adviser; (j) Investment banker; and (k) Research Entity. (2) A Banking Unit may act as a banker to an issue in an IFSC subject to compliance with the regulatory provisions specified by the Authority under these regulations. (3) A Banking Unit may act as an investment banker subject to authorisation in accordance with the requirements specified by the Authority under these regulations. (4) Notwithstanding anything contrary contained in these regulations, the following is exempted from seeking separate registration under these regulations as a - (a) ‘Research Entity’, if an investment adviser or credit rating agency or Fund Management Entity registered with the Authority which issues, circulates or distributes a research report to public. (5) The following persons are exempted from the requirement of seeking registration under these regulations - (a) as an ‘investment adviser’, if- (i) a person who gives general comments in good faith in regard to trends in the financial or securities market or the economic situation where such comments do not specify any particular securities or investment product; (ii) an insurance agent or an insurance broker registered with the Authority, who offers investment advice solely in insurance products; (iii) a distributor of funds providing any investment advice to its clients incidental to its primary activity; (iv) a member of the Institute of Chartered Accountants of India, the Institute of Company Secretaries of India, the Institute of Cost Accountants of India, the Institute of Actuaries of India or any other professional body as may be specified by the Authority, who provides investment advice, either independently or as an employee of an entity, to his clients, incidental to his professional service; (v) a broker dealer or an investment banker who offers investment advice to its clients, incidental to its primary activity; (vi) a fund manager, by whatever name called, providing advice to a mutual fund, retail fund, alternative investment fund or any other fund registered or regulated by the Authority or any other securities market regulator; (vii) any person providing investment advice to investors such as: a. central and state governments; b. developmental agencies set up under the aegis of government(s); c. multilateral agencies; d. sovereign wealth funds; e. intermediaries registered with the Authority; f. banking companies; g. insurance companies; h. pension funds; i. provident funds; j. public financial institutions; and k. any other category of investors, as may be specified by the Authority from time to time. (viii) any person who provides investment advice exclusively to its associates or group entities; and (ix) any other person as may be specified by the Authority; (b) a credit rating agency, arranger, distributor, debenture trustee, ESG rating agency, ESG data products providers or registrars to an issue or share transfer agents or such other intermediaries as may be specified by the Authority located outside IFSC and providing services to an entity in an IFSC or an issuer whose securities are listed or proposed to be listed on a recognised stock exchange: Explanation: For the avoidance of doubt, it is hereby clarified that the requirement of obtaining registration under these regulations shall be applicable, in case an entity located outside IFSC sets up a unit in an IFSC for providing aforementioned services. (6) In addition to sub-regulations (1) to (3), the Authority may specify norms for obtaining authorisation or registration as CMI.",
+        "metadata": {
+            "contained_section": "Section 4",
+            "contained_chapter": "Chapter II - Registration of Capital Market Intermediaries",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 4
+        }
+    },
+    {
+        "id": "cmi_section_5",
+        "content": "(1) An entity desirous of obtaining a certificate of registration as a CMI in IFSC shall submit an application form through SWIT along with documents and application fees, in the manner as specified by the Authority: Provided that the applicant seeking registration to act as a broker dealer, clearing member, depository participant shall make the application along with such additional information through the recognised stock exchange, recognised clearing corporation, recognised depository, as the case may be. (2) The recognised stock exchange, the recognised clearing corporation or the recognised depository, as the case may be, shall examine the eligibility of the applicant in terms of these regulations, applicable Acts, rules, regulations and bye-laws, and forward the application to the Authority along with its recommendation no later than thirty days of receipt of the complete application. (3) An application which is not complete in all respects shall be liable to be rejected. (4) Subject to approval by the concerned recognised stock exchange, and without any requirement of a separate certificate of registration, - (a) a clearing member may be permitted to act as a broker dealer in a recognised stock exchange; and (b) a broker dealer may be permitted to operate in more than one recognised stock exchange. (5) Subject to approval by the concerned recognised clearing corporation, and without any requirement of a separate certificate of registration, - (a) a broker dealer may be permitted to act as a clearing member in a recognised clearing corporation; and (b) a clearing member may be permitted to operate in more than one recognised clearing corporation. (6) An entity filing an application for seeking registration as a capital market intermediary shall comply with additional norms and requirements as may be specified by the Authority. (7) The provisions of these regulations, as applicable to the grant of registration shall also apply to an application for renewal of registration of a capital market intermediary, wherever applicable.",
+        "metadata": {
+            "contained_section": "Section 5",
+            "contained_chapter": "Chapter II - Registration of Capital Market Intermediaries",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 5
+        }
+    },
+    {
+        "id": "cmi_section_6",
+        "content": "A capital market intermediary seeking registration with the Authority shall be required to be present in an IFSC in the form of a company or an LLP or a body corporate, or branch thereof.",
+        "metadata": {
+            "contained_section": "Section 6",
+            "contained_chapter": "Chapter II - Registration of Capital Market Intermediaries",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 6
+        }
+    },
+    {
+        "id": "cmi_section_7",
+        "content": "(1) An entity seeking registration as a capital market intermediary shall comply with the net worth requirements as specified in Schedule I of these regulations, which shall be maintained at all times. (2) Where a capital market intermediary is set up in the form of branch, the minimum net worth requirements specified in these regulations may be maintained at the parent level in the home jurisdiction where the parent entity is incorporated: Provided that the minimum net worth maintained at the parent level shall be earmarked for its branch in IFSC. (3) The minimum net worth requirements under these regulations shall be separate and in addition to the minimum net worth requirements applicable for other activities outside IFSC or within IFSC under any other regulations or framework. (4) Where an entity intends to operate as a capital market intermediary in multiple categories covered under these regulations, it shall maintain the highest of the applicable minimum net worth requirements, unless otherwise specified by the Authority. Explanation: Where a CMI is required to infuse capital to comply with the revised minimum net worth requirements specified in these regulations, such entity shall ensure compliance by October 01, 2025 or any other date as may be specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 7",
+            "contained_chapter": "Chapter II - Registration of Capital Market Intermediaries",
+            "doc_name": "cmi",
+            "references": "[\"Schedule I\"]",
+            "chunk_index": 7
+        }
+    },
+    {
+        "id": "cmi_section_8",
+        "content": "(1) A capital market intermediary shall ensure that the entity and its principal officer, directors/ designated partners, key managerial personnel and controlling shareholders are fit and proper persons, at all times. (2) For the purpose of sub-regulation (1), a person shall be deemed to be a fit and proper person if, - (a) such person has a record of fairness and integrity, including but not limited to- (i) financial integrity; (ii) good reputation and character; and (iii) honesty. (b) such person has not incurred any of the following disqualifications – (i) the person has been convicted by a court of law for any offence involving moral turpitude or any economic offence or any offence against securities laws; (ii) charge sheet has been filed against such person by any Indian enforcement agency in matters concerning economic offences and is pending; (iii) charges have been framed by a court of law or an equivalent institution in matters concerning economic offences; (iv) a recovery proceeding has been initiated against the person by a financial regulatory authority and is pending; (v) an order has been passed against the person for malfeasance; (vi) the person has been declared insolvent and not discharged; (vii) an order restraining, prohibiting or debarring the person from accessing or dealing in financial product(s) or financial service(s), has been passed by any regulatory authority, in any matter concerning securities laws or financial services market and such order is in force; (viii) any other order against the person, which has a material bearing on the securities market, has been passed by the Authority or any other regulatory authority, and a period of three years from the date of the order has not elapsed: Explanation. – For the above provision, the decision to determine materiality shall be that of the Authority; (ix) the person has been found to be of unsound mind by a court of competent jurisdiction and the finding is in force; (x) the person is financially not sound or has been categorized as a wilful defaulter; (xi) the person has been declared a fugitive economic offender; or (xii) any other disqualification as may be specified by the Authority. (3) Where any person has been declared as not ‘fit and proper person’ by an order of a regulatory authority, such a person shall not be eligible to apply for any registration, until she satisfies the fit and proper criteria.",
+        "metadata": {
+            "contained_section": "Section 8",
+            "contained_chapter": "Chapter II - Registration of Capital Market Intermediaries",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 8
+        }
+    },
+    {
+        "id": "cmi_section_9",
+        "content": "(1) A capital market intermediary shall designate a principal officer and a separate compliance officer based out of IFSC. (2) A capital market intermediary shall ensure that the principal officer and the compliance officer meet the following educational qualification requirements: (a) A professional qualification or post-graduate degree or post graduate diploma (minimum one year in duration) in finance, law, accountancy, business management, commerce, economics, capital market, banking, insurance or actuarial science from a university or an institution recognised by the Central Government or any State Government or a recognised foreign university or institution or association or a CFA or a FRM from Global Association of Risk Professionals or any other relevant educational qualifications as may be specified by the Authority: Provided that a graduation degree in any field from a university or an institution recognised by the Central Government or any State Government or a foreign university would suffice where the principal officer or the compliance officer has a work experience of at least ten years in the financial services market: Provided further that a person who has a qualification of Bachelor of Law from a university, or an institution recognised by the Central Government or any State Government or a recognised foreign university or institution or association is also eligible for appointment as a compliance officer: Provided further that, in respect of a principal officer of a distributor or an investment adviser or a research entity, a graduate degree in any field from a university or an institution recognised by the Central Government or any State Government or a foreign university along with a certification as a Certified Financial Planner from Financial Planning Standards Board shall also suffice. Explanation. - For the purposes of these regulations, the professional qualification shall include membership of Institute of Chartered Accountants of India, Institute of Company Secretaries of India, Institute of Cost Accountants of India or any institution equivalent thereto in a Foreign Jurisdiction. (3) A capital market intermediary shall ensure that the principal officer and compliance officer meet the following experience requirements: (a) A principal officer shall have an experience of at least three years in the financial services market: Provided that a person having a work experience of at least one year in ESG related activities may also be eligible for appointment as principal officer of an ERDPP. (b) A compliance officer shall have an experience of at least two years in the financial services market: Provided that the work experience in any other field shall be considered if the person has work experience of minimum two years in compliance related role or function in a company. (4) The requirement of qualification and experience as mentioned in the sub-regulations (2) and (3) shall apply to all the appointments by a CMI after these regulations coming into force: Provided that all the capital market intermediaries already registered with the Authority under these regulations as on the date of these regulations coming into force shall ensure that their principal officer and compliance officer meet the above requirements on or before October 01, 2025 or any other date as may be specified by the Authority. (5) A CMI shall ensure that its employees shall undergo such certification courses from such institutions, as may be specified by the Authority. (6) A CMI shall have adequate manpower commensurate with its business activities in an IFSC. (7) The principal officer shall be responsible for the overall operations undertaken by the CMI and shall also ensure that other employees of the CMI comply with the obligations under these regulations. (8) Where an entity has multiple registrations under these regulations, the principal officer shall be appointed/ designated for each such registration separately: Provided that an entity with registration as broker dealer, clearing member and depository participant may have the same person as principal officer for these activities: Provided further that an entity with registration as credit rating agency and ERDPP may have the same person as principal officer for these activities. (9) Where an entity has multiple registrations under these regulations, the entity may have the same person as compliance officer for ensuring compliances with all the applicable regulatory and legal requirements for its activities as capital market intermediary in the IFSC. Provided further that the Authority may review sub-regulations (8) and (9) based on the size, scale and complexity of business activities of the intermediaries and may specify revised norms in this regard.",
+        "metadata": {
+            "contained_section": "Section 9",
+            "contained_chapter": "Chapter II - Registration of Capital Market Intermediaries",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 9
+        }
+    },
+    {
+        "id": "cmi_section_10",
+        "content": "(1) The Authority may require the applicant to furnish any further information or clarification regarding itself or nature of the capital market activities or any related matter to consider the application for grant of a certificate of registration. (2) If required by the Authority, the applicant shall appear before the Authority for personal representation. (3) If required, the Authority may undertake an inspection of the office of the applicant before the grant of a certificate of registration.",
+        "metadata": {
+            "contained_section": "Section 10",
+            "contained_chapter": "Chapter II - Registration of Capital Market Intermediaries",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 10
+        }
+    },
+    {
+        "id": "cmi_section_11",
+        "content": "The Authority shall take into account all matters which it deems relevant for grant of registration to a CMI including the following: (a) the applicant or its principal officer and compliance officer have the specified qualification and adequate work experience; (b) the applicant has the necessary infrastructure like adequate office space, equipment, communication facilities and manpower to effectively discharge its activities; (c) the applicant satisfies the eligibility criteria, net worth and fund allocation requirements, if applicable, as specified in these regulations; (d) the applicant has satisfactory financial credit worthiness; and (e) the applicant and its principal officers, directors/ designated partners, key managerial personnel and controlling shareholders are fit and proper persons.",
+        "metadata": {
+            "contained_section": "Section 11",
+            "contained_chapter": "Chapter II - Registration of Capital Market Intermediaries",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 11
+        }
+    },
+    {
+        "id": "cmi_section_12",
+        "content": "(1) The Authority may, after considering the application and on being satisfied that the applicant has complied with the conditions laid down in these regulations and is eligible to act as a CMI, and upon receipt of registration fees, grant registration to the applicant subject to the conditions as deemed fit. (2) If the Authority is of the opinion that the registration cannot be granted, it shall communicate the deficiencies to the Applicant giving it thirty days’ time to rectify them. (3) If the Applicant fails to rectify such deficiencies to the satisfaction of the Authority within the specified time, the Authority may refuse to grant registration and shall communicate the same to the Applicant, giving reasons for such refusal: Provided that no such refusal shall be made by the Authority without giving the Applicant an opportunity to make written submissions on the grounds on which the registration is proposed to be refused. (4) The CMI shall comply with any other conditions as may be imposed by the Authority as it deems fit in the interest of the investors or orderly development of the securities market, in an IFSC. (5) The registration granted to a CMI may be withdrawn by the Authority only after giving a reasonable opportunity of being heard.",
+        "metadata": {
+            "contained_section": "Section 12",
+            "contained_chapter": "Chapter II - Registration of Capital Market Intermediaries",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 12
+        }
+    },
+    {
+        "id": "cmi_section_13",
+        "content": "The certificate of registration granted to a CMI shall be perpetual unless it is suspended or cancelled by the Authority.",
+        "metadata": {
+            "contained_section": "Section 13",
+            "contained_chapter": "Chapter II - Registration of Capital Market Intermediaries",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 13
+        }
+    },
+    {
+        "id": "cmi_section_14",
+        "content": "A CMI may file an application with the Authority for surrender of its registration: Provided that a trading member or clearing member or depository participant shall make such application through the recognised stock exchange or recognised clearing corporation or recognised depository, as the case may be: Explanation. - The voluntary surrender of certificate of registration shall be effective only after its acceptance by the Authority.",
+        "metadata": {
+            "contained_section": "Section 14",
+            "contained_chapter": "Chapter II - Registration of Capital Market Intermediaries",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 14
+        }
+    },
+    {
+        "id": "cmi_section_15",
+        "content": "A CMI shall abide by the Code of Conduct as specified in Schedule II.",
+        "metadata": {
+            "contained_section": "Section 15",
+            "contained_chapter": "Chapter III - GENERAL OBLIGATIONS AND RESPONSIBILITIES",
+            "doc_name": "cmi",
+            "references": "[\"Schedule II\"]",
+            "chunk_index": 15
+        }
+    },
+    {
+        "id": "cmi_section_16",
+        "content": "(1) A CMI shall maintain and preserve the following books of account, records and documents, in electronic retrieval form for a minimum of eight years, namely: - (a) a copy of the balance sheet at the end of each accounting period; (b) a copy of profit and loss account for each accounting period; (c) a copy of the auditor’s report on the accounts for each accounting period; (d) a statement of net worth for each quarter; (e) documentation relating to compliance with the IFSCA (Anti Money Laundering, Counter Terrorist Financing and Know Your Customer) Guidelines, 2022; (f) documents relating to account opening of each client and any power of attorney or signature authority forms of the clients; (g) relevant records and documents relating to its activities in capital markets; (h) records relating to complaint handling and grievance redressal; (i) such other books of accounts, records and documents as may be specified by the Authority from time to time.",
+        "metadata": {
+            "contained_section": "Section 16",
+            "contained_chapter": "Chapter III - GENERAL OBLIGATIONS AND RESPONSIBILITIES",
+            "doc_name": "cmi",
+            "references": "[\"IFSCA (Anti Money Laundering, Counter Terrorist Financing and Know Your Customer) Guidelines, 2022\"]",
+            "chunk_index": 16
+        }
+    },
+    {
+        "id": "cmi_section_17",
+        "content": "(1) A CMI shall furnish to the Authority any material change in the information or particulars previously furnished along with the application, which has a bearing on the certificate of registration granted to it. (2) A CMI shall intimate to the Authority any change in principal officer, compliance officer or key managerial personnel to the Authority, within 15 days of such change. (3) A CMI shall furnish such reports, returns, statements and particulars, in such manner, interval and form, as may be specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 17",
+            "contained_chapter": "Chapter III - GENERAL OBLIGATIONS AND RESPONSIBILITIES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 17
+        }
+    },
+    {
+        "id": "cmi_section_18",
+        "content": "A CMI shall take adequate steps for redress of grievances of the investors in accordance with the requirements as may be specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 18",
+            "contained_chapter": "Chapter III - GENERAL OBLIGATIONS AND RESPONSIBILITIES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 18
+        }
+    },
+    {
+        "id": "cmi_section_19",
+        "content": "A CMI shall take adequate steps to ensure that disputes between a CMI and its clients and/or investors arising out of or in relation to the activities of the CMI in IFSC shall be dealt with in accordance with the dispute resolution mechanism as may be specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 19",
+            "contained_chapter": "Chapter III - GENERAL OBLIGATIONS AND RESPONSIBILITIES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 19
+        }
+    },
+    {
+        "id": "cmi_section_20",
+        "content": "(1) A CMI shall maintain a business continuity plan identifying procedures relating to an emergency or significant business disruption, commensurate with its size, nature and scale of business. (2) A CMI shall update its business continuity plan in the event of any material change to operations, structure, business, or location. (3) A CMI shall conduct an annual review of its business continuity plan.",
+        "metadata": {
+            "contained_section": "Section 20",
+            "contained_chapter": "Chapter III - GENERAL OBLIGATIONS AND RESPONSIBILITIES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 20
+        }
+    },
+    {
+        "id": "cmi_section_21",
+        "content": "A CMI shall have robust cyber security and cyber resilience framework in accordance with the requirements as may be specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 21",
+            "contained_chapter": "Chapter III - GENERAL OBLIGATIONS AND RESPONSIBILITIES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 21
+        }
+    },
+    {
+        "id": "cmi_section_22",
+        "content": "(1) A CMI shall have a sound risk management system for comprehensively managing risks. (2) A CMI shall have adequate internal procedures and controls, given the types of business in which it engages (including any activities which have been outsourced) with the aim of protecting the interests of clients and their assets and ensuring proper management of risk.",
+        "metadata": {
+            "contained_section": "Section 22",
+            "contained_chapter": "Chapter III - GENERAL OBLIGATIONS AND RESPONSIBILITIES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 22
+        }
+    },
+    {
+        "id": "cmi_section_23",
+        "content": "(1) Where a CMI is operating in the form of branch in an IFSC, it shall intimate the Authority, and the market infrastructure institution of which it is a member (if applicable), within fifteen days of any direct or indirect change in control of the intermediary. (2) Where a CMI is incorporated in an IFSC, it shall seek prior approval of the Authority, in case of any direct or indirect change in control of the intermediary.",
+        "metadata": {
+            "contained_section": "Section 23",
+            "contained_chapter": "Chapter III - GENERAL OBLIGATIONS AND RESPONSIBILITIES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 23
+        }
+    },
+    {
+        "id": "cmi_section_24",
+        "content": "A CMI shall pay the fees pertaining to annual fees, turnover based fees and any other fees specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 24",
+            "contained_chapter": "Chapter III - GENERAL OBLIGATIONS AND RESPONSIBILITIES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 24
+        }
+    },
+    {
+        "id": "cmi_section_25",
+        "content": "(1) A CMI shall have an annual audit conducted in respect of compliance with these regulations by a member of the Institute of Chartered Accountants of India or a member of the Institute of Company Secretaries of India or a member of the Institute of Cost Accountants of India or any person authorised to conduct audit in a Foreign Jurisdiction. (2) A copy of such compliance audit report for a financial year shall be furnished to the Authority by the 30th of September of such year: Provided that a trading member, a clearing member and a depository participant shall also file a copy of such report to the recognised stock exchange, recognised clearing corporation and depository, as the case may be. (3) A CMI shall have additional audits and submit such reports as may be specified by the Authority from time to time.",
+        "metadata": {
+            "contained_section": "Section 25",
+            "contained_chapter": "Chapter III - GENERAL OBLIGATIONS AND RESPONSIBILITIES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 25
+        }
+    },
+    {
+        "id": "cmi_section_26",
+        "content": "(1) A broker dealer shall ensure compliance with the applicable laws, including bye-laws, rules and regulations specified by the recognised stock exchange. (2) A clearing member shall ensure compliance with the applicable laws, including bye-laws, rules and regulations specified by the recognised clearing corporation.",
+        "metadata": {
+            "contained_section": "Section 26",
+            "contained_chapter": "Chapter IV - SPECIFIC OBLIGATIONS AND RESPONSIBILITES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 26
+        }
+    },
+    {
+        "id": "cmi_section_27",
+        "content": "A CMI, including a broker dealer, desirous of dealing in securities in Foreign Jurisdictions shall comply with the norms and requirements specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 27",
+            "contained_chapter": "Chapter IV - SPECIFIC OBLIGATIONS AND RESPONSIBILITES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 27
+        }
+    },
+    {
+        "id": "cmi_section_28",
+        "content": "(1) A registered credit rating agency shall enter into a written agreement with each client whose securities or other permitted financial products it proposes to rate, and every such agreement shall include the right and liabilities of each party and fee to be charged by such credit rating agency. (2) The client shall provide all co-operation required for arriving at a true and accurate rating of the securities or other permitted financial products by a registered credit rating agency. (3) A registered credit rating agency shall inform to the client the rating assigned to the securities or other permitted financial products. (4) A registered credit rating agency shall continuously monitor the rating of securities or other permitted financial products and carry out periodic reviews of the rating, unless the rating is withdrawn. (5) A registered credit rating agency shall generally not withdraw a rating so long as the obligations under the security /instrument/ facility rated by it are outstanding: Provided that a registered credit rating agency may withdraw a rating in the following situations: (a) Where the entity whose security/instrument/facility is rated is wound up or merged or amalgamated with another entity, (b) In case of non-cooperation from the issuers, or non-payment of agreed fee, (c) At the request of an issuer, except where such request might give rise to avoiding an imminent rating change, or (d) Where such credit rating agency is constrained from providing service due to events beyond its control: Provided further that the reason for withdrawal of rating shall be mentioned in the press release issued by the registered credit rating agency withdrawing such rating. (6) A registered credit rating agency shall disseminate information regarding change in ratings promptly through press releases and simultaneously to the recognised stock exchanges (if the securities or other permitted financial products are listed on a recognised stock exchange in an IFSC). (7) A registered credit rating agency shall make public the definitions of the concerned rating, along with the symbol and also state that the ratings do not constitute recommendations to buy, hold or sell any securities or other permitted financial products. (8) A registered credit rating agency shall make available to the general public, the information relating to the rationale of the ratings, which shall cover an analysis of various underlying factors. (9) A registered credit rating agency shall specify the rating process and file a copy of the same to the Authority for record. (10) A registered credit rating agency shall have professional rating committees, comprising members who are adequately qualified and knowledgeable to assign a rating, and all rating decisions shall be taken by the said committee. (11) A registered credit rating agency shall exercise due diligence to ensure that the rating given by it is fair and appropriate. (12) A registered credit rating agency shall not rate securities or other permitted financial products issued by it or any of its group entity. (13) A registered credit rating agency shall have appropriate procedures and systems for preventing trading on the basis of unpublished price sensitive information obtained by them in the course of any professional assignment.",
+        "metadata": {
+            "contained_section": "Section 28",
+            "contained_chapter": "Chapter IV - SPECIFIC OBLIGATIONS AND RESPONSIBILITES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 28
+        }
+    },
+    {
+        "id": "cmi_section_29",
+        "content": "(1) A custodian shall separate and segregate its custodian activities from all other activities. (2) A custodian shall have adequate mechanisms for reviewing, monitoring and evaluating its controls, systems, procedures and safeguards. (3) A custodian shall enter into an agreement with each client detailing various circumstances relating to custody of the securities or other permitted financial products or funds. (4) A custodian shall have adequate internal controls to prevent any manipulation of records and documents, and to protect the records from theft and natural hazard.",
+        "metadata": {
+            "contained_section": "Section 29",
+            "contained_chapter": "Chapter IV - SPECIFIC OBLIGATIONS AND RESPONSIBILITES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 29
+        }
+    },
+    {
+        "id": "cmi_section_30",
+        "content": "(1) A registered debenture trustee shall enter into an agreement with the issuer before the opening of the subscription list for issue of debentures. (2) A person shall not be appointed as a debenture trustee, in cases where the debenture trustee is an associate of the issuer or is likely to have conflict of interest in any manner. (3) A registered debenture trustee shall ensure that: (a) It accepts the trust deed which shall contain details on standard information pertaining to the debt issue and details specific to the particular debt issue and shall not contain covenants prejudicial to the interest of the debenture holders; (b) The trust deed is consistent with the terms of the proposed issue of debentures; (c) It calls for periodical reports/ performance report from the issuer company within seven days of the relevant board meeting or within forty five days of the respective quarter whichever is earlier; (d) It calls for reports on the utilization of funds raised by the issue of debentures; (e) It communicates to the debenture holder defaults, if any, in respect of the payment of interest or redemption of debentures and actions taken thereunder; (f) It appoints a nominee director on the board of the issuer in the event of two consecutive defaults in payment of interest or default in creation of security or default in redemption of debentures; and the issuer shall be obliged to provide all requisite support in this regard, if legally permissible; (g) In case of breach of terms of the issue of debentures or covenants of the trust deed, it shall take reasonable steps to remedy such breach and inform the debenture holders immediately of any such breach; (h) The issuer satisfies the conditions, if any, regarding creation of security for the debentures, debenture redemption reserve and recovery expense fund; (i) The assets of the issuer and of the guarantors are sufficient to discharge the interest and principal amount at all times and such assets are free from any other encumbrances except those which are specifically agreed to by the debenture holders; (j) It shall perform all acts necessary for the enforcement of the security and for protection of the interest of the debenture holders; (k) It shall call for reports on the utilization of funds raised by the issue of debentures; (l) It takes steps to convene a meeting of debenture holders as and when required; (m) The debentures have been converted or redeemed in accordance with the terms of the issue of debentures; (n) It takes possession of the trust property in accordance with the terms of the trust deed; (o) The debentures have been credited in the demat accounts of the debenture holders; (p) Debenture holders have been paid the interest due on the debentures and the monies due to them on the date of redemption of the debenture; (q) It informs the Authority immediately of any breach of trust deed or provision of any applicable laws; (r) It obtains reports from the lead bank regarding the progress of the project; and (s) It may inspect books of account, record, registers of the issuer and trust property to the extent necessary for discharging its obligations. (4) Before creating a charge on the security for the debentures, the debenture trustee shall exercise independent due diligence to ensure that such security is free from any encumbrance or that it has obtained the necessary consent from other charge-holders if the security has an existing charge, in the manner as may be specified by the Authority from time to time. (5) No debenture trustee shall relinquish its assignment as debenture trustee in respect of the debenture issue of any issuer, unless and until another debenture trustee is appointed in its place by the issuer.",
+        "metadata": {
+            "contained_section": "Section 30",
+            "contained_chapter": "Chapter IV - SPECIFIC OBLIGATIONS AND RESPONSIBILITES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 30
+        }
+    },
+    {
+        "id": "cmi_section_31",
+        "content": "(1) A depository participant shall ensure compliance with the applicable laws, including bye-laws, rules and regulations specified by the recognised depository. (2) A depository participant shall ensure that separate accounts are opened in the name of each of the beneficial owners and the securities of each beneficial owner shall be segregated, and shall not be mixed up with the securities of other beneficial owners or with the participant’s own securities. (3) A depository participant shall have adequate mechanisms for the purpose of reviewing, monitoring and evaluating its internal accounting controls and systems. (4) Where the records are maintained in electronic form, a depository participant shall ensure that the integrity of the data processing system is maintained at all times. (5) A depository participant shall reconcile its records with the depository, on a daily basis.",
+        "metadata": {
+            "contained_section": "Section 31",
+            "contained_chapter": "Chapter IV - SPECIFIC OBLIGATIONS AND RESPONSIBILITES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 31
+        }
+    },
+    {
+        "id": "cmi_section_32",
+        "content": "(1) A registered distributor may undertake the following activities: (a) Distribution of capital market products and/or services to any client in IFSC or Foreign Jurisdiction: The capital market products and/or services offered by any regulated financial entity set up in India, IFSC, jurisdictions which are identified in the notification published in vide no. G.S.R. 882(E) dated November 28, 2019, as may be revised from time to time, or any other jurisdiction as may be specified by the Authority, may be distributed to any client in IFSC or foreign jurisdictions; (b) Distribution of capital market products and/or services to sophisticated investors in IFSC or Foreign Jurisdictions: The capital market products and/or services offered by any issuer or service provider, respectively, which is set up in India, IFSC or any foreign jurisdiction may be distributed to sophisticated investors in IFSC or foreign jurisdictions; (c) Distribution of capital market products and/or services to any client in India: The capital market products and/or services offered by any regulated financial entity set up in IFSC, jurisdictions which are identified in the notification published in vide no. G.S.R. 882(E) dated November 28, 2019, as may be revised from time to time, or any other jurisdiction as may be specified by the Authority, may be distributed to any client in India; (d) Distribution of capital market products and/or services to sophisticated investors in India : The capital market products and/or services offered by any issuer or service provider, respectively, which is set up in IFSC or any foreign jurisdiction, may be distributed to sophisticated investors in India; and (e) Any other activities as may be specified by the Authority. Explanation: For the purpose of distribution activities under these regulations, (a) “capital market products” shall mean “securities” as defined under sub-section (h) under section 2 of Securities Contracts (Regulation) Act, 1956, and includes similar instruments by whatever name called, issued or created by any issuer in IFSC, India or Foreign Jurisdictions, and such other instruments as may be specified by the Authority; (b) “capital market products and services” shall collectively mean and include capital market products and capital market services; and (c) “capital market services” shall mean and include investment advisory services, portfolio management services, by whatever name called, provided by a service provider which is a regulated financial entity, and such other services as may be specified by the Authority. (2) For distribution of capital market products and/or services offered by a regulated financial entity to all types of clients, the registered distributor shall ensure that such products or services have been authorised, vetted or approved for offering to all types of investors, by the relevant regulatory or supervisory authority of such regulated financial entity: Explanation: For the purpose of this regulation, “regulated financial entity” means an issuer or a service provider set up in India, an IFSC or any Foreign Jurisdiction, which is registered, authorised, licensed or regulated by any regulatory or supervisory authority of its home jurisdiction for carrying out activities related to asset management, funds management, investment advisory, portfolio management or any other similar activity, by whatever name called. (3) A registered distributor while undertaking various permissible activities shall ensure compliance with all applicable laws as prevalent in the jurisdictions of issuers, service providers and clients. (4) A registered distributor shall comply with the requirements specified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 32",
+            "contained_chapter": "Chapter IV - SPECIFIC OBLIGATIONS AND RESPONSIBILITES",
+            "doc_name": "cmi",
+            "references": "[\"sub-section (h) under section 2 of Securities Contracts (Regulation) Act, 1956\"]",
+            "chunk_index": 32
+        }
+    },
+    {
+        "id": "cmi_section_33",
+        "content": "(1) An ERDPP may undertake services relating to ESG Ratings and ESG Data Products in an IFSC or a Foreign Jurisdiction. (2) An ERDPP shall not provide any other service without the prior approval of the Authority. (3) An ERDPP shall adhere to the following “Code of Conduct”, on a “comply” or “explain” basis: (a) Principle on Good Governance ERDPP shall ensure appropriate governance arrangements are in place that enable it to promote and uphold the principles and overall objectives of the Code of Conduct. (b) Principle on Securing Quality (Systems and Controls) ERDPP shall adopt and implement written policies and procedures designed to help ensure the issuance of high quality ESG Ratings and Data Products. (c) Principles on managing Conflicts of Interest i. ERDPP shall adopt and implement written policies and procedures designed to help ensure that its decisions are independent, free from political or economic interference, and appropriately address actual or potential conflicts of interest that may arise from, among other things, ERDPP’s organisational structure, business or financial activities, or the financial interests of the ERDPP, its officers and employees. ii. ERDPP shall also identify, avoid or appropriately manage, mitigate and disclose actual or potential conflicts of interest that may compromise the independence and integrity of the ERDPP’s operations. (d) Principle on Transparency ERDPP shall make adequate levels of public disclosure and transparency a priority for its ESG Ratings and Data Products, including its methodologies and processes to enable the users of the product to understand what the product is and how it is produced, including any potential conflicts of interest, while maintaining a balance with respect to proprietary or confidential information, data and methodologies. (e) Principle on Confidentiality (Systems and Controls) ERDPP shall adopt and implement written policies and procedures designed to address and protect all non-public information received from or communicated to it by any entity, or its agents, related to their ESG Ratings and ESG Data Products, in a manner appropriate in the circumstances. (f) Principles on Engagement (Systems and Controls) i. ERDPP shall regularly consider whether its information gathering processes with entities covered by its products lead to efficient information procurement for both the providers and these entities. Where potential improvements to information gathering processes are identified, the ERDPP shall consider what measures can be taken to implement them. ii. Where feasible and appropriate, the ERDPP shall respond to and address issues flagged by entities covered by its ESG Ratings and Data Products and by users while maintaining the independence and integrity of these products. (4) An ERDPP shall disclose compliance of the “Code of Conduct” provided above on a “comply” or “explain” basis on its website. (5) An ERDPP providing ESG Ratings shall have guidelines / criteria / methodology on the rating process and the same shall be disclosed on its website. (6) An ERDPP shall disclose all ESG Ratings provided by it on its website. (7) An ERDPP shall segregate its activities relating to ESG Ratings and ESG Data Products from its other activities to ensure that there is no conflict of interest between these activities.",
+        "metadata": {
+            "contained_section": "Section 33",
+            "contained_chapter": "Chapter IV - SPECIFIC OBLIGATIONS AND RESPONSIBILITES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 33
+        }
+    },
+    {
+        "id": "cmi_section_34",
+        "content": "(1) An investment adviser shall disclose to a prospective client, all material information about itself including its business, disciplinary history, the terms and conditions on which it offers advisory services, affiliations with other intermediaries and such other information so as to enable the client to take an informed decision on whether or not to avail its advisory services. (2) An investment adviser shall make the following disclosures to its clients: - (a) its holding or position, if any, in the financial products or securities which are subject matter of advice; (b) any potential or actual conflict of interest arising from any connection to or association with any issuer of products/securities; (c) all material facts relating to the key features of the products or securities, particularly performance track record; and (d) warnings, disclaimers in documents and advertising materials relating to an investment product which it is recommending to the client. (3) An investment adviser shall act in a fiduciary capacity towards its clients and shall disclose all conflicts of interest as and when they arise. (4) An investment adviser shall not receive any consideration by way of remuneration or compensation or in any other form from any person other than the client being advised, in respect of the underlying products or securities for which advice is provided. (5) An investment adviser shall maintain an arm’s-length relationship between its activities as an investment adviser and its other activities. (6) An investment adviser shall not enter into transactions on its own account which is contrary to the advice given to its clients for a period of 15 days from the day of such advice: Provided that during the period of 15 days, if the investment adviser is of the opinion that the situation has changed, then it may enter into such a transaction on its own account after giving such revised assessment to the client at least 24 hours in advance of entering into such transaction. (7) An investment adviser shall not act on its own account, knowingly to sell securities or investment products to or purchase securities or investment products from a client. (8) An investment adviser shall ensure that, for the purposes of risk profiling, - (a) it obtains such information from the client as is necessary for the purpose of giving investment advice; (b) it has a process for assessing the risk a client is willing and able to take; (c) risk profile of the client is communicated to the client after completion of risk assessment; and (d) the information provided by clients and their risk assessment is updated periodically. (9) An investment adviser shall ensure that all investments on which investment advice is provided is suitable to the risk profile of the client and is consistent with the client’s investment objectives and financial position. (10) An investment adviser shall have client level segregation for investment advisory and distribution services. (11) An investment adviser shall maintain an arm’s length relationship between its activities as investment adviser and distributor by providing advisory services through a separately identifiable department or division, including separate manpower for conduct of these activities. (12) An investment adviser may provide implementation services to its advisory clients in securities market: Provided that the investment adviser shall ensure the following: (a) the potential conflicts of interest, if any, are adequately disclosed to its clients; and (b) the fee charged, if any, for the implementation services is pursuant to an agreement with its clients and disclosed in a transparent manner. (13) The client shall not be under any obligation to avail implementation services offered by the investment adviser.",
+        "metadata": {
+            "contained_section": "Section 34",
+            "contained_chapter": "Chapter IV - SPECIFIC OBLIGATIONS AND RESPONSIBILITES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 34
+        }
+    },
+    {
+        "id": "cmi_section_35",
+        "content": "(1) An investment banker shall enter into an agreement with the issuer of securities specifying the roles and responsibilities of the investment banker in the issue. (2) Where there is more than one lead investment banker to the issue, the responsibilities of each of such lead investment banker shall be clearly demarcated. (3) An investment banker shall not undertake any activity, except for marketing of the issue or offer, if the investment banker is a promoter or an associate of the issuer of securities or of any person making an offer to sell or purchase securities in terms of any regulations made by the Authority. (4) No investment banker or any of its principal officer, directors, partner or manager shall either on their respective accounts or through their associates or relatives enter into any transaction in securities of issuer on the basis of unpublished price sensitive information obtained by them in the course of any professional assignment. (5) An investment banker shall submit to the Authority complete particulars of any transaction for acquisition of securities of any body corporate whose issue is being managed by that investment banker within fifteen days from the date of entering into such transaction. (6) An investment banker may act as an underwriter of an issue in an IFSC, subject to the following conditions: (a) An investment banker acting as an underwriter, shall enter into an agreement with the issuer of securities, on whose behalf it is acting as an underwriter, which shall have the understanding in relation to amount of underwriting obligations and commission, allocation of duties and responsibilities, timelines and other relevant details. (b) At any point of time, the total underwriting obligations under all the agreements shall not exceed twenty times the net worth of the investment banker.",
+        "metadata": {
+            "contained_section": "Section 35",
+            "contained_chapter": "Chapter IV - SPECIFIC OBLIGATIONS AND RESPONSIBILITES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 35
+        }
+    },
+    {
+        "id": "cmi_section_36",
+        "content": "(1) A research entity shall have written internal policies and control procedures governing the dealing and trading by any employee for: (a) addressing actual or potential conflict of interest arising from such dealings or trading of securities of subject company; (b) promoting objective and reliable research that reflects unbiased view of research analyst; and (c) preventing the use of research report or research analysis to manipulate the financial market. (2) A research entity shall ensure that the procedures or controls designed to manage actual or potential conflicts of interest are based on the nature, scale and complexity of the business. (3) The internal policy should ensure that the conflicts of interest are identified and adequately addressed so that the quality of the research report is not compromised. (4) A research entity shall have in place appropriate mechanisms to ensure independence of its research activities from its other business activities. (5) A research entity shall establish, implement and enforce policies and procedures for personal trading by its analysts and their associates. (6) Personal trading activities of the individuals employed as research analyst by research entity shall be monitored, recorded and wherever necessary, shall be subject to a formal approval process. (7) The policy shall ensure that an analyst does not trade for himself in a manner that is contrary to his outstanding research recommendations, except in special circumstances, where the analyst shall be required to obtain prior written approval for each trade. (8) A research entity shall ensure that the remuneration of analysts is structured in a way to avoid any bias in his research analyses and recommendations. (9) A research entity shall ensure that there are robust and effective barriers between the entity and other business dealings of the entity or its group entity to ensure independence and objectivity of the research reports. (10) A research entity shall not provide any promise or assurance of favourable review in its research report to a company or industry or sector or group of companies or business group as consideration to commence or influence a business relationship or for the receipt of compensation or other benefits. (11) A research entity shall ensure that the information provided in the report is complete, concise and specific such that investors can understand the actual or potential conflicts of interest and their likely impact on the quality of the research report published. (12) A research entity shall disclose any material interest in the report that may create a potential conflict of interest and thereby affect the ability of the entity to maintain independence and objectivity: Explanation: The research entity shall disclose in the report if the research entity or the research analyst or his associate or his relative has: (a) any material financial interest in the subject company and the nature of such financial interest; (b) beneficial ownership of one or more per cent. of the securities of the subject company; (c) any material business relationship with the subject company over the past 12 months that may result in conflict of interest; and (d) any other material conflict of interest relating to the subject company. (13) A research entity shall take steps to ensure that facts in its research reports are based on reliable information and shall define the terms used in making recommendations, and these terms shall be consistently used. (14) A research entity shall have adequate documentary basis, supported by research, for preparing a research report. (15) Where a research entity employs a rating system, it must clearly define the meaning of each such rating including the time horizon and benchmarks on which a rating is based.",
+        "metadata": {
+            "contained_section": "Section 36",
+            "contained_chapter": "Chapter IV - SPECIFIC OBLIGATIONS AND RESPONSIBILITES",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 36
+        }
+    },
+    {
+        "id": "cmi_section_37",
+        "content": "(1) The Authority may suo motu or upon receipt of information or complaint at any time appoint one or more persons as inspecting authority to undertake the inspection of the books, accounts, records, documents, infrastructure, procedures and systems of a CMI, for any purpose, including the purposes as specified under sub-regulation (2). (2) The purposes referred to in sub-regulation (1) may include, - (a) to ensure that the books of account, records and documents are being maintained in the manner as required under these regulations; (b) to ensure that the provisions of the Act, the regulations and circulars made thereunder, are complied with; (c) to ascertain whether adequate internal control systems, procedures and safeguards have been established or are being followed by the CMI to fulfil its obligations under these regulations; (d) to ascertain whether any circumstances exist which would render the intermediary unfit or ineligible; (e) to inquire into the complaints received from the investors, clients, other market participants, or any other person on any matter having a bearing on the activities of the intermediary; and (f) to inquire suo motu into such matters as may be deemed fit in the interest of investors or the capital market in an IFSC. (3) Before undertaking an inspection under sub-regulation (1), the inspecting authority shall give a notice to the CMI: Provided that where the inspecting authority is satisfied that in the interest of the investors no such notice should be given, it may, for reasons to be recorded in writing, dispense with such notice. (4) Notwithstanding anything contained in sub-regulations (1), (2) and (3), a recognised stock exchange, a recognised clearing corporation or a recognised depository may conduct inspection of a broker dealer (trading member), a clearing member or a depository participant respectively, in accordance with its bye-laws. (5) The Authority and the relevant market infrastructure institution may conduct joint inspection of a CMI.",
+        "metadata": {
+            "contained_section": "Section 37",
+            "contained_chapter": "Chapter V - Inspection",
+            "doc_name": "cmi",
+            "references": "[\"sub-regulation (2)\", \"sub-regulation (1)\", \"Act\", \"sub-regulations (1)\", \"(2)\", \"(3)\"]",
+            "chunk_index": 37
+        }
+    },
+    {
+        "id": "cmi_section_38",
+        "content": "(1) Where an inspection of a CMI is undertaken by the Authority, such CMI and every principal officer, proprietor, partner, designated partner, trustee, director, chairperson, officer, employee and any agent of the intermediary shall provide all assistance and cooperate with the inspection authority and shall furnish books of accounts, records and documents to the inspection authority with such statements and information relating to its activities within such time as decided by the inspection authority. (2) The CMI shall give all assistance as may be required in connection with the inspection and allow the inspecting authority to have reasonable access to its premises and extend reasonable facility for examining any books of accounts, records and documents in its possession, and also provide copies of records or documents or other material which in the opinion of the inspecting authority are relevant for the purposes of the inspection. (3) The Inspecting Authority, in the course of inspection, shall be entitled to examine or record the statements of any principal officer, partner, designated partner, trustee, director, chairperson, officer, employee and any agent of the CMI. (4) It shall be the duty of every principal officer, partner, designated partner, trustee, director, chairperson, CEO, KMPs, officer, employee and any agent of the CMI to give to the inspecting officer all assistance in connection with the inspection, which the inspecting officer may require.",
+        "metadata": {
+            "contained_section": "Section 38",
+            "contained_chapter": "Chapter V - Inspection",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 38
+        }
+    },
+    {
+        "id": "cmi_section_39",
+        "content": "(1) The Authority may appoint any person to inspect the books of account, records, documents infrastructures, systems and procedures or affairs of a CMI: Provided that such person so appointed shall have the same powers of an inspecting authority: Provided further that a CMI and its employees shall have the same obligations towards such person, so appointed as they have towards inspecting authority as specified in regulation 38 with respect to such inspection. (2) The Authority shall be entitled to recover expenses, including fees paid to such person, relating to such inspection from the CMI.",
+        "metadata": {
+            "contained_section": "Section 39",
+            "contained_chapter": "Chapter V - Inspection",
+            "doc_name": "cmi",
+            "references": "[\"regulation 38\"]",
+            "chunk_index": 39
+        }
+    },
+    {
+        "id": "cmi_section_40",
+        "content": "The inspecting authority shall submit an inspection report including interim reports to the Authority, and the Authority may take such action as it may deem fit and appropriate on such report.",
+        "metadata": {
+            "contained_section": "Section 40",
+            "contained_chapter": "Chapter V - Inspection",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 40
+        }
+    },
+    {
+        "id": "cmi_section_41",
+        "content": "(1) The Authority may take such action as deemed fit, including suspension or cancellation of registration, against a CMI if it: (a) fails to comply with any conditions subject to which a certificate of registration has been granted; (b) contravenes any of the provisions of the Act or any rules, regulations, notifications, circulars, guidelines, directions, instructions issued under the Act or any other relevant statute; (c) fails to furnish any information relating to its activity as a capital market intermediary as directed by the Authority; (d) furnishes to the Authority information which is false or misleading in any material particular; (e) does not submit periodic returns or reports as directed by the Authority; (f) does not co-operate in any enquiry, inspection or investigation conducted by the Authority; (g) fails to resolve the complaints of investors or fails to give a satisfactory reply to the Authority; or (h) commits any other act/omission which in the opinion of the Authority warrants such action or which is against the interest of the investors. (2) Without prejudice to sub-regulation (1), a recognised stock exchange may take such action as deemed fit, including suspension, against a broker dealer (trading member), in accordance with the applicable laws. (3) Without prejudice to sub-regulation (1), a recognised clearing corporation may take such action as deemed fit, including suspension, against a clearing member, in accordance with the applicable laws. (4) Without prejudice to sub-regulation (1), a recognised depository may take such action as deemed fit, including suspension, against a depository participant, in accordance with the applicable laws.",
+        "metadata": {
+            "contained_section": "Section 41",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "cmi",
+            "references": "[\"sub-regulation (1)\"]",
+            "chunk_index": 41
+        }
+    },
+    {
+        "id": "cmi_section_42",
+        "content": "The Authority may call for any information, documents or records from a CMI.",
+        "metadata": {
+            "contained_section": "Section 42",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 42
+        }
+    },
+    {
+        "id": "cmi_section_43",
+        "content": "In order to remove any difficulties in the interpretation or application of the provisions of these regulations, the Authority may issue directions through guidance notes or circulars.",
+        "metadata": {
+            "contained_section": "Section 43",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 43
+        }
+    },
+    {
+        "id": "cmi_section_44",
+        "content": "(1) The Authority may, in the interest of development and regulation of financial services market in IFSC, relax the strict enforcement of any requirements of these regulations. (2) For seeking relaxation under sub-regulation (1), an application, giving details and the grounds on which such relaxation has been sought, shall be filed with the Authority along with a non-refundable fee as may be specified by the Authority. (3) The Authority shall process such application within thirty days of the date of receipt of the application complete in all respects and shall record reasons for acceptance or refusal of the relaxations sought by the applicant.",
+        "metadata": {
+            "contained_section": "Section 44",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "cmi",
+            "references": "[\"sub-regulation (1)\"]",
+            "chunk_index": 44
+        }
+    },
+    {
+        "id": "cmi_section_45",
+        "content": "For the purposes of implementation of these regulations and matters incidental thereto, the Authority may specify norms, procedures, processes, additional requirements etc. by way of circulars or guidelines or directions.",
+        "metadata": {
+            "contained_section": "Section 45",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 45
+        }
+    },
+    {
+        "id": "cmi_section_46",
+        "content": "The powers exercisable by the Authority under these regulations shall also be exercisable by any officer of the Authority to whom such powers are delegated by the Authority.",
+        "metadata": {
+            "contained_section": "Section 46",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 46
+        }
+    },
+    {
+        "id": "cmi_section_47",
+        "content": "(1) On and from the commencement of these regulations, the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2021 shall stand repealed: Provided that the provisions of Chapter V of the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2021 shall continue to apply to a CMI including broker dealer dealing in securities in Foreign Jurisdictions, until the relevant norms and requirements under regulation 27 of these regulations are issued by the Authority. (2) On and from the commencement of these regulations, the following circulars issued by the Authority shall stand superseded: (a) IFSCA Circular No. F. No. 817/IFSCA/Distribution/2022-23 titled “Distribution of Capital Market Products and Services under IFSCA (Capital Market Intermediaries) Regulations, 2021” dated December 21, 2022; and (b) IFSCA Circular No. F. No. IFSCA-PLNP/12/2024-Capital Markets titled “Framework for ESG Ratings and Data Products Providers in the IFSC” dated October 30, 2024. (3) Notwithstanding such repeal and supersession, - (a) anything done or any action taken or purported to have been done or taken including registration or approval granted, suspended or cancelled, fees collected, any adjudication, enquiry or investigation commenced or show-cause notice issued, under the repealed regulations, superseded circulars, shall be deemed to have been done or taken or commenced under the corresponding provisions of these regulations; (b) any application made to the Authority under the repealed regulations, prior to such repeal, and pending before it shall be deemed to have been made under the corresponding provisions of these regulations; (c) the previous operation of the repealed regulations, superseded circulars or anything duly done or suffered thereunder, any right, privilege, obligation or liability acquired, accrued or incurred under the repealed regulations, any penalty incurred in respect of any violation committed against the repealed regulations, or any investigation, legal proceeding or remedy in respect of any such right, privilege, obligation, liability, penalty as aforesaid, shall remain unaffected as if the repealed regulations have never been repealed. (4) After the repeal of International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2021, any reference thereto in any other regulations made, guidelines or circulars issued thereunder by the Authority, any act of the Government of India or laws enacted by other statutory authorities shall be deemed to have the reference to the corresponding provisions of these regulations. (5) Save as otherwise contained in sub-regulation (2), the circulars or guidelines issued by Authority under the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2021, shall be deemed to have been issued under these regulations unless and until they are specifically superseded or modified by the Authority.",
+        "metadata": {
+            "contained_section": "Section 47",
+            "contained_chapter": "Chapter VI - Miscellaneous",
+            "doc_name": "cmi",
+            "references": "[\"Chapter V of the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2021\", \"regulation 27\", \"sub-regulation (2)\"]",
+            "chunk_index": 47
+        }
+    },
+    {
+        "id": "cmi_schedule",
+        "content": "SCHEDULE I Net worth requirements Sl. No. Category Net worth 1 Broker dealer (Trading member) As specified by recognised stock exchange 2 Clearing Member As specified by recognised clearing corporation 3 Credit Rating Agency USD 200,000 4 Custodian As specified by the Authority from time to time 5 Debenture Trustee USD 1.5 million 6 Depository Participant As specified by depository 7 Distributor USD 50,000 8 ESG Ratings and Data Products Provider USD 25,000 9 Investment Adviser USD 25,000 10 Investment Banker USD 100,000 11 Research Entity USD 25,000",
+        "metadata": {
+            "contained_section": "Schedule",
+            "contained_chapter": "Schedule I",
+            "doc_name": "cmi",
+            "references": "[]",
+            "chunk_index": 48
+        }
+    },
+    {
+        "id": "cmi_schedule_1",
+        "content": "SCHEDULE II CODE OF CONDUCT Part A - Code of Conduct - All capital market intermediaries (as applicable) 1. A CMI shall make all efforts to protect the interest of investors and render the best possible advice to the clients having regard to the needs of the clients, environment and its own professional skills. 2. A CMI shall in the conduct of its business, observe high standards of integrity and fairness and fulfil its obligations in a prompt, ethical and professional manner. 3. A CMI shall at all times exercise due diligence, ensure proper care and exercise independent professional judgment. 4. A CMI shall not indulge in manipulative, fraudulent or deceptive transactions or schemes or spread rumours with a view to distorting market equilibrium or making personal gains. 5. A CMI shall not create false market either singly or in collusion with other intermediaries or the issuer in a manner that is detrimental to the interests of investors, or which leads to interference with the fair and smooth functioning of the market. 6. A CMI shall endeavour to ensure that inquires and grievances of the investors are dealt with in a timely and appropriate manner. 7. A CMI shall not make any exaggerated statement either oral or in written form to the client about its capability, qualification and achievement in regard to services rendered to the client. 8. A CMI shall maintain confidentiality with respect to the information about its clients, except where such disclosures are required to be made in compliance with any law for the time being in force. 9. A CMI shall avoid conflict of interest and make adequate disclosure of its possible conflict of interest and duties and shall put in place a mechanism to resolve any conflict of interest situation. 10. A CMI shall not indulge in any unfair competition, which is likely to harm the interests of other capital market intermediaries and investors. 11. A CMI shall not discriminate amongst its clients, save and except on ethical and commercial considerations. 12. A CMI shall ensure that any change in registration status/any penal action taken by Authority or any material change in financials which may adversely affect the interests of clients/investors is promptly informed to the clients. 13. A CMI shall inform the Authority promptly about any action initiated against it in respect of material breach or non-compliance of any law, regulations and direction issued by the Authority or any other regulatory body. 14. A CMI shall ensure that it and any of its employees shall not render, directly or indirectly any investment advice about any security in the publicly accessible media, unless a disclosure of its interest in the said security has been made while rendering such advice. 15. A CMI shall ensure that it or any of its principal officer, directors, or employees having power of management shall not indulge in insider trading. 16. A CMI shall have and employ effectively appropriate resources and procedures which are needed for the efficient performance of its business activities. 17. A CMI shall have internal control procedures and financial and operational capabilities adequate enough to protect the clients and investors from financial loss arising from theft, fraud, omissions and professional misconduct. 18. A CMI shall have an internal policy for outsourcing of its activities from outside of IFSC and the CMI shall ensure compliance with the policy at all times. 19. A CMI shall develop its own internal code of conduct for governing its internal operations and conduct of its employees. 20. A CMI shall ensure that the compliance officer has adequate freedom and power for effective discharge of his duties. 21. A CMI shall ensure that any person it employs or appoints is a fit and proper person and otherwise qualified to act in the capacity so employed or appointed. 22. A CMI shall not be a party to or instrumental for: (a) creation of false market; (b) price rigging or manipulation; (c) passing of unpublished price sensitive information to any other intermediary or any person, in respect of any securities which are listed and proposed to be listed in any stock exchange. 23. The senior management of a CMI shall bear primary responsibility for ensuring the maintenance of appropriate standards of conduct and adherence to proper procedures by the intermediary. 24. A CMI shall not make untrue statement or suppress any material fact in any documents, reports or information furnished to the Authority. 25. A CMI shall not make a recommendation to any client or investor who may be expected to rely thereon to acquire, dispose of or retain any securities unless he has reasonable grounds to believe that the recommendation is suitable. Part B In addition to compliance with the code of conduct as specified in Part A of this Schedule, the capital market intermediaries shall abide by the following code of conduct: A. Broker dealers / Clearing Members 1. A broker dealer shall abide by all the provisions of the Act and the rules, regulations and byelaws issued by the Government of India, the Authority and the recognised stock exchange from time to time as may be applicable. 2. A clearing member shall abide by all the provisions of the Act and the rules, regulations and bye-laws issued by the Government of India, the Authority and the recognised clearing corporation from time to time as may be applicable. 3. A broker dealer shall not involve itself in excessive speculative business in the market beyond reasonable levels not commensurate with its financial soundness. 4. A broker dealer shall faithfully execute the orders for buying and selling of securities at the best available price and not refuse to deal with a small investor merely on the ground of the volume of business involved. 5. A broker dealer shall promptly inform its client about the execution or non-execution of an order, and make prompt payment in respect of securities sold and arrange for prompt delivery of securities purchased by its clients. 6. A broker dealer shall issue without delay to its client a contract note for all transactions in the form specified by the recognised stock exchange. 7. A broker dealer shall not encourage sales or purchases of securities with the sole object of generating brokerage or commission. 8. A broker dealer shall not furnish false or misleading quotations or give any other false or misleading advice or information to the clients with a view of inducing them to do business in particular securities and enabling itself to earn brokerage or commission thereby. 9. A broker dealer shall not deal or transact business knowingly, directly or indirectly or execute an order for a client who has failed to carry out its commitments in relation to securities with another broker dealer. 10. A broker dealer shall not resort to unfair means of inducing clients from other broker dealers. B. Credit rating agencies 1. A registered credit rating agency shall at all times exercise due diligence, ensure proper care and exercise independent professional judgment in order to achieve and maintain objectivity and independence in the rating process. 2. A registered credit rating agency shall maintain an arm’s length relationship between the credit rating activity and its other activities. 3. A registered credit rating agency shall have a reasonable and adequate basis for performing rating evaluations, with the support of appropriate and in-depth rating researches. It shall also maintain records to support its decisions. 4. A registered credit rating agency shall have in place a rating process that reflects consistent and international rating standards. 5. A registered credit rating agency shall disclose its rating methodology to clients, users and the public. 6. A registered credit rating agency shall not indulge in any unfair competition. 7. A registered credit rating agency shall keep track of all important changes relating to its client companies and shall develop efficient and responsive systems to yield timely and accurate ratings. Further a credit rating agency shall also monitor closely all relevant factors that might affect the creditworthiness of the issuers. 8. A registered credit rating agency shall, wherever necessary, disclose to its clients, possible sources of conflict of duties and interests, which could impair their ability to make fair, objective and unbiased ratings. Further, a registered credit rating agency shall ensure that no conflict of interest exists between any member of the rating committee participating in the rating analysis, and that of its clients. 9. A registered credit rating agency shall ensure that there is no misuse of any privileged information including prior knowledge of rating decisions or changes. 10. A registered credit rating agency shall develop its own internal code of conduct for governing its internal operations and laying down standards of appropriate conduct for its employees and officers in the carrying out of their duties within the credit rating agency and as a part of the industry. C. Custodians 1. A custodian shall be prompt in distributing dividends, interest or any such accruals of income received or collected by it on behalf of its clients on the securities held in custody. 2. A custodian shall be continuously accountable for the movement of securities or financial products in and out of the custody account, deposit, and withdrawal of cash from the client's account and shall provide complete audit trail, whenever called for by the client or the Authority. 3. A custodian shall establish and maintain adequate infrastructural facility to be able to discharge custodial services to the satisfaction of clients, and the operating procedures and systems of the custodian shall be well documented and backed by operations manuals. 4. A custodian shall take precautions necessary to ensure that continuity in record keeping is not lost or destroyed and that sufficient back up of records is available. 5. A custodian shall create and maintain the records of securities held in custody in such manner that the tracing of securities or obtaining duplicate title documents is facilitated, in the event of loss of original records for any reason. 6. A custodian shall extend to other custodial entities, depositories and clearing organizations all such co-operation that is necessary for the conduct of business in the areas of inter custodial settlements, transfer of securities and transfer of funds. 7. A custodian shall ensure that an arm’s length relationship is maintained, both in terms of staff and systems, from its other businesses. 8. A custodian shall exercise due diligence in safe-keeping and administration of the assets of its clients. D. Debenture trustees 1. A registered debenture trustee shall ensure that adequate disclosures are made to the debenture holders, in a comprehensible and timely manner so as to enable them to make a balanced and informed decision. 2. A registered debenture trustee shall take all reasonable steps to establish the true and full identity of each of its clients, and of each client’s financial situation and maintain record of the same. 3. A registered debenture trustee shall share information available with it regarding client companies with credit rating agencies, wherever required. 4. A registered debenture trustee shall make reasonable efforts to avoid misrepresentation and ensure that the information provided to the debenture holders is not misleading. E. Depository Participants 1. A depository participant shall not increase charges/fees for the services rendered without proper advance notice of at least seven (7) days to the beneficial owners. 2. A depository participant shall be prompt and diligent in opening of a beneficial owner account, dispatch of the dematerialisation request form, rematerialisation request form and execution of debit instruction slip and in all the other activities undertaken by them on behalf of the beneficial owners. 3. A depository participant shall take adequate and necessary steps to ensure that continuity in data and record keeping is maintained and that the data or records are not lost or destroyed. It shall also ensure that for electronic records and data, up-to-date back up is always available with it. 4. A depository participant shall ensure that it has satisfactory internal control procedures in place as well as adequate financial and operational capabilities which can be reasonably expected to take care of any losses arising due to theft, fraud and other dishonest acts, professional misconduct or omissions. F. Distributors 1. A registered distributor shall avoid malpractices, such as mis-selling of capital market products and services, and shall consider clients’ interest and suitability to their financial needs. 2. When dealing with clients other than sophisticated investors, a registered distributor shall undertake due diligence of capital market products and services being distributed to them, and also assess the suitability of product / service to the investors. For this purpose, a distributor shall seek information from such clients about their financial status, investment experience, investment objectives, etc. to be in a better position to offer them such capital market products and services which are suitable to their risk profile. 3. A registered distributor shall act in the best interests of the clients and the integrity of the market. A distributor shall inform the client if the capital market product or service is not deemed suitable for them. 4. A registered distributor shall be fully conversant with the terms of the private placement memorandum, disclosure document and all other relevant agreements / documents. 5. Wherever the client is a sophisticated investor, a registered distributor shall obtain a declaration to the effect that the investor understands the risks associated to the capital market product or service being distributed. 6. A registered distributor shall disclose all material information to its prospective clients, including but not limited to its business, disciplinary history, terms and conditions of distribution services, conflict of interest, affiliations with other intermediaries and any other material information. 7. A registered distributor shall urge its clients to go through the private placement memorandum, disclosure document and other applicable capital market product or service related documents, as the case may be, and agreement to be entered with the client and the regulated financial entities before making the final decision. 8. A registered distributor shall disclose all material information regarding the capital market products and services being distributed to its clients, including related party transactions and self-positions. If requested by a client, the distributor shall disclose the amount of direct and indirect remuneration and the basis of such remuneration it receives as a result of rendering distributing services to that client and whether there is any relation between the distributor and the entity offering the capital market product or service. 9. A registered distributor shall assist its clients in completing KYC and other related procedures and assist in compliance with relevant laws relating to, inter alia, AML and CFT to the extent applicable. 10. A registered distributor shall abstain from tampering with the application form and other documents submitted by the client, including inserting, deleting, or changing any information in the application form or any other document provided by the client. 11. A registered distributor shall provide to its clients full and latest information about the capital market products and services offered by the regulated financial entities and shall clearly highlight the assumptions made in performance calculations, risk assessments, performance projections etc. 12. A registered distributor shall abstain from giving any assurance or cause any misrepresentation to its clients with respect to returns or risk characteristics of a capital market product or service. 13. A registered distributor shall abstain from attracting clients through offer of rebate, kickback, gifts, etc. 14. A registered distributor shall maintain necessary infrastructure to provide support to its clients and regulated financial entities, so as to be able to satisfactorily discharge its responsibilities as per the mutually agreed terms. 15. A registered distributor shall ensure clear segregation of its proprietary investments and those carried out as part of distribution activities. If allowed to facilitate clients’ investments through omnibus structure, it shall ensure compliance with all applicable norms. 16. A registered distributor shall maintain adequate records in relation to its clients, whether in physical or digital form including correspondence with the clients on particular capital market product or service suitability and consent/dissent of the clients, wherever applicable. 17. A registered distributor shall ensure that all client related statutory communications as well as such other reports as mutually agreed are reliably and timely sent to its clients. 18. A registered distributor shall take all reasonable steps to avoid conflicts of interest (whether actual or perceived) and develop appropriate policies and procedures to identify, manage, monitor and, where applicable, disclose, those conflicts of interest in order to prevent them from adversely affecting the interests of the clients. 19. In order to avoid conflict of interest arising due to multiple activities, a registered distributor shall ensure segregation of the activities and proper disclosures about segregation to the clients. 20. A registered distributor shall maintain and protect confidentiality of its clients’ details, deals and transactions, investment goals which it comes to know in the course of business relationship. 21. A registered distributor shall have a robust complaint redressal mechanism and an escalation matrix. It shall endeavour to resolve all grievances / complaints arising out of its distribution activities in a time bound manner. 22. A registered distributor shall abstain from encouraging over transacting and churning of portfolio of the clients to earn higher remuneration. 23. When distributing various capital market products and services, a registered distributor shall ensure that clients’ interest are paramount and that earning extra remuneration should never form the basis for distributing any product or service to its clients. 24. A registered distributor shall not indulge in any manipulative, fraudulent or deceptive practices. 25. A registered distributor shall hold valid registration with the IFSCA at all times, if applicable, and shall comply with all applicable laws, code of conduct and norms related to qualifications and experiences of its principal officer and other employees. Advertisement Code for Distributors 26. Advertisements shall be accurate, true, fair, clear, complete, unambiguous and concise. 27. Advertisements shall not contain statements which are false, misleading, biased or deceptive, based on assumption/projections and shall not contain any testimonials or any ranking based on any criteria. 28. Advertisements shall not be so designed as likely to be misunderstood or likely to disguise the significance of any statement. Advertisements shall not contain statements which directly or by implication or by omission may mislead the client. 29. Advertisements shall not carry any slogan that is exaggerated or unwarranted or slogan that is inconsistent with or unrelated to the nature and risk and return profile of the capital market product or service. 30. Advertisements shall not be so framed as to exploit the lack of experience or knowledge of the clients. Extensive use of technical or legal terminology or complex language and the inclusion of excessive details which may detract the clients should be avoided. 31. Advertisements shall contain information which is timely and consistent with the disclosures made in the private placement memorandum, disclosure document or the basic document, by whatever name called, which is created by the issuer / service provider and explains the characteristics of the capital market product or service. G. Investment Advisers 1. An investment adviser shall seek from its clients, information about their financial situation, investment experience and investment objectives relevant to the services to be provided and maintain confidentiality of such information. 2. An investment adviser shall make adequate disclosures of relevant material information while dealing with its clients. 3. An investment Adviser shall ensure that fees charged to the clients is fair and reasonable. H. Investment Bankers 1. An investment banker shall ensure that adequate disclosures are made to the investors in a timely manner in accordance with the applicable regulations and guidelines so as to enable them to make a balanced and informed decision. 2. An investment banker shall endeavour to ensure that the investors are provided with true and adequate information without making any misleading or exaggerated claims or any misrepresentation and are made aware of the attendant risks before taking any investment decision. 3. An investment banker shall ensure that copies of the prospectus, offer document, letter of offer or any other related document is made available to the investors at the time of issue or the offer. 4. An investment banker shall not discriminate amongst its clients, save and except on ethical and commercial considerations. 5. An investment banker shall maintain arm’s-length relationship between the investment banking activity and any other activity. 6. An investment banker shall demarcate the responsibilities of the various intermediaries clearly so as to avoid any conflict or confusion in their job description. I. IBU acting as banker to an issue 1. A banker to an issue shall not allow blank application forms bearing brokers stamp to be kept at the bank premises or peddled anywhere near the entrance of the premises. 2. A banker to an issue shall not accept applications after office hours or after the date of closure of the issue or on bank holidays. 3. A banker to an issue shall not part with the issue proceeds until listing permission is granted by the stock exchange to the body corporate. 4. A banker to an issue shall not delay in issuing the final certificate pertaining to the collection figures to the lead manager and the body corporate. J. Research Entities 1. A research entity shall act with due skill, care and diligence and shall ensure that the research report is prepared after thorough analysis. 2. A research entity shall effectively address conflict of interest which may affect the impartiality of its research analysis and research report and shall make appropriate disclosures to address the same. 3. A research entity or its employees or research analysts shall not engage in insider trading or front running or front running of its own research report 4. A research entity shall maintain confidentiality of report till the report is made public. 5. A research entity shall observe high professional standard while preparing research report. 6. The senior management of a research entity shall bear primary responsibility for ensuring the maintenance of appropriate standards of conduct and adherence to proper procedures. K. RAJARAMAN, Chairperson and Published by the Controller of Publications, Delhi-110054. GORAKHA NATH YADAVA Digitally signed by GORAKHA NATH YADAVA Date: 2025.04.17 15:51:58 +05'30'",
+        "metadata": {
+            "contained_section": "Schedule",
+            "contained_chapter": "Schedule II",
+            "doc_name": "cmi",
+            "references": "[\"Part A of this Schedule\", \"Act\"]",
+            "chunk_index": 49
+        }
+    }
+]

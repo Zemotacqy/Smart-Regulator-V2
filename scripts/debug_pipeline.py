@@ -67,11 +67,11 @@ async def debug_pipeline(query: str, doc_filter_id: Optional[str] = None):
         ctx = await run_hybrid_search(ctx)
         print(f"  Duration: {ctx.stage_timings.get('hybrid_search', 0.0):.4f}s")
         print(f"  Candidate Nodes Retrieved: {len(ctx.candidate_nodes)}")
-        for idx, node in enumerate(ctx.candidate_nodes[:5], 1):
+        for idx, node in enumerate(ctx.candidate_nodes[:10], 1):
             print(f"    [{idx}] {node.breadcrumb} | Score: {node.score}")
             print(f"        Snippet: {node.text_content[:100]}...")
         if len(ctx.candidate_nodes) > 5:
-            print(f"    ... and {len(ctx.candidate_nodes) - 5} more candidate nodes.")
+            print(f"    ... and {len(ctx.candidate_nodes) - 10} more candidate nodes.")
         print("-" * 80)
         
         # --- Stage C: Hop Expander ---
