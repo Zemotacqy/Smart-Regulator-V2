@@ -215,7 +215,7 @@ async def main() -> None:
     
     # Initialize Rotated rate-limited Gemini Client
     # 15 RPM is the free tier limit per key
-    gemini_client = GeminiClient(api_keys=GEMINI_API_KEYS, rpm_limit=15)
+    gemini_client = GeminiClient(api_keys=GEMINI_API_KEYS, rpm_limit=10)
     
     try:
         # Fetch targets and distractors

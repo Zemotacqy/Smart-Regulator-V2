@@ -142,7 +142,7 @@ async def main() -> None:
     # Initialize DB pool
     await init_db_pool()
     
-    gemini_client = GeminiClient(api_keys=GEMINI_API_KEYS, rpm_limit=15)
+    gemini_client = GeminiClient(api_keys=GEMINI_API_KEYS, rpm_limit=10)
     semaphore = asyncio.Semaphore(args.concurrency)
     
     try:
