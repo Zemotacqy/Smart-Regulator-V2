@@ -15,10 +15,9 @@ OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 CLASSIFIER_MODEL = os.getenv("CLASSIFIER_MODEL", "ifsca-classifier-3b")
 BOUNDARY_MODEL = os.getenv("BOUNDARY_MODEL", "ifsca-boundary-3b")
 EXTRACTOR_MODEL = os.getenv("EXTRACTOR_MODEL", "ifsca-extractor-3b")
-EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "nomic-embed-text:v1.5")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "snowflake-arctic-embed2")
 EXPANDER_MODEL = os.getenv("EXPANDER_MODEL", "ifsca-expander-3b")
 GENERATOR_MODEL = os.getenv("GENERATOR_MODEL", "ifsca-saullm-7b-ft")
-RERANKER_SLM_MODEL = os.getenv("RERANKER_SLM_MODEL", "ifsca-reranker-3b")
 EVAL_MODEL = os.getenv("EVAL_MODEL", "mistral-nemo:12b")
 
 # Context budget constraints

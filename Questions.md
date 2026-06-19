@@ -67,3 +67,4 @@ Comments:
 Tomm:
 
 - Check reranker if we can use a fine tuning SLM
+- uv run python scripts/assemble_golden_dataset.py
