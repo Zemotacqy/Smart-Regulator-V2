@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { Marked } from 'marked';
 
 // Configure marked to be safe and clean
@@ -7,7 +7,24 @@ const markedInstance = new Marked({
   breaks: true,
 });
 
+const KEYWORDS = [
+  'Searching...',
+  'Analysing...',
+  'Drafting...'
+];
+
 export default function StreamingAnswer({ text, timings, citations, onViewCitations, isStreaming }) {
+  const [keywordIndex, setKeywordIndex] = useState(0);
+
+  useEffect(() => {
+    if (!text && isStreaming) {
+      const interval = setInterval(() => {
+        setKeywordIndex((prev) => (prev + 1) % KEYWORDS.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [text, isStreaming]);
+
   const htmlContent = useMemo(() => {
     try {
       return { __html: markedInstance.parse(text || '') };
@@ -36,21 +53,42 @@ export default function StreamingAnswer({ text, timings, citations, onViewCitati
           Regulatory Assistant
         </span>
         {isStreaming && (
-          <span className="pulse-dot" style={{
-            width: '8px',
-            height: '8px',
-            borderRadius: '50%',
-            backgroundColor: 'var(--accent-primary)',
-            marginLeft: '6px'
-          }} />
+          <>
+            <span className="pulse-dot" style={{
+              width: '8px',
+              height: '8px',
+              borderRadius: '50%',
+              backgroundColor: 'var(--accent-primary)',
+              marginLeft: '6px'
+            }} />
+            {!text && (
+              <span style={{
+                fontSize: '11px',
+                color: 'var(--text-muted)',
+                marginLeft: '12px',
+                fontWeight: 'normal',
+                textTransform: 'none',
+                animation: 'fadeIn 0.2s ease'
+              }}>
+                {KEYWORDS[keywordIndex]}
+              </span>
+            )}
+          </>
         )}
       </div>
 
-      {/* Main Answer Content */}
-      <div 
-        className="markdown-content"
-        dangerouslySetInnerHTML={htmlContent}
-      />
+      {/* Main Answer Content / Simple Pulsing Indicator */}
+      {!text && isStreaming ? (
+        <div className="pipeline-loader">
+          <div className="pipeline-pulse-dot"></div>
+          <span className="pipeline-status-text">{KEYWORDS[keywordIndex]}</span>
+        </div>
+      ) : (
+        <div 
+          className="markdown-content"
+          dangerouslySetInnerHTML={htmlContent}
+        />
+      )}
 
       {/* Citations toggle and stage timings */}
       <div style={{

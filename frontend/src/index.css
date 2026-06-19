@@ -606,3 +606,44 @@ body {
 .markdown-content li {
   margin-bottom: 4px;
 }
+
+/* Simplified Awaiting Response Loader */
+.pipeline-loader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background-color: var(--bg-hover);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin: 12px 0;
+  width: fit-content;
+  animation: fadeIn 0.3s ease;
+}
+
+.pipeline-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  animation: pulse-waiting 1.2s infinite ease-in-out;
+}
+
+.pipeline-status-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+}
+
+@keyframes pulse-waiting {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 1;
+    box-shadow: 0 0 8px var(--accent-primary);
+  }
+}
