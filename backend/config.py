@@ -20,6 +20,10 @@ EXPANDER_MODEL = os.getenv("EXPANDER_MODEL", "ifsca-expander-3b")
 GENERATOR_MODEL = os.getenv("GENERATOR_MODEL", "ifsca-saullm-7b-ft")
 EVAL_MODEL = os.getenv("EVAL_MODEL", "mistral-nemo:12b")
 
+# Gemini API configuration
+GEMINI_API_KEYS = [k.strip() for k in os.getenv("GEMINI_API_KEYS", "").split(",") if k.strip()]
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite")
+
 # Context budget constraints
 MAX_CONTEXT_CHARS = 12000
 MAX_SINGLE_SECTION_CHARS = 4000

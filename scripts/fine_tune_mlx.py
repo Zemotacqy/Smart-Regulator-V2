@@ -71,15 +71,15 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Wrapper for MLX QLoRA fine-tuning.")
     parser.add_argument("--model", type=str, required=True, help="Base model path or Hugging Face repo.")
     parser.add_argument("--data", type=str, required=True, help="Input JSONL file to split and train on.")
-    parser.add_argument("--lora-rank", type=int, default=8, help="LoRA rank.")
-    parser.add_argument("--lora-alpha", type=int, default=16, help="LoRA alpha.")
-    parser.add_argument("--lora-targets", nargs="+", default=["q_proj", "v_proj"], help="LoRA target layers.")
+    parser.add_argument("--lora-rank", type=int, default=16, help="LoRA rank.")
+    parser.add_argument("--lora-alpha", type=int, default=32, help="LoRA alpha.")
+    parser.add_argument("--lora-targets", nargs="+", default=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"], help="LoRA target layers.")
     parser.add_argument("--learning-rate", type=float, default=1e-5, help="Learning rate.")
     parser.add_argument("--epochs", type=int, default=3, help="Number of epochs to train.")
     parser.add_argument("--batch-size", type=int, default=4, help="Batch size.")
     parser.add_argument("--output", type=str, required=True, help="Output adapters directory.")
     parser.add_argument("--grad-checkpoint", action="store_true", help="Use gradient checkpointing to reduce memory.")
-    parser.add_argument("--max-seq-length", type=int, default=1024, help="Max sequence length.")
+    parser.add_argument("--max-seq-length", type=int, default=2048, help="Max sequence length.")
     args = parser.parse_args()
     
     # 1. Setup temp data directory
@@ -134,7 +134,9 @@ def main() -> None:
         "--batch-size", str(args.batch_size),
         "--learning-rate", str(args.learning_rate),
         "--adapter-path", args.output,
-        "--config", temp_config_path
+        "--config", temp_config_path,
+        "--seed", "42",
+        "--val-batches", "50"
     ]
     
     if args.grad_checkpoint:
