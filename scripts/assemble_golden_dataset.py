@@ -11,8 +11,8 @@ import structlog
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from backend.database.connection import init_db_pool, get_db_connection, close_db_pool
-from ollama import AsyncClient
-from backend.config import OLLAMA_HOST
+from backend.config import GEMINI_API_KEYS, GEMINI_MODEL
+from scripts.utils.gemini_client import GeminiClient
 
 logger = structlog.get_logger()
 
@@ -26,7 +26,7 @@ structlog.configure(
 )
 
 async def generate_golden_pair(
-    ollama_client: AsyncClient,
+    gemini_client: GeminiClient,
     model: str,
     category: str,
     context_text: str,
@@ -35,11 +35,11 @@ async def generate_golden_pair(
     semaphore: asyncio.Semaphore
 ) -> Optional[Dict[str, Any]]:
     """
-    Generates a single golden QA pair using the local LLM.
+    Generates a single golden QA pair using the Gemini API.
     
     Args:
-        ollama_client (AsyncClient): Ollama async client.
-        model (str): LLM model name.
+        gemini_client (GeminiClient): Gemini async client.
+        model (str): Gemini model name.
         category (str): Category classification for this question.
         context_text (str): Regulatory text context.
         breadcrumb (str): Section breadcrumb/title.
@@ -66,16 +66,13 @@ async def generate_golden_pair(
     
     async with semaphore:
         try:
-            response = await ollama_client.chat(
+            content_str = await gemini_client.generate_content(
                 model=model,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                format="json",
-                options={"temperature": 0.2}
+                system_instruction=system_prompt,
+                user_content=user_prompt,
+                temperature=0.2,
+                json_mode=True
             )
-            content_str = response.message.content
             parsed = json.loads(content_str)
             
             query = parsed.get("query")
@@ -95,13 +92,13 @@ async def generate_golden_pair(
             logger.debug("generate_golden_pair_failed", error=str(e), node_id=target_node_id)
             return None
 
-async def assemble_dataset(ollama_model: str, output_path: str, concurrency: int) -> None:
+async def assemble_dataset(gemini_model: str, output_path: str, concurrency: int) -> None:
     """
     Queries the database for candidate nodes across all 5 evaluation categories,
-    invokes Ollama to generate golden QA pairs, and saves them to a JSON file.
+    invokes Gemini to generate golden QA pairs, and saves them to a JSON file.
     
     Args:
-        ollama_model (str): Ollama model name.
+        gemini_model (str): Gemini model name.
         output_path (str): Output filepath.
         concurrency (int): Max concurrent LLM requests.
     """
@@ -198,7 +195,11 @@ async def assemble_dataset(ollama_model: str, output_path: str, concurrency: int
                 amendments=len(amendment_candidates), 
                 compliance=len(compliance_rows))
 
-    ollama_client = AsyncClient(host=OLLAMA_HOST)
+    if not GEMINI_API_KEYS:
+        print("ERROR: GEMINI_API_KEYS is not defined in .env.", file=sys.stderr)
+        sys.exit(1)
+
+    gemini_client = GeminiClient(api_keys=GEMINI_API_KEYS, rpm_limit=15)
     semaphore = asyncio.Semaphore(concurrency)
     
     tasks = []
@@ -254,8 +255,8 @@ async def assemble_dataset(ollama_model: str, output_path: str, concurrency: int
     # Create future tasks
     future_tasks = [
         generate_golden_pair(
-            ollama_client=ollama_client,
-            model=ollama_model,
+            gemini_client=gemini_client,
+            model=gemini_model,
             category=cat,
             context_text=ctx,
             breadcrumb=bread,
@@ -265,29 +266,32 @@ async def assemble_dataset(ollama_model: str, output_path: str, concurrency: int
         for cat, ctx, bread, nid in tasks
     ]
     
-    results = []
-    completed = 0
-    for future in asyncio.as_completed(future_tasks):
-        res = await future
-        completed += 1
-        if res:
-            results.append(res)
+    try:
+        results = []
+        completed = 0
+        for future in asyncio.as_completed(future_tasks):
+            res = await future
+            completed += 1
+            if res:
+                results.append(res)
+                
+            if completed % 10 == 0 or completed == len(future_tasks):
+                logger.info("generation_progress", completed=completed, total=len(future_tasks), generated=len(results))
+                
+        logger.info("writing_golden_dataset", count=len(results), path=output_path)
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(results, f, indent=2, ensure_ascii=False)
             
-        if completed % 10 == 0 or completed == len(future_tasks):
-            logger.info("generation_progress", completed=completed, total=len(future_tasks), generated=len(results))
-            
-    logger.info("writing_golden_dataset", count=len(results), path=output_path)
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
-        
-    logger.info("golden_dataset_assembled_successfully", count=len(results))
+        logger.info("golden_dataset_assembled_successfully", count=len(results))
+    finally:
+        await gemini_client.close()
 
 async def main() -> None:
     parser = argparse.ArgumentParser(description="Assemble golden dataset from DB candidate nodes.")
-    parser.add_argument("--model", type=str, default="llama3.2:3b", help="Ollama model to use.")
+    parser.add_argument("--model", type=str, default=GEMINI_MODEL, help="Gemini model to use.")
     parser.add_argument("--output", type=str, default="tests/golden_dataset.json", help="Output JSON path.")
-    parser.add_argument("--concurrency", type=int, default=8, help="Ollama concurrency limit.")
+    parser.add_argument("--concurrency", type=int, default=15, help="Gemini concurrency limit.")
     args = parser.parse_args()
     
     await init_db_pool()

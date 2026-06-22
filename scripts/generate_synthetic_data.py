@@ -4,6 +4,7 @@ import os
 import sys
 import json
 import random
+import time
 from typing import Any, Dict, List, Optional
 import structlog
 
@@ -11,8 +12,8 @@ import structlog
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from backend.database.connection import init_db_pool, get_db_connection, close_db_pool
-from ollama import AsyncClient
-from backend.config import OLLAMA_HOST
+from backend.config import GEMINI_API_KEYS, GEMINI_MODEL
+from scripts.utils.gemini_client import GeminiClient
 
 logger = structlog.get_logger()
 
@@ -72,111 +73,97 @@ async def fetch_all_distractor_nodes(target_node_ids: List[str]) -> List[Dict[st
         return [dict(r) for r in rows]
 
 async def generate_single_pair(
-    ollama_client: AsyncClient,
+    gemini_client: GeminiClient,
     model: str,
     target: Dict[str, Any],
     distractors: List[Dict[str, Any]],
-    semaphore: asyncio.Semaphore
+    semaphore: asyncio.Semaphore,
+    is_negative: bool = False
 ) -> Optional[Dict[str, Any]]:
     """
-    Generates a single RAFT training example (messages structure) by querying Ollama.
-    
-    Args:
-        ollama_client (AsyncClient): Async Ollama API client.
-        model (str): Name of the local LLM model to query.
-        target (Dict[str, Any]): Target node information.
-        distractors (List[Dict[str, Any]]): List of 2 distractor nodes.
-        semaphore (asyncio.Semaphore): Concurrency controller.
-        
-    Returns:
-        Optional[Dict[str, Any]]: Structured training dict, or None on failure.
+    Generates a single RAFT training example (messages structure) by querying Gemini.
+    Supports negative sampling where the target clause is omitted from context.
     """
-    system_prompt = (
-        "You are a dataset generator for a regulatory compliance RAG system.\n"
-        "You return a JSON object with exactly two keys: 'question' and 'answer'.\n"
-        "The value of 'question' is a string containing a natural user question.\n"
-        "The value of 'answer' MUST be a single string containing the exact markdown formatted text with headers, table, and source quotes. Do NOT make the value of 'answer' a JSON object or dictionary.\n"
-        "Your generated answer MUST contain all four of these parts:\n"
-        "1. **Short Answer:** [Direct plain-English answer, max 2 sentences]\n"
-        "2. A markdown table with columns 'Rule', 'Detail', and 'Source' mapping the key fact(s) from the target clause.\n"
-        "3. **Plain Language:** [Simple explanation of the rule, explaining any complex legal terms simply]\n"
-        "4. **Source Quote:** \"[Verbatim quotation of the key sentence from the target clause]\"\n\n"
-        "Example output format:\n"
-        "{\n"
-        "  \"question\": \"What are the capital requirements for an IBU?\",\n"
-        "  \"answer\": \"**Short Answer:** The minimum capital is USD 20 million.\\n\\n| Rule | Detail | Source |\\n|---|---|---|\\n| Capital Requirement | Minimum USD 20 million | Section 3(a) |\\n\\n**Plain Language:** An IBU must have at least USD 20 million in capital to operate.\\n\\n**Source Quote:** \\\"The minimum capital requirement for an IFSC Banking Unit shall be USD 20 million.\\\"\"\n"
-        "}"
-    )
-
-    user_prompt = (
-        "Based on the following target clause, generate one compliance question and its detailed answer string.\n\n"
-        "TARGET CLAUSE:\n"
-        f"Breadcrumb: {target['breadcrumb']}\n"
-        f"Title: {target['title']}\n"
-        f"Content: {target['text_content']}\n\n"
-        "Ensure the generated answer uses ONLY facts from the target clause.\n"
-        "Return a JSON object with keys 'question' (string) and 'answer' (string)."
-    )
+    if is_negative:
+        # Negative sample: generate query for target, but omit target from context block.
+        system_prompt = (
+            "You are a dataset generator for a regulatory compliance RAG system.\n"
+            "You return a JSON object with exactly one key: 'question'.\n"
+            "The value of 'question' is a string containing a natural user question based on the target clause.\n"
+            "To ensure the model generalizes well to different styles of user queries, vary your query styles. "
+            "Some queries should be formal legal questions, others should be casual, procedural, or formulated as hypothetical scenarios (e.g. 'Can my company do X...')."
+        )
+        user_prompt = (
+            "Based on the following target clause, generate one compliance question that a user might ask to learn about this rule.\n\n"
+            "TARGET CLAUSE:\n"
+            f"Breadcrumb: {target['breadcrumb']}\n"
+            f"Title: {target['title']}\n"
+            f"Content: {target['text_content']}\n\n"
+            "Return a JSON object with key 'question' (string)."
+        )
+    else:
+        # Positive sample: generate both query and structured answer.
+        system_prompt = (
+            "You are a dataset generator for a regulatory compliance RAG system.\n"
+            "You return a JSON object with exactly two keys: 'question' and 'answer'.\n"
+            "The value of 'question' is a string containing a natural user question.\n"
+            "To ensure the model generalizes well to different styles of user queries, vary your query styles. "
+            "Some queries should be formal legal questions, others should be casual, procedural, or formulated as hypothetical scenarios (e.g. 'Can my company do X...').\n"
+            "The value of 'answer' MUST be a single string containing the exact markdown formatted text. Do NOT make the value of 'answer' a JSON object or dictionary.\n"
+            "Your generated answer MUST contain all three of these parts:\n"
+            "1. **Executive Summary:** A direct, user-friendly 1-2 sentence plain-English summary answering the question directly.\n"
+            "2. **Key Requirements / Conditions:** A clean, bulleted list detailing all rules, thresholds, and conditions with natural inline citations (no tables).\n"
+            "3. # Verbatim Regulatory Quote\n"
+            "   > [Verbatim quotation of the key sentence from the target clause]\n\n"
+            "Example output format:\n"
+            "{\n"
+            "  \"question\": \"What are the capital requirements for an IBU?\",\n"
+            "  \"answer\": \"**Executive Summary:** The minimum capital requirement for an IFSC Banking Unit (IBU) is USD 20 million.\\n\\n**Key Requirements / Conditions:**\\n* As specified in Section 3(a) of the IFSC Banking Regulations, the IBU must maintain a minimum capital of USD 20 million at all times.\\n\\n# Verbatim Regulatory Quote\\n> The minimum capital requirement for an IFSC Banking Unit shall be USD 20 million.\"\n"
+            "}"
+        )
+        user_prompt = (
+            "Based on the following target clause, generate one compliance question and its detailed answer string.\n\n"
+            "TARGET CLAUSE:\n"
+            f"Breadcrumb: {target['breadcrumb']}\n"
+            f"Title: {target['title']}\n"
+            f"Content: {target['text_content']}\n\n"
+            "Ensure the generated answer uses ONLY facts from the target clause.\n"
+            "Return a JSON object with keys 'question' (string) and 'answer' (string)."
+        )
 
     async with semaphore:
         try:
-            response = await ollama_client.chat(
+            content_str = await gemini_client.generate_content(
                 model=model,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                format="json",
-                options={"temperature": 0.4}
+                system_instruction=system_prompt,
+                user_content=user_prompt,
+                temperature=0.4,
+                json_mode=True
             )
-            content_str = response.message.content
             parsed = json.loads(content_str)
-            
             question = parsed.get("question")
-            answer = parsed.get("answer")
             
-            if not question or not answer:
+            if not question:
                 return None
                 
-            # If the model returned the answer as a dictionary (sometimes occurs despite prompt), format it.
-            if isinstance(answer, dict):
-                parts = []
-                short_ans = answer.get("**Short Answer**:") or answer.get("Short Answer") or answer.get("**Short Answer**") or ""
-                if short_ans:
-                    parts.append(f"**Short Answer:** {short_ans}")
-                    
-                table_lines = []
-                for k, v in answer.items():
-                    if "Rule" in k or "table" in k:
-                        if isinstance(v, list):
-                            table_lines.extend(v)
-                        elif isinstance(v, str):
-                            table_lines.append(v)
-                if table_lines:
-                    parts.append("\n".join(table_lines))
-                    
-                plain_lang = answer.get("**Plain Language**:") or answer.get("Plain Language") or answer.get("**Plain Language**") or ""
-                if plain_lang:
-                    parts.append(f"**Plain Language:** {plain_lang}")
-                    
-                quote = answer.get("**Source Quote**:") or answer.get("Source Quote") or answer.get("**Source Quote**") or ""
-                if quote:
-                    parts.append(f"**Source Quote:** \"{quote}\"")
-                    
-                answer = "\n\n".join(parts)
-                
-            # Build Context list
-            contexts = []
+            if is_negative:
+                answer = "I do not know the answer as no regulation was found in the available corpus."
+                # Format contexts (only distractors)
+                dist1_ctx = f"[DISTRACTOR: {distractors[0]['doc_title']}, {distractors[0]['breadcrumb']}: '{distractors[0]['text_content']}']"
+                dist2_ctx = f"[DISTRACTOR: {distractors[1]['doc_title']}, {distractors[1]['breadcrumb']}: '{distractors[1]['text_content']}']"
+                context_list = [dist1_ctx, dist2_ctx]
+            else:
+                answer = parsed.get("answer")
+                if not answer:
+                    return None
+                # Format contexts (target + distractors)
+                target_ctx = f"[TARGET: {target['doc_title']}, {target['breadcrumb']}: '{target['text_content']}']"
+                dist1_ctx = f"[DISTRACTOR: {distractors[0]['doc_title']}, {distractors[0]['breadcrumb']}: '{distractors[0]['text_content']}']"
+                dist2_ctx = f"[DISTRACTOR: {distractors[1]['doc_title']}, {distractors[1]['breadcrumb']}: '{distractors[1]['text_content']}']"
+                context_list = [target_ctx, dist1_ctx, dist2_ctx]
             
-            # Format targets and distractors
-            target_ctx = f"[TARGET: {target['doc_title']}, {target['breadcrumb']}: '{target['text_content']}']"
-            dist1_ctx = f"[DISTRACTOR: {distractors[0]['doc_title']}, {distractors[0]['breadcrumb']}: '{distractors[0]['text_content']}']"
-            dist2_ctx = f"[DISTRACTOR: {distractors[1]['doc_title']}, {distractors[1]['breadcrumb']}: '{distractors[1]['text_content']}']"
-            
-            # Shuffle targets and distractors
-            context_list = [target_ctx, dist1_ctx, dist2_ctx]
+            # Shuffle contexts
             random.shuffle(context_list)
-            
             context_str = "CONTEXT:\n" + "\n".join(context_list)
             
             # Assemble RAFT conversation dict
@@ -204,17 +191,31 @@ async def main() -> None:
     Parses arguments, queries database, launches concurrent generations,
     and writes outputs to JSONL format.
     """
-    parser = argparse.ArgumentParser(description="Generate synthetic RAFT training dataset from PostgreSQL.")
+    parser = argparse.ArgumentParser(description="Generate synthetic RAFT training dataset from PostgreSQL using Gemini API.")
     parser.add_argument("--count", type=int, default=2000, help="Number of training pairs to generate.")
-    parser.add_argument("--model", type=str, default="llama3.2:3b", help="Ollama model to use.")
+    parser.add_argument("--model", type=str, default=GEMINI_MODEL, help="Gemini model to use.")
     parser.add_argument("--output", type=str, default="data/raft_training_pairs.jsonl", help="Output JSONL filepath.")
-    parser.add_argument("--concurrency", type=int, default=8, help="Number of parallel generation tasks.")
+    parser.add_argument("--concurrency", type=int, default=20, help="Number of parallel generation tasks.")
+    parser.add_argument("--resume", action="store_true", help="Resume generation from the existing output file if it exists.")
     args = parser.parse_args()
     
     logger.info("synthetic_generation_started", target_count=args.count, model=args.model, output_file=args.output)
     
+    # Check for Gemini keys
+    if not GEMINI_API_KEYS:
+        logger.error("missing_gemini_keys", error="GEMINI_API_KEYS is not defined or is empty in config/.env")
+        print("ERROR: GEMINI_API_KEYS environment variable is not defined or is empty in .env.", file=sys.stderr)
+        print("Please configure at least one Gemini API key before running this script.", file=sys.stderr)
+        sys.exit(1)
+        
+    logger.info("gemini_keys_loaded", count=len(GEMINI_API_KEYS))
+    
     # Initialize connection pool
     await init_db_pool()
+    
+    # Initialize Rotated rate-limited Gemini Client
+    # 15 RPM is the free tier limit per key
+    gemini_client = GeminiClient(api_keys=GEMINI_API_KEYS, rpm_limit=10)
     
     try:
         # Fetch targets and distractors
@@ -231,40 +232,74 @@ async def main() -> None:
             sys.exit(1)
             
         # Create output directory
-        os.makedirs(os.path.dirname(args.output), exist_ok=True)
-        
-        ollama_client = AsyncClient(host=OLLAMA_HOST)
+        output_dir = os.path.dirname(args.output)
+        if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
+            
+        # Determine file mode and starting count
+        mode = "w"
+        existing_count = 0
+        if os.path.exists(args.output):
+            if args.resume:
+                try:
+                    with open(args.output, "r", encoding="utf-8") as infile:
+                        existing_count = sum(1 for _ in infile if _.strip())
+                    mode = "a"
+                    logger.info("resuming_generation", existing_count=existing_count)
+                except Exception as e:
+                    logger.warning("failed_to_read_existing_file_starting_fresh", error=str(e))
+                    mode = "w"
+            else:
+                logger.warning("output_file_exists_overwriting", filepath=args.output)
+                
+        if existing_count >= args.count:
+            logger.info("dataset_already_complete", existing_count=existing_count, target_count=args.count)
+            return
+            
         semaphore = asyncio.Semaphore(args.concurrency)
-        
-        generated_count = 0
+        generated_count = existing_count
         tasks = []
         
         # We sample target nodes to match the desired count
-        # Each target can be used multiple times if count > len(targets)
         random.seed(42)
         sampled_targets = random.choices(targets, k=args.count)
         
+        # If resuming, slice targets to process only remaining ones
+        if existing_count > 0:
+            sampled_targets = sampled_targets[existing_count:]
+            
         # Build tasks
         for t in sampled_targets:
-            # Select 2 distractors that are not the same node
-            dists = random.sample(distractors_all, k=2)
-            while dists[0]["node_id"] == t["node_id"] or dists[1]["node_id"] == t["node_id"]:
+            # Select 2 distractors that are not the same node, with a bounded retry limit
+            max_tries = 20
+            for _ in range(max_tries):
                 dists = random.sample(distractors_all, k=2)
+                if dists[0]["node_id"] != t["node_id"] and dists[1]["node_id"] != t["node_id"]:
+                    break
+            else:
+                # Fall back to any two nodes that are not the target node
+                dists = [d for d in distractors_all if d["node_id"] != t["node_id"]][:2]
+                if len(dists) < 2:
+                    logger.warning("distractor_pool_too_small_skipping", node_id=str(t["node_id"]))
+                    continue
+            
+            # 18% probability of negative sampling (target omitted)
+            is_negative = random.random() < 0.18
             
             task = generate_single_pair(
-                ollama_client=ollama_client,
+                gemini_client=gemini_client,
                 model=args.model,
                 target=t,
                 distractors=dists,
-                semaphore=semaphore
+                semaphore=semaphore,
+                is_negative=is_negative
             )
             tasks.append(task)
             
         logger.info("launching_generation_jobs", num_jobs=len(tasks))
         
-        # Open output file in append/write mode
-        with open(args.output, "w", encoding="utf-8") as outfile:
-            # Process tasks as they complete
+        # Open output file
+        with open(args.output, mode, encoding="utf-8") as outfile:
             completed_jobs = 0
             for future in asyncio.as_completed(tasks):
                 result = await future
@@ -276,7 +311,12 @@ async def main() -> None:
                     generated_count += 1
                     
                 if completed_jobs % 10 == 0 or completed_jobs == len(tasks):
-                    logger.info("progress_report", completed=completed_jobs, total=len(tasks), successfully_generated=generated_count)
+                    logger.info(
+                        "progress_report",
+                        completed=completed_jobs,
+                        total=len(tasks),
+                        successfully_generated=generated_count
+                    )
                     
         logger.info("synthetic_generation_completed", successfully_generated=generated_count, file_saved=args.output)
         
@@ -284,6 +324,7 @@ async def main() -> None:
         logger.error("synthetic_generation_failed", error=str(e))
         sys.exit(1)
     finally:
+        await gemini_client.close()
         await close_db_pool()
 
 if __name__ == "__main__":

@@ -1,639 +1,464 @@
 [
   {
-    "query": "What are the minimum educational qualifications required for a capital market intermediary to be appointed?",
-    "golden_answer": "A professional qualification or post-graduate degree or post graduate diploma (minimum one year in duration) in finance, law, accountancy, business management, commerce, economics, capital market, banking, insurance, actuarial science, fintech, science, technology, engineering or mathematics from a university or an institution recognised by the Central Government or any State Government or a foreign university or institution or association or a CFA or a FRM.",
-    "target_node_id": "0d25e376-2dc7-4d04-92c9-ab85b25afa0e",
+    "query": "What is the minimum investment threshold required for joint investors under the IFSCA (Fund Management) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nJoint investors consisting of an individual and their immediate family member (spouse, parent, or child) must meet a collective minimum investment threshold of USD 250,000.\n\n### Key Requirements / Conditions\n*   **Applicable Relationships:** The joint investment rule applies to an investor and their spouse, parent, or daughter/son.\n*   **Minimum Threshold:** The total combined investment made by these joint parties must be at least USD 250,000.\n\n# Verbatim Regulatory Quote\n> Provided also that the total investments by the following individuals when acting as joint investors, shall be at least USD 250,000: (i) An investor and his/her spouse; (ii) An investor and his/her parent; (iii) An investor and his/her daughter/son",
+    "target_node_id": "577cccee-0444-47b1-980a-301c545b2321",
     "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Appointment of Principal Officer, Compliance Officer and other human resources > (2) A capital market intermediary shall... > CLAUSE Block"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter III - Schemes for Fund Management > Section 20 > Clause"
   },
   {
-    "query": "What is the purpose of the evaluation criteria for a FinTech Sandbox Entity under the IFSCA (FinTech) Framework for Limited Use Authorisation?",
-    "golden_answer": "To assess the suitability of a FinTech Sandbox Entity for limited use authorisation.",
-    "target_node_id": "52550964-9241-49fd-b7a5-14ea93b56214",
+    "query": "What are the operational requirements for a registered credit rating agency regarding its client monitoring and rating processes?",
+    "golden_answer": "### Executive Summary\nA registered credit rating agency is required to actively monitor significant developments regarding its client companies and maintain efficient, responsive systems to ensure the delivery of timely and accurate credit ratings.\n\n### Key Requirements / Conditions\n*   **Continuous Monitoring:** The agency must track all important changes related to its client companies.\n*   **System Efficiency:** The agency is required to develop and maintain systems that are both efficient and responsive.\n*   **Rating Quality:** The primary objective of these systems must be to ensure that all issued ratings remain timely and accurate.\n\n# Verbatim Regulatory Quote\n> 7. A registered credit rating agency shall keep track of all important changes relating to its client companies and shall develop efficient and responsive systems to yield timely and accurate ratings",
+    "target_node_id": "b91dcb6e-fea2-4a71-8f7d-4d10bbceaf26",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Capital Market Intermediaries) Regulations, 2025 > Schedule II > Schedule > Clause"
+  },
+  {
+    "query": "What is the timeline and process for the Authority if it decides to reject an application for setting up a Banking Unit?",
+    "golden_answer": "### Executive Summary\nIf the Authority determines that an application for a Banking Unit is unsatisfactory, it may reject the request. The Authority is required to provide the applicant with a written explanation detailing the reasons for this rejection within thirty days.\n\n### Key Requirements / Conditions\n* **Authority Discretion:** The Authority may reject an application if it is not satisfied with the submissions provided by the applicant under sub-regulation (6).\n* **Communication Method:** The decision to reject must be formally communicated to the applicant in writing.\n* **Requirement for Justification:** The written communication must include the specific reasons for the rejection.\n* **Timeline:** The notification of rejection must be issued no later than thirty days after the Authority's decision.\n\n# Verbatim Regulatory Quote\n> (7) After considering the submissions under sub-regulation (6) made by the applicant to the Authority, if the Authority is not satisfied, it may reject the application and shall communicate the same to the applicant in writing with reasons, not later than thirty days",
+    "target_node_id": "e0ba660c-085a-4a79-bcdc-aa6acb2b223d",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Banking) Regulations, 2020 > Chapter II - SETTING UP OF A BANKING UNIT > Section 3 > (7)"
+  },
+  {
+    "query": "What are the requirements for parties involved in an Investment Trust regarding their roles and responsibilities under the IFSCA (Fund Management) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nParties involved in an Investment Trust must ensure they are fit and proper persons and must fulfill their specific duties as outlined in the Fourth Schedule of the regulations.\n\n### Key Requirements / Conditions\n* **Fit and Proper Status:** Registration for an Investment Trust is contingent upon all involved parties meeting the \"fit and proper\" criteria defined under the regulations.\n* **Performance of Duties:** All parties are legally obligated to execute their designated roles and discharge their responsibilities in strict accordance with the Fourth Schedule.\n\n# Verbatim Regulatory Quote\n> (2) The Parties to an Investment Trust shall perform their roles and discharge their responsibilities as specified in the Fourth Schedule .",
+    "target_node_id": "cb909e01-6c6f-4719-b58c-5c6df53d8d06",
     "category": "Cross-Reference",
-    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > Evaluation Criteria -> IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > Evaluation Criteria"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > PART B: INVESTMENT TRUST > Section 89 -> IFSCA (Fund Management) Regulations, 2025 > FOURTH SCHEDULE"
   },
   {
-    "query": "What types of financial services can tech financing companies aid or assist in arranging?",
-    "golden_answer": "financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act",
-    "target_node_id": "e2d3a32c-9ca7-42e4-9024-1f049b30b855",
-    "category": "Compliance Check",
-    "breadcrumb": "Tech Financing Regulations, 2023 > Tech Financing Regulations, 2023 > PREAMBLE Block > CLAUSE Block"
+    "query": "Are TechFin and Ancillary Service Providers permitted to perform the services listed in the Third Schedule of the IFSCA (TechFin and Ancillary Services) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nNo, TechFin and Ancillary Service Providers are strictly prohibited from performing any of the services listed in the Third Schedule of the IFSCA (TechFin and Ancillary Services) Regulations, 2025.\n\n### Key Requirements / Conditions\n*   **Prohibition:** Entities registered as TechFin and Ancillary Service Providers are explicitly barred from undertaking any activities or services categorized under the Third Schedule.\n*   **Scope of Registration:** Registration under these regulations is limited to providing services specified in the First Schedule (Ancillary Services) and the Second Schedule (TechFin Services) to assist in financial services defined under the Act.\n\n# Verbatim Regulatory Quote\n> Explanation. - For removal of doubts, it is hereby clarified that the TechFin and Ancillary Service Providers registered under these regulations shall not undertake any of the services specified in the Third Schedule.",
+    "target_node_id": "ed12cd55-6683-40d6-bc95-a418b1f6b0af",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (TechFin and Ancillary Services) Regulations, 2025 > Chapter I - Preliminary > Section 3 -> IFSCA (TechFin and Ancillary Services) Regulations, 2025 > The Third Schedule"
   },
   {
-    "query": "What are the Boundary Conditions that a FinTech Sandbox Entity must operate within during the Testing Stage?",
-    "golden_answer": "Boundary Conditions",
-    "target_node_id": "62109a2a-36d9-432d-a13c-d7c3cf3be5cb",
+    "query": "Under the IFSCA (TechFin and Ancillary Services) Regulations, 2025, what criteria must be met for an entity to be considered part of 'Group Entities'?",
+    "golden_answer": "### Executive Summary\nUnder the IFSCA (TechFin and Ancillary Services) Regulations, 2025, \"Group Entities\" refers to two or more entities that are connected through specific corporate, financial, or operational relationships.\n\n### Key Requirements / Conditions\nEntities are considered part of a \"Group\" if they share any of the following relationships:\n*   **Parent-Subsidiary:** As defined under Ind-AS 110 or AS 21.\n*   **Joint Venture:** As defined under Ind-AS 28 or AS 27.\n*   **Associate:** As defined under Ind-AS 28 or AS 23.\n*   **Common Brand Name:** Entities operating under a shared brand identity.\n*   **Financial Investment:** Holding an investment in equity shares or a capital contribution of 20 percent or more.\n*   **Network Membership:** Being part of a larger structure of firms that pool resources, share uniform policies, technology, and collaterals, and present themselves as a single unit with a lead firm acting on behalf of the members.\n\n# Verbatim Regulatory Quote\n> “Group Entities” includes an arrangement involving two or more entities related to each other through any of the following relationships: (a) parent- subsidiary (as per Ind-AS 110/AS 21); (b) joint venture (as per Ind-AS 28/AS 27); (c) associate (as per Ind-AS 28/AS 23); (d) common brand name; (e) investment in equity shares/capital contribution of 20 per cent and above; or (f) part of a network; Explanation .- For the purpose of this clause, ‘network’ shall mean a larger structure of a group of firms that have come together for mutual benefits by pooling resources, showcase their combined strength and have uniform policies, technology and collaterals, and showcase themselves as one big unit, with one lead firm acting on behalf of the member-firms.",
+    "target_node_id": "ed12cd55-6683-40d6-bc95-a418b1f6b0af",
     "category": "Glossary Definition",
-    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > PREAMBLE Block > Testing Stage > Boundary Conditions"
+    "breadcrumb": "IFSCA (TechFin and Ancillary Services) Regulations, 2025 > Chapter I - Preliminary > Section 3 > Ancillary Services"
   },
   {
-    "query": "What is the currency of operation for tech financing under the Tech Financing Regulations, 2023?",
-    "golden_answer": "The currency of operation for tech financing under the Tech Financing Regulations, 2023, shall be the currency of the country in which the financial institution is established.",
-    "target_node_id": "df072078-cbd8-4d41-8657-ce858b08b058",
+    "query": "What are the obligations of a capital market intermediary regarding a client's risk profile under the IFSCA (Capital Market Intermediaries) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nCapital market intermediaries are required to inform clients of their assessed risk profile and ensure that both client-provided information and risk assessments remain current through periodic updates.\n\n### Key Requirements / Conditions\n*   **Communication of Risk Profile:** Intermediaries must formally communicate the client's risk profile to the client immediately following the completion of the risk assessment process.\n*   **Periodic Updates:** Intermediaries are obligated to ensure that all information provided by the client, as well as the resulting risk assessment, is reviewed and updated on a periodic basis.\n\n# Verbatim Regulatory Quote\n> (c) risk profile of the client is communicated to the client after completion of risk assessment; and (d) the information provided by clients and their risk assessment is updated periodically",
+    "target_node_id": "bb4b2291-1a3b-4839-af4f-d652cdc0ec88",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Capital Market Intermediaries) Regulations, 2025 > Chapter IV - SPECIFIC OBLIGATIONS AND RESPONSIBILITES > Section 34 > Clause"
+  },
+  {
+    "query": "What is the requirement for an FME operating as a branch in an IFSC if it obtains approval from its home regulator for activities outside of those specified in the IFSCA regulations?",
+    "golden_answer": "### Executive Summary\nAn FME operating as a branch in an IFSC is required to notify the Authority within fifteen days if it receives approval from its home regulator to conduct activities outside of those specified in the IFSCA regulations.\n\n### Key Requirements / Conditions\n*   **Scope of Activities:** An FME is generally prohibited from undertaking business activities beyond those specified in the regulations without prior approval from the Authority.\n*   **Branch Notification:** If an FME operating as a branch in an IFSC obtains approval from its home regulator for additional activities, it must inform the Authority of this approval.\n*   **Timeline:** The notification to the Authority must be submitted within fifteen (15) days of receiving the home regulator's approval.\n\n# Verbatim Regulatory Quote\n> Provided that a FME operating in the form of branch in an IFSC shall inform the Authority within fifteen (15) days regarding any approval obtained from the home regulator for activities other than those specified under these regulations.",
+    "target_node_id": "1921305a-4b0f-40e7-993e-1529f35276fd",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter VIII - General Obligations and Responsibilities > Section 137 > Clause"
+  },
+  {
+    "query": "Under what circumstances and for what purpose can the Authority appoint an Inspecting Authority regarding a Fund Management Entity (FME)?",
+    "golden_answer": "### Executive Summary\nThe Authority may appoint an Inspecting Authority at any time, either on its own initiative or in response to a complaint, to conduct a comprehensive review of an FME's operations and records.\n\n### Key Requirements / Conditions\n*   **Triggering Events:** The Authority may initiate an inspection *suo motu* (on its own motion) or upon receiving information or a formal complaint.\n*   **Timing:** Inspections can be ordered at any time.\n*   **Scope of Inspection:** The Inspecting Authority is authorized to examine the books, accounts, records, documents, infrastructure, procedures, and systems of the FME.\n*   **Applicability:** The inspection may cover the FME itself or any other entity associated with the FME.\n\n# Verbatim Regulatory Quote\n> (1) The Authority may suo motu or upon receipt of information or complaint at any time appoint one or more persons as Inspecting Authority to undertake the inspection of the books, accounts, records, documents, infrastructure, procedures, systems of a FME or any other entity associated with the",
+    "target_node_id": "9d6324e3-16f8-4185-8e36-0447bc7699a3",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter IX - Inspection and Audit > Section 138 > (1)"
+  },
+  {
+    "query": "Who is responsible for valuing the assets of a scheme under the IFSCA (Fund Management) Regulations, 2025, and are there any exceptions to this requirement?",
+    "golden_answer": "### Executive Summary\nThe assets of a scheme must be valued by an independent service provider, such as a fund administrator, custodian, or registered valuer. An exception is provided for fund of funds schemes that invest in underlying schemes already valued by an independent entity.\n\n### Key Requirements / Conditions\n*   **Primary Responsibility:** The Fund Management Entity (FME) and fiduciaries are responsible for ensuring compliance with investment valuation norms.\n*   **Authorized Valuers:** Assets must be valued by an independent service provider, which includes:\n    *   A fund administrator.\n    *   A custodian.\n    *   A credit rating agency registered with the Authority.\n    *   A valuer registered with the Insolvency and Bankruptcy Board of India.\n    *   Any other person specified by the Authority.\n*   **Exception:** The requirement for an independent valuation does not apply to a fund of funds scheme that invests in schemes regulated by a financial sector regulator (in IFSC, India, or a foreign jurisdiction) where those underlying schemes are already valued by an independent entity.\n\n# Verbatim Regulatory Quote\n> \"In line with the investment valuation norms, the assets of the scheme shall be valued by an independent service provider, such as a fund administrator, a custodian, a credit rating agency registered with the Authority or a valuer registered with Insolvency and Bankruptcy Board of India or such other person as may be specified by the Authority: Provided that this requirement shall not apply in case of a fund of funds scheme that invests in scheme(s) regulated by a financial sector regulator, directly or through a manager, in IFSC, India or foreign jurisdiction(s), which are valued by any independent entity.\"",
+    "target_node_id": "cf46c484-0e58-4b60-823d-58a03de20e0e",
     "category": "Cross-Reference",
-    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > Fourth Schedule > Currency of operations -> Tech Financing Regulations, 2023 > PREAMBLE Block > Fourth Schedule > Currency of operations"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter III - Schemes for Fund Management > Section 26 -> IFSCA (Fund Management) Regulations, 2025 > Sixth Schedule"
   },
   {
-    "query": "What does it mean for an intermediary to furnish false or misleading information?",
-    "golden_answer": "An intermediary must provide accurate and truthful information to the Authority.",
-    "target_node_id": "93c474bd-d809-4900-b673-51ab35118aa5",
+    "query": "What specific operational requirements must an applicant commit to regarding the location of key activities and personnel under the IFSCA (Fund Management) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nApplicants must commit to conducting core operational activities from the IFSC and ensuring that all required Key Management Personnel are physically based within the IFSC.\n\n### Key Requirements / Conditions\n*   **Operational Location:** The applicant must ensure that the key activities of investment decision-making, portfolio management, and grievance handling are performed from the IFSC (First Schedule, Clause f).\n*   **Personnel Location:** The applicant must ensure that all Key Management Personnel, as mandated under regulation 7, are based out of the IFSC (First Schedule, Clause g).\n\n# Verbatim Regulatory Quote\n> f) We shall ensure that the key activities of Investment decision, portfolio management and grievance handling shall be undertaken from IFSC. g) We shall ensure that Key Management Personnel as required under regulation 7 shall be based out of IFSC.",
+    "target_node_id": "80ea95a9-b1fe-45dc-b3e8-2b1c8b2af885",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > First Schedule > Schedule"
+  },
+  {
+    "query": "Under the IFSCA (Banking) Regulations, 2020, what is the distinction between an 'IFSC Banking Company' (IBC) and an 'IFSC Banking Unit' (IBU)?",
+    "golden_answer": "### Executive Summary\nThe primary distinction between an IFSC Banking Company (IBC) and an IFSC Banking Unit (IBU) lies in their legal structure relative to the Parent Bank: an IBC operates as a subsidiary company, while an IBU operates as a branch.\n\n### Key Requirements / Conditions\n*   **IFSC Banking Company (IBC):** Defined as a Banking Unit that has been licensed or permitted by the Authority to conduct operations within an IFSC specifically as a subsidiary of its Parent Bank.\n*   **IFSC Banking Unit (IBU):** Defined as a Banking Unit that has been licensed or permitted by the Authority to conduct operations within an IFSC specifically as a branch of its Parent Bank.\n\n# Verbatim Regulatory Quote\n> (eb) “IFSC Banking Company” or “IBC” means a Banking Unit licensed or permitted by the Authority to operate in an IFSC as a subsidiary company of the Parent Bank. (ec) “IFSC Banking Unit” or “IBU” means a Banking Unit licensed or permitted by the Authority to operate in an IFSC as a branch of the Parent Bank.",
+    "target_node_id": "c385283d-bb08-4bcc-bf6a-59a9552590a7",
     "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > MISCELLANEOUS > Suspension, cancellation of registration or any other actions > (1) > CLAUSE Block > information"
+    "breadcrumb": "IFSCA (Banking) Regulations, 2020 > Chapter I - Preliminary > Section 2 > Act"
   },
   {
-    "query": "What is the effective date for the qualification and experience requirements for Capital Market Intermediaries (CMIs) appointments?",
-    "golden_answer": "after these regulations come into force",
-    "target_node_id": "fb9207f4-32a8-4386-bffd-d594bd856c28",
-    "category": "Amendment/Temporal",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > Preamble > (4)"
-  },
-  {
-    "query": "What happens to the rules for registering a capital market intermediary when it comes time to renew its registration?",
-    "golden_answer": "The provisions of these regulations, as applicable to the grant of registration shall also apply to an application for renewal of registration of a capital market intermediary, wherever applicable.",
-    "target_node_id": "e5b29354-eece-4cbb-ad67-1558467d72d8",
-    "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > CLAUSE Block"
-  },
-  {
-    "query": "What is considered an international financial services centre product or instrument under the International Financial Services Centres Authority Act, 2019?",
-    "golden_answer": "any other product or instrument that may be notified by the Central Government from time to time.",
-    "target_node_id": "0205f68c-853d-481e-8120-b56c0858f842",
-    "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > This Act > DEFINITION Block > (vi) -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > This Act > DEFINITION Block > (vi)"
-  },
-  {
-    "query": "What types of facility management services are prohibited for TechFin and Ancillary Service Providers under these regulations?",
-    "golden_answer": "building maintenance, security services, housekeeping services, civil, mechanical, electrical and plumbing maintenance services or any other related manpower outsourced services",
-    "target_node_id": "6790db7e-a42e-4894-9386-1efd4c90b284",
-    "category": "Compliance Check",
-    "breadcrumb": "Tech Financing Regulations, 2023 > Tech Financing Regulations, 2023 > PREAMBLE Block > List of services not permitted to be provided by TechFin and Ancillary Service Provider under these regulations: > CLAUSE Block"
-  },
-  {
-    "query": "What entity is responsible for exercising the powers under section (b) of the Reserve Bank of India Act, 1934?",
-    "golden_answer": "The International Financial Services Centres Authority established under sub-section (1) of section 4 of the International Financial Services Centres Authority Act, 2019.",
-    "target_node_id": "84ca8a45-8944-4fc2-ab93-552774ba4160",
-    "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > AMENDMENT TO THE RESERVE BANK OF INDIA ACT, 1934 (2 OF 1934) > Notwithstanding anything contained in any other law for the time being in force > (b)"
-  },
-  {
-    "query": "What are global mobility services (Immigration support services) for students and employees of foreign countries?",
-    "golden_answer": "Global mobility services (Immigration support services) for students and employees of foreign countries intending to study and work at IFSC respectively.",
-    "target_node_id": "9e4ffd21-6df3-48c4-b5da-b07043375512",
+    "query": "Under the International Financial Services Centres Authority Act, 2019, how is a 'financial institution' defined?",
+    "golden_answer": "### Executive Summary\nUnder the International Financial Services Centres Authority Act, 2019, a 'financial institution' is defined as a business unit operating within an International Financial Services Centre that provides financial services related to financial products.\n\n### Key Requirements / Conditions\n*   **Location:** The entity must be a unit set up specifically within an International Financial Services Centre.\n*   **Activity:** The entity must be actively engaged in rendering financial services.\n*   **Scope:** The services provided must be in respect of a financial product as defined under the Act.\n\n# Verbatim Regulatory Quote\n> 'financial institution' means a unit set up in an International Financial Services Centre and which is engaged in rendering financial services in respect of any financial product;",
+    "target_node_id": "702581a5-f2a7-4b49-a9a1-0b93f4a1e1c3",
     "category": "Glossary Definition",
-    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > Broking services for leasing activities > Global mobility services (Immigration support services) for students and employees of foreign countries intending to study and work at IFSC respectively; > Global mobility services (Immigration support services)"
+    "breadcrumb": "IFSCA Act - International Financial Services Centres Authority Act, 2019 > Chapter I - Preliminary > Section 3 > Authority"
   },
   {
-    "query": "What is the trigger for updating a capital market intermediary's business continuity plan?",
-    "golden_answer": "A material change to operations, structure, business, or location.",
-    "target_node_id": "9f680d8c-c6a6-489e-8b8e-6afcddc1bcf8",
-    "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Business Continuity Plan > (1) > (2) -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Business Continuity Plan"
-  },
-  {
-    "query": "Can a TechFin and Ancillary Service Provider set up an office in the IFSC or Overseas for a Resident?",
-    "golden_answer": "Yes, they may also provide services to a Resident for the limited purpose of setting up their office in the IFSC or Overseas.",
-    "target_node_id": "455db3fd-b8c0-4968-9610-9217f8b43786",
-    "category": "Compliance Check",
-    "breadcrumb": "Tech Financing Regulations, 2023 > Tech Financing Regulations, 2023 > PREAMBLE Block"
-  },
-  {
-    "query": "Can a suit be filed against the Central Government or the Authority or its Members, officers or other employees for something they did in bad faith?",
-    "golden_answer": "No",
-    "target_node_id": "bf16d2bc-b678-405a-8c60-61c51ed446c6",
+    "query": "What are the specific requirements for an individual to be designated as a compliance officer under the IFSCA (Fund Management) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nTo be designated as a compliance officer under the IFSCA (Fund Management) Regulations, 2025, an individual must be a senior officer who reports directly to the board of directors or the head of the organization.\n\n### Key Requirements / Conditions\n*   **Seniority:** The individual must hold a senior officer position within the organization.\n*   **Reporting Structure:** The officer must report directly to the board of directors, or to the head of the organization if no board exists.\n*   **Competency:** The individual must possess the capability to understand financial statements and the relevant legal and regulatory requirements.\n\n# Verbatim Regulatory Quote\n> “compliance officer” means any senior officer, designated so and reporting to the board of directors or head of the organization in case board is not there, who is capable of understanding the financial statements and the requirements for legal and",
+    "target_node_id": "c1bacf74-321b-4a69-9b0f-6ce409c7a711",
     "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter I - Preliminary > Section 2 > Clause"
   },
   {
-    "query": "What is the requirement for a capital market intermediary (CMI) to disclose its possible conflicts of interest?",
-    "golden_answer": "A CMI shall make adequate disclosure of its possible conflict of interest and duties.",
-    "target_node_id": "523d495e-e684-4cd1-a284-d3a2ba21052a",
+    "query": "Who is authorized to perform the valuation of assets for a scheme under the IFSCA (Fund Management) Regulations, 2025, and are there any exceptions to this requirement?",
+    "golden_answer": "### Executive Summary\nAssets of a scheme must be valued by an independent service provider, though an exception exists for certain fund of funds schemes that invest in underlying schemes already valued by an independent entity.\n\n### Key Requirements / Conditions\n*   **Authorized Valuers:** Valuation must be performed by an independent service provider, which includes:\n    *   A fund administrator.\n    *   A custodian.\n    *   A credit rating agency registered with the Authority.\n    *   A valuer registered with the Insolvency and Bankruptcy Board of India.\n    *   Any other person specified by the Authority.\n*   **Exception:** The requirement for an independent service provider does not apply to a fund of funds scheme if it invests in schemes regulated by a financial sector regulator (in IFSC, India, or a foreign jurisdiction) that are already valued by an independent entity.\n\n# Verbatim Regulatory Quote\n> \"In line with the investment valuation norms, the assets of the scheme shall be valued by an independent service provider, such as a fund administrator, a custodian, a credit rating agency registered with the Authority or a valuer registered with Insolvency and Bankruptcy Board of India or such other person as may be specified by the Authority: Provided that the above requirement shall not apply in case of a fund of funds scheme that invests in scheme(s) regulated by a financial sector regulator, directly or through a manager, in IFSC, India or foreign jurisdiction(s), which are valued by any independent entity.\"",
+    "target_node_id": "29a88931-88ad-42f2-a51e-7265c5129fa1",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > PART B: RESTRICTED SCHEMES (NON-RETAIL SCHEMES) > Section 38 -> IFSCA (Fund Management) Regulations, 2025 > Sixth Schedule"
+  },
+  {
+    "query": "What are the specific criteria used to determine if a person meets the 'fit and proper' requirement under the IFSCA (TechFin and Ancillary Services) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nTo meet the \"fit and proper\" requirement, an individual must demonstrate a consistent record of fairness and integrity in their professional and personal conduct.\n\n### Key Requirements / Conditions\nTo be deemed \"fit and proper,\" a person must satisfy the following criteria regarding their record of fairness and integrity:\n*   **Financial Integrity:** Maintaining sound financial standing and ethical management of financial affairs.\n*   **Reputation and Character:** Possessing a good professional and personal reputation.\n*   **Honesty:** Demonstrating truthfulness and transparency in all dealings.\n\n# Verbatim Regulatory Quote\n> 2) For the purpose of sub-regulation (1), a person shall be deemed to be a ‘fit and proper’ if,- (i). such a person has a record of fairness and integrity, including but not limited to- (a) financial integrity; (b) good reputation and character; and (c) honesty.",
+    "target_node_id": "ec5a6d61-f534-433c-bfdc-f22ed672cd9c",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (TechFin and Ancillary Services) Regulations, 2025 > Chapter III - FIT AND PROPER REQUIREMENTS AND CODE OF CONDUCT > Section 7 > Clause"
+  },
+  {
+    "query": "What is the minimum experience requirement for Key Managerial Personnel (KMP) as specified under sub-regulation (2) of the IFSCA (Fund Management) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nKey Managerial Personnel (KMP) specified under sub-regulation (2) must possess a minimum of 3 years of relevant experience in the securities market or financial products within an eligible institution.\n\n### Key Requirements / Conditions\n*   **Experience Threshold:** KMPs covered under sub-regulation (2) are required to have at least 3 years of experience.\n*   **Scope of Experience:** The experience must be gained through related activities in the securities market or financial products.\n*   **Institutional Requirement:** The experience must be acquired while working at an eligible institution.\n\n# Verbatim Regulatory Quote\n> Provided that for the KMP referred under sub-regulation (2), the experience mentioned in clause (b) shall be required for a minimum period of 3",
+    "target_node_id": "91033745-7b68-4603-9053-117124dfbdfe",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter II - REGISTRATION OF FUND MANAGEMENT ENTITY (FME) > Section 7 > Clause"
+  },
+  {
+    "query": "Which individuals and entities within a Fund Management Entity (FME) are required to adhere to the Code of Conduct outlined in the Third Schedule of the IFSCA (Fund Management) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nThe Code of Conduct outlined in the Third Schedule of the IFSCA (Fund Management) Regulations, 2025, applies to all Fund Management Entities (FMEs), their fiduciaries, and their Key Managerial Personnel (KMPs).\n\n### Key Requirements / Conditions\n*   **Fund Management Entities (FMEs):** All entities registered as an FME must adhere to the Code of Conduct.\n*   **Fiduciaries:** All individuals or entities acting in a fiduciary capacity for the FME are subject to these requirements.\n*   **Key Managerial Personnel (KMPs):** All KMPs are required to comply, which specifically includes:\n    *   The Principal Officer;\n    *   Fund Managers; and\n    *   The Designated Compliance Officer.\n\n# Verbatim Regulatory Quote\n> Every FME, fiduciaries, KMPs (including Principal officer, Fund Managers and Designated Compliance Officer) shall abide by the Code of Conduct specified in Third Schedule.",
+    "target_node_id": "dd60bbc5-3a2b-4ff2-9ca0-90fdd8499377",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter VIII - General Obligations and Responsibilities > Section 118 -> IFSCA (Fund Management) Regulations, 2025 > Third Schedule"
+  },
+  {
+    "query": "If a term is not explicitly defined in the IFSCA Act, 2019, how should its meaning be determined according to the Act?",
+    "golden_answer": "### Executive Summary\nIf a term is not explicitly defined within the IFSCA Act, 2019, it must be interpreted according to the definitions provided in the specific Acts listed in column (3) of the First Schedule of the Act.\n\n### Key Requirements / Conditions\n*   **Applicability:** This rule applies to any words or expressions used in the IFSCA Act that lack a specific definition within the Act itself.\n*   **Source of Definition:** The meaning must be derived from the corresponding Acts identified in column (3) of the First Schedule to the IFSCA Act.\n*   **Contextual Override:** These definitions apply unless the context of the Act requires a different interpretation.\n\n# Verbatim Regulatory Quote\n> Words and expressions used and not defined in this Act but defined in the Acts specified under column (3) of the First Schedule to this Act shall have the meanings respectively assigned to them in those Acts.",
+    "target_node_id": "702581a5-f2a7-4b49-a9a1-0b93f4a1e1c3",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA Act - International Financial Services Centres Authority Act, 2019 > Chapter I - Preliminary > Section 3 -> IFSCA Act - International Financial Services Centres Authority Act, 2019 > Schedules > First Schedule"
+  },
+  {
+    "query": "Under the IFSCA (Fund Management) Regulations, 2025, what specific legal or enforcement circumstances regarding economic offences would disqualify a person from registration?",
+    "golden_answer": "### Executive Summary\nA person is disqualified from registration under the IFSCA (Fund Management) Regulations, 2025, if they are involved in pending economic offence cases, have had charges framed against them by a court, or are subject to recovery proceedings.\n\n### Key Requirements / Conditions\n*   **Pending Enforcement Actions:** A person is disqualified if a case concerning economic offences has been filed against them by an Indian enforcement agency and remains pending.\n*   **Judicial Charges:** Disqualification applies if a court of law or an equivalent institution has formally framed charges against the person regarding economic offences.\n*   **Recovery Proceedings:** A person is disqualified if any recovery proceeding has been initiated against them.\n\n# Verbatim Regulatory Quote\n> has been filed against such person by any Indian enforcement agency in matters concerning economic offences and is pending; (iii) charges have been framed by a court of law or an equivalent institution in matters concerning economic offences; (iv) a recovery proceeding has been initiated against",
+    "target_node_id": "37ea88ce-c9f2-45f3-8c10-d116d88977ad",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter II - REGISTRATION OF FUND MANAGEMENT ENTITY (FME) > Section 9 > Clause"
+  },
+  {
+    "query": "Under the IFSCA (Fund Management) Regulations, 2025, what criteria must a person meet to be designated as a 'compliance officer' for a fund management entity?",
+    "golden_answer": "### Executive Summary\nA compliance officer is a senior officer designated by a fund management entity (FME) who is responsible for ensuring the entity adheres to all legal and regulatory requirements. They must report directly to the board of directors or the head of the organization and possess the ability to interpret financial statements.\n\n### Key Requirements / Conditions\n*   **Designation:** Must be a senior officer specifically designated for the role.\n*   **Reporting Structure:** Must report to the board of directors or, if no board exists, the head of the organization.\n*   **Competency:** Must be capable of understanding financial statements and the legal and regulatory requirements stipulated under the regulations.\n*   **Core Responsibilities:**\n    *   Ensuring compliance with internal policies and procedures.\n    *   Maintaining necessary records.\n    *   Monitoring adherence to rules regarding the preservation of unpublished price-sensitive information.\n    *   Monitoring trades and managing risk.\n    *   Implementing the codes specified in the regulations.\n*   **Supervision:** All duties must be performed under the overall supervision of the board of directors or the head of the organization.\n\n# Verbatim Regulatory Quote\n> “compliance officer” means any senior officer, designated so and reporting to the board of directors or head of the organization in case board is not there, who is capable of understanding the financial statements and the requirements for legal and regulatory compliance under these regulations, and who shall be responsible for compliance of policies, procedures, maintenance of records, monitoring adherence to the rules for the preservation of unpublished price sensitive information, monitoring of trades, risk management, and the implementation of the codes specified in these regulations, under the overall supervision of the board of directors of the FME or the head of an organization, as the case may be.",
+    "target_node_id": "e2cb51bd-0ce8-4dc1-8662-4e3f6ce5fff3",
     "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Code of Conduct - All capital market intermediaries > 8. A CMI shall maintain confidentiality with respect to the information about its clients... > CLAUSE Block > conflict of interest"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter I - Preliminary > Section 2 > fund management entity (FME)"
   },
   {
-    "query": "What constitutes a research entity under the Capital Market Intermediaries Regulations, 2025?",
-    "golden_answer": "A person registered as a research entity with the Authority who is responsible for publishing or providing research reports on securities.",
-    "target_node_id": "6f9a4bbd-bda6-4f67-a8f8-373584b3671a",
+    "query": "What conditions must an FME satisfy when creating a segregated portfolio for co-investments within a restricted scheme?",
+    "golden_answer": "### Executive Summary\nWhen a Fund Management Entity (FME) creates a segregated portfolio for co-investments within a restricted scheme, it must ensure fair treatment compared to the scheme's common portfolio and provide transparent disclosures to investors.\n\n### Key Requirements / Conditions\n*   **Fairness in Terms:** The FME must ensure that investments made by the segregated portfolio are not offered on terms more favorable than those provided to the common portfolio of the restricted scheme.\n*   **Disclosure Obligations:** The FME must include appropriate disclosures regarding the creation of the segregated portfolio within the scheme's placement memorandum.\n\n# Verbatim Regulatory Quote\n> (2) The FME shall ensure that:- (a) The investments by such segregated portfolios shall, in no circumstances, be on terms more favourable than those offered to the common portfolio of the restricted scheme; and (b) Appropriate disclosures have been made in the placement memorandum regarding creation of segregated portfolio.",
+    "target_node_id": "d5182baa-a73a-466b-a211-78dc5ceb77b6",
     "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > DEFINITION Block"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter II > Section 41"
   },
   {
-    "query": "What is required for an applicant to be considered as a FinTech Sandbox Entity under the IFSCA (FinTech) Framework for Limited Use Authorisation?",
-    "golden_answer": "An applicant must meet certain criteria, including being a fintech company or startup that has not yet reached profitability, and demonstrating potential for growth and innovation.",
-    "target_node_id": "a4f81c3b-0967-41f4-94a4-6bd825ef19fe",
+    "query": "What are the specific obligations of a Fund Management Entity (FME) regarding the valuation of investments in its schemes?",
+    "golden_answer": "### Executive Summary\nA Fund Management Entity (FME) is responsible for accurately valuing its scheme investments according to regulatory standards and must publish these valuations. The FME and its controlling shareholders are held financially liable for compensating investors or the scheme if inappropriate valuation leads to unfair treatment.\n\n### Key Requirements / Conditions\n*   **Valuation Methodology:** The FME must compute and perform valuations for all scheme investments strictly following the norms outlined in the Sixth Schedule of the regulations.\n*   **Transparency:** The FME is required to publish the valuations of its scheme investments.\n*   **Liability for Misconduct:** The FME and its controlling shareholders are legally responsible for compensating the scheme or affected investors if any unfair treatment occurs due to inappropriate valuation practices.\n\n# Verbatim Regulatory Quote\n> (f) The FME shall compute and carry out valuation of investments made by its scheme(s) in accordance with the investment valuation norms specified in Sixth Schedule, and shall publish the same. (g) The FME and its controlling shareholders shall be liable to compensate the affected investors and/or the scheme for any unfair treatment to any investor as a result of inappropriate valuation.",
+    "target_node_id": "655f98ec-a79a-4790-8f55-cf0cfd102032",
     "category": "Cross-Reference",
-    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > Profile of the Applicant -> IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > Profile of the Applicant"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Third Schedule > Schedule -> IFSCA (Fund Management) Regulations, 2025 > Sixth Schedule"
   },
   {
-    "query": "What is the timeframe within which an application under sub-regulation (2) must be processed after receiving it?",
-    "golden_answer": "The application made under sub-regulation (2), complete in all respects, shall be processed within thirty (30) days from the date of receipt of the application.",
-    "target_node_id": "2c0ec945-4e19-4faf-8450-82efd0929375",
-    "category": "Compliance Check",
-    "breadcrumb": "Tech Financing Regulations, 2023 > Tech Financing Regulations, 2023 > PREAMBLE Block > sub-regulation (1) > SUBCLAUSE Block"
-  },
-  {
-    "query": "Can the Authority form committees of its members and delegate power to them?",
-    "golden_answer": "Yes, the Authority may form committees of its members and delegate to them the powers and functions of the Authority.",
-    "target_node_id": "10c12309-e097-4f46-966a-bb69d79f5132",
-    "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > CLAUSE Block"
-  },
-  {
-    "query": "What is the purpose of an IFSCA FinTech Innovation Sandbox?",
-    "golden_answer": "a testing environment where a FinTech Sandbox Entity can develop and/or test its innovative idea(s)/product(s)/solution(s) in isolation from the live market",
-    "target_node_id": "73afaf0d-509c-44e9-b9f4-b00d7a6181be",
+    "query": "Under the IFSCA (Fund Management) Regulations, 2025, how is a 'family investment fund' defined?",
+    "golden_answer": "### Executive Summary\nA 'family investment fund' is defined as a fund that pools capital exclusively from a single family through one or more investment vehicles and is established in accordance with the IFSCA (Fund Management) Regulations, 2025.\n\n### Key Requirements / Conditions\n*   **Source of Capital:** The fund must pool money exclusively from a single family.\n*   **Investment Structure:** The fund may utilize one or more investment vehicles to pool this capital.\n*   **Regulatory Compliance:** The fund must be set up in accordance with the provisions of the IFSCA (Fund Management) Regulations, 2025.\n\n# Verbatim Regulatory Quote\n> “family investment fund” means a fund, pooling money only from a single family under one or more investment vehicles and has been set up in terms of these regulations;",
+    "target_node_id": "e2cb51bd-0ce8-4dc1-8662-4e3f6ce5fff3",
     "category": "Glossary Definition",
-    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > PREAMBLE Block > DEFINITION Block > FinTech Sandbox Entity"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter I - Preliminary > Section 2 > family investment fund"
   },
   {
-    "query": "What is the process for disputing a decision made by a capital market intermediary in the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025?",
-    "golden_answer": "A person who is dissatisfied with any decision of a registered capital market intermediary may make a written complaint to the Authority.",
-    "target_node_id": "e639e83d-6b97-484d-a5f4-f5878d6e0ed8",
+    "query": "What are the specific purposes for which the Authority may appoint an inspecting authority to conduct an inspection of a Capital Market Intermediary (CMI)?",
+    "golden_answer": "### Executive Summary\nThe Authority may appoint an inspecting authority to conduct inspections of a Capital Market Intermediary (CMI) to ensure regulatory compliance, verify internal controls, investigate complaints, and protect the interests of investors and the capital market.\n\n### Key Requirements / Conditions\nThe Authority may appoint an inspecting authority for the following purposes:\n* **Record Keeping:** To ensure that books of account, records, and documents are maintained as required by the regulations.\n* **Regulatory Compliance:** To ensure that the provisions of the Act, regulations, and circulars are being followed.\n* **Internal Controls:** To ascertain whether the CMI has established and is following adequate internal control systems, procedures, and safeguards.\n* **Eligibility Verification:** To determine if any circumstances exist that would render the intermediary unfit or ineligible.\n* **Complaint Investigation:** To inquire into complaints received from investors, clients, other market participants, or any other person regarding the intermediary's activities.\n* **Suo Motu Inquiries:** To conduct inquiries on its own motion into matters deemed necessary in the interest of investors or the capital market in an IFSC.\n\n# Verbatim Regulatory Quote\n> (2) The purposes referred to in sub-regulation (1) may include, - (a) to ensure that the books of account, records and documents are being maintained in the manner as required under these regulations; (b) to ensure that the provisions of the Act, the regulations and circulars made thereunder, are complied with; (c) to ascertain whether adequate internal control systems, procedures and safeguards have been established or are being followed by the CMI to fulfil its obligations under these regulations; (d) to ascertain whether any circumstances exist which would render the intermediary unfit or ineligible; (e) to inquire into the complaints received from the investors, clients, other market participants, or any other person on any matter having a bearing on the activities of the intermediary; and (f) to inquire suo motu into such matters as may be deemed fit in the interest of investors or the capital market in an IFSC.",
+    "target_node_id": "a00304f0-b0d4-4594-80a2-1a8e8f34a84e",
     "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Dispute Resolution -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Dispute Resolution"
+    "breadcrumb": "IFSCA (Capital Market Intermediaries) Regulations, 2025 > Chapter V - Inspection > Section 37 -> IFSCA (Capital Market Intermediaries) Regulations, 2025 > Chapter V - Inspection > Section 37 > (2)"
   },
   {
-    "query": "What kind of infrastructure must a registered distributor maintain to support its clients and regulated financial entities?",
-    "golden_answer": "necessary infrastructure",
-    "target_node_id": "09d46994-c5e6-44b0-841e-abc88b2c31f1",
+    "query": "What types of ancillary services are included under the scope of the IFSCA (TechFin and Ancillary Services) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nThe IFSCA (TechFin and Ancillary Services) Regulations, 2025, cover a broad range of operational support services, including facility maintenance, logistics, and construction-related activities.\n\n### Key Requirements / Conditions\n*   **Facility Maintenance:** Includes housekeeping, as well as civil, mechanical, electrical, and plumbing maintenance services.\n*   **Outsourced Manpower:** Includes any related manpower services that are outsourced.\n*   **Logistics and Infrastructure:** Includes transport and logistics services, construction-related services, and the management of physical assets.\n*   **Discretionary Services:** Includes any other services that the Authority deems appropriate.\n\n# Verbatim Regulatory Quote\n> housekeeping services, civil, mechanical, electrical and plumbing maintenance services or any other related manpower outsourced services; (iv) Transport and logistic services, construction related services, and management of physical assets; and (v) Any other services which, in the opinion of the",
+    "target_node_id": "3ae90422-a6a1-4101-aa5f-f967fedb5cad",
     "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Distributors > 14."
+    "breadcrumb": "IFSCA (TechFin and Ancillary Services) Regulations, 2025 > The Third Schedule > Schedule > Clause"
   },
   {
-    "query": "What happens to rights and liabilities acquired under the repealed Circulars after they are officially repealed?",
-    "golden_answer": "Any right, privilege, obligation or liability acquired, accrued or incurred under the repealed Circulars shall remain unaffected as if the repealed Circulars have never been repealed.",
-    "target_node_id": "45bc6fdd-3a4d-4e0f-a61e-b0be9d15e4b9",
-    "category": "Compliance Check",
-    "breadcrumb": "Tech Financing Regulations, 2023 > Tech Financing Regulations, 2023 > PREAMBLE Block"
+    "query": "Who is authorized to value the assets of a scheme under the IFSCA (Fund Management) Regulations, 2025, and are there any exceptions to this requirement?",
+    "golden_answer": "### Executive Summary\nAssets of a scheme must generally be valued by an independent service provider registered with the Authority or a registered valuer, with an exception provided for certain fund of funds schemes.\n\n### Key Requirements / Conditions\n*   **Authorized Valuers:** Assets must be valued by one of the following:\n    *   An independent service provider registered with the Authority (e.g., a fund administrator, custodian, or credit rating agency).\n    *   A valuer registered with the Insolvency and Bankruptcy Board of India.\n    *   Any other person specifically designated by the Authority.\n*   **Exception:** The requirement for independent valuation does not apply to fund of funds schemes that invest in underlying schemes regulated by a financial sector regulator (in IFSC, India, or foreign jurisdictions), provided those underlying schemes are already valued by an independent entity.\n\n# Verbatim Regulatory Quote\n> In line with the investment valuation norms, the assets of the scheme shall be valued by an independent service provider such as a fund administrator, a custodian or a credit rating agency, registered with the Authority, or a valuer registered with Insolvency and Bankruptcy Board of India or such other person as may be specified by the Authority: Provided that the above requirement shall not apply in case of a fund of funds scheme that invest in scheme(s), regulated by a financial sector regulator, directly or through a manager, in IFSC or India or foreign jurisdiction(s), which are valued by any independent entity.",
+    "target_node_id": "3261df3a-24ee-48e9-980e-25a6508e095d",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > PART C: RETAIL SCHEMES > Section 50 -> IFSCA (Fund Management) Regulations, 2025 > Sixth Schedule"
   },
   {
-    "query": "What is the minimum net worth requirement for an entity seeking registration as a capital market intermediary?",
-    "golden_answer": "An entity must comply with the net worth requirements specified in Schedule I of these regulations, which shall be maintained at all times.",
-    "target_node_id": "5492ca7a-1ed4-4792-b00f-9242c3372434",
+    "query": "What criteria must a Venture Capital scheme follow when making investments under sub-regulation (1)?",
+    "golden_answer": "### Executive Summary\nInvestments made by a Venture Capital scheme under sub-regulation (1) must align with the scheme's stated objectives, follow the disclosures in its placement memorandum, and comply with the IFSCA (Fund Management) Regulations, 2025.\n\n### Key Requirements / Conditions\n* **Regulatory Compliance:** All investments must adhere to the provisions set forth in the IFSCA (Fund Management) Regulations, 2025.\n* **Investment Alignment:** Investments must be consistent with the specific investment objective defined for the Venture Capital scheme.\n* **Disclosure Adherence:** Investments must be made in accordance with the disclosures provided in the scheme's placement memorandum.\n\n# Verbatim Regulatory Quote\n> (2) Any investment made under sub-regulation (1) shall be in accordance with the provisions of these regulations, investment objective of the Venture Capital scheme and disclosures made in the placement memorandum.",
+    "target_node_id": "9be3f87c-0ddb-41df-9ef3-9655a06f7f60",
     "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Registration with the Authority > Net worth requirements > (1)"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter III - Schemes for Fund Management > Section 22 > (2)"
   },
   {
-    "query": "What does a Group entity include?",
-    "golden_answer": "Any holding company, subsidiaries, branches or any other entity, in whatever legal form, through which the Parent bank undertakes its operations or permitted activities.",
-    "target_node_id": "a0d50cd7-a0da-461a-a5b7-caf1097cccb1",
+    "query": "Is the inspecting authority required to provide prior notice to a Capital Market Intermediary (CMI) before conducting an inspection, and are there any exceptions to this requirement?",
+    "golden_answer": "### Executive Summary\nThe inspecting authority is generally required to provide prior notice to a Capital Market Intermediary (CMI) before conducting an inspection. However, this requirement may be waived if the authority determines that proceeding without notice is in the interest of investors, provided the reasons are documented in writing.\n\n### Key Requirements / Conditions\n*   **General Rule:** The inspecting authority must issue a notice to the CMI before commencing any inspection of its books, accounts, records, or systems (IFSCA (Capital Market Intermediaries) Regulations, 2025, Section 37(3)).\n*   **Exception:** The authority may dispense with the notice requirement if it is satisfied that doing so is in the interest of investors (IFSCA (Capital Market Intermediaries) Regulations, 2025, Section 37(3)).\n*   **Documentation:** If the notice requirement is waived, the inspecting authority is mandated to record the reasons for this decision in writing (IFSCA (Capital Market Intermediaries) Regulations, 2025, Section 37(3)).\n\n# Verbatim Regulatory Quote\n> Before undertaking an inspection under sub-regulation (1), the inspecting authority shall give a notice to the CMI: Provided that where the inspecting authority is satisfied that in the interest of the investors no such notice should be given, it may, for reasons to be recorded in writing, dispense with such notice.",
+    "target_node_id": "a00304f0-b0d4-4594-80a2-1a8e8f34a84e",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (Capital Market Intermediaries) Regulations, 2025 > Chapter V - Inspection > Section 37 -> IFSCA (Capital Market Intermediaries) Regulations, 2025 > Chapter V - Inspection > Section 37 > (3)"
+  },
+  {
+    "query": "What criteria must a sponsor meet to be considered as having a 'sound track record' under the IFSCA (Fund Management) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nTo be considered as having a \"sound track record,\" a sponsor must demonstrate at least five years of relevant experience, with additional project completion requirements if the sponsor is a developer.\n\n### Key Requirements / Conditions\n*   **General Experience:** The sponsor must possess a minimum of five years of relevant experience.\n*   **Developer Requirement:** If the sponsor operates as a developer, they must have successfully completed at least two projects.\n\n# Verbatim Regulatory Quote\n> Explanation.- For the purpose of this sub-regulation, ‘sound track record’ means relevant experience of at least five (5) years, and where the sponsor is a developer, at least two projects of the sponsor have been completed.",
+    "target_node_id": "7bfc53bb-78a2-4df5-9448-10dcb5666ffb",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > PART B: INVESTMENT TRUST > Section 86 > Clause"
+  },
+  {
+    "query": "What is the deadline for completing the half-yearly valuation report for an Investment Trust, and what period must it cover?",
+    "golden_answer": "### Executive Summary\nThe half-yearly valuation report for an Investment Trust must be completed within one month of the period ending on September 30, covering all key changes from the preceding six months.\n\n### Key Requirements / Conditions\n*   **Reporting Period:** The valuation must cover the six-month period ending on September 30.\n*   **Scope:** The report must incorporate all key changes that occurred during the preceding six months.\n*   **Deadline:** The valuation report must be prepared no later than one month after the end of the half-year period.\n\n# Verbatim Regulatory Quote\n> (2) A half yearly valuation of the assets of Investment Trust shall be conducted by the valuer for the half-year ending on September 30 for incorporating any key changes in the previous six (6) months and such half yearly valuation report shall be prepared within one (1) month from the date of end",
+    "target_node_id": "10c2f5b7-3303-42cf-812b-13641cd44a08",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > PART B: INVESTMENT TRUST > Section 102 > (2)"
+  },
+  {
+    "query": "Under the IFSCA (Fund Management) Regulations, 2025, what are the grounds upon which the Authority may take action, such as suspension or cancellation of registration, against a Fund Management Entity (FME)?",
+    "golden_answer": "### Executive Summary\nThe IFSCA may suspend or cancel an FME's registration if the entity fails to meet regulatory obligations, provides false information, or engages in conduct that harms investor interests or obstructs the Authority's oversight.\n\n### Key Requirements / Conditions\nThe Authority may take action against an FME under the following circumstances:\n* **Failure to comply:** Neglecting to exercise due diligence or failing to adhere to the conditions of the registration certificate.\n* **Regulatory contravention:** Violating any provisions of the Act, rules, regulations, circulars, guidelines, or instructions issued by the Authority.\n* **Information failures:** Failing to provide requested information regarding FME activities or submitting information that is false or misleading in any material particular.\n* **Reporting lapses:** Failing to submit required periodic returns or reports.\n* **Lack of cooperation:** Obstructing or failing to cooperate in any enquiry, inspection, or investigation conducted by the Authority.\n* **Investor protection:** Failing to resolve investor complaints or provide satisfactory responses to the Authority.\n* **Discretionary grounds:** Committing any other act or omission that the Authority deems warrants action or determines is contrary to the interests of investors.\n\n# Verbatim Regulatory Quote\n> 143. The Authority may take such action as deemed fit, including suspension or cancellation of registration, against a FME if it:- (a) fails to exercise due diligence or comply with any conditions subject to which a certificate of registration has been granted; (b) contravenes any of the provisions of the Act or rules or regulations or circulars or guidelines or directions or instructions issued thereunder; (c) fails to furnish any information relating to its activity as a FME as directed by the Authority; (d) furnishes to the Authority information which is false or misleading in any material particular; (e) does not submit periodic returns or reports as directed by the Authority; (f) does not co-operate in any enquiry, inspection or investigation conducted by the Authority; (g) fails to resolve the complaints of investors or fails to give a satisfactory reply to the Authority; or (h) commits any other act/omission which in the opinion of the Authority warrants such action or which is against the interest of the investors.",
+    "target_node_id": "b2e4d986-df07-4bba-8486-b2689ec549ec",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter X - Liability for action in case of default > Section 143 -> IFSCA (Fund Management) Regulations, 2025 > Chapter X - Liability for action in case of default"
+  },
+  {
+    "query": "Under the IFSCA (Fund Management) Regulations, 2025, what specific criteria must a pre-COD infrastructure project meet to be considered an 'eligible infrastructure project'?",
+    "golden_answer": "### Executive Summary\nTo qualify as an \"eligible infrastructure project,\" a pre-COD project must not have reached its commercial operation date and must demonstrate significant progress through either physical construction completion or capital expenditure.\n\n### Key Requirements / Conditions\n*   **Commercial Operation Status:** The project must not have achieved its commercial operation date (COD) as defined in its relevant project agreements, such as concession or power purchase agreements (IFSCA (Fund Management) Regulations, 2025, Section 83(k)(i)).\n*   **Construction Progress:** The project must have completed at least 50% of its construction, as verified by an independent engineer (IFSCA (Fund Management) Regulations, 2025, Section 83(k)(ii)(a)).\n*   **Capital Expenditure:** Alternatively, the project must have expended at least 50% of the total capital cost specified in the financial package of the relevant project agreement (IFSCA (Fund Management) Regulations, 2025, Section 83(k)(ii)(b)).\n\n# Verbatim Regulatory Quote\n> (k) “pre-COD project” means an infrastructure project: i. which has not achieved commercial operation date as defined under the relevant project agreements including the concession agreement, power purchase agreement or any other agreement of a similar nature entered into in relation to the operation of a project or any agreement entered into with the lenders; and ii. which has,– a. achieved completion of at least fifty per cent. (50%) of the construction of the infrastructure project as certified by an independent engineer of such project; or b. expended not less than fifty per cent. (50%) of the total capital cost set forth in the financial package of the relevant project agreement;",
+    "target_node_id": "19fea583-e9e4-4ae6-a527-52f79685f113",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > PART B: INVESTMENT TRUST > Section 83 -> IFSCA (Fund Management) Regulations, 2025 > FOURTH SCHEDULE"
+  },
+  {
+    "query": "If a capital market intermediary operates under multiple categories, how should it determine its minimum net worth requirement?",
+    "golden_answer": "### Executive Summary\nIf a capital market intermediary operates under multiple registration categories, it must maintain the highest minimum net worth requirement applicable to those categories. This rule applies unless the Authority provides specific instructions to the contrary.\n\n### Key Requirements / Conditions\n*   **Multiple Categories:** Entities operating in more than one category under the regulations must adhere to the highest applicable net worth threshold.\n*   **Authority Discretion:** The Authority reserves the right to specify alternative requirements, overriding the general rule of maintaining the highest threshold.\n*   **Independence of Requirements:** These net worth requirements are separate from and in addition to any requirements mandated for activities conducted outside the IFSC or under other regulatory frameworks.\n\n# Verbatim Regulatory Quote\n> Where an entity intends to operate as a capital market intermediary in multiple categories covered under these regulations, it shall maintain the highest of the applicable minimum net worth requirements, unless otherwise specified by the Authority.",
+    "target_node_id": "4479dcaa-5466-4eea-9a5f-ca5ef59050e2",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (Capital Market Intermediaries) Regulations, 2025 > Chapter II - Registration of Capital Market Intermediaries > Section 7 -> IFSCA (Capital Market Intermediaries) Regulations, 2025 > Schedule I"
+  },
+  {
+    "query": "What are the requirements for a Fund Management Entity (FME) if it intends to change its registration category?",
+    "golden_answer": "### Executive Summary\nA Fund Management Entity (FME) is prohibited from changing its registration category unless it first obtains formal approval from the Authority.\n\n### Key Requirements / Conditions\n*   **Prior Approval:** An FME must secure prior authorization from the Authority before transitioning to a different registration category.\n*   **Regulatory Compliance:** This requirement applies to all FMEs that have already been granted a certificate of registration under a specific category.\n\n# Verbatim Regulatory Quote\n> The FME which has been granted certificate of registration under a particular category cannot change its category, except with the prior approval of the Authority.",
+    "target_node_id": "72f8dca7-d3ed-44ab-8849-3a638c0468d4",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter II - REGISTRATION OF FUND MANAGEMENT ENTITY (FME) > Section 13"
+  },
+  {
+    "query": "Under the IFSCA (Fund Management) Regulations, 2025, how is a 'trust' defined?",
+    "golden_answer": "### Executive Summary\nUnder the IFSCA (Fund Management) Regulations, 2025, a 'trust' is defined as a legal entity established either under the Indian Trusts Act, 1882, or through specific legislation enacted by the Parliament or a State Legislature.\n\n### Key Requirements / Conditions\n*   **Legal Basis:** A trust must be constituted under the Indian Trusts Act, 1882.\n*   **Statutory Alternative:** A trust may also be established under any applicable Act of Parliament or State Legislation.\n\n# Verbatim Regulatory Quote\n> “trust” means a trust established under the Indian Trusts Act, 1882, or under an Act of Parliament or State Legislation.",
+    "target_node_id": "e2cb51bd-0ce8-4dc1-8662-4e3f6ce5fff3",
     "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > DEFINITION Block > IFSC Banking Unit"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter I - Preliminary > Section 2 > trust"
   },
   {
-    "query": "How long does the Authority take to process an application for relaxation of strict enforcement of regulations?",
-    "golden_answer": "The Authority shall process such application within thirty days of the date of receipt of the application complete in all respects.",
-    "target_node_id": "98fe6301-b52f-4785-ac24-efd7b625e862",
-    "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Power to relax strict enforcement of the regulations > (1) > CLAUSE Block"
-  },
-  {
-    "query": "What happens to an individual if they are restrained, prohibited or barred from accessing or dealing in financial products or services due to regulatory authority action?",
-    "golden_answer": "An individual is not allowed to access or deal in financial products or services.",
-    "target_node_id": "c6568b01-d944-4aed-9b82-c85635148249",
-    "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Fit and proper requirements > (1) > CLAUSE Block -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > (vii)"
-  },
-  {
-    "query": "What does it mean when words or expressions used in this Framework are defined in applicable Laws?",
-    "golden_answer": "Words and expressions used and not defined in this Framework but defined in the applicable Laws, and in particular, under the Act or any rules or regulations made thereunder shall have the same meanings respectively assigned to them in those Laws.",
-    "target_node_id": "b91dbcf9-a272-47d9-8707-8438bf244de4",
-    "category": "Compliance Check",
-    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > PREAMBLE Block > DEFINITION Block > CLAUSE Block > DEFINITION Block"
-  },
-  {
-    "query": "What is the timeframe for notifying the Authority if a TechFin or Ancillary Service Provider's promoter or significant beneficial owner has a home jurisdiction identified as a High-Risk Jurisdiction by FATF?",
-    "golden_answer": "Within ten (10) business days from the date of publication by FATF.",
-    "target_node_id": "dc3c09ec-791a-4c8a-a090-8158bbfc8b54",
-    "category": "Direct Regulation",
-    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > Code of Conduct for the TechFin and Ancillary Service Provider > CLAUSE Block"
-  },
-  {
-    "query": "What is considered a regulated financial entity under the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025?",
-    "golden_answer": "An issuer or service provider set up in India, an IFSC or any Foreign Jurisdiction that is registered, authorised, licensed or regulated by its home jurisdiction for carrying out activities related to asset management, funds management, investment advisory, portfolio management or any other similar activity.",
-    "target_node_id": "53dc0ea7-39b9-44b9-910b-baf905cf3488",
+    "query": "Under the IFSCA (Capital Market Intermediaries) Regulations, 2025, what are the specific criteria and responsibilities required for an individual to be designated as a compliance officer?",
+    "golden_answer": "### Executive Summary\nA compliance officer is a designated senior official who reports directly to the board of directors or governing body and is responsible for overseeing all regulatory and legal adherence for a capital market intermediary. They must possess the professional competence to interpret financial statements and ensure the firm follows all applicable laws, risk management protocols, and codes of conduct.\n\n### Key Requirements / Conditions\n*   **Seniority and Reporting:** The individual must be a senior officer who reports directly to the board of directors or the governing body of the entity.\n*   **Professional Competence:** The officer must be capable of understanding financial statements and the specific legal and regulatory requirements applicable to the capital market intermediary's activities within the IFSC.\n*   **Operational Responsibilities:** The officer is responsible for ensuring compliance with:\n    *   Internal policies and procedures.\n    *   Maintenance of records.\n    *   Risk management frameworks.\n    *   Implementation of the applicable code of conduct as specified in the regulations.\n\n# Verbatim Regulatory Quote\n> \"compliance officer\" means any senior officer, designated so and reporting to the board of directors or the governing body, as the case may be, who is capable of understanding the financial statements and the requirements for legal and regulatory compliances under these regulations and all applicable legal and regulatory requirements for the activities of the capital market intermediary in the IFSC, including compliance of policies, procedures, maintenance of records, risk management, and implementation of the applicable code of conduct specified in these regulations;",
+    "target_node_id": "ffd6f767-0c05-4657-9e7c-0dff21e994a3",
     "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > DEFINITION Block > regulated financial entity"
+    "breadcrumb": "IFSCA (Capital Market Intermediaries) Regulations, 2025 > Chapter I - PRELIMINARY > Section 3 > IFSCA"
   },
   {
-    "query": "What is the effective date of the International Financial Services Centres Authority (Banking) Regulations, 2020?",
-    "golden_answer": "The International Financial Services Centres Authority (Banking) Regulations, 2020 came into effect on November 20, 2020.",
-    "target_node_id": "0ba525fd-d03a-4b14-a104-fcca6576806a",
-    "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block"
-  },
-  {
-    "query": "What is the source section that defines the list of permitted TechFin services?",
-    "golden_answer": "Source Section: [refer regulation 3(1)(xiii)]",
-    "target_node_id": "725d540b-c769-4cd0-9491-c45e1176c7c2",
+    "query": "What are the net worth requirements for a Fund Management Entity (FME) operating as a branch in the IFSC, and can these be maintained by the parent entity?",
+    "golden_answer": "### Executive Summary\nA Fund Management Entity (FME) operating as a branch in the IFSC must maintain the minimum net worth requirements specified in the regulations, which may be held at the parent entity level. The parent entity is responsible for ensuring that sufficient funds remain available to support the branch's daily operations.\n\n### Key Requirements / Conditions\n*   **Compliance:** The branch must comply with the minimum net worth requirements stipulated in the Second Schedule of the regulations or as otherwise directed by the Authority.\n*   **Parent Entity Maintenance:** These requirements may be maintained by the parent entity, provided the parent ensures adequate liquidity for the branch's day-to-day operations.\n*   **Exclusivity:** The required net worth must be maintained separately from, and in addition to, any net worth requirements applicable to the entity's other activities conducted inside or outside the IFSC.\n\n# Verbatim Regulatory Quote\n> An entity operating as a branch shall at all times comply with the minimum net worth requirements specified in these regulations for its activities in IFSC which may be maintained at the level of the parent entity, and the parent entity shall ensure that adequate funds are available for the day-to-day operations of the branch.",
+    "target_node_id": "13f8a8d0-3e23-490a-8b26-5c196fbc8159",
     "category": "Cross-Reference",
-    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > SECOND > [refer regulation 3(1)(xiii)] -> Tech Financing Regulations, 2023 > PREAMBLE Block > THE FIRST SCHEDULE > [refer regulation 3(1)(xiii)]"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter II - REGISTRATION OF FUND MANAGEMENT ENTITY (FME) > Section 8 -> IFSCA (Fund Management) Regulations, 2025 > Second Schedule"
   },
   {
-    "query": "What is the purpose of Single Window IT Systems (SWIT) in the context of the IFSCA Limited Use Authorisation as FinTech Sandbox Entity?",
-    "golden_answer": "to facilitate the processing of applications submitted by Applicants under this Framework",
-    "target_node_id": "5c99bacd-45fb-41f7-a065-73ac40c57de6",
-    "category": "Compliance Check",
-    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > PREAMBLE Block > DEFINITION Block > DEFINITION Block"
+    "query": "Under the IFSCA (TechFin and Ancillary Services) Regulations, 2025, what criteria must be met for an entity to be considered a 'Group Entity'?",
+    "golden_answer": "### Executive Summary\nUnder the IFSCA (TechFin and Ancillary Services) Regulations, 2025, an entity is classified as a 'Group Entity' if it maintains specific structural, financial, or operational relationships with another entity. These relationships range from formal corporate associations and ownership stakes to shared branding or participation in a collaborative network.\n\n### Key Requirements / Conditions\nAn entity is considered a 'Group Entity' if it shares any of the following relationships with another entity:\n* **Parent-Subsidiary:** As defined under Ind-AS 110 or AS 21.\n* **Joint Venture:** As defined under Ind-AS 28 or AS 27.\n* **Associate:** As defined under Ind-AS 28 or AS 23.\n* **Common Brand Name:** Sharing a common brand identity.\n* **Financial Investment:** Holding an investment in equity shares or a capital contribution of 20 percent or more.\n* **Network Participation:** Being part of a larger structure of firms that pool resources, share uniform policies, technology, and collaterals, and operate as a single unit with a lead firm acting on behalf of the members.\n\n# Verbatim Regulatory Quote\n> “Group Entities” includes an arrangement involving two or more entities related to each other through any of the following relationships: (a) parent- subsidiary (as per Ind-AS 110/AS 21); (b) joint venture (as per Ind-AS 28/AS 27); (c) associate (as per Ind-AS 28/AS 23); (d) common brand name; (e) investment in equity shares/capital contribution of 20 per cent and above; or (f) part of a network; Explanation .- For the purpose of this clause, ‘network’ shall mean a larger structure of a group of firms that have come together for mutual benefits by pooling resources, showcase their combined strength and have uniform policies, technology and collaterals, and showcase themselves as one big unit, with one lead firm acting on behalf of the member-firms.",
+    "target_node_id": "ed12cd55-6683-40d6-bc95-a418b1f6b0af",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (TechFin and Ancillary Services) Regulations, 2025 > Chapter I - Preliminary > Section 3 -> IFSCA (TechFin and Ancillary Services) Regulations, 2025 > The Second Schedule"
   },
   {
-    "query": "What happens to an application made to the Authority under the repealed regulations that is already being considered?",
-    "golden_answer": "It shall be deemed to have been made under the corresponding provisions of these regulations.",
-    "target_node_id": "353bfb7c-6d75-448e-aac9-9bf6503c3dd2",
+    "query": "What are the requirements for submitting an application to seek a relaxation under the IFSCA (TechFin and Ancillary Services) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nTo request a relaxation under the IFSCA (TechFin and Ancillary Services) Regulations, 2025, an applicant must submit a formal application to the Authority detailing the grounds for the request and pay the required non-refundable fee.\n\n### Key Requirements / Conditions\n*   **Application Content:** The submission must include comprehensive details regarding the request and the specific grounds upon which the relaxation is sought.\n*   **Submission Process:** The application must be filed directly with the Authority.\n*   **Fee Requirement:** Applicants are required to pay a non-refundable fee, the amount of which is determined and specified by the Authority.\n\n# Verbatim Regulatory Quote\n> 2) For seeking relaxation under sub-regulation (1), an application giving details and the grounds on which such relaxation has been sought, shall be filed with the Authority along with a non-refundable fee as may be specified by the Authority",
+    "target_node_id": "4510df6c-c0c7-41d1-9655-965340cff899",
     "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > null > CLAUSE Block"
+    "breadcrumb": "IFSCA (TechFin and Ancillary Services) Regulations, 2025 > Chapter VI - Miscellaneous > Section 13 > Clause"
   },
   {
-    "query": "What is considered a non-resident under the Foreign Exchange Management Act, 1999?",
-    "golden_answer": "A person resident outside India as defined under the Foreign Exchange Management Act, 1999, including financial institutions in an International Financial Service Centre.",
-    "target_node_id": "ac17648e-5f0c-4241-8e64-2d54bf709c65",
+    "query": "What are the obligations of a TechFin and Ancillary Service Provider regarding the Code of Conduct under the IFSCA (TechFin and Ancillary Services) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nTechFin and Ancillary Service Providers are legally mandated to adhere to the specific standards of behavior and professional ethics outlined in the Fourth Schedule of the regulations.\n\n### Key Requirements / Conditions\n*   **Mandatory Compliance:** All entities registered as a TechFin or Ancillary Service Provider must comply with the Code of Conduct.\n*   **Regulatory Reference:** The specific standards and obligations are detailed in the Fourth Schedule of the IFSCA (TechFin and Ancillary Services) Regulations, 2025.\n\n# Verbatim Regulatory Quote\n> 8. Code of Conduct The TechFin and Ancillary Service Provider shall abide by the Code of Conduct specified in the Fourth Schedule.",
+    "target_node_id": "34a030f9-a23e-4527-b0e4-2f91859bcd70",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (TechFin and Ancillary Services) Regulations, 2025 > Chapter III - FIT AND PROPER REQUIREMENTS AND CODE OF CONDUCT > Section 8 -> IFSCA (TechFin and Ancillary Services) Regulations, 2025 > The Fourth Schedule"
+  },
+  {
+    "query": "What are the minimum net worth or asset requirements for a sponsor of an investment trust under the IFSCA (Fund Management) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nA sponsor of an investment trust must maintain a minimum net worth or net tangible assets of USD 15 million. The specific requirement depends on whether the sponsor is structured as a body corporate or another entity type.\n\n### Key Requirements / Conditions\n*   **Body Corporate or Company:** Must maintain a net worth of no less than USD 15 million.\n*   **Other Entities:** Must maintain net tangible assets with a value of no less than USD 15 million.\n\n# Verbatim Regulatory Quote\n> Each sponsor shall maintain net worth not less than USD 15 million if it is a body corporate or a company, or net tangible assets of value not less than USD 15 million in case it",
+    "target_node_id": "5a3aa7a4-bccc-412b-a8fa-56d57a7989d6",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > PART B: INVESTMENT TRUST > Section 86 > Clause"
+  },
+  {
+    "query": "What regulatory standard must a Fund Management Entity (FME) follow when issuing advertisements?",
+    "golden_answer": "### Executive Summary\nWhen issuing advertisements, a Fund Management Entity (FME) is required to strictly adhere to the standards set forth in the Advertisement Code.\n\n### Key Requirements / Conditions\n*   **Compliance Standard:** All advertisements released by an FME must comply with the Advertisement Code.\n*   **Regulatory Reference:** The specific requirements for these advertisements are detailed in the Fifth Schedule of the IFSCA (Fund Management) Regulations, 2025.\n\n# Verbatim Regulatory Quote\n> Advertisements issued by FME, if any, shall be in conformity with the Advertisement Code as specified in the Fifth Schedule of these regulations.",
+    "target_node_id": "3e5c5a46-3521-42ce-af4a-6e6075beb28b",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter VIII - General Obligations and Responsibilities > Section 127 -> IFSCA (Fund Management) Regulations, 2025 > FIFTH SCHEDULE"
+  },
+  {
+    "query": "What specific risk management measures must an FME implement when providing third-party fund management services under the IFSCA (Fund Management) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nAn FME providing third-party fund management services must establish a comprehensive risk management framework, ensure operational independence, and extend existing investor protection and audit protocols to these arrangements.\n\n### Key Requirements / Conditions\n*   **Risk Management Framework:** FMEs must maintain an internal policy that includes a comprehensive framework to identify and mitigate unique risks and conflicts of interest arising from third-party fund management (Section 107J(a)).\n*   **Operational Independence:** FMEs are required to ensure the segregation of funds and maintain operational independence for all schemes, regardless of whether they are self-managed or under third-party management (Section 107J(b)).\n*   **Investor Protection:** Existing mechanisms for handling investor complaints and disputes must be extended to cover investors of schemes managed under third-party arrangements (Section 107J(c)).\n*   **Audit and Review:** FMEs must implement an internal policy for periodic internal audits and reviews to ensure regulatory compliance, with the resulting reports submitted to the fiduciaries (Section 107J(d)).\n*   **Regulatory Oversight:** FMEs must comply with any additional risk management measures as specified by the Authority (Section 107J(e)).\n\n# Verbatim Regulatory Quote\n> The FMEs shall have the following risk management measures in place: (a) An internal policy comprising of a comprehensive risk management framework to identify and address the unique risks associated with third-party fund management and conflicts emerging from the same; (b) Segregation of funds and operational independence for all the schemes, whether under self-management or third-party fund management; (c) Existing mechanism to address the investors’ complaints and disputes is extended to the complaints and disputes of the investors of the schemes under third-party fund management arrangement; (d) An internal policy for conducting periodic internal audits and reviews to ensure compliances with the regulatory requirements with respect to third-party fund management; and the submission of the report thereon to the fiduciaries; and (e) Such other measures as may be specified by the Authority.",
+    "target_node_id": "abffd015-e1bb-4b0a-bd2d-b6d0b382b1e6",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > PART D: THIRD-PARTY FUND MANAGEMENT SERVICES > Section 107J"
+  },
+  {
+    "query": "Under the IFSCA (TechFin and Ancillary Services) Regulations, 2025, what criteria must be met for an entity to be classified as a 'Group Entity'?",
+    "golden_answer": "### Executive Summary\nUnder the IFSCA (TechFin and Ancillary Services) Regulations, 2025, an entity is classified as a 'Group Entity' if it is part of an arrangement involving two or more entities linked through specific corporate, financial, or operational relationships.\n\n### Key Requirements / Conditions\nAn entity qualifies as a 'Group Entity' if it maintains any of the following relationships with another entity:\n* **Parent-Subsidiary:** As defined under Ind-AS 110 or AS 21.\n* **Joint Venture:** As defined under Ind-AS 28 or AS 27.\n* **Associate Relationship:** As defined under Ind-AS 28 or AS 23.\n* **Common Brand Name:** Sharing a common brand identity.\n* **Financial Investment:** Holding an investment in equity shares or providing a capital contribution of 20 percent or more.\n* **Network Participation:** Being part of a larger structure of firms that pool resources, share technology, policies, and collaterals, and operate as a single unit with a lead firm acting on behalf of the members.\n\n# Verbatim Regulatory Quote\n> “Group Entities” includes an arrangement involving two or more entities related to each other through any of the following relationships: (a) parent- subsidiary (as per Ind-AS 110/AS 21); (b) joint venture (as per Ind-AS 28/AS 27); (c) associate (as per Ind-AS 28/AS 23); (d) common brand name; (e) investment in equity shares/capital contribution of 20 per cent and above; or (f) part of a network; Explanation .- For the purpose of this clause, ‘network’ shall mean a larger structure of a group of firms that have come together for mutual benefits by pooling resources, showcase their combined strength and have uniform policies, technology and collaterals, and showcase themselves as one big unit, with one lead firm acting on behalf of the member-firms.",
+    "target_node_id": "ed12cd55-6683-40d6-bc95-a418b1f6b0af",
+    "category": "Cross-Reference",
+    "breadcrumb": "IFSCA (TechFin and Ancillary Services) Regulations, 2025 > Chapter I - Preliminary > Section 3 -> IFSCA (TechFin and Ancillary Services) Regulations, 2025 > The First Schedule"
+  },
+  {
+    "query": "Under the IFSCA (Fund Management) Regulations, 2025, what criteria must a person meet to be designated as a 'compliance officer'?",
+    "golden_answer": "### Executive Summary\nA compliance officer is a designated senior official responsible for ensuring an organization adheres to legal and regulatory requirements. They must report directly to the board of directors or the head of the organization and possess the ability to interpret financial statements.\n\n### Key Requirements / Conditions\n*   **Designation:** Must be a senior officer within the organization.\n*   **Reporting Structure:** Must report to the board of directors or, if no board exists, the head of the organization.\n*   **Competency:** Must be capable of understanding financial statements and the legal/regulatory requirements set forth in the regulations.\n*   **Core Responsibilities:**\n    *   Ensuring compliance with organizational policies and procedures.\n    *   Maintaining necessary records.\n    *   Monitoring adherence to rules regarding the preservation of unpublished price-sensitive information.\n    *   Monitoring trades and managing risk.\n    *   Implementing the codes specified in the regulations.\n*   **Supervision:** All duties must be performed under the overall supervision of the board of directors or the head of the organization.\n\n# Verbatim Regulatory Quote\n> “compliance officer” means any senior officer, designated so and reporting to the board of directors or head of the organization in case board is not there, who is capable of understanding the financial statements and the requirements for legal and regulatory compliance under these regulations, and who shall be responsible for compliance of policies, procedures, maintenance of records, monitoring adherence to the rules for the preservation of unpublished price sensitive information, monitoring of trades, risk management, and the implementation of the codes specified in these regulations, under the overall supervision of the board of directors of the FME or the head of an organization, as the case may be.",
+    "target_node_id": "e2cb51bd-0ce8-4dc1-8662-4e3f6ce5fff3",
     "category": "Glossary Definition",
-    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > CLAUSE Block > DEFINITION Block > person resident outside India"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter I - Preliminary > Section 2 > Act"
   },
   {
-    "query": "What is the purpose of recovering fines or penalties?",
-    "golden_answer": "The purpose of recovering fines or penalties is to enforce compliance with provisions of respective Acts specified in the First Schedule.",
-    "target_node_id": "1f91240e-56f7-4608-9eec-1a18c27fbe7e",
-    "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > (2) > CLAUSE Block"
-  },
-  {
-    "query": "What does it mean for an individual to be disqualified under section (xii) of the Capital Market Intermediaries Regulations, 2025?",
-    "golden_answer": "any other disqualification as may be specified by the Authority.",
-    "target_node_id": "8ea71e83-a792-49ba-bd07-828530416b4d",
-    "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > (xii) -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > (xii)"
-  },
-  {
-    "query": "What types of services can an entity regulated by a financial sector regulator in its home jurisdiction outsource, but are not covered in the Schedule?",
-    "golden_answer": "Outsourced services that are not covered in this Schedule but are permitted to be outsourced by the entity regulated by any financial sector regulator of its home jurisdiction.",
-    "target_node_id": "048f3b30-00ac-4849-baa5-cf6233f10ca4",
-    "category": "Compliance Check",
-    "breadcrumb": "Tech Financing Regulations, 2023 > Tech Financing Regulations, 2023 > PREAMBLE Block > SCHEDULE Block"
-  },
-  {
-    "query": "What is the deadline for an existing ancillary service provider or TechFin to obtain a certificate of registration?",
-    "golden_answer": "A period of twelve (12) months from the date of commencement of these regulations.",
-    "target_node_id": "36292364-02d8-4f3e-8596-4ed69ecde786",
-    "category": "Direct Regulation",
-    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block"
-  },
-  {
-    "query": "What types of services are considered capital market services?",
-    "golden_answer": "investment advisory services, portfolio management services, and any other services specified by the Authority.",
-    "target_node_id": "464887a5-a097-408e-8694-a4d4e30e0f22",
+    "query": "Under the International Financial Services Centres Authority Act, 2019, how is a 'financial institution' defined?",
+    "golden_answer": "### Executive Summary\nUnder the International Financial Services Centres Authority Act, 2019, a 'financial institution' is defined as a business unit operating within an International Financial Services Centre that provides financial services related to financial products.\n\n### Key Requirements / Conditions\n*   **Location:** The entity must be a unit set up specifically within an International Financial Services Centre.\n*   **Activity:** The entity must be actively engaged in rendering financial services.\n*   **Scope:** The services provided must be in respect of a financial product as defined under the Act.\n\n# Verbatim Regulatory Quote\n> 'financial institution' means a unit set up in an International Financial Services Centre and which is engaged in rendering financial services in respect of any financial product;",
+    "target_node_id": "702581a5-f2a7-4b49-a9a1-0b93f4a1e1c3",
     "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > CLAUSE Block > capital market services"
+    "breadcrumb": "IFSCA Act - International Financial Services Centres Authority Act, 2019 > Chapter I - Preliminary > Section 3 > International Financial Services Centre"
   },
   {
-    "query": "What are the specific malpractices that a registered distributor must avoid?",
-    "golden_answer": "mis-selling of capital market products and services",
-    "target_node_id": "f8c1360f-69c5-4fe7-a13c-1586a2908e5d",
+    "query": "What are the requirements for the information contained in advertisements issued by a service provider or issuer?",
+    "golden_answer": "### Executive Summary\nAdvertisements issued by a service provider or issuer must ensure that all information provided is current and aligns with the official offering documentation.\n\n### Key Requirements / Conditions\n*   **Timeliness:** All information included in the advertisement must be up-to-date.\n*   **Consistency:** The content must be consistent with the disclosures found in the issuer's or service provider's private placement memorandum, disclosure document, or any other foundational document that describes the characteristics of the offering.\n\n# Verbatim Regulatory Quote\n> 31. Advertisements shall contain information which is timely and consistent with the disclosures made in the private placement memorandum, disclosure document or the basic document, by whatever name called, which is created by the issuer / service provider and explains the characteristics of the",
+    "target_node_id": "a9c89fa7-ef85-4a90-b31d-43c72d624ba8",
     "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Distributors > A registered distributor shall avoid malpractices..."
+    "breadcrumb": "IFSCA (Capital Market Intermediaries) Regulations, 2025 > Schedule II > Schedule > Clause"
   },
   {
-    "query": "What types of services are covered under the definition of availing services in section (B) of the International Financial Services Centres Authority Act, 2019?",
-    "golden_answer": "services in sub-clauses (i) to (xi)",
-    "target_node_id": "a1efccd7-47c6-4fd9-9fc1-be11ec151fa8",
+    "query": "What is the requirement for a Fund Management Entity (FME) regarding the first close of a scheme?",
+    "golden_answer": "### Executive Summary\nA Fund Management Entity (FME) must declare the first close of a scheme by ensuring the scheme reaches the minimum corpus size required by regulation.\n\n### Key Requirements / Conditions\n*   **Minimum Corpus Threshold:** The FME is obligated to achieve at least the minimum size of the corpus as defined under sub-regulation (1) of regulation 23 to declare the first close.\n*   **Compliance Obligation:** Failure to meet this minimum corpus size within the prescribed timeframe constitutes a failure to satisfy the regulatory requirements for the scheme's first close.\n\n# Verbatim Regulatory Quote\n> shall declare the first close of the scheme by achieving at least the minimum size of corpus as specified under sub-regulation (1) of regulation 23: Provided that if a FME fails to achieve the minimum size of corpus, as specified under sub-regulation (1) of regulation 23, within the specified time",
+    "target_node_id": "d50f5694-2105-4a96-8590-2497c55f9ef2",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter III - Schemes for Fund Management > Section 19 > Clause"
+  },
+  {
+    "query": "What are the specific requirements for an entity to apply for a certificate of registration as a Fund Management Entity (FME) in an IFSC?",
+    "golden_answer": "### Executive Summary\nTo register as a Fund Management Entity (FME) in an IFSC, an entity must submit a formal application including all required declarations, undertakings, documents, and fees to the Authority. Applications that are incomplete in any respect are subject to rejection.\n\n### Key Requirements / Conditions\n*   **Registration Requirement:** Entities must obtain a certificate of registration from the Authority before commencing any fund management operations in an IFSC.\n*   **Application Process:** Applicants must submit the application form, including the declarations and undertakings specified in the First Schedule, along with all required documentation and prescribed fees.\n*   **Completeness:** Any application that is not complete in all respects is liable to be rejected by the Authority.\n*   **Registration Categories:** Applicants must seek registration under one of three specific categories:\n    *   **Authorised FME:** Limited to pooling money from accredited investors/high-threshold investors for start-ups/early-stage ventures, or managing a Single Family Investment Fund.\n    *   **Registered FME (Non-Retail):** Permitted to pool money from accredited/high-threshold investors for restricted schemes, provide Portfolio Management Services, act as an investment manager for private placement Investment Trusts, and perform all activities permitted to Authorised FMEs.\n    *   **Registered FME (Retail):** Permitted to pool money from all investors for retail schemes, act as an investment manager for public offer Investment Trusts, launch ETFs, and perform all activities permitted to Authorised and Registered (Non-Retail) FMEs.\n\n# Verbatim Regulatory Quote\n> An entity desirous of obtaining a certificate of registration as a FME in IFSC shall submit an application form including the declarations and undertakings in the manner as specified in First Schedule along with documents and application fees as specified by the Authority.",
+    "target_node_id": "68961c22-668f-46fa-b0fc-da4b3bfa8d76",
     "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > This Act > DEFINITION Block > (B) -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > PREAMBLE Block > (C)"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter II - REGISTRATION OF FUND MANAGEMENT ENTITY (FME) > Section 3 -> IFSCA (Fund Management) Regulations, 2025 > First Schedule"
   },
   {
-    "query": "Can the Authority revoke an applicant's In-Principle Approval if they fail to fulfill the specified conditions for Limited Use Authorisation?",
-    "golden_answer": "Yes, the Authority may revoke the 'In-Principle Approval' after providing the Applicant an opportunity of filing written submissions.",
-    "target_node_id": "2077b82f-f1d9-4276-94b6-23fe6fac6ec6",
-    "category": "Compliance Check",
-    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > DEFINITION Block"
-  },
-  {
-    "query": "What does it mean for a word or expression used in the International Financial Services Centres Authority Act, 2019 but defined in another Act listed in the First Schedule?",
-    "golden_answer": "Words and expressions used and not defined in this Act but defined in the Acts specified under column (3) of the First Schedule to this Act shall have the meanings respectively assigned to them in those Acts.",
-    "target_node_id": "9c2c61dd-a537-4744-bd90-0d1bce450a12",
-    "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > PREAMBLE Block > DEFINITION Block > DEFINITION Block"
-  },
-  {
-    "query": "What is a subsidiary company under the Companies Act, 2013?",
-    "golden_answer": "A subsidiary company is a company that satisfies the definition u/s 2(87) of the Companies Act, 2013.",
-    "target_node_id": "239bd09a-8356-4b03-9aa3-c23d469dcb1e",
+    "query": "Under the IFSCA (Fund Management) Regulations, 2025, how is an 'associate' defined in relation to a Fund Management Entity (FME)?",
+    "golden_answer": "### Executive Summary\nUnder the IFSCA (Fund Management) Regulations, 2025, an 'associate' is defined as a company, LLP, or body corporate that maintains a specific threshold of ownership or control in relation to a Fund Management Entity (FME) or its key stakeholders. This definition covers entities where there is a 20% or greater stake in paid-up equity or partnership interest.\n\n### Key Requirements / Conditions\n*   **FME Stakeholders:** An associate includes any company, LLP, or body corporate in which the FME, its directors, trustees, partners, or fiduciaries (as defined in regulation 17) hold at least 20% of the paid-up equity share capital or partnership interest, either individually or collectively.\n*   **Ownership in FME:** An associate includes any company, LLP, or body corporate that holds at least 20% of the paid-up equity share capital or partnership interest in the FME, either individually or collectively.\n*   **Indirect Ownership:** An associate includes any company, LLP, or body corporate in which an entity that holds 20% or more of the FME (as described in the point above) also holds at least 20% of the paid-up equity share capital or partnership interest.\n\n# Verbatim Regulatory Quote\n> “associate” means- (i) a company or a limited liability partnership (LLP) or a body corporate in which a director or trustee or partner of the FME or the FME or any fiduciaries as defined in regulation 17 of these regulations, either individually or collectively, hold twenty per cent. (20%) or more of its paid-up equity share capital or partnership interest, as the case may be; (ii) a company or a limited liability partnership or a body corporate, either individually or collectively, hold twenty per cent. (20%) or more of its paid-up equity share capital or partnership interest, as the case may be in the FME; (iii) Any other company or a limited liability partnership or a body corporate, in which the entity referred in clause (ii) above holds twenty per cent. (20%) or more of its paid-up equity share capital or partnership interest, as the case may be;",
+    "target_node_id": "e2cb51bd-0ce8-4dc1-8662-4e3f6ce5fff3",
     "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > Subsidiary company > Companies Act, 2013"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter I - Preliminary > Section 2 > fund"
   },
   {
-    "query": "What constitutes a jurisdiction that has not made sufficient progress in addressing deficiencies or has not committed to an action plan?",
-    "golden_answer": "A jurisdiction that has not made sufficient progress in addressing the deficiencies or has not committed to an action plan developed with the Financial Action Task Force to address the deficiencies.",
-    "target_node_id": "b5f334fc-93ac-461a-b9b6-8a68b38aa664",
+    "query": "What are the cooperation obligations of a custodian regarding inter-entity operations under the IFSCA (Capital Market Intermediaries) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nA custodian is required to provide full cooperation to other custodial entities, depositories, and clearing organizations to ensure the smooth operation of business activities.\n\n### Key Requirements / Conditions\n*   **Scope of Cooperation:** Custodians must extend all necessary assistance to other custodial entities, depositories, and clearing organizations.\n*   **Operational Areas:** This cooperation is mandatory for business activities specifically involving:\n    *   Inter-custodial settlements.\n    *   The transfer of securities.\n    *   The transfer of funds.\n\n# Verbatim Regulatory Quote\n> 6. A custodian shall extend to other custodial entities, depositories and clearing organizations all such co-operation that is necessary for the conduct of business in the areas of inter custodial settlements, transfer of securities and transfer of funds.",
+    "target_node_id": "d88ef8a1-c944-4e25-890d-cee6aa3cf790",
     "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > Notification No. IFSCA/GN/2025/003 dated 11th April 2025 > SCHEDULE Block > DEFINITION Block > CLAUSE Block > SUBCLAUSE Block"
+    "breadcrumb": "IFSCA (Capital Market Intermediaries) Regulations, 2025 > Schedule II > Schedule > Clause"
   },
   {
-    "query": "What is the Liquidity Coverage Ratio for a Banking Unit before it was substituted by Notification No. IFSCA/2023-24/GN/REG041 dated 6th July, 2023?",
-    "golden_answer": "A Banking Unit shall maintain the Liquidity Coverage Ratio.",
-    "target_node_id": "382128f9-8071-4147-9f19-4f9b534a2235",
-    "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PRUDENTIAL REGULATORY REQUIREMENTS > Substituted vide Notification No. IFSCA/2023-24/GN/REG041 dated 6 th July, 2023. > (1) -> International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > Substituted vide Notification No. IFSCA/2023-24/GN/REG041 dated 6 th July, 2023."
-  },
-  {
-    "query": "What is the timeframe for an applicant to fulfill conditions specified in In-Principle Approval before receiving Limited Use Authorisation?",
-    "golden_answer": "within thirty (30) days, unless extended by the Authority",
-    "target_node_id": "7c8b89ac-dd3f-4420-a838-b3b6dded232f",
-    "category": "Compliance Check",
-    "breadcrumb": "IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > IFSCA (FinTech) Framework for Limited Use Authorisation as FinTech Sandbox Entity > PREAMBLE Block > DEFINITION Block"
-  },
-  {
-    "query": "What activities can banking units undertake under the International Financial Services Centres Authority (IFSCA) Regulations, 2020?",
-    "golden_answer": "Banking units may undertake any or all of the activities mentioned under clause (e) of sub-section (1) of Section 3 of the Act or Section 6 of the Banking Regulation Act, 1949, except those expressly prohibited by the Authority.",
-    "target_node_id": "48d38e37-b667-48c3-9a4f-9a97efca5429",
-    "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > OPERATIONAL REQUIREMENTS > Reporting requirements > CLAUSE Block"
-  },
-  {
-    "query": "Can capital market products and/or services offered by an issuer or service provider in an IFSC or foreign jurisdiction be distributed to sophisticated investors in India?",
-    "golden_answer": "Yes, capital market products and/or services offered by any issuer or service provider set up in IFSC or any foreign jurisdiction may be distributed to sophisticated investors in India.",
-    "target_node_id": "19f6beb2-595f-4c3d-a64b-64e3d1a8a924",
+    "query": "Under the IFSCA (TechFin and Ancillary Services) Regulations, 2025, how is a 'Service Recipient' defined?",
+    "golden_answer": "### Executive Summary\nA 'Service Recipient' is an entity that receives services to facilitate the conduct of specific financial services. These services may be obtained either directly from a TechFin and Ancillary Service Provider or through an intermediary.\n\n### Key Requirements / Conditions\n*   **Purpose of Receipt:** The services must be received for the purpose of carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the International Financial Services Centres Authority Act, 2019.\n*   **Delivery Channels:** Services may be received through two primary channels:\n    *   Directly from a TechFin and Ancillary Service Provider.\n    *   Indirectly through an Intermediary.\n\n# Verbatim Regulatory Quote\n> “Service Recipient” means an entity that receives services, directly from TechFin and Ancillary Service Provider or through an Intermediary for the purpose of carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act;",
+    "target_node_id": "ed12cd55-6683-40d6-bc95-a418b1f6b0af",
     "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > (c) > CLAUSE Block > Foreign Jurisdiction"
+    "breadcrumb": "IFSCA (TechFin and Ancillary Services) Regulations, 2025 > Chapter I - Preliminary > Section 3 > Service Recipient"
   },
   {
-    "query": "Can a Banking Unit conduct business in Indian Rupees (INR) with non-resident persons?",
-    "golden_answer": "Yes, but only if the Authority specifies that such transactions be settled in foreign currencies.",
-    "target_node_id": "58c4e5e8-1d0a-4342-9d91-f2e6f225a913",
-    "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PRUDENTIAL REGULATORY REQUIREMENTS > Substituted vide Notification No. IFSCA/2023-24/GN/REG041 dated 6 th July, 2023. > 10. Currency for conducting business > CLAUSE Block"
-  },
-  {
-    "query": "What information must I submit to the Authority in order to seek relaxation under sub-regulation (1) of the Global In-House Centres Regulations, 2025?",
-    "golden_answer": "An application giving details and the grounds on which such relaxation has been sought, along with a non-refundable fee as may be specified by the Authority.",
-    "target_node_id": "9644cc5c-c21d-4096-838c-4184c54e4565",
+    "query": "What are the specific fiduciary appointment requirements for a Fund Management Entity (FME) before filing a scheme document, and what additional obligation applies if the FME intends to launch a retail scheme?",
+    "golden_answer": "### Executive Summary\nBefore filing a scheme document, a Fund Management Entity (FME) must appoint specific fiduciaries based on the scheme's legal structure and ensure they meet regulatory standards. If the FME intends to launch a retail scheme, it must obtain prior approval from the Authority for all fiduciary appointments.\n\n### Key Requirements / Conditions\n*   **Fiduciary Appointments:** An FME must appoint the following based on the scheme's structure:\n    *   **Company:** A Board of Directors.\n    *   **Limited Liability Partnership:** Designated Partners.\n    *   **Trust:** Trustees (including the Board if it is a Trustee company).\n*   **Fit and Proper Standards:** All appointed fiduciaries must satisfy the \"fit and proper\" requirements specified in Chapter II of the regulations.\n*   **Code of Conduct:** All fiduciaries are required to comply with the Code of Conduct and obligations outlined in Part B of the Third Schedule.\n*   **Retail Scheme Obligation:** FMEs planning to launch retail schemes must secure prior approval from the Authority before appointing any person as a fiduciary.\n\n# Verbatim Regulatory Quote\n> (2) A FME, prior to the filing of a scheme document with the Authority, shall appoint fiduciaries as follows: (a) Board of Directors in case the scheme is set up in the form of a Company; (b) Designated Partners in case the scheme is set up in the form of a Limited Liability Partnership; or (c) Trustees (including the Board in case of a Trustee company) in case the scheme is set up in the form of a Trust. (4) A FME intending to launch retail schemes shall take prior approval of the Authority for appointing any person as a fiduciary.",
+    "target_node_id": "1de6ca44-3851-4c74-be2b-0bc82eaabb6e",
     "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority (Global In-House Centres) Regulations, 2025 > PREAMBLE Block > Power to Relax Strict Enforcement of the Regulations -> International Financial Services Centres Authority (Global In-House Centres) Regulations, 2025 > PREAMBLE Block > sub-regulation (1)"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter II - REGISTRATION OF FUND MANAGEMENT ENTITY (FME) > Section 17 -> IFSCA (Fund Management) Regulations, 2025 > Third Schedule"
   },
   {
-    "query": "What information must a registered credit rating agency include in its written agreement with a client?",
-    "golden_answer": "the right and liabilities of each party and the fee to be charged by such credit rating agency.",
-    "target_node_id": "b62e4964-308e-4c53-97d5-6c1cbbacf80c",
-    "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Credit rating agencies > CLAUSE Block"
-  },
-  {
-    "query": "What is the requirement for banking units regarding leverage ratio?",
-    "golden_answer": "Banking units must adhere to the norms and guidelines relating to leverage ratio as specified by the Authority.",
-    "target_node_id": "db1ca14c-5323-41a0-b0f5-aa9cb8d6d123",
+    "query": "Under the IFSCA (Fund Management) Regulations, 2025, what are the specific criteria that define a 'restricted scheme'?",
+    "golden_answer": "### Executive Summary\nA 'restricted scheme' is a private placement investment vehicle under the IFSCA regulations that is limited to specific high-value or accredited investors and capped at a maximum number of participants.\n\n### Key Requirements / Conditions\n*   **Placement Basis:** The scheme must be offered exclusively on a private placement basis.\n*   **Investor Eligibility:** Participation is restricted to 'accredited investors' or those investing a minimum threshold of USD 1,50,000.\n*   **Investor Ceiling:** The scheme must not have more than 1,000 investors, or such other number as may be specified by the Authority.\n\n# Verbatim Regulatory Quote\n> (ee) “restricted scheme” means a scheme offered on private placement basis only to “accredited investors” or investors investing at least USD 1,50,000 and not having more than 1000 investors or such other number as may be specified by the Authority;",
+    "target_node_id": "e2cb51bd-0ce8-4dc1-8662-4e3f6ce5fff3",
     "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PRUDENTIAL REGULATORY REQUIREMENTS > Substituted vide Notification No. IFSCA/2023-24/GN/REG041 dated 6 th July, 2023. > CLAUSE Block > Leverage Ratio"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter I - Preliminary > Section 2 > restricted scheme"
   },
   {
-    "query": "What is the timeframe for an applicant to comply with the regulations after receiving in-principle approval?",
-    "golden_answer": "An applicant must take necessary steps to comply within 180 days, unless extended by the Authority.",
-    "target_node_id": "16180f25-b654-4b99-9e2b-b85495681448",
+    "query": "Who within a TechFin and Ancillary Services Provider is required to meet the 'fit and proper' criteria according to the IFSCA regulations?",
+    "golden_answer": "### Executive Summary\nTo operate as a TechFin and Ancillary Services Provider, the entity and its key leadership and ownership personnel must satisfy 'fit and proper' criteria at all times.\n\n### Key Requirements / Conditions\nThe following individuals and entities are subject to the 'fit and proper' requirements:\n*   The TechFin and Ancillary Services Provider entity itself.\n*   The principal officer.\n*   The compliance officer.\n*   Directors, partners, or designated partners.\n*   Controlling shareholders.\n\n# Verbatim Regulatory Quote\n> 7. Fit and Proper requirements 1) The TechFin and Ancillary Services Provider shall ensure that the entity and its principal officer, compliance officer, directors/ partners/ designated partners, and controlling shareholders are ‘fit and proper’ persons, at all times",
+    "target_node_id": "c6647a38-08e7-4b8a-8182-c6cea3d7e438",
     "category": "Direct Regulation",
-    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block"
+    "breadcrumb": "IFSCA (TechFin and Ancillary Services) Regulations, 2025 > Chapter III - FIT AND PROPER REQUIREMENTS AND CODE OF CONDUCT > Section 7 > Clause"
   },
   {
-    "query": "What is the process for filing an application for recognition under the International Financial Services Centres Authority Act, 2019?",
-    "golden_answer": "the manner of filing an application for recognition or registration or withdrawal of recognition or registration",
-    "target_node_id": "7aef03f8-081c-4b3e-a045-96e932d6c265",
+    "query": "Are IFSCA employees permitted to collect funds or contributions for an objective without prior approval?",
+    "golden_answer": "### Executive Summary\nIFSCA employees are prohibited from collecting funds or contributions for any objective unless they have received prior approval from the competent authority.\n\n### Key Requirements / Conditions\n*   **Prior Approval Required:** Employees must obtain sanction from the competent authority before engaging in any fundraising activities.\n*   **Scope of Prohibition:** This restriction applies to asking for contributions, accepting contributions, or associating oneself with the collection of funds.\n*   **Nature of Collections:** The rule covers all collections, whether in cash or in kind, regardless of the objective.\n\n# Verbatim Regulatory Quote\n> 70. No employee shall, except with the previous sanction of the competent authority, ask for or accept a contribution to or otherwise associate himself with the raising of any funds or other collections in cash or in kind in pursuance of any objective whatsoever.",
+    "target_node_id": "5100ff83-98b4-4711-ae00-146434cbb24d",
+    "category": "Direct Regulation",
+    "breadcrumb": "IFSCA (Employees' Service) Regulations, 2020 > Chapter VI - CONDUCT, DISCIPLINE AND APPEALS > Section 70"
+  },
+  {
+    "query": "What specific oversight responsibility do fiduciaries have regarding the financial health of the Fund Management Entity (FME) in relation to the Second Schedule?",
+    "golden_answer": "### Executive Summary\nFiduciaries are responsible for conducting an annual review of the Fund Management Entity's (FME) net worth to verify that it consistently meets the financial threshold requirements mandated by the Second Schedule.\n\n### Key Requirements / Conditions\n*   **Annual Review:** Fiduciaries must perform a formal assessment of the FME’s net worth at least once every year.\n*   **Compliance Monitoring:** The purpose of this review is to ensure the FME maintains the specific financial thresholds established in the Second Schedule on a continuous basis.\n\n# Verbatim Regulatory Quote\n> (xii) shall on a yearly basis review the net-worth of the FME to ensure compliance with the threshold provided in Second Schedule on a continuous basis.",
+    "target_node_id": "fa6ae770-7760-4bbb-a301-a9026140b925",
     "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > (2) > (a) -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > THE FIRST SCHEDULE"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Third Schedule > Schedule -> IFSCA (Fund Management) Regulations, 2025 > Second Schedule"
   },
   {
-    "query": "What conditions must a parent bank meet when setting up a Representative Office or Global Administrative Office in an International Financial Services Centre (IFSC)?",
-    "golden_answer": "such conditions as may be specified by the Authority.",
-    "target_node_id": "a31d1a94-76b2-41f0-bc3b-c114bcba8f3c",
-    "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > DEFINITION Block > CLAUSE Block -> International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > 27 [A Parent Bank may set up its Representative Office or Global Administrative Office in IFSC under a suitable mechanism, subject to such conditions as may be specified by the Authority.]"
-  },
-  {
-    "query": "What does it mean to be considered fit and proper for regulatory purposes?",
-    "golden_answer": "a person is deemed to be 'fit and proper' if they meet the requirements specified in sub-regulation (1)",
-    "target_node_id": "6a744f19-4f4f-4c84-aa99-e26c30d00b0b",
+    "query": "Under the IFSCA (Fund Management) Regulations, 2025, how is a 'Retail scheme' defined?",
+    "golden_answer": "### Executive Summary\nA 'Retail scheme' is an investment vehicle offered to the general public or specific segments of investors for subscription. Unlike restricted schemes, there is no limit on the total number of investors allowed to participate in the scheme.\n\n### Key Requirements / Conditions\n*   **Target Audience:** The scheme may be offered to all investors or a specific section of investors.\n*   **Investor Ceiling:** There is no maximum limit (ceiling) placed on the number of investors permitted to subscribe to the scheme.\n\n# Verbatim Regulatory Quote\n> “Retail scheme” means a scheme offered to all investors or a section of the investors for subscription with no ceiling as to number of investors in the scheme;",
+    "target_node_id": "e2cb51bd-0ce8-4dc1-8662-4e3f6ce5fff3",
     "category": "Glossary Definition",
-    "breadcrumb": "Tech Financing Regulations, 2023 > FIT AND PROPER REQUIREMENTS AND CODE OF CONDUCT > Fit and Proper requirements > DEFINITION Block > CLAUSE Block > fit and proper"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter I - Preliminary > Section 2 > Retail scheme"
   },
   {
-    "query": "What are ancillary services in the context of tech financing regulations?",
-    "golden_answer": "Ancillary services mean those services that directly or indirectly aid, help, or assist in making arrangements for carrying on any of the financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of section 3 of the Act.",
-    "target_node_id": "65af8255-a1a8-4b60-be50-e447bec15bc2",
-    "category": "Direct Regulation",
-    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > Objectives > DEFINITION Block > CLAUSE Block"
-  },
-  {
-    "query": "What is the definition of an investment adviser under the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025?",
-    "golden_answer": "An investment adviser means any person who provides investment advice or manages investments on behalf of clients.",
-    "target_node_id": "1c84b68e-ab34-47cd-9984-b27652b4dbfa",
+    "query": "What are the conduct requirements for a Capital Market Intermediary (CMI) under the IFSCA (Capital Market Intermediaries) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nCapital Market Intermediaries (CMIs) are required to adhere to the specific standards of professional behavior and ethical practices outlined in the regulatory framework.\n\n### Key Requirements / Conditions\n*   **Code of Conduct Compliance:** All CMIs must strictly follow the Code of Conduct as mandated by the IFSCA (Capital Market Intermediaries) Regulations, 2025.\n*   **Regulatory Reference:** The specific standards applicable to CMIs are detailed in Schedule II of the aforementioned regulations.\n\n# Verbatim Regulatory Quote\n> A CMI shall abide by the Code of Conduct as specified in Schedule II.",
+    "target_node_id": "a27f9f5c-c943-485d-b9f5-0a0729c2dc78",
     "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > PREAMBLE Block > Investment advisers -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > PREAMBLE Block > Investment advisers"
+    "breadcrumb": "IFSCA (Capital Market Intermediaries) Regulations, 2025 > Chapter III - GENERAL OBLIGATIONS AND RESPONSIBILITIES > Section 15 -> IFSCA (Capital Market Intermediaries) Regulations, 2025 > Schedule II"
   },
   {
-    "query": "What is the effective date for the vacancy of offices by the Chairperson and other Members under this Act?",
-    "golden_answer": "as from the date of supersession",
-    "target_node_id": "2cb20a5a-6834-4bd4-9529-4112a89b0da2",
-    "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > CLAUSE Block -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > This Act"
-  },
-  {
-    "query": "What is considered a group entity under the Capital Market Intermediaries Regulations 2025?",
-    "golden_answer": "an entity of a business group that consists of a parent company or of any other type of legal person exercising control over the rest of the group, together with branches and/or subsidiaries.",
-    "target_node_id": "55ddd366-9677-4a9d-a665-0b62aa13df7f",
+    "query": "Under the International Financial Services Centres Authority Act, 2019, what activities are included in the definition of 'financial service'?",
+    "golden_answer": "### Executive Summary\nUnder the International Financial Services Centres Authority Act, 2019, \"financial service\" encompasses a broad range of activities related to financial products, including asset management, insurance, credit services, and any other services specifically notified by the Central Government.\n\n### Key Requirements / Conditions\nThe definition of \"financial service\" includes the following activities:\n*   Buying, selling, or subscribing to a financial product.\n*   Acceptance of deposits.\n*   Safeguarding and administering assets.\n*   Effecting contracts of insurance.\n*   Managing assets.\n*   Exercising rights associated with financial products or services.\n*   Establishing investment schemes.\n*   Maintaining ownership records.\n*   Underwriting financial products.\n*   Providing credit information.\n*   Providing payment services.\n*   Arranging financial services.\n*   Rendering advice.\n*   Engaging in solicitation activities.\n*   Any other service notified by the Central Government.\n\n# Verbatim Regulatory Quote\n> 'financial service' means buying, selling, or subscribing to a financial product, acceptance of deposits, safeguarding and administering assets, effecting contracts of insurance, managing assets, exercising rights associated with financial products or services, establishing investment schemes, maintaining ownership records, underwriting financial products, providing credit information, payment services, arranging financial services, rendering advice, solicitation activities, and any other service notified by the Central Government;",
+    "target_node_id": "702581a5-f2a7-4b49-a9a1-0b93f4a1e1c3",
     "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > Notification No. IFSCA/GN/2025/003 dated 11th April 2025 > SCHEDULE Block > DEFINITION Block > CLAUSE Block > DEFINITION Block > group entity"
+    "breadcrumb": "IFSCA Act - International Financial Services Centres Authority Act, 2019 > Chapter I - Preliminary > Section 3 > financial service"
   },
   {
-    "query": "What is required of a registered credit rating agency to develop an internal code of conduct for its employees and officers?",
-    "golden_answer": "A registered credit rating agency shall develop its own internal code of conduct for governing its internal operations and laying down standards of appropriate conduct for its employees and officers in the carrying out of their duties within the credit rating agency and as a part of the industry.",
-    "target_node_id": "3f66f176-b0c7-4f73-80eb-8e22d3385f78",
+    "query": "How are 'third-party fund management services' defined under the IFSCA (Fund Management) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nUnder the IFSCA (Fund Management) Regulations, 2025, third-party fund management services refer to an arrangement where a Registered Fund Management Entity (FME) manages investment schemes on behalf of an external third party.\n\n### Key Requirements / Conditions\n*   **Definition of Services:** The term encompasses any activity where a Registered FME provides management services for schemes owned or initiated by a third party.\n*   **Definition of Third-Party Fund Manager:** This refers to an entity that is registered or regulated for fund management, portfolio management, investment advisory, or similar activities by the financial sector regulator in its home country and utilizes the services of a Registered FME.\n\n# Verbatim Regulatory Quote\n> “third-party fund management services” or “third-party fund management arrangement” refers to the activity wherein a Registered FME manages the schemes on behalf of a third- party;",
+    "target_node_id": "074f8fe3-0ad8-448d-a411-2985754b8f28",
     "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > DEFINITION Block"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > PART D: THIRD-PARTY FUND MANAGEMENT SERVICES > Section 107B"
   },
   {
-    "query": "What is the list of services that are not permitted to be provided by TechFin and Ancillary Service Providers under these regulations?",
-    "golden_answer": "List of services not permitted to be provided by TechFin and Ancillary Service Provider under these regulations:",
-    "target_node_id": "593246d2-30f2-4790-b5e6-16be5c725d9c",
-    "category": "Cross-Reference",
-    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > CLAUSE Block -> Tech Financing Regulations, 2023 > PREAMBLE Block > List of services not permitted to be provided by TechFin and Ancillary Service Provider under these regulations:"
-  },
-  {
-    "query": "What is the requirement for TechFin and Ancillary Service Provider to be heard before taking action in case of default?",
-    "golden_answer": "No action as referred under sub-regulation (1) shall be taken without giving the TechFin and Ancillary Service Provider, a reasonable opportunity of being heard by way of written submissions.",
-    "target_node_id": "6b8ceb37-08d8-432c-90d6-f59bceca523f",
-    "category": "Cross-Reference",
-    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > Action in case of default > CLAUSE Block -> Tech Financing Regulations, 2023 > PREAMBLE Block > sub-regulation (1)"
-  },
-  {
-    "query": "What does a group entity include?",
-    "golden_answer": "any holding company, subsidiaries, branches or any other entity, in whatever legal form, through which the Parent bank undertakes its operations or permitted activities.",
-    "target_node_id": "a0d50cd7-a0da-461a-a5b7-caf1097cccb1",
-    "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > DEFINITION Block > Home Regulator"
-  },
-  {
-    "query": "Can a registered distributor change or delete information from a client's application form without permission?",
-    "golden_answer": "No, a registered distributor shall abstain from tampering with the application form and other documents submitted by the client.",
-    "target_node_id": "fb4fc550-d105-40a6-80eb-419ec38f95d3",
+    "query": "What are the record-keeping and reconciliation requirements for a depository participant under the IFSCA (Capital Market Intermediaries) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nDepository participants are required to maintain the integrity of their electronic data processing systems and must perform daily reconciliations of their records with the depository.\n\n### Key Requirements / Conditions\n*   **Electronic Record Integrity:** When maintaining records in electronic form, the depository participant must ensure the data processing system remains secure and intact at all times.\n*   **Reconciliation Frequency:** The depository participant is mandated to reconcile its internal records with the depository on a daily basis.\n\n# Verbatim Regulatory Quote\n> (4) Where the records are maintained in electronic form, a depository participant shall ensure that the integrity of the data processing system is maintained at all times. (5) A depository participant shall reconcile its records with the depository, on a daily basis.",
+    "target_node_id": "079ca8b8-0a79-470d-a041-0c6ddd407405",
     "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Distributors > 10. A registered distributor shall abstain from tampering with the application form and other documents submitted by the client..."
+    "breadcrumb": "IFSCA (Capital Market Intermediaries) Regulations, 2025 > Chapter IV - SPECIFIC OBLIGATIONS AND RESPONSIBILITES > Section 31 > (4)"
   },
   {
-    "query": "What types of financial products, services, or institutions can be regulated by the International Financial Services Centres Authority under the authority of the Central Government?",
-    "golden_answer": "financial products, financial services, or financial institutions in the International Financial Services Centres as may be notified by the Central Government from time to time;",
-    "target_node_id": "4d62f9ea-58b7-45d5-b316-d78badf84fb6",
-    "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > POWERS AND FUNCTIONS OF AUTHORITY > (b) -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > Grants by Central Government"
-  },
-  {
-    "query": "What is the purpose of a legally enforceable netting arrangement?",
-    "golden_answer": "To reflect mark to market exposure under non-centrally cleared over the counter currency, interest rate, credit and commodity derivative contracts.",
-    "target_node_id": "60b33e0d-08f1-4bd4-975c-cb2367334b56",
-    "category": "Amendment/Temporal",
-    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > Netting Arrangement > CLAUSE Block"
-  },
-  {
-    "query": "What types of laws are included in the First Schedule for the purposes of sub-section (1)?",
-    "golden_answer": "the provisions of the respective Acts specified under column (3) of the First Schedule relating to",
-    "target_node_id": "13422a6a-5ac7-46f5-9042-65451609d91b",
-    "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > (2) > (4) -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > THE FIRST SCHEDULE"
-  },
-  {
-    "query": "Can an investment banker enter into a transaction involving an issuer's securities based on unpublished price-sensitive information they received during a professional assignment?",
-    "golden_answer": "No, an investment banker or its associates/relatives cannot enter into any transaction in securities of the issuer on the basis of unpublished price sensitive information obtained by them in the course of any professional assignment.",
-    "target_node_id": "a3eb2427-60fb-474e-963b-e949b86c437f",
+    "query": "What are the requirements for extending the tenure of a close-ended retail scheme under the IFSCA (Fund Management) Regulations, 2025?",
+    "golden_answer": "### Executive Summary\nA close-ended retail scheme may extend its tenure by a maximum of two years, provided it secures both regulatory approval and the consent of a majority of its investors.\n\n### Key Requirements / Conditions\n*   **Maximum Extension Period:** The tenure of the scheme may be extended for a period of up to two years.\n*   **Investor Approval:** The extension requires the approval of at least two-thirds (2/3) of the investors, calculated based on the value of their investment in the scheme.\n*   **Regulatory Approval:** The extension is subject to the formal approval of the Authority.\n\n# Verbatim Regulatory Quote\n> The tenure of the close ended scheme may be extended up to two (2) years, subject to approval of two-thirds (2/3 rd) of the investors by value of their investment in the scheme and the approval of the Authority.",
+    "target_node_id": "92e08cb3-f4e4-4eb3-97b0-951c36dc04d6",
     "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Investment Bankers > (1) > CLAUSE Block"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > PART C: RETAIL SCHEMES > Section 45"
   },
   {
-    "query": "What is the minimum retention period for maintaining electronic books of account, records, and documents as a Capital Market Intermediary (CMI) in accordance with the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025?",
-    "golden_answer": "eight years",
-    "target_node_id": "4c69ffcc-7b01-4c81-8f99-801bef5be6d6",
-    "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > GENERAL OBLIGATIONS AND RESPONSIBILITIES > Code of Conduct > Maintenance of books of account, records and other documents > (1) -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > A CMI may file an application with the Authority for surrender of its registration:"
-  },
-  {
-    "query": "What is the effect on the Payment and Settlement Systems Act, 2007 when a new section is inserted after section 34A under the International Financial Services Centres Authority Act, 2019?",
-    "golden_answer": "The Payment and Settlement Systems Act, 2007 will have a new section inserted after section 34A as per the International Financial Services Centres Authority Act, 2019.",
-    "target_node_id": "dda50209-04f5-41c9-accb-2988d14409de",
-    "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > AMENDMENT TO THE PAYMENT AND SETTLEMENT SYSTEMS ACT, 2007 > Following -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > PREAMBLE Block > Insertion of new section after section 34A"
-  },
-  {
-    "query": "Will actions taken before the repeal of the previous regulations be considered valid under the new regulations?",
-    "golden_answer": "Yes, anything done or any action taken prior to the repeal shall be deemed to have been done or taken under the corresponding provisions of these regulations.",
-    "target_node_id": "ade8752a-8188-4f37-bdf0-c3de9c4fbeb0",
-    "category": "Amendment/Temporal",
-    "breadcrumb": "International Financial Services Centres Authority (Global In-House Centres) Regulations, 2025 > PREAMBLE Block > CLAUSE Block"
-  },
-  {
-    "query": "What is considered a Parent Bank under the International Financial Services Centres Authority (Banking) Regulations, 2020?",
-    "golden_answer": "A Foreign Bank as defined under sub-regulation (d), or an Indian Bank as defined under sub-regulation (f), or both.",
-    "target_node_id": "47f204f1-bc6c-47d8-80dc-5a2f25f96e7b",
+    "query": "Does the Pension Fund Regulatory and Development Authority (PFRDA) have regulatory jurisdiction over financial products and services within an International Financial Services Centre (IFSC)?",
+    "golden_answer": "### Executive Summary\nThe Pension Fund Regulatory and Development Authority (PFRDA) does not have jurisdiction over financial products and services within an International Financial Services Centre (IFSC). Regulatory authority in these zones is exclusively vested in the International Financial Services Centres Authority (IFSCA).\n\n### Key Requirements / Conditions\n*   **Exclusion of PFRDA Powers:** The powers granted to the PFRDA under the Pension Fund Regulatory and Development Authority Act, 2013, do not extend to any International Financial Services Centre established under the Special Economic Zones Act, 2005.\n*   **Transfer of Authority:** Regulatory oversight for all financial products, services, and institutions permitted within an IFSC is transferred to the International Financial Services Centres Authority (IFSCA).\n*   **Legal Precedence:** These provisions apply notwithstanding any other laws currently in force.\n\n# Verbatim Regulatory Quote\n> \"50A. Notwithstanding anything contained in any other law for the time being in force, the powers exercisable by the Authority under this Act,— (a) shall not extend to an International Financial Services Centre set up under sub-section (1) of section 18 of the Special Economic Zones Act, 2005; (b) shall be exercisable by the International Financial Services Centres Authority established under sub-section (1) of section 4 of the International Financial Services Centres Authority Act, 2019, in so far as regulation of financial products, financial services and financial institutions that are permitted in the International Financial Services Centres are concerned.\"",
+    "target_node_id": "7f960731-22fe-470e-9d15-df1065c25c73",
     "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > DEFINITION Block > CLAUSE Block"
+    "breadcrumb": "IFSCA Act - International Financial Services Centres Authority Act, 2019 > Second Schedule > Second Schedule - Part XIV"
   },
   {
-    "query": "Can a clearing member operate in more than one recognized clearing corporation?",
-    "golden_answer": "Yes, a clearing member may be permitted to operate in more than one recognized clearing corporation.",
-    "target_node_id": "96a1dbe3-46a4-4365-a71b-f3def787b007",
-    "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > CLAUSE Block > clearing member"
-  },
-  {
-    "query": "What is the source section referred to in regulation 3(1)(xiii) of the Tech Financing Regulations, 2023?",
-    "golden_answer": "Source Section: [refer regulation 3(1)(xiii)]",
-    "target_node_id": "3ad8510e-07e4-4dd8-86ce-52d7b8634d65",
-    "category": "Cross-Reference",
-    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > THIRD SCHEDULE > [refer regulation 3(1)(xiii)] -> Tech Financing Regulations, 2023 > PREAMBLE Block > THE FIRST SCHEDULE > [refer regulation 3(1)(xiii)]"
-  },
-  {
-    "query": "What happens to existing regulations after the repeal and supersession of new ones?",
-    "golden_answer": "Notwithstanding such repeal and supersession, -",
-    "target_node_id": "6e4eeea0-6aeb-4192-a13b-ce691ca8cd56",
-    "category": "Amendment/Temporal",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > null > CLAUSE Block"
-  },
-  {
-    "query": "Can a person who gives general comments about trends in the financial or securities market be considered as providing information that requires registration under these regulations?",
-    "golden_answer": "No, a person who gives general comments in good faith regarding trends in the financial or securities market without specifying any particular securities or investment product does not require registration.",
-    "target_node_id": "4cfc9dcf-1ee1-4f18-9b6b-c9fd34e55fbf",
+    "query": "What are the requirements for a Fund Management Entity (FME) regarding a change in control?",
+    "golden_answer": "### Executive Summary\nA Fund Management Entity (FME) must obtain prior approval from the Authority for any direct or indirect change in control, unless it operates as a branch subject to specific regulatory requirements in its home jurisdiction.\n\n### Key Requirements / Conditions\n*   **General Requirement:** FMEs are required to seek prior approval from the Authority for any direct or indirect change in control.\n*   **Branch Exception:** If an FME operates as a branch and is mandated to obtain prior approval from its sectoral regulator in its principal place of operation, it is only required to notify the Authority of the change within fifteen (15) days.\n*   **Authority Discretion:** The Authority may grant approval for a change in control subject to specific conditions it deems appropriate, which may include a requirement to provide an exit opportunity to investors.\n\n# Verbatim Regulatory Quote\n> (1) A FME shall seek prior approval of the Authority in case of any direct or indirect change in control of the FME: Provided that where a FME operating in the form of branch is required to take prior approval from its sectoral regulator in its principal place of operation, it shall only inform such change to the Authority, within fifteen (15) days thereof. (2) The Authority may consider such request for change in control subject to such conditions, as deemed appropriate including offering exit opportunity to investors.",
+    "target_node_id": "deccdc25-0e01-4dc4-9565-7debb38eba5d",
     "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > Inserted by the International Financial Services Centres Authority (Capital Market Intermediaries) (Amendment) Regulations, 2026 w.e.f. 12 th January, 2026. > CLAUSE Block"
-  },
-  {
-    "query": "Can a person who has been declared as not fit and proper by a regulatory authority still apply for registration?",
-    "golden_answer": "No, such a person shall not be eligible to apply for any registration until they satisfy the 'fit and proper' requirements.",
-    "target_node_id": "aaaf622c-f7ce-4a48-ba1d-741ce4df8873",
-    "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority (Global In-House Centres) Regulations, 2025 > PREAMBLE Block > DEFINITION Block > fit and proper"
-  },
-  {
-    "query": "What does the term \"acceptance of deposits\" mean in the context of the International Financial Services Centres Authority Act, 2019?",
-    "golden_answer": "The acceptance of deposits refers to the act of receiving money or other valuable security from an individual or entity with the understanding that it will be held for safekeeping and returned upon request.",
-    "target_node_id": "60515a20-746c-4428-8591-4c70cb8c1253",
-    "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > This Act > DEFINITION Block > CLAUSE Block -> International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > This Act > DEFINITION Block > (ii)"
-  },
-  {
-    "query": "What is the word that has been substituted for 'ten' by the International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2026, effective January 12th, 2026?",
-    "golden_answer": "the word 'five'",
-    "target_node_id": "e2c99841-c62a-4598-96fd-4bdef4eed260",
-    "category": "Amendment/Temporal",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > Preamble > CLAUSE Block"
-  },
-  {
-    "query": "What assistance must CMI give to the inspecting authority during an inspection?",
-    "golden_answer": "The CMI shall give all assistance as may be required in connection with the inspection.",
-    "target_node_id": "20ec137f-4cd0-4a13-b505-ca57e1d27b53",
-    "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > INSPECTION > CLAUSE Block"
-  },
-  {
-    "query": "What activities are covered under the term ESG Ratings and Data Products Provider (ERDPP)?",
-    "golden_answer": "Providing services relating to independent external review for ESG labelled bonds listed on the recognised stock exchanges in an IFSC.",
-    "target_node_id": "4641877b-f059-4b11-b757-8587002b935c",
-    "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > Notification No. IFSCA/GN/2025/003 dated 11th April 2025 > SCHEDULE Block > DEFINITION Block > ESG Ratings and Data Products Provider (ERDPP)"
-  },
-  {
-    "query": "What are the circumstances under which an issuer must provide support for appointing a nominee director by a registered debenture trustee?",
-    "golden_answer": "In the event of two consecutive defaults in payment of interest or default in creation of security, the issuer shall be obliged to provide all requisite support in this regard, if legally permissible.",
-    "target_node_id": "13507861-8ee4-4467-9edf-7d27090e6270",
-    "category": "Cross-Reference",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Custodians > Debenture trustees > (1) > CLAUSE Block -> International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > Custodians > 4. A registered debenture trustee shall make reasonable efforts to avoid misrepresentation and ensure that the information provided to the debenture holders is not misleading."
-  },
-  {
-    "query": "What happens to references to International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2021 in other regulations after they are repealed?",
-    "golden_answer": "Any reference thereto in any other regulations made, guidelines or circulars issued thereunder by the Authority shall be deemed to have the reference to the corresponding provisions of these regulations.",
-    "target_node_id": "37ef4910-f7ea-4ac9-8741-328fab0b65dc",
-    "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority (Capital Market Intermediaries) Regulations, 2025 > PREAMBLE Block > null > CLAUSE Block > SUBCLAUSE Block"
-  },
-  {
-    "query": "What activities can banking units undertake before July 6, 2023?",
-    "golden_answer": "Banking Units may undertake any or all of the activities mentioned under clause (e) of sub-section (1) of Section 3 of the Act or Section 6 of the Banking Regulation Act, 1949, except those expressly prohibited by the Authority.",
-    "target_node_id": "48d38e37-b667-48c3-9a4f-9a97efca5429",
-    "category": "Amendment/Temporal",
-    "breadcrumb": "International Financial Services Centres Authority (Banking) Regulations, 2020 > PREAMBLE Block > OPERATIONAL REQUIREMENTS > Reporting requirements > CLAUSE Block"
-  },
-  {
-    "query": "What is the timeframe for laying a copy of every notification proposed under sub-section (1) before each House of Parliament?",
-    "golden_answer": "A total period of thirty days, which may be comprised in one session or in two or more successive sessions.",
-    "target_node_id": "76cd794f-3a70-4964-b91b-f6e31a4c14b9",
-    "category": "Direct Regulation",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > (b) > (1)"
-  },
-  {
-    "query": "What is considered a service recipient under TechFin regulations?",
-    "golden_answer": "An entity that receives services directly from TechFin and Ancillary Service Provider or through an Intermediary for the purpose of carrying on financial services listed in sub-clauses (i) to (xi) of clause (e) of sub-section (1) of Section 3 of the Act.",
-    "target_node_id": "2fb83252-4f65-44b0-8e33-6188999ca2fe",
-    "category": "Glossary Definition",
-    "breadcrumb": "Tech Financing Regulations, 2023 > PREAMBLE Block > CLAUSE Block > DEFINITION Block > Service Recipient"
-  },
-  {
-    "query": "What are the powers exercisable by the Authority under the International Financial Services Centres Authority Act, 2019?",
-    "golden_answer": "the powers exercisable by the Authority under this Act,",
-    "target_node_id": "88b1be5a-1df3-4c3a-a0f5-6292c161f27b",
-    "category": "Glossary Definition",
-    "breadcrumb": "International Financial Services Centres Authority Act, 2019 > PREAMBLE Block > AMENDMENT TO THE INSURANCE ACT, 1938 > Notwithstanding anything contained in any other law for the time being in force > Authority"
+    "breadcrumb": "IFSCA (Fund Management) Regulations, 2025 > Chapter VIII - General Obligations and Responsibilities > Section 125"
   }
 ]

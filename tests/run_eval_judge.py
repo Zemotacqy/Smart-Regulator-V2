@@ -90,6 +90,8 @@ async def evaluate_with_judge(
     """
     system_prompt = (
         "You are an independent, highly critical regulatory evaluation judge. Your task is to evaluate a generated answer.\n"
+        "Ignore any formatting mismatches, bulleting styles, layout structure (such as tables vs. lists), or document length differences between the generated answer and the golden reference answer. "
+        "Evaluate strictly based on semantic facts, compliance logic, factual accuracy, and faithfulness.\n"
         "You MUST output ONLY a JSON object with exactly four keys:\n"
         "- 'faithfulness': float (0.0 to 1.0). Is every claim in the generated answer fully and directly supported by the context? Deduct heavily for any claim not found in the context.\n"
         "- 'context_recall': float (0.0 to 1.0). Are all the key facts in the golden reference answer present in the retrieved context?\n"

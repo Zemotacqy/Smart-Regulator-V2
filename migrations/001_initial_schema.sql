@@ -22,13 +22,13 @@ CREATE TABLE IF NOT EXISTS ast_nodes (
     text_content    TEXT,
     breadcrumb      TEXT NOT NULL,
     needs_repair    BOOLEAN NOT NULL DEFAULT FALSE,
-    embedding       VECTOR(768),
+    embedding       VECTOR(1024),
     ts_vector       TSVECTOR
 );
 
 -- HNSW tuning: m=16 (edge density), ef_construction=128 (build quality).
--- For a 50k–200k node corpus at 768 dimensions:
---   m=16 → good recall, manageable memory (~0.8 GB index)
+-- For a 50k–200k node corpus at 1024 dimensions:
+--   m=16 → good recall, manageable memory
 --   ef_construction=128 → higher quality graph than default 64, with acceptable build time
 -- Query-time tuning: SET hnsw.ef_search = 80 (tune up to 150 without rebuilding)
 -- IMPORTANT: SET maintenance_work_mem = '2GB' before running this index creation

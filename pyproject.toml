@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14.3"
 dependencies = [
+    "google-generativeai>=0.8.6",
     "mlx>=0.31.2",
     "mlx-lm>=0.31.3",
     "torch>=2.12.0",

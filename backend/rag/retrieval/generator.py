@@ -1,15 +1,93 @@
 import time
 import asyncio
+import re
 from typing import AsyncGenerator, List, Dict
 import structlog
 from ollama import AsyncClient
 
-from backend.config import GENERATOR_MODEL, OLLAMA_HOST
-from backend.rag.retrieval.pipeline_context import QueryPipelineContext, SourceCitation
+from backend.config import GENERATOR_MODEL, OLLAMA_HOST, GENERATOR_CONCURRENCY_LIMIT, MERGE_MODEL
+from backend.rag.retrieval.pipeline_context import QueryPipelineContext, SourceCitation, NodeCandidate
 from backend.rag.retrieval.compressor import assemble_batch
 
 logger = structlog.get_logger()
 _client = AsyncClient(host=OLLAMA_HOST)
+
+def clean_for_matching(text: str) -> str:
+    """Strips HTML comments, normalizes spaces/newlines, and removes punctuation/case."""
+    # Strip HTML comments like <!-- ID: ... -->
+    text = re.sub(r"<!--.*?-->", "", text)
+    # Normalize whitespace/newlines
+    text = re.sub(r"\s+", " ", text).strip().lower()
+    # Strip basic punctuation to prevent mismatch on minor details
+    text = re.sub(r"[^\w\s]", "", text)
+    return text
+
+def extract_quote_from_text(text: str) -> str:
+    """Extracts verbatim quote from model output block by removing headers and formatting."""
+    lines = text.split("\n")
+    quote_lines = []
+    for line in lines:
+        line_strip = line.strip()
+        if line_strip.startswith("#") or "quote" in line_strip.lower() or not line_strip:
+            continue
+        # Strip blockquote prefix
+        if line_strip.startswith(">"):
+            line_strip = line_strip[1:].strip()
+        # Strip double quotes
+        if line_strip.startswith('"') and line_strip.endswith('"'):
+            line_strip = line_strip[1:-1].strip()
+        quote_lines.append(line_strip)
+    return "\n".join(quote_lines).strip()
+
+def verify_and_correct_answer(answer_text: str, nodes: List[NodeCandidate]) -> str:
+    """Verifies that the verbatim quote in answer_text exists in nodes, otherwise corrects it."""
+    lower_ans = answer_text.lower()
+    trigger_words = [
+        "\n# verbatim regulatory quote",
+        "\n# exact regulation quote",
+        "\n# verbatim quote",
+        "\n# exact quote",
+    ]
+    
+    first_idx = -1
+    for trigger in trigger_words:
+        idx = lower_ans.find(trigger)
+        if idx != -1:
+            first_idx = idx
+            break
+            
+    if first_idx == -1:
+        # If the quote section was omitted entirely, append it programmatically
+        if nodes:
+            return answer_text.strip() + f"\n\n# Verbatim Regulatory Quote\n> {nodes[0].text_content.strip()}"
+        return answer_text
+        
+    pre_quote = answer_text[:first_idx]
+    quote_section = answer_text[first_idx:]
+    
+    extracted_quote = extract_quote_from_text(quote_section)
+    if not extracted_quote:
+        if nodes:
+            return pre_quote.strip() + f"\n\n# Verbatim Regulatory Quote\n> {nodes[0].text_content.strip()}"
+        return answer_text
+        
+    cleaned_model_quote = clean_for_matching(extracted_quote)
+    
+    # Check if this cleaned quote is present in any node's raw content
+    match_found = False
+    for node in nodes:
+        cleaned_node_text = clean_for_matching(node.text_content)
+        if cleaned_model_quote in cleaned_node_text:
+            match_found = True
+            break
+            
+    if match_found:
+        return answer_text
+    else:
+        # Programmatic correction of the quote
+        if nodes:
+            return pre_quote.strip() + f"\n\n# Verbatim Regulatory Quote\n> {nodes[0].text_content.strip()}"
+        return pre_quote.strip()
 
 async def check_model_exists(model_name: str) -> bool:
     """
@@ -35,8 +113,14 @@ async def check_model_exists(model_name: str) -> bool:
         logger.error("check_model_exists_failed", error=str(e))
         return False
 
-async def generate_once(context_block: str, glossary_text: str, query: str, system_prompt: str, model: str) -> str:
-    """Helper to run a single non-streaming generator call for overflow map batches."""
+async def generate_once(context_block: str, glossary_text: str, query: str, model: str) -> str:
+    """Helper to run a single non-streaming generator call for overflow map batches.
+    
+    NOTE: No system prompt is injected here. The model's system instructions are
+    compiled into Modelfile.saullm and served by Ollama at the model level.
+    To change behavior, update Modelfile.saullm and recompile via:
+        ollama create ifsca-saullm-7b-ft -f modelfiles/Modelfile.saullm
+    """
     user_content = (
         f"GLOSSARY DEFINITIONS:\n{glossary_text or 'None'}\n\n"
         f"CONTEXT:\n{context_block}\n\n"
@@ -45,20 +129,11 @@ async def generate_once(context_block: str, glossary_text: str, query: str, syst
     response = await _client.chat(
         model=model,
         messages=[
-            {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_content}
         ],
         options={"temperature": 0.0}
     )
-    # Post-process answer to remove table rows
-    lines = response.message.content.split("\n")
-    cleaned_lines = []
-    for line in lines:
-        trimmed = line.strip()
-        if trimmed.startswith('|') and trimmed.endswith('|'):
-            continue
-        cleaned_lines.append(line)
-    return "\n".join(cleaned_lines)
+    return response.message.content.strip()
 
 async def merge_answers(partial_answers: List[str], query: str, model: str) -> str:
     """Synthesizes multiple partial answers into a single coherent response."""
@@ -120,20 +195,11 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
     if ctx.inlined_definitions:
         glossary_lines = [f"'{term}': {definition}" for term, definition in ctx.inlined_definitions.items()]
         glossary_text = "\n".join(glossary_lines)
-        
-    system_prompt = (
-        "You are the IFSCA Regulatory Assistant. You help regulatory officers understand compliance requirements.\n\n"
-        "OUTPUT RULES:\n"
-        "1. Answer using ONLY facts from the CONTEXT blocks provided below. Do not extrapolate, infer, or use prior knowledge.\n"
-        "2. Write in plain, clear, and friendly English. Avoid dense legal jargon and make the response easily understandable for non-technical users.\n"
-        "3. Be highly verbose, comprehensive, and detailed in your explanation. Share the complete set of rules, requirements, conditions, limits, qualifications, and exemptions. Never write a short summary or simply point to where the answer can be found.\n"
-        "4. Write your response naturally using paragraphs and bullet points. Do not format your answer as a table.\n"
-        "5. When citing regulations, always explain exactly where to find the rule by mentioning the full name of the regulation and the section/clause title naturally in your text (for example: 'as specified in Section 8 (Reserve requirements) of the IFSCA Banking Regulations, 2020'). Never just say 'Section 8' without context.\n"
-        "6. At the very end of your response, create a section titled \"# Exact Regulation Quote\" to share the verbatim quoted text of the relevant regulations for reference.\n"
-        "7. NEVER include or output UUIDs, chunk IDs, or internal identifiers (like \"[ID: ...]\" or comment tags) in your response.\n"
-        "8. If you do not know the answer or the context does not contain facts to answer the question, clearly state: \"I do not know the answer as no regulation was found in the available corpus.\"\n"
-        "9. CRITICAL LIST CONSTRAINT: When asked to list items (such as a Code of Conduct, principles, or conditions), you MUST identify EVERY separate set of rules/principles present in the context. For each set of rules/principles found, you MUST extract and list EVERY single item/point present in the context completely without omission."
-    )
+
+    # NOTE: No system prompt is injected here. The model's system instructions are
+    # compiled into Modelfile.saullm and served by Ollama at the model level.
+    # To change response behavior or formatting, update Modelfile.saullm and recompile:
+    #     ollama create ifsca-saullm-7b-ft -f modelfiles/Modelfile.saullm
     
     # 2. Determine which generator model to use
     model_to_use = GENERATOR_MODEL
@@ -147,10 +213,12 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
                            configured_model=GENERATOR_MODEL, fallback_model="llama3.2:3b")
             model_to_use = "llama3.2:3b"
             
-    # Resolve merge model: ifsca-extractor-3b or llama3.2:3b
-    merge_model = "ifsca-extractor-3b"
+    # Resolve merge model from config with fallback to llama3.2:3b if not found
+    merge_model = MERGE_MODEL
     merge_model_exists = await check_model_exists(merge_model)
     if not merge_model_exists:
+        logger.warning("merge_model_not_found_using_fallback", 
+                       configured_model=MERGE_MODEL, fallback_model="llama3.2:3b")
         merge_model = "llama3.2:3b"
         
     has_context = ctx.compressed_context and ctx.compressed_context.strip() and ctx.compressed_context.strip() != "No context found."
@@ -168,14 +236,16 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
                 "\"I do not know the answer as no regulation was found in the available corpus.\" "
                 "Then, provide the definitions of any key terms from the GLOSSARY DEFINITIONS to help the user."
             )
-            response_stream = await _client.chat(
-                model=model_to_use,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_content}
-                ],
-                stream=True,
-                options={"temperature": 0.0}
+            response_stream = await asyncio.wait_for(
+                _client.chat(
+                    model=model_to_use,
+                    messages=[
+                        {"role": "user", "content": user_content}
+                    ],
+                    stream=True,
+                    options={"temperature": 0.0}
+                ),
+                timeout=30.0
             )
             async for chunk in response_stream:
                 token = chunk.message.content or ""
@@ -191,66 +261,149 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
                 f"CONTEXT:\n{ctx.compressed_context}\n\n"
                 f"QUERY: {ctx.original_query}"
             )
-            response_stream = await _client.chat(
-                model=model_to_use,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_content_1}
-                ],
-                stream=True,
-                options={"temperature": 0.0}
+            response_stream = await asyncio.wait_for(
+                _client.chat(
+                    model=model_to_use,
+                    messages=[
+                        {"role": "user", "content": user_content_1}
+                    ],
+                    stream=True,
+                    options={"temperature": 0.0}
+                ),
+                timeout=30.0
             )
             
-            buffer = ""
+            in_quote_section = False
+            quote_buffer = []
+            accumulated_stream = ""
+            yielded_len = 0
+            
             async for chunk in response_stream:
                 token = chunk.message.content or ""
-                buffer += token
+                accumulated_stream += token
                 
-                while "\n" in buffer:
-                    line, buffer = buffer.split("\n", 1)
-                    trimmed = line.strip()
-                    if trimmed.startswith('|') and trimmed.endswith('|'):
-                        continue
-                    yield line + "\n"
-                    accumulated_response.append(line + "\n")
+                if not in_quote_section:
+                    lower_accumulated = accumulated_stream.lower()
+                    trigger_words = [
+                        "\n# verbatim regulatory quote",
+                        "\n# exact regulation quote",
+                        "\n# verbatim quote",
+                        "\n# exact quote",
+                    ]
                     
-            if buffer:
-                trimmed = buffer.strip()
-                if not (trimmed.startswith('|') and trimmed.endswith('|')):
-                    yield buffer
-                    accumulated_response.append(buffer)
+                    first_idx = -1
+                    for trigger in trigger_words:
+                        idx = lower_accumulated.find(trigger)
+                        if idx != -1:
+                            first_idx = idx
+                            break
+                            
+                    if first_idx != -1:
+                        # Yield everything before trigger
+                        text_to_yield = accumulated_stream[yielded_len:first_idx]
+                        if text_to_yield:
+                            yield text_to_yield
+                            accumulated_response.append(text_to_yield)
+                        
+                        yielded_len = first_idx
+                        in_quote_section = True
+                        quote_buffer.append(accumulated_stream[first_idx:])
+                    else:
+                        # Yield safely keeping a buffer margin for potential triggers
+                        safety_margin = 35
+                        if len(accumulated_stream) - yielded_len > safety_margin:
+                            text_to_yield = accumulated_stream[yielded_len : len(accumulated_stream) - safety_margin]
+                            if text_to_yield:
+                                yield text_to_yield
+                                accumulated_response.append(text_to_yield)
+                                yielded_len += len(text_to_yield)
+                else:
+                    quote_buffer.append(token)
+            
+            # Flush out final pieces
+            if not in_quote_section:
+                remaining_text = accumulated_stream[yielded_len:]
+                if remaining_text:
+                    yield remaining_text
+                    accumulated_response.append(remaining_text)
+            else:
+                quote_block = "".join(quote_buffer)
+                extracted_quote = extract_quote_from_text(quote_block)
+                
+                if extracted_quote:
+                    cleaned_model_quote = clean_for_matching(extracted_quote)
                     
+                    # Verify quote against raw retrieved nodes
+                    match_found = False
+                    for node in ctx.reranked_nodes:
+                        cleaned_node_text = clean_for_matching(node.text_content)
+                        if cleaned_model_quote in cleaned_node_text:
+                            match_found = True
+                            break
+                            
+                    if match_found:
+                        yield quote_block
+                        accumulated_response.append(quote_block)
+                    else:
+                        logger.warning("hallucinated_quote_detected_correcting_at_runtime", extracted_quote=extracted_quote[:100])
+                        if ctx.reranked_nodes:
+                            corrected_quote_block = (
+                                f"\n\n# Verbatim Regulatory Quote\n"
+                                f"> {ctx.reranked_nodes[0].text_content.strip()}"
+                            )
+                            yield corrected_quote_block
+                            accumulated_response.append(corrected_quote_block)
+                else:
+                    if ctx.reranked_nodes:
+                        corrected_quote_block = (
+                            f"\n\n# Verbatim Regulatory Quote\n"
+                            f"> {ctx.reranked_nodes[0].text_content.strip()}"
+                        )
+                        yield corrected_quote_block
+                        accumulated_response.append(corrected_quote_block)
+                        
             if has_overflow:
-                # Notify UI that refinement is in progress
                 yield "\n\n---\n\n*Refining answer using additional retrieved contexts...*\n"
                 
                 partial_answers = ["".join(accumulated_response)]
                 
-                # Map phase: Generate partial answers for remaining batches
-                for idx, batch_nodes in enumerate(ctx.overflow_batches):
-                    logger.info("generation_start_overflow_batch", batch_idx=idx+1, model=model_to_use)
-                    batch_context = assemble_batch(batch_nodes)
-                    try:
-                        partial = await generate_once(batch_context, glossary_text, ctx.original_query, system_prompt, model_to_use)
-                        partial_answers.append(partial)
-                    except Exception as batch_err:
-                        logger.error("overflow_batch_failed_skipping", batch_idx=idx+1, error=str(batch_err))
-                        # Skip failed batches — do not crash the whole generator
+                # Map phase (parallel execution with configurable concurrency)
+                semaphore = asyncio.Semaphore(GENERATOR_CONCURRENCY_LIMIT)
+                
+                async def sem_generate(idx, batch_nodes):
+                    async with semaphore:
+                        logger.info("generation_start_overflow_batch", batch_idx=idx+1, model=model_to_use)
+                        batch_context = assemble_batch(batch_nodes)
+                        try:
+                            return await generate_once(batch_context, glossary_text, ctx.original_query, model_to_use)
+                        except Exception as batch_err:
+                            logger.error("overflow_batch_failed_skipping", batch_idx=idx+1, error=str(batch_err))
+                            return None
+
+                tasks = [sem_generate(idx, batch) for idx, batch in enumerate(ctx.overflow_batches)]
+                results = await asyncio.gather(*tasks)
+                
+                for res in results:
+                    if res is not None:
+                        partial_answers.append(res)
                     
-                # Reduce phase: Merge all partial responses
+                # Reduce phase
                 logger.info("generation_merge_start", model=merge_model)
                 try:
                     merged_answer = await asyncio.wait_for(
                         merge_answers(partial_answers, ctx.original_query, merge_model),
-                        timeout=30.0
+                        timeout=120.0
                     )
-                    yield f"\n\n# Synthesized Final Answer\n{merged_answer}\n"
-                    ctx.answer_text = merged_answer
+                    # Verify map-reduce merged output quote
+                    verified_merged = verify_and_correct_answer(merged_answer, ctx.reranked_nodes)
+                    yield f"\n\n# Synthesized Final Answer\n{verified_merged}\n"
+                    ctx.answer_text = verified_merged
                 except Exception as merge_err:
                     logger.error("merge_failed_falling_back_to_concatenation", error=str(merge_err))
                     fallback_merged = "\n\n---\n\n".join(partial_answers)
-                    yield f"\n\n# Synthesized Answer (Fallback)\n{fallback_merged}\n"
-                    ctx.answer_text = fallback_merged
+                    verified_fallback = verify_and_correct_answer(fallback_merged, ctx.reranked_nodes)
+                    yield f"\n\n# Synthesized Answer (Fallback)\n{verified_fallback}\n"
+                    ctx.answer_text = verified_fallback
             else:
                 ctx.answer_text = "".join(accumulated_response)
                 
