@@ -33,11 +33,19 @@ def _get_mxbai_model():
             if _mxbai_model is None:
                 from transformers import AutoModelForSequenceClassification, AutoTokenizer
                 model_name = "mixedbread-ai/mxbai-rerank-large-v1"
-                logger.info("loading_mxbai_reranker_model_start", model=model_name)
+                
+                device = "cpu"
+                if torch.cuda.is_available():
+                    device = "cuda"
+                elif torch.backends.mps.is_available():
+                    device = "mps"
+                    
+                logger.info("loading_mxbai_reranker_model_start", model=model_name, device=device)
                 _mxbai_tokenizer = AutoTokenizer.from_pretrained(model_name)
-                _mxbai_model = AutoModelForSequenceClassification.from_pretrained(model_name)
+                model = AutoModelForSequenceClassification.from_pretrained(model_name)
+                _mxbai_model = model.to(device)
                 _mxbai_model.eval()
-                logger.info("loading_mxbai_reranker_model_complete")
+                logger.info("loading_mxbai_reranker_model_complete", device=device)
     return _mxbai_tokenizer, _mxbai_model
 
 
@@ -126,13 +134,18 @@ async def run_reranker(ctx: QueryPipelineContext) -> QueryPipelineContext:
                 all_inputs.append(_build_map_input(node, chunk_text))
                 index_mapping.append(c_idx)
         
-        # CPU forward pass (vectorized batch)
+        # GPU/MPS/CPU forward pass (vectorized batch)
         pairs = [[ctx.original_query, inp] for inp in all_inputs]
         
         inputs = tokenizer(pairs, padding=True, truncation=True, return_tensors="pt", max_length=512)
+        
+        # Move inputs to the same device as the model
+        device = next(model.parameters()).device
+        inputs = {k: v.to(device) for k, v in inputs.items()}
+        
         with torch.no_grad():
             outputs = model(**inputs)
-            logits = outputs.logits.squeeze(-1).tolist()
+            logits = outputs.logits.squeeze(-1).cpu().tolist()
             if not isinstance(logits, list):
                 logits = [logits]
         

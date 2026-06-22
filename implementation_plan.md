@@ -727,33 +727,29 @@ For the core Q&A retrieval pipeline, the custom `QueryPipelineContext` keeps the
 {
   "messages": [
     {
-      "role": "system",
-      "content": "You are the IFSCA Regulatory Assistant."
-    },
-    {
       "role": "user",
-      "content": "CONTEXT:\n[DISTRACTOR: RBI circular on interest rates — unrelated]\n[TARGET: IFSCA Banking Regulations, Section 4(1): 'An IBU shall not accept deposits from persons resident in India']\n[DISTRACTOR: FinTech Sandbox Framework Section 7 on exit criteria]\n\nQUESTION: Can an IBU accept deposits from Indian residents?"
+      "content": "You are the IFSCA Regulatory Assistant.\n\nCONTEXT:\n[DISTRACTOR: RBI circular on interest rates — unrelated]\n[TARGET: IFSCA Banking Regulations, Section 4(1): 'An IBU shall not accept deposits from persons resident in India']\n[DISTRACTOR: FinTech Sandbox Framework Section 7 on exit criteria]\n\nQUESTION: Can an IBU accept deposits from Indian residents?"
     },
     {
       "role": "assistant",
-      "content": "**Short Answer:** No. An IBU cannot accept deposits from Indian residents.\n\n| Rule | Detail | Source |\n|---|---|---|\n| Deposit Restriction | IBUs may not accept deposits from persons resident in India | Section 4(1) |\n\n**Plain Language:** An IFSC Banking Unit is set up to serve only international (non-resident) customers. Accepting deposits from Indian residents is not permitted.\n\n**Source Quote:** \"An IBU shall not accept deposits from persons resident in India.\" — Section 4(1), IFSCA Banking Regulations 2020"
+      "content": "**Executive Summary:** An IBU cannot accept deposits from persons resident in India.\n\n**Key Requirements / Conditions:**\n* As specified in Section 4(1) of the IFSCA Banking Regulations, 2020, an IBU is prohibited from accepting deposits from persons resident in India.\n\n# Verbatim Regulatory Quote\n> An IBU shall not accept deposits from persons resident in India."
     }
   ]
 }
 ```
 
 - 2 distractors per training example — trains the model to ignore irrelevant context.
-- Plain-English answers baked into training data — model learns this output format at weight level.
-- ~2,000 total training pairs across all 6 document categories.
+- Plain-English 3-section answers baked into training data — model learns this structured reasoning chain-of-thought at weight level.
+- 1,835 filtered training pairs (cleaned from 2,000 to exclude sequence lengths exceeding 4,500 characters / ~1,000 tokens to prevent sequence/citation truncation).
 
 ### 7.2 — MLX Fine-tuning (Mac M4 Air)
 ```bash
-python scripts/fine_tune_mlx.py \
-  --model mlx-community/SaulLM-7B-Instruct-4bit \
+uv run scripts/fine_tune_mlx.py \
+  --model models/Saul-7B-Instruct-v1-4bit \
   --data data/raft_training_pairs.jsonl \
-  --lora-rank 8 \
-  --lora-alpha 16 \
-  --lora-targets q_proj v_proj \
+  --lora-rank 16 \
+  --lora-alpha 32 \
+  --lora-targets q_proj k_proj v_proj o_proj gate_proj up_proj down_proj \
   --learning-rate 1e-5 \
   --epochs 3 \
   --batch-size 2 \
@@ -771,7 +767,7 @@ bash scripts/convert_to_gguf.sh \
   --output models/ifsca-saullm-7b-ft.Q4_K_M.gguf
 
 # Compile and deploy Modelfile
-ollama create ifsca-saullm-7b-ft -f modelfiles/Modelfile.saullm
+bash scripts/compile_modelfiles.sh
 ```
 
 ---

@@ -5,7 +5,7 @@ from typing import AsyncGenerator, List, Dict
 import structlog
 from ollama import AsyncClient
 
-from backend.config import GENERATOR_MODEL, OLLAMA_HOST
+from backend.config import GENERATOR_MODEL, OLLAMA_HOST, GENERATOR_CONCURRENCY_LIMIT, MERGE_MODEL
 from backend.rag.retrieval.pipeline_context import QueryPipelineContext, SourceCitation, NodeCandidate
 from backend.rag.retrieval.compressor import assemble_batch
 
@@ -113,8 +113,14 @@ async def check_model_exists(model_name: str) -> bool:
         logger.error("check_model_exists_failed", error=str(e))
         return False
 
-async def generate_once(context_block: str, glossary_text: str, query: str, system_prompt: str, model: str) -> str:
-    """Helper to run a single non-streaming generator call for overflow map batches."""
+async def generate_once(context_block: str, glossary_text: str, query: str, model: str) -> str:
+    """Helper to run a single non-streaming generator call for overflow map batches.
+    
+    NOTE: No system prompt is injected here. The model's system instructions are
+    compiled into Modelfile.saullm and served by Ollama at the model level.
+    To change behavior, update Modelfile.saullm and recompile via:
+        ollama create ifsca-saullm-7b-ft -f modelfiles/Modelfile.saullm
+    """
     user_content = (
         f"GLOSSARY DEFINITIONS:\n{glossary_text or 'None'}\n\n"
         f"CONTEXT:\n{context_block}\n\n"
@@ -123,7 +129,6 @@ async def generate_once(context_block: str, glossary_text: str, query: str, syst
     response = await _client.chat(
         model=model,
         messages=[
-            {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_content}
         ],
         options={"temperature": 0.0}
@@ -190,22 +195,11 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
     if ctx.inlined_definitions:
         glossary_lines = [f"'{term}': {definition}" for term, definition in ctx.inlined_definitions.items()]
         glossary_text = "\n".join(glossary_lines)
-        
-    system_prompt = (
-        "You are the IFSCA Regulatory Assistant. You help regulatory officers understand compliance requirements.\n\n"
-        "OUTPUT RULES:\n"
-        "1. Answer using ONLY facts from the CONTEXT blocks provided below. Do not extrapolate, infer, or use prior knowledge.\n"
-        "2. Write in plain, clear, and friendly English. Avoid dense legal jargon and make the response easily understandable for non-technical users.\n"
-        "3. Be highly verbose, comprehensive, and detailed in your explanation. Share the complete set of rules, requirements, conditions, limits, qualifications, and exemptions. Never write a short summary or simply point to where the answer can be found.\n"
-        "4. Write your response naturally using paragraphs and bullet points. Do not format your answer as a table.\n"
-        "5. When citing regulations, always explain exactly where to find the rule by mentioning the full name of the regulation and the section/clause title naturally in your text (for example: 'as specified in Section 8 (Reserve requirements) of the IFSCA Banking Regulations, 2020'). Never just say 'Section 8' without context.\n"
-        "6. At the very end of your response, you MUST create a section titled \"# Verbatim Regulatory Quote\" containing the exact verbatim quoted text of the relevant regulations from the context inside a blockquote (for example:\n"
-        "# Verbatim Regulatory Quote\n"
-        "> [verbatim text here]).\n"
-        "7. NEVER include or output UUIDs, chunk IDs, or internal identifiers (like \"[ID: ...]\" or comment tags) in your response.\n"
-        "8. If you do not know the answer or the context does not contain facts to answer the question, clearly state: \"I do not know the answer as no regulation was found in the available corpus.\"\n"
-        "9. CRITICAL LIST CONSTRAINT: When asked to list items (such as a Code of Conduct, principles, or conditions), you MUST identify EVERY separate set of rules/principles present in the context. For each set of rules/principles found, you MUST extract and list EVERY single item/point present in the context completely without omission."
-    )
+
+    # NOTE: No system prompt is injected here. The model's system instructions are
+    # compiled into Modelfile.saullm and served by Ollama at the model level.
+    # To change response behavior or formatting, update Modelfile.saullm and recompile:
+    #     ollama create ifsca-saullm-7b-ft -f modelfiles/Modelfile.saullm
     
     # 2. Determine which generator model to use
     model_to_use = GENERATOR_MODEL
@@ -219,10 +213,12 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
                            configured_model=GENERATOR_MODEL, fallback_model="llama3.2:3b")
             model_to_use = "llama3.2:3b"
             
-    # Resolve merge model: ifsca-extractor-3b or llama3.2:3b
-    merge_model = "ifsca-extractor-3b"
+    # Resolve merge model from config with fallback to llama3.2:3b if not found
+    merge_model = MERGE_MODEL
     merge_model_exists = await check_model_exists(merge_model)
     if not merge_model_exists:
+        logger.warning("merge_model_not_found_using_fallback", 
+                       configured_model=MERGE_MODEL, fallback_model="llama3.2:3b")
         merge_model = "llama3.2:3b"
         
     has_context = ctx.compressed_context and ctx.compressed_context.strip() and ctx.compressed_context.strip() != "No context found."
@@ -244,7 +240,6 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
                 _client.chat(
                     model=model_to_use,
                     messages=[
-                        {"role": "system", "content": system_prompt},
                         {"role": "user", "content": user_content}
                     ],
                     stream=True,
@@ -270,7 +265,6 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
                 _client.chat(
                     model=model_to_use,
                     messages=[
-                        {"role": "system", "content": system_prompt},
                         {"role": "user", "content": user_content_1}
                     ],
                     stream=True,
@@ -373,15 +367,25 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
                 
                 partial_answers = ["".join(accumulated_response)]
                 
-                # Map phase
-                for idx, batch_nodes in enumerate(ctx.overflow_batches):
-                    logger.info("generation_start_overflow_batch", batch_idx=idx+1, model=model_to_use)
-                    batch_context = assemble_batch(batch_nodes)
-                    try:
-                        partial = await generate_once(batch_context, glossary_text, ctx.original_query, system_prompt, model_to_use)
-                        partial_answers.append(partial)
-                    except Exception as batch_err:
-                        logger.error("overflow_batch_failed_skipping", batch_idx=idx+1, error=str(batch_err))
+                # Map phase (parallel execution with configurable concurrency)
+                semaphore = asyncio.Semaphore(GENERATOR_CONCURRENCY_LIMIT)
+                
+                async def sem_generate(idx, batch_nodes):
+                    async with semaphore:
+                        logger.info("generation_start_overflow_batch", batch_idx=idx+1, model=model_to_use)
+                        batch_context = assemble_batch(batch_nodes)
+                        try:
+                            return await generate_once(batch_context, glossary_text, ctx.original_query, model_to_use)
+                        except Exception as batch_err:
+                            logger.error("overflow_batch_failed_skipping", batch_idx=idx+1, error=str(batch_err))
+                            return None
+
+                tasks = [sem_generate(idx, batch) for idx, batch in enumerate(ctx.overflow_batches)]
+                results = await asyncio.gather(*tasks)
+                
+                for res in results:
+                    if res is not None:
+                        partial_answers.append(res)
                     
                 # Reduce phase
                 logger.info("generation_merge_start", model=merge_model)

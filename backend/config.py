@@ -18,6 +18,7 @@ EXTRACTOR_MODEL = os.getenv("EXTRACTOR_MODEL", "ifsca-extractor-3b")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "snowflake-arctic-embed2")
 EXPANDER_MODEL = os.getenv("EXPANDER_MODEL", "ifsca-expander-3b")
 GENERATOR_MODEL = os.getenv("GENERATOR_MODEL", "ifsca-saullm-7b-ft")
+MERGE_MODEL = os.getenv("MERGE_MODEL", "ifsca-saullm-7b-ft")
 EVAL_MODEL = os.getenv("EVAL_MODEL", "mistral-nemo:12b")
 
 # Gemini API configuration
@@ -27,6 +28,9 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite")
 # Context budget constraints
 MAX_CONTEXT_CHARS = 12000
 MAX_SINGLE_SECTION_CHARS = 4000
+
+# Concurrency configuration
+GENERATOR_CONCURRENCY_LIMIT = int(os.getenv("GENERATOR_CONCURRENCY_LIMIT", "4"))
 
 # Known document types for validation — self-expanding, persisted across restarts
 # Sidecar JSON lives in the data/ directory alongside training assets.

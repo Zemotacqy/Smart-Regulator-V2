@@ -16,7 +16,7 @@ from backend.rag.retrieval.query_expander import run_query_expander
 from backend.rag.retrieval.hybrid_search import run_hybrid_search
 from backend.rag.retrieval.hop_expander import run_hop_expander
 from backend.rag.retrieval.temporal_filter import run_temporal_filter
-from backend.rag.retrieval.reranker import run_reranker
+from backend.rag.retrieval.reranker import run_reranker, get_reranker_model
 from backend.rag.retrieval.compressor import run_compressor
 from backend.rag.retrieval.generator import run_generator
 
@@ -41,6 +41,9 @@ async def debug_pipeline(query: str, doc_filter_id: Optional[str] = None):
 
     # Initialize pool
     await init_db_pool()
+    
+    # Warm up reranker model to avoid first-query latency spike
+    await get_reranker_model()
     
     doc_filter = [UUID(doc_filter_id)] if doc_filter_id else None
     
