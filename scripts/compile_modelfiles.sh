@@ -18,7 +18,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
-MODELFILES_DIR="${REPO_ROOT}/Modelfiles"
+MODELFILES_DIR="${REPO_ROOT}/modelfiles"
 
 # ANSI colours
 RED='\033[0;31m'
