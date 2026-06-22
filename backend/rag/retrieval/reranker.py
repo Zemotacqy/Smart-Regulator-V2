@@ -17,6 +17,7 @@ import threading
 from typing import List
 import structlog
 import torch
+import os
 
 from backend.rag.retrieval.pipeline_context import QueryPipelineContext, NodeCandidate
 
@@ -34,11 +35,15 @@ def _get_mxbai_model():
                 from transformers import AutoModelForSequenceClassification, AutoTokenizer
                 model_name = "mixedbread-ai/mxbai-rerank-large-v1"
                 
-                device = "cpu"
-                if torch.cuda.is_available():
-                    device = "cuda"
-                elif torch.backends.mps.is_available():
-                    device = "mps"
+                # Allow manual override via environment variable (e.g. RERANKER_DEVICE=cpu)
+                device = os.getenv("RERANKER_DEVICE")
+                if not device:
+                    if torch.cuda.is_available():
+                        device = "cuda"
+                    elif torch.backends.mps.is_available():
+                        device = "mps"
+                    else:
+                        device = "cpu"
                     
                 logger.info("loading_mxbai_reranker_model_start", model=model_name, device=device)
                 _mxbai_tokenizer = AutoTokenizer.from_pretrained(model_name)
