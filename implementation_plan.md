@@ -30,22 +30,23 @@
 ## 1. Design Philosophy & 1000× Analysis
 
 The baseline architecture (reference image) is built on:
+
 1. `RecursiveCharacterTextSplitter(2000/300)` — blindly splits on character count; guaranteed to bisect regulation clauses.
 2. Flat ChromaDB cosine similarity — no hierarchy, no amendment awareness, no cross-references.
 3. Generic `intfloat/e5-large` embeddings — zero sensitivity to regulatory/legal syntax.
 4. A heuristic confidence score: `0.5 × retrieval + 0.3 × faithfulness + 0.2 × diversity` — opaque, cannot decompose failures.
 5. A single Modelfile-baked Llama 8B — the **one correct idea** we inherit and radically expand.
 
-| Dimension | Baseline | Our Architecture |
-|---|---|---|
-| **Chunking** | Naive character split (2000/300) | Visual Layout AST — SLM-classified at section/clause boundary |
-| **Storage** | Flat vector store | PostgreSQL + pgvector — hierarchy + relations + vectors in one ACID store |
-| **Reference Resolution** | None | Programmatic SQL 1-hop joins — intra- and inter-doc in <10ms |
-| **Amendment Handling** | None | `SUBSTITUTES`, `INSERTED_BY`, `OMITTED_BY` temporal edges |
-| **Glossary & Definitions** | None | `DEFINES_TERM` edges — auto-expanded into query context |
-| **Model** | Generic Llama 8B Modelfile | SaulLM-7B-Instruct (30B+ legal token pretraining) + RAFT QLoRA + Modelfile |
-| **Evaluation** | Composite heuristic | Orthogonal RAG Triad + 5 additional retrieval/operational metrics |
-| **User Output** | Dense technical text | Plain-English narrative with collapsible citation panel |
+| Dimension                  | Baseline                         | Our Architecture                                                           |
+| -------------------------- | -------------------------------- | -------------------------------------------------------------------------- |
+| **Chunking**               | Naive character split (2000/300) | Visual Layout AST — SLM-classified at section/clause boundary              |
+| **Storage**                | Flat vector store                | PostgreSQL + pgvector — hierarchy + relations + vectors in one ACID store  |
+| **Reference Resolution**   | None                             | Programmatic SQL 1-hop joins — intra- and inter-doc in <10ms               |
+| **Amendment Handling**     | None                             | `SUBSTITUTES`, `INSERTED_BY`, `OMITTED_BY` temporal edges                  |
+| **Glossary & Definitions** | None                             | `DEFINES_TERM` edges — auto-expanded into query context                    |
+| **Model**                  | Generic Llama 8B Modelfile       | SaulLM-7B-Instruct (30B+ legal token pretraining) + RAFT QLoRA + Modelfile |
+| **Evaluation**             | Composite heuristic              | Orthogonal RAG Triad + 5 additional retrieval/operational metrics          |
+| **User Output**            | Dense technical text             | Plain-English narrative with collapsible citation panel                    |
 
 ---
 
@@ -54,7 +55,9 @@ The baseline architecture (reference image) is built on:
 ### 2.1 — Schema Design Decisions
 
 #### Q: Why is `level` constrained to 1–6?
+
 Indian regulatory documents have a finite structural hierarchy. We assign levels as follows:
+
 - Level 1: Document root (e.g. "IFSCA Act 2019")
 - Level 2: Chapter / Schedule / Part
 - Level 3: Section
@@ -65,45 +68,49 @@ Indian regulatory documents have a finite structural hierarchy. We assign levels
 Six levels cover 100% of observed IFSCA document structures. If a future document exceeds this (e.g. a 7-layer nested statutory instrument), the constraint is raised in a migration: `ALTER TABLE ast_nodes DROP CONSTRAINT ... ADD CHECK (level BETWEEN 1 AND 7)`. This is a **one-line migration**, not an architectural change.
 
 #### Q: What are the two vector columns — `embedding` vs `ts_vector`?
+
 These serve completely different retrieval mechanisms:
 
-| Column | Type | Purpose | Query Method |
-|---|---|---|---|
-| `embedding VECTOR(768)` | Dense float32 array | Semantic similarity — captures *meaning*. "Capital requirements" will match "minimum financial threshold" | HNSW approximate nearest-neighbor via pgvector |
-| `ts_vector TSVECTOR` | Pre-tokenised lexeme list | Exact keyword retrieval — critical for statutory references like "Section 4(2)(b)". Semantic embeddings miss exact clause citations. | GIN index full-text search with `ts_rank` |
+| Column                  | Type                      | Purpose                                                                                                                              | Query Method                                   |
+| ----------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------- |
+| `embedding VECTOR(768)` | Dense float32 array       | Semantic similarity — captures _meaning_. "Capital requirements" will match "minimum financial threshold"                            | HNSW approximate nearest-neighbor via pgvector |
+| `ts_vector TSVECTOR`    | Pre-tokenised lexeme list | Exact keyword retrieval — critical for statutory references like "Section 4(2)(b)". Semantic embeddings miss exact clause citations. | GIN index full-text search with `ts_rank`      |
 
 Both are required because regulatory queries alternate between semantic questions ("what governs GIC registration?") and exact citation lookups ("what does Section 12(3)(b) say?"). Neither method alone achieves acceptable recall.
 
 #### Q: Explain the HNSW index parameters `m=16, ef_construction=64`
+
 HNSW (Hierarchical Navigable Small World) is a graph-based ANN index.
 
 - **`m=16`**: Each vector node maintains up to 16 bidirectional edges in the graph. Higher `m` → denser graph → better recall → more memory and slower insert. The pgvector default of `m=16` is the correct starting point for a 50K–200K node corpus. Tune to `m=32` only if post-deployment recall audits show <80% Recall@5.
-- **`ef_construction=64`**: The candidate list size during index *build*. `64` is the pgvector default and appropriate for our corpus size. Increasing to `128` improves index quality at build-time cost. This is a build-time-only setting.
+- **`ef_construction=64`**: The candidate list size during index _build_. `64` is the pgvector default and appropriate for our corpus size. Increasing to `128` improves index quality at build-time cost. This is a build-time-only setting.
 - **`ef_search`** (query-time): This is tunable per session without rebuilding the index: `SET hnsw.ef_search = 100;`. Start at the default (`40`) and increase during evaluation if recall is insufficient.
 
 > [!TIP]
 > For tuning: adjust `ef_search` first (no index rebuild needed). Only rebuild with higher `m`/`ef_construction` if `ef_search` tuning has been exhausted.
 
 #### Q: What happens if the same term has multiple definitions?
+
 The `glossary` table uses `PRIMARY KEY (term, doc_id)`. This handles the common case where the same term is defined differently in different regulations (e.g. "Specified Foreign Currency" may be defined differently in the Banking Regulations vs. the GIC Regulations). The system uses the definition scoped to the document being queried.
 
-If the *same document* defines a term twice (rare but legal in Indian drafting — one in the definition section and one contextually in a schedule), the **first** definition encountered during ingestion is stored; the second triggers an `ON CONFLICT DO NOTHING`. The extractor will flag this in the audit log for human review.
+If the _same document_ defines a term twice (rare but legal in Indian drafting — one in the definition section and one contextually in a schedule), the **first** definition encountered during ingestion is stored; the second triggers an `ON CONFLICT DO NOTHING`. The extractor will flag this in the audit log for human review.
 
 ### 2.2 — Expanded Relationship Types
 
 Based on research into IFSCA regulatory amendment patterns (confirmed from live IFSCA documents), the following relationship types are observed:
 
-| `rel_type` | When Used | Example | Found In Corpus |
-|---|---|---|---|
-| `REFERS_TO` | Clause cites another clause, section, act, or schedule | "subject to Section 8(1)" / "as defined under FEMA" | All 6 documents |
-| `DEFINES_TERM` | Node is the canonical definition of a legal term | Definitions section: "'IBU' means International Banking Unit..." | Docs 1,2,3,4,6 |
-| `SUBSTITUTES` | An amendment fully replaces the text of an existing node | "Substituted vide GN/REG041... Before substitution it read as under: [text]" | CMI Amendment, Banking Regs |
-| `INSERTED_BY` | An amendment adds an entirely new clause where none existed | "the following proviso shall be inserted, namely:—" | CMI Amendment, IFSCA Act 2nd Schedule, Banking Regs |
-| `OMITTED_BY` | An amendment deletes an existing clause | "the word 'recognised' shall be omitted" / "Omitted by GN/REG013" | CMI Amendment, Banking Regs |
-| `SUPERSEDES` | One regulation/circular explicitly replaces another instrument | "shall stand superseded" | Techfin, GIC Regs, Sandbox, CMI Amendment |
+| `rel_type`     | When Used                                                      | Example                                                                      | Found In Corpus                                     |
+| -------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------- |
+| `REFERS_TO`    | Clause cites another clause, section, act, or schedule         | "subject to Section 8(1)" / "as defined under FEMA"                          | All 6 documents                                     |
+| `DEFINES_TERM` | Node is the canonical definition of a legal term               | Definitions section: "'IBU' means International Banking Unit..."             | Docs 1,2,3,4,6                                      |
+| `SUBSTITUTES`  | An amendment fully replaces the text of an existing node       | "Substituted vide GN/REG041... Before substitution it read as under: [text]" | CMI Amendment, Banking Regs                         |
+| `INSERTED_BY`  | An amendment adds an entirely new clause where none existed    | "the following proviso shall be inserted, namely:—"                          | CMI Amendment, IFSCA Act 2nd Schedule, Banking Regs |
+| `OMITTED_BY`   | An amendment deletes an existing clause                        | "the word 'recognised' shall be omitted" / "Omitted by GN/REG013"            | CMI Amendment, Banking Regs                         |
+| `SUPERSEDES`   | One regulation/circular explicitly replaces another instrument | "shall stand superseded"                                                     | Techfin, GIC Regs, Sandbox, CMI Amendment           |
 
 **Difference between `AMENDS` (removed) and `SUBSTITUTES`/`INSERTED_BY`/`OMITTED_BY` (added):**
 The previous spec used a generic `AMENDS` type. This is too coarse. `AMENDS` could mean a partial text change, a full replacement, an insertion, or a deletion — these have completely different retrieval implications:
+
 - `SUBSTITUTES` → the old node is **inactive** and must be swapped for the new node at query time.
 - `INSERTED_BY` → the new clause is **additive**; both old and new nodes are active.
 - `OMITTED_BY` → the old node is **removed**; it must never appear in retrieval results.
@@ -111,6 +118,7 @@ The previous spec used a generic `AMENDS` type. This is too coarse. `AMENDS` cou
 The ifsca-extractor SLM must be prompted to output one of these five types only.
 
 The schema update for the `relationships` table:
+
 ```sql
 rel_type TEXT NOT NULL CHECK (rel_type IN (
     'REFERS_TO', 'DEFINES_TERM',
@@ -137,6 +145,7 @@ $$ LANGUAGE plpgsql;
 ```
 
 **How it works:**
+
 1. `to_tsvector('english', text)` tokenises the text using the English dictionary (applies stemming: "regulations" → "regulat", "requiring" → "requir"). This enables the query "require" to match text containing "requiring" or "required".
 2. `setweight(..., 'A')` and `setweight(..., 'B')` assign relevance weights. Title matches (weight 'A') are ranked higher than body text matches (weight 'B') in `ts_rank` scoring.
 3. `||` concatenates the two weighted tsvectors into one column, so a single full-text query searches both title and body simultaneously.
@@ -237,21 +246,22 @@ CREATE OR REPLACE TRIGGER trg_ast_nodes_tsvector
 
 ### 3.1 — Complete Model Assignment Table
 
-| Stage | Model | Placement | Memory | Primary Justification |
-|---|---|---|---|---|
-| **Doc Classification** | `ifsca-classifier-3b` (Llama 3.2 3B Q4_K_M) | CPU · Ollama | 2.2 GB RAM | Lightweight; classification only needs front-matter text |
-| **Boundary Detection** | `ifsca-boundary-3b` (Llama 3.2 3B Q4_K_M) | CPU · Ollama | 2.2 GB RAM | Structural classification is a pure formatting task |
-| **Relation Extraction** | `ifsca-extractor-3b` (Llama 3.2 3B Q4_K_M) | CPU · Ollama | 2.2 GB RAM | 10-clause batching keeps throughput high |
-| **Text Embedding** | `nomic-embed-text:v1.5` | CPU · Ollama | 280 MB RAM | 8k context (NTK interpolation), bi-encoder, Ollama-native. Phase 3: evaluate BGE-M3 |
-| **Query Expansion** | `ifsca-expander-3b` (Llama 3.2 3B Q4_K_M) | CPU · Ollama | 2.2 GB RAM | Fast 3-variant expansion; no GPU needed |
-| **Cross-Encoder Rerank** | `ifsca-reranker-3b` (Llama 3.2 3B Q4_K_M) | CPU · Ollama | 2.2 GB RAM | Baked SLM reranking; parallel batches of 5 candidates, 2,000-char previews |
-| **Context Compression** | `ifsca-extractor-3b` (reused) | CPU · Ollama | Shared | Sentence extraction is a pure filtering task |
-| **Primary Q&A** | `ifsca-saullm-7b-ft` (SaulLM-7B-Instruct + RAFT QLoRA) | **GPU · Ollama** | 5.5 GB VRAM at 4k ctx | Legal pretraining (30B legal tokens) + RAFT fine-tune; `num_ctx 4096` keeps within 6GB VRAM |
-| **Eval / Testing** | `mistral-nemo:12b` | Mac M4 Air | 8 GB Unified | LLM-as-a-Judge evaluator; larger reasoning model for golden dataset scoring |
+| Stage                    | Model                                                  | Placement        | Memory                | Primary Justification                                                                       |
+| ------------------------ | ------------------------------------------------------ | ---------------- | --------------------- | ------------------------------------------------------------------------------------------- |
+| **Doc Classification**   | `ifsca-classifier-3b` (Llama 3.2 3B Q4_K_M)            | CPU · Ollama     | 2.2 GB RAM            | Lightweight; classification only needs front-matter text                                    |
+| **Boundary Detection**   | `ifsca-boundary-3b` (Llama 3.2 3B Q4_K_M)              | CPU · Ollama     | 2.2 GB RAM            | Structural classification is a pure formatting task                                         |
+| **Relation Extraction**  | `ifsca-extractor-3b` (Llama 3.2 3B Q4_K_M)             | CPU · Ollama     | 2.2 GB RAM            | 10-clause batching keeps throughput high                                                    |
+| **Text Embedding**       | `snowflake-arctic-embed2`                              | CPU · Ollama     | 280 MB RAM            | 8k context (NTK interpolation), bi-encoder, Ollama-native.                                  |
+| **Query Expansion**      | `ifsca-expander-3b` (Llama 3.2 3B Q4_K_M)              | CPU · Ollama     | 2.2 GB RAM            | Fast 3-variant expansion; no GPU needed                                                     |
+| **Cross-Encoder Rerank** | `mixedbread-ai/mxbai-rerank-large-v1`                  | CPU · Local      | 2.2 GB RAM            | MapReduce Framework to handle 512 token batches                                             |
+| **Context Compression**  | `ifsca-extractor-3b` (reused)                          | CPU · Ollama     | Shared                | Sentence extraction is a pure filtering task                                                |
+| **Primary Q&A**          | `ifsca-saullm-7b-ft` (SaulLM-7B-Instruct + RAFT QLoRA) | **GPU · Ollama** | 5.5 GB VRAM at 4k ctx | Legal pretraining (30B legal tokens) + RAFT fine-tune; `num_ctx 4096` keeps within 6GB VRAM |
+| **Eval / Testing**       | `mistral-nemo:12b`                                     | Mac M4 Air       | 8 GB Unified          | LLM-as-a-Judge evaluator; larger reasoning model for golden dataset scoring                 |
 
 ### 3.2 — Embedding Model: Full Analysis (Re-validated June 2026)
 
 #### Option A: `nomic-embed-text:v1.5` (Selected for Phase 1)
+
 - **Context window:** 8,192 tokens via Dynamic NTK RoPE interpolation. Pretraining base was 2,048 tokens. Extended context is stable for inputs under 6k tokens — well within the range of even the longest regulatory schedule entries.
 - **Critical deployment note:** Ollama may silently cap context at 2,048 tokens with default settings. Always set `num_ctx = 8192` explicitly in the Ollama configuration when generating embeddings.
 - **Dimensionality:** 768 dimensions; Matryoshka Representation Learning (MRL) allows downsizing to 256/64 dimensions if storage becomes a concern.
@@ -260,6 +270,7 @@ CREATE OR REPLACE TRIGGER trg_ast_nodes_tsvector
 - **Benchmark caveat:** nomic-embed-text-v1.5 does **not** appear in the top-10 of the Massive Legal Embedding Benchmark (MLEB, Oct 2025). MLEB is the domain-specific legal retrieval benchmark. This is a known limitation we accept for Phase 1 in exchange for zero infrastructure overhead.
 
 #### Option B: `BAAI/bge-m3` (Planned Phase 3 Upgrade)
+
 - **Context window:** 8,192 tokens. Fully bi-encoder trained.
 - **Multi-functionality:** Supports dense retrieval + learned sparse retrieval (SPLADE-style) + multi-vector ColBERT simultaneously. In practice, BGE-M3's learned sparse retrieval outperforms PostgreSQL tsvector BM25, potentially allowing us to **simplify our hybrid search stage** in Phase 3.
 - **MLEB performance:** Competitive on legal benchmarks — strong general-purpose legal retrieval performance.
@@ -267,41 +278,44 @@ CREATE OR REPLACE TRIGGER trg_ast_nodes_tsvector
 - **Recommendation:** Start with `nomic-embed-text:v1.5` (zero extra infrastructure). **Evaluate BGE-M3 as a Phase 3 upgrade** if Recall@10 on the golden dataset is below 85%.
 
 #### Option C: `legal-bert-base-uncased` (Rejected for Retrieval)
+
 - **Context window:** 512 tokens — a hard BERT architectural limit. The consolidated Banking Regulations alone have schedule entries well exceeding 512 tokens.
-- **Training objective:** Masked Language Model (MLM). This is a *pre-training technique*, not a retrieval architecture. Legal-BERT CAN be used as a bi-encoder backbone — but ONLY after explicit fine-tuning with contrastive objectives (MultipleNegativesRankingLoss). Without that fine-tuning, raw CLS embeddings from Legal-BERT produce poor cosine similarity scores.
+- **Training objective:** Masked Language Model (MLM). This is a _pre-training technique_, not a retrieval architecture. Legal-BERT CAN be used as a bi-encoder backbone — but ONLY after explicit fine-tuning with contrastive objectives (MultipleNegativesRankingLoss). Without that fine-tuning, raw CLS embeddings from Legal-BERT produce poor cosine similarity scores.
 - **Verdict:** **Rejected.** Even if fine-tuned as a bi-encoder, the 512-token limit makes it structurally unsuitable for IFSCA regulatory clauses.
 
 #### Benchmark Context: Massive Legal Embedding Benchmark (MLEB, Oct 2025)
+
 MLEB is the current gold-standard benchmark for legal embedding models (10 expert-annotated datasets, English, US/UK/EU/Singapore jurisdictions).
 
-| Rank | Model | MLEB Score | Self-Hostable? |
-|---|---|---|---|
-| #1 | Kanon 2 Embedder | 81.9% | ❌ API |
-| #2 | Voyage 4 Large | 81.1% | ❌ API |
-| #5 | Qwen3 Embedding 8B | 75.9% | ⚠️ Qwen (excluded per constraints) |
-| — | BGE-M3 | ~70%+ | ✅ Phase 3 target |
-| — | nomic-embed-text-v1.5 | Not in top-10 | ✅ Phase 1 choice |
+| Rank | Model                 | MLEB Score    | Self-Hostable?                     |
+| ---- | --------------------- | ------------- | ---------------------------------- |
+| #1   | Kanon 2 Embedder      | 81.9%         | ❌ API                             |
+| #2   | Voyage 4 Large        | 81.1%         | ❌ API                             |
+| #5   | Qwen3 Embedding 8B    | 75.9%         | ⚠️ Qwen (excluded per constraints) |
+| —    | BGE-M3                | ~70%+         | ✅ Phase 3 target                  |
+| —    | nomic-embed-text-v1.5 | Not in top-10 | ✅ Phase 1 choice                  |
 
 > [!IMPORTANT]
 > **Re-validation result (June 2026):** nomic-embed-text:v1.5 supports 8k tokens via NTK interpolation — confirmed. Legal-BERT 512-token limit — confirmed. BGE-M3 bi-encoder with 8k context — confirmed. Neither nomic nor BGE-M3 are in the top-10 of MLEB. The leading open-source legal embedding path is BGE-M3 **fine-tuned** on our IFSCA corpus (Phase 3 activity). Phase 1 proceeds with nomic-embed-text:v1.5 for zero-overhead local deployment.
 
 ### 3.3 — SaulLM-7B-Instruct: Legal Pretraining, Plain-English Output & VRAM Reality
 
-**Plain-English output:** End users are generalist IFSCA officers, not lawyers. SaulLM's legal pretraining is an **advantage for comprehension** — the model understands legal text accurately enough to *extract* core facts from complex statutory language, then the Modelfile instructs it to output in plain English. A generic model may misread regulatory nuance; SaulLM reads it correctly, then simplifies it.
+**Plain-English output:** End users are generalist IFSCA officers, not lawyers. SaulLM's legal pretraining is an **advantage for comprehension** — the model understands legal text accurately enough to _extract_ core facts from complex statutory language, then the Modelfile instructs it to output in plain English. A generic model may misread regulatory nuance; SaulLM reads it correctly, then simplifies it.
 
 **VRAM reality check (GTX 3050, 6 GB VRAM):**
 
-| Component | VRAM consumed |
-|---|---|
-| SaulLM-7B Q4_K_M weights | ~4.0–4.5 GB |
-| KV cache at 8k context | ~1.5 GB |
-| Runtime overhead | ~0.5 GB |
-| **Total at 8k context** | **~6.5 GB — exceeds GTX 3050 VRAM** |
-| **Total at 4k context** | **~5.5 GB — fits with ~0.5 GB headroom** |
+| Component                | VRAM consumed                            |
+| ------------------------ | ---------------------------------------- |
+| SaulLM-7B Q4_K_M weights | ~4.0–4.5 GB                              |
+| KV cache at 8k context   | ~1.5 GB                                  |
+| Runtime overhead         | ~0.5 GB                                  |
+| **Total at 8k context**  | **~6.5 GB — exceeds GTX 3050 VRAM**      |
+| **Total at 4k context**  | **~5.5 GB — fits with ~0.5 GB headroom** |
 
 **Decision:** The production Modelfile uses `num_ctx 4096` (not 8192). The contextual compression stage (Stage E) ensures that by the time context reaches the generator, it is under 1,500 tokens — so 4k context is more than sufficient. This keeps inference on the GPU.
 
 **India/IFSCA jurisdiction caveat:** SaulLM-7B was trained on the Pile of Law dataset — primarily US federal statutes, SCOTUS opinions, UK legislation, and EU directives. **Indian financial regulations (IFSCA, SEBI, RBI, FEMA) are NOT present in SaulLM's training data.** This means:
+
 - SaulLM cannot answer IFSCA questions from parametric memory — RAG is mandatory, not optional.
 - The model's general legal reasoning ability (identifying obligations, spotting inconsistencies, understanding conditional clauses) **does generalize** to IFSCA text — this is why it is still the best available open-source option.
 - RAFT fine-tuning on our IFSCA corpus explicitly teaches it the IFSCA terminology and drafting patterns, bridging this gap at the weight level.
@@ -317,11 +331,13 @@ SaulLM already has 30B+ legal tokens baked into its weights. This gives us IFSCA
 
 **Layer 2 — RAFT QLoRA Fine-tuning (IFSCA-specific baking):**
 We further fine-tune SaulLM on synthetic IFSCA-specific Q&A pairs. Each training example contains:
+
 - The correct source clause (golden context)
 - 2 distractor clauses from unrelated documents
 - The expected answer in plain-English with structured table + citation
 
 This bakes three behaviours into the weights:
+
 1. **Distractor resistance** — the model learns to ignore irrelevant retrieved context
 2. **Citation format** — the model always produces structured tables + exact quotes
 3. **Plain-English output** — training examples use plain-English answers consistently
@@ -330,6 +346,7 @@ This bakes three behaviours into the weights:
 Even after fine-tuning, the Modelfile's `SYSTEM` block provides a runtime guard that cannot be overridden by user input. This is a defence-in-depth measure against prompt injection.
 
 **Modelfile for JSON schema flexibility:**
+
 ```dockerfile
 FROM ./ifsca-saullm-7b-ft.Q4_K_M.gguf
 
@@ -413,7 +430,7 @@ def find_english_classifier_window(docling_pages: list[DoclingPage]) -> str:
     Concatenates all pages of the document and scans for the starting line of the
     continuous English section, resolving cases where the English text starts at
     the bottom of a Hindi page (e.g., bilingual Gazette notifications).
-    
+
     Returns a window of text (~2 pages) starting from the English title.
     """
     # 1. Concatenate all pages into lines to preserve text flow
@@ -421,7 +438,7 @@ def find_english_classifier_window(docling_pages: list[DoclingPage]) -> str:
     for page in docling_pages:
         if page.text:
             all_lines.extend(page.text.split('\n'))
-            
+
     if not all_lines:
         return ""
 
@@ -441,19 +458,19 @@ def find_english_classifier_window(docling_pages: list[DoclingPage]) -> str:
     # we verify that the current line and the subsequent block of text are predominantly English.
     start_line_idx = 0
     total_lines = len(all_lines)
-    
+
     for i in range(total_lines):
         line = all_lines[i].strip()
         # Skip empty lines or extremely short lines (e.g. line numbers) for start detection
         if len(line) < 10:
             continue
-            
+
         if get_devanagari_ratio(line) < 0.15:
             # We found a potential English start. Let's lookahead to verify.
             # Lookahead next 15 lines or 800 characters to confirm it's a sustained English block
             lookahead_lines = all_lines[i:min(i + 15, total_lines)]
             lookahead_text = " ".join(lookahead_lines)
-            
+
             if len(lookahead_text.strip()) > 100 and get_devanagari_ratio(lookahead_text) < 0.15:
                 # Confirmed: this is the start of the English section!
                 start_line_idx = i
@@ -544,13 +561,15 @@ Adding a field to `ClassifierOutput` and updating the Modelfile prompt is all th
 
 **The solution:** The `ifsca-classifier-3b` Modelfile already extracts `amends_document` from the PDF front-matter. Amendment PDFs always carry a title like:
 
-> *"IFSCA (Banking) (Amendment) Regulations, 2023"*
+> _"IFSCA (Banking) (Amendment) Regulations, 2023"_
 
 The classifier is prompted to:
+
 1. Detect the word "Amendment" in the document title → set `is_amendment: true`
 2. Infer the parent document name from the title pattern → set `amends_document: "IFSCA Banking Regulations"`
 
 The orchestrator then:
+
 1. Looks up `amends_document` in the `documents` table to find the parent `doc_id`.
 2. Feeds the parent document's node structure to the extractor as context.
 3. The extractor identifies which specific clauses are "Substituted by", "Inserted by", or "Omitted by" this amendment.
@@ -574,9 +593,10 @@ The verification is **structural and probabilistic**, not prompted:
 
 ### 5.1 — Worked Example
 
-**User query:** *"Can an IFSC Banking Unit accept deposits from Indian residents?"*
+**User query:** _"Can an IFSC Banking Unit accept deposits from Indian residents?"_
 
 **Stage A — Query Expansion (`ifsca-expander-3b`):**
+
 ```json
 {
   "original_query": "Can an IFSC Banking Unit accept deposits from Indian residents?",
@@ -587,14 +607,17 @@ The verification is **structural and probabilistic**, not prompted:
   ]
 }
 ```
+
 _Four queries are now issued to the database (original + 3 expansions)._
 
 **Stage B — Hybrid Retrieval (PostgreSQL):**
+
 - Dense HNSW search on all 4 queries → returns 20 candidate nodes each → 80 raw candidates.
 - Sparse tsvector search for "IBU deposit resident" → returns 20 nodes.
 - RRF merges all → top-20 unique nodes by combined rank.
 
 Example top-3 returned nodes:
+
 ```
 Rank 1: "Section 4(1). Permissible Activities — An IBU shall not accept deposits from persons resident in India..."
 Rank 2: "Section 2(k). Definition of 'Permitted Currency'"
@@ -602,6 +625,7 @@ Rank 3: "Schedule I. List of permissible foreign currencies"
 ```
 
 **Stage C — Relational Hop Expansion:**
+
 - `Rank 1` has a `REFERS_TO` edge to "Section 2(k)" → Section 2(k) is appended to context.
 - `Rank 2` has a `DEFINES_TERM` edge → definition is inlined into the context block.
 - Temporal filter: no `SUBSTITUTES` edge on Rank 1 → node is current, no swap needed.
@@ -618,6 +642,7 @@ _Compressed from 450 tokens to 28 tokens — reducing generation cost by 94%._
 **Stage F — Structured Generation (`ifsca-saullm-7b-ft`):**
 Input: compressed_context + conversation_history + original_query.
 Output:
+
 ```
 **Short Answer:** No. An IBU cannot accept deposits from Indian residents.
 
@@ -674,6 +699,7 @@ class QueryPipelineContext:
 ```
 
 Each stage is a function with a consistent signature:
+
 ```python
 async def run_stage(ctx: QueryPipelineContext) -> QueryPipelineContext:
     start = time.monotonic()
@@ -683,6 +709,7 @@ async def run_stage(ctx: QueryPipelineContext) -> QueryPipelineContext:
 ```
 
 The orchestrator chains stages:
+
 ```python
 ctx = QueryPipelineContext(request_id=str(uuid4()), original_query=user_query)
 ctx = await run_query_expander(ctx)
@@ -702,16 +729,18 @@ The user raised a valid design question: **Why not use LangGraph for this archit
 
 While LangGraph is an excellent tool for complex, agentic, multi-turn, or cyclical workflows, it is an unnecessary abstraction and potential latency bottleneck for our core retrieval pipeline. Below is a comparison table outlining why we chose a custom dataclass-driven pipeline and when we should transition to LangGraph:
 
-| Architectural Metric | Custom `QueryPipelineContext` (Chosen) | LangGraph |
-| :--- | :--- | :--- |
-| **Pipeline Nature** | **Strictly Linear**: A → B → C → D → E → F. No branching, cycles, or state-routing logic. | **Cyclical / State-Graph**: Designed for state machines, agent loops, and conditional routing. |
-| **Overhead & Latency** | **Zero**: standard async Python function calls. Crucial for meeting low TTFT (Time-to-First-Token) goals. | **Moderate**: runtime state validations, channel updates, graph compilation, and serialization. |
-| **Streaming Control** | **Native Async Generator**: direct SSE (Server-Sent Events) streaming from Ollama to client with zero abstraction. | **Complex**: Graph stream events require specialized event handlers and custom parsers. |
-| **Dependency Weight** | **None**: pure python stdlib (`dataclasses`). Keeps Docker images and production server lightweight. | **High**: adds `langgraph`, `langchain-core`, and large dependency sub-trees (~50MB+ footprint). |
-| **Best Fit** | High-performance, low-latency, linear RAG pipelines. | Non-linear agentic loops, human-in-the-loop, multi-agent collaboration. |
+| Architectural Metric   | Custom `QueryPipelineContext` (Chosen)                                                                             | LangGraph                                                                                        |
+| :--------------------- | :----------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------- |
+| **Pipeline Nature**    | **Strictly Linear**: A → B → C → D → E → F. No branching, cycles, or state-routing logic.                          | **Cyclical / State-Graph**: Designed for state machines, agent loops, and conditional routing.   |
+| **Overhead & Latency** | **Zero**: standard async Python function calls. Crucial for meeting low TTFT (Time-to-First-Token) goals.          | **Moderate**: runtime state validations, channel updates, graph compilation, and serialization.  |
+| **Streaming Control**  | **Native Async Generator**: direct SSE (Server-Sent Events) streaming from Ollama to client with zero abstraction. | **Complex**: Graph stream events require specialized event handlers and custom parsers.          |
+| **Dependency Weight**  | **None**: pure python stdlib (`dataclasses`). Keeps Docker images and production server lightweight.               | **High**: adds `langgraph`, `langchain-core`, and large dependency sub-trees (~50MB+ footprint). |
+| **Best Fit**           | High-performance, low-latency, linear RAG pipelines.                                                               | Non-linear agentic loops, human-in-the-loop, multi-agent collaboration.                          |
 
 #### When will we use LangGraph?
+
 We will adopt LangGraph in **Phase 2 / Phase 3 (Compliance Checker Component)**. The compliance checker is inherently non-linear and requires:
+
 1. **Conditional Routing:** Branching based on applicability (e.g., is Chapter II applicable to this entity?).
 2. **State Backtracking & Looping:** If the compliance checker finds a compliance mismatch, it may loop back to query the vector store for specific clarifying clauses.
 3. **Human-in-the-Loop (HITL):** Pausing the graph state to request human auditor input, and resuming execution once approved.
@@ -723,6 +752,7 @@ For the core Q&A retrieval pipeline, the custom `QueryPipelineContext` keeps the
 ## 7. Model Baking Strategy
 
 ### 7.1 — RAFT Training Dataset Format
+
 ```json
 {
   "messages": [
@@ -743,6 +773,7 @@ For the core Q&A retrieval pipeline, the custom `QueryPipelineContext` keeps the
 - 1,835 filtered training pairs (cleaned from 2,000 to exclude sequence lengths exceeding 4,500 characters / ~1,000 tokens to prevent sequence/citation truncation).
 
 ### 7.2 — MLX Fine-tuning (Mac M4 Air)
+
 ```bash
 uv run scripts/fine_tune_mlx.py \
   --model models/Saul-7B-Instruct-v1-4bit \
@@ -759,6 +790,7 @@ uv run scripts/fine_tune_mlx.py \
 ```
 
 ### 7.3 — Deployment to Ubuntu Server
+
 ```bash
 # Merge LoRA adapters + quantize
 bash scripts/convert_to_gguf.sh \
@@ -775,7 +807,9 @@ bash scripts/compile_modelfiles.sh
 ## 8. Evaluation Metrics & Benchmarking
 
 ### 8.1 — LLM-as-a-Judge Setup
+
 LLM-as-a-Judge uses a separate, independent model to evaluate generated answers. We use `mistral-nemo:12b` on the Mac M4 Air (high-reasoning dev model) to score responses. The judge receives:
+
 - The user query
 - The retrieved context
 - The generated answer
@@ -828,15 +862,16 @@ Target: 1.00 (every citation must be verifiable).
 
 #### Operational Metrics (measured during load testing)
 
-| Metric | Target | Measurement |
-|---|---|---|
-| Time to First Token (TTFT) | < 800ms | Prometheus histogram |
-| Total Query Latency P50 | < 3.0s | Prometheus histogram |
-| Total Query Latency P95 | < 6.0s | Prometheus histogram |
-| Ingestion throughput | > 5 pages/min | Ingestion logs |
-| Repair Rate | < 5% of nodes | `COUNT(*) WHERE needs_repair=TRUE / COUNT(*)` |
+| Metric                     | Target        | Measurement                                   |
+| -------------------------- | ------------- | --------------------------------------------- |
+| Time to First Token (TTFT) | < 800ms       | Prometheus histogram                          |
+| Total Query Latency P50    | < 3.0s        | Prometheus histogram                          |
+| Total Query Latency P95    | < 6.0s        | Prometheus histogram                          |
+| Ingestion throughput       | > 5 pages/min | Ingestion logs                                |
+| Repair Rate                | < 5% of nodes | `COUNT(*) WHERE needs_repair=TRUE / COUNT(*)` |
 
 ### 8.3 — Golden Dataset Composition (100 Questions)
+
 - 30 direct regulation questions ("What is the minimum capital for an IBU?")
 - 25 cross-reference questions ("Section A says X subject to Section B — what is Section B's requirement?")
 - 20 glossary-term questions ("What does 'Permitted Currency' mean under IFSCA Banking Regulations?")
@@ -864,7 +899,7 @@ psycopg2-binary==2.9.9    # Sync driver for migration scripts
 # ── Ingestion & Visual Parsing ────────────────────────────────────────────────
 docling==2.0.1             # Visual PDF layout parsing
 pypdf==4.2.0               # PDF page text extraction (pre-filter only)
-                           # Handles mixed-language corpus (e.g., first 20 pages of 
+                           # Handles mixed-language corpus (e.g., first 20 pages of
                            # Techfin/GIC may contain Hindi headers/titles).
 
 # ── AI / Local Inference ──────────────────────────────────────────────────────
@@ -887,26 +922,27 @@ httpx==0.27.0              # Async HTTP client for integration tests
 
 **Rule:** Every stage must be safe to re-run against the same input without corrupting state.
 
-| Stage | Idempotency Mechanism |
-|---|---|
-| Document Ingestion | `DELETE FROM documents WHERE file_name = :file_name` before insert. Cascades to all AST nodes and relationships automatically. |
-| Relationship Extraction | `UNIQUE (source_node_id, target_text_ref, rel_type)` + `ON CONFLICT DO NOTHING`. |
-| Corpus Resolution | `UPDATE WHERE is_resolved = FALSE` — resolved edges are never re-processed. |
-| Embedding Generation | Embeddings are written during the atomic transaction. If the transaction fails, no embedding is persisted. Re-run re-generates and re-inserts cleanly. |
+| Stage                   | Idempotency Mechanism                                                                                                                                  |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Document Ingestion      | `DELETE FROM documents WHERE file_name = :file_name` before insert. Cascades to all AST nodes and relationships automatically.                         |
+| Relationship Extraction | `UNIQUE (source_node_id, target_text_ref, rel_type)` + `ON CONFLICT DO NOTHING`.                                                                       |
+| Corpus Resolution       | `UPDATE WHERE is_resolved = FALSE` — resolved edges are never re-processed.                                                                            |
+| Embedding Generation    | Embeddings are written during the atomic transaction. If the transaction fails, no embedding is persisted. Re-run re-generates and re-inserts cleanly. |
 
 > [!IMPORTANT]
 > **ON CONFLICT DO NOTHING and idempotency:** This is safe because the unique constraint on `(source_node_id, target_text_ref, rel_type)` guarantees that re-running extraction on the same clause produces the same edge with no duplication. If the extractor output changes for the same clause (e.g. after a Modelfile update), the old edge persists — a full re-ingestion (which cascades delete all relationships) is required to refresh. This is by design: relationships are only refreshed on explicit document re-ingestion.
 
 ### 9.3 — Error Handling Philosophy
+
 **No fallback chains.** One specific behaviour per failure mode:
 
-| Failure Mode | Root Cause | Resolution |
-|---|---|---|
-| SLM returns invalid JSON | Model prepended explanation text | Ollama `format: "json"` + Pydantic parse + 1 self-heal with error feedback in prompt |
-| Self-heal fails on 2nd attempt | Persistent model confusion on unusual text | Set `needs_repair = TRUE`, commit node with raw text, continue pipeline |
-| Embedding call times out | Ollama model not loaded or VRAM pressure | Raise `EmbeddingServiceError`, fail the entire document ingestion, log for operator |
-| PostgreSQL transaction fails | DB connection lost or disk full | Rollback automatically (ACID); log critical error; do not retry automatically |
-| Docling cannot parse PDF | Corrupted PDF or unusual encoding | Raise `IngestionError`, reject the upload with a clear error message to the user |
+| Failure Mode                   | Root Cause                                 | Resolution                                                                           |
+| ------------------------------ | ------------------------------------------ | ------------------------------------------------------------------------------------ |
+| SLM returns invalid JSON       | Model prepended explanation text           | Ollama `format: "json"` + Pydantic parse + 1 self-heal with error feedback in prompt |
+| Self-heal fails on 2nd attempt | Persistent model confusion on unusual text | Set `needs_repair = TRUE`, commit node with raw text, continue pipeline              |
+| Embedding call times out       | Ollama model not loaded or VRAM pressure   | Raise `EmbeddingServiceError`, fail the entire document ingestion, log for operator  |
+| PostgreSQL transaction fails   | DB connection lost or disk full            | Rollback automatically (ACID); log critical error; do not retry automatically        |
+| Docling cannot parse PDF       | Corrupted PDF or unusual encoding          | Raise `IngestionError`, reject the upload with a clear error message to the user     |
 
 ---
 
@@ -936,6 +972,7 @@ Three-column shell layout:
 ### 10.3 — Page Designs
 
 #### Page 1: Q&A Interface (`/qa`)
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │  IFSCA Regulatory Assistant                    [Admin →]     │
@@ -960,12 +997,14 @@ Three-column shell layout:
 ```
 
 **Key behaviours:**
+
 - Token-by-token streaming via SSE — user sees the answer build in real time.
 - "View Sources" expands inline to show the exact regulation excerpts with breadcrumbs.
 - "Filter by document" allows scoping queries to a specific regulation (e.g. Banking Regulations only).
 - Conversation history is maintained client-side (not in DB); each session is ephemeral.
 
 #### Page 2: Compliance Checker (`/compliance`)
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │  Compliance Document Check                                   │
@@ -990,6 +1029,7 @@ Three-column shell layout:
 ```
 
 **Key behaviours:**
+
 - The uploaded entity PDF is chunked (simple character chunking is acceptable here — we're not building an AST for the entity doc).
 - Each chunk is queried against the regulation corpus via the retrieval pipeline.
 - Results stream live as each section is checked — the user sees compliance status building in real time.
@@ -997,6 +1037,7 @@ Three-column shell layout:
 - Each result card is expandable to show the exact regulation text and the quoted entity text.
 
 #### Page 3: Admin Dashboard (`/admin`)
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │  Admin — Document Corpus Management                          │
@@ -1018,12 +1059,14 @@ Three-column shell layout:
 ```
 
 **Key behaviours:**
+
 - All 6 current corpus documents are shown with status.
 - New document upload triggers the full ingestion pipeline; live log output streams to the UI.
 - Flagged nodes (`needs_repair = TRUE`) are surfaced for operator attention.
 - Evaluation metrics panel shows the latest golden dataset scores.
 
 ### 10.4 — Frontend Extensibility Design
+
 Each future feature is a new React page registered in `App.jsx`'s router:
 
 ```jsx
@@ -1031,12 +1074,12 @@ Each future feature is a new React page registered in `App.jsx`'s router:
 // 1. Create pages/NewFeaturePage.jsx
 // 2. Add one route entry below
 <Routes>
-  <Route path="/qa"           element={<QAPage />} />
-  <Route path="/compliance"   element={<CompliancePage />} />
-  <Route path="/admin"        element={<AdminDashboard />} />
+  <Route path="/qa" element={<QAPage />} />
+  <Route path="/compliance" element={<CompliancePage />} />
+  <Route path="/admin" element={<AdminDashboard />} />
   {/* Future features added here without touching existing pages */}
-  <Route path="/amendments"   element={<AmendmentTracker />} />
-  <Route path="/compare"      element={<DocumentComparator />} />
+  <Route path="/amendments" element={<AmendmentTracker />} />
+  <Route path="/compare" element={<DocumentComparator />} />
 </Routes>
 ```
 
@@ -1251,6 +1294,7 @@ uvicorn backend.main:app --reload --port 8000
 ## 13. Operations Runbook
 
 ### 13.1 — Ingest Initial Corpus (All 6 Documents)
+
 ```bash
 # Run once after infrastructure setup
 python scripts/onboard_document.py --file "documents/IFSCA ACT.pdf"
@@ -1266,6 +1310,7 @@ python -m backend.rag.ingestion.corpus_resolver
 ```
 
 ### 13.2 — Ingest a New Regulation (Future)
+
 ```bash
 # The system auto-detects doc_type and amendment status from the document
 python scripts/onboard_document.py --file "/path/to/new_regulation.pdf"
@@ -1273,6 +1318,7 @@ python scripts/onboard_document.py --file "/path/to/new_regulation.pdf"
 ```
 
 ### 13.3 — Handling `needs_repair` Nodes
+
 ```bash
 # Query flagged nodes
 psql $DATABASE_URL -c "SELECT node_id, breadcrumb, LEFT(text_content, 100) FROM ast_nodes WHERE needs_repair = TRUE;"
@@ -1285,6 +1331,7 @@ python scripts/run_node_repair.py --all
 ```
 
 ### 13.4 — Database Backup
+
 ```bash
 # Full backup (run daily via cron)
 pg_dump -U sr_app -d smart_regulator -F c -b -v \
@@ -1298,6 +1345,7 @@ pg_restore -U sr_app -d smart_regulator -v "backups/smart_regulator_2026-06-14_0
 ```
 
 ### 13.5 — Monitor HNSW Index Performance
+
 ```sql
 -- Check current ef_search setting
 SHOW hnsw.ef_search;
@@ -1316,6 +1364,7 @@ WHERE tablename = 'ast_nodes';
 ## 14. Debugging & Pipeline Tracing Playbook
 
 ### 14.1 — End-to-End Query Trace
+
 ```bash
 python scripts/debug_pipeline.py \
     --query "Can an IBU accept deposits from Indian residents?" \
@@ -1323,6 +1372,7 @@ python scripts/debug_pipeline.py \
 ```
 
 **Expected output per stage:**
+
 ```
 [request_id: a8f9b1c0]
 
@@ -1360,6 +1410,7 @@ python scripts/debug_pipeline.py \
 ```
 
 ### 14.2 — Inspect Structured Logs
+
 ```bash
 # View all logs for a request (replace with actual request_id)
 cat logs/app.log | jq 'select(.request_id == "a8f9b1c0")' | jq '{stage, duration_ms, msg}'
@@ -1375,12 +1426,14 @@ cat logs/app.log | jq 'select(.event == "corpus_resolution_complete") | {resolve
 ```
 
 ### 14.3 — Diagnose Low Recall
+
 1. Run `debug_pipeline.py` — check if the golden answer node appears in Stage B candidates.
 2. If **not in Stage B**: embedding or FTS retrieval failure. Try increasing `ef_search` (`SET hnsw.ef_search = 150`) and re-run. If it appears then, raise the default in `config.py`.
 3. If **in Stage B but not Stage D**: the SLM reranker demoted it. Inspect the `ifsca-reranker-3b` output scores and reasoning. If a relevant node scored poorly, verify that its content preview (up to 2,000 characters) contains the necessary keywords/clauses, or tune the domain signals in the reranker Modelfile.
 4. If **in Stage D but not in final answer**: the compressor may have removed the critical sentence. Check Stage E output directly. Tighten the compression prompt.
 
 ### 14.4 — Debug Ingestion Failures
+
 ```bash
 # Re-run ingestion with debug logging
 LOG_LEVEL=DEBUG python scripts/onboard_document.py --file documents/IFSCA\ ACT.pdf 2>&1 | tee ingest_debug.log
@@ -1406,6 +1459,7 @@ psql $DATABASE_URL -c "
 ## 15. Phased Delivery Plan
 
 ### Phase 0 — Infrastructure Setup (Days 1–2)
+
 - [ ] Provision PostgreSQL on Ubuntu server; run `001_initial_schema.sql`
 - [ ] Verify pgvector HNSW index creation on GTX 3050
 - [ ] Install Ollama; pull `llama3.2:3b` and `nomic-embed-text:v1.5`
@@ -1414,6 +1468,7 @@ psql $DATABASE_URL -c "
 - [ ] Set up macOS dev environment with local PostgreSQL and Ollama
 
 ### Phase 1 — Ingestion Pipeline (Days 3–7)
+
 - [ ] Implement `prefilters.py` — Devanagari filter + `find_english_classifier_window()`
 - [ ] Implement `schemas.py` — all Pydantic SLM I/O models
 - [ ] Implement `llm_client.py` — async Ollama client (Pydantic parse + 1 retry)
@@ -1424,12 +1479,14 @@ psql $DATABASE_URL -c "
 - [ ] Run `onboard_document.py` on all 6 source documents; verify AST in DB
 
 ### Phase 2 — Retrieval Pipeline (Days 8–12)
+
 - [ ] Implement `pipeline_context.py` — `QueryPipelineContext` dataclass
 - [ ] Implement all 6 retrieval stages (expander, hybrid_search, hop_expander, temporal_filter, reranker, compressor, generator)
 - [ ] Build FastAPI endpoints (`/api/qa`, `/api/compliance`, `/api/admin/ingest`)
 - [ ] Implement `debug_pipeline.py` CLI tool
 
 ### Phase 3 — Fine-Tuning & Evaluation (Days 13–18)
+
 - [ ] Run `generate_synthetic_data.py` → 2,000 RAFT training pairs
 - [ ] Execute `fine_tune_mlx.py` on Mac M4 Air (SaulLM-7B, ~45 mins)
 - [ ] Run `convert_to_gguf.sh` → `ifsca-saullm-7b-ft.Q4_K_M.gguf`
@@ -1439,6 +1496,7 @@ psql $DATABASE_URL -c "
 - [ ] Document all metric scores; identify improvement areas
 
 ### Phase 4 — Frontend & Production Hardening (Days 19–24)
+
 - [ ] Build React + Vite frontend (QAPage, CompliancePage, AdminDashboard)
 - [ ] Implement three-column shell layout with extensible page registry
 - [ ] Integrate SSE streaming consumer (StreamingAnswer component)
