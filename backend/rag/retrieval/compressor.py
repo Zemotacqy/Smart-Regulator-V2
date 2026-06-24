@@ -1,3 +1,4 @@
+import re
 import time
 from typing import List
 import structlog
@@ -6,6 +7,73 @@ from backend.config import MAX_CONTEXT_CHARS, MAX_SINGLE_SECTION_CHARS
 from backend.rag.retrieval.pipeline_context import QueryPipelineContext, NodeCandidate
 
 logger = structlog.get_logger()
+
+# Matches numbered sub-section markers of the form "(N) " that represent genuine
+# structural sub-sections within a flat text blob, as opposed to cross-references
+# like "sub-section (2)" or "Section 13(5)" that appear mid-sentence.
+#
+# A genuine structural marker appears:
+#   - At the start of the string:      ^(1) Text...
+#   - After a sentence-ending period:  ...previous rule. (2) Next rule...
+#   - After a closing parenthesis:     ...(a) last clause.) (3) Next sub-section...
+#
+# The (?<=\.\s) and (?<=\)\s) lookbehinds require exactly one space after the
+# boundary, matching IFSCA Act drafting conventions.
+_INLINE_SUBSECTION_RE = re.compile(
+    r'(?:(?:^|(?<=\.\s)|(?<=\)\s))\((\d+)\)\s)',
+    re.MULTILINE,
+)
+
+
+def annotate_inline_subsections(text: str) -> str:
+    """
+    Detects numbered sub-sections packed inline within a single text blob
+    (a common ingestion artefact when the boundary detector stores an entire
+    section as one SECTION node rather than splitting each numbered sub-section
+    into a child node) and inserts a blank line + bold label before each one.
+
+    This gives the LLM a clear visual boundary between adjacent sub-sections so
+    it can identify which specific sub-section answers the query, rather than
+    conflating facts from neighbouring sub-sections.
+
+    The transformation is purely deterministic string manipulation — no LLM
+    call, no DB query, zero latency impact.
+
+    Example (input):
+        "(1) Scope text... (2) Amendment power... (5) Foreign currency rule..."
+
+    Example (output):
+        "**Sub-section (1)**\nScope text...\n\n**Sub-section (2)**\nAmendment power..."
+
+    If no inline sub-section pattern is detected, the original text is returned
+    unchanged so the function is safe to apply to all nodes unconditionally.
+    """
+    matches = list(_INLINE_SUBSECTION_RE.finditer(text))
+
+    # Require at least two distinct sub-section markers before reformatting.
+    # A single "(1)" in a paragraph is more likely incidental punctuation than
+    # a genuine numbered sub-section sequence worth splitting.
+    if len(matches) < 2:
+        return text
+
+    parts: List[str] = []
+
+    # Capture any leading text before the first sub-section marker (e.g. a
+    # preamble sentence that precedes sub-section (1)).
+    first_match_start = matches[0].start()
+    preamble = text[:first_match_start].strip()
+    if preamble:
+        parts.append(preamble)
+
+    for i, match in enumerate(matches):
+        sub_num = match.group(1)
+        # Content runs from just after this marker up to the start of the next.
+        content_start = match.end()
+        content_end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+        content = text[content_start:content_end].strip()
+        parts.append(f"**Sub-section ({sub_num})**\n{content}")
+
+    return "\n\n".join(parts)
 
 def split_large_section(node: NodeCandidate, limit: int = 4000) -> List[NodeCandidate]:
     """
@@ -96,9 +164,18 @@ def split_large_section(node: NodeCandidate, limit: int = 4000) -> List[NodeCand
     return sub_nodes
 
 def assemble_batch(batch_nodes: List[NodeCandidate]) -> str:
+    """
+    Assembles the final context string passed to the generator.
+
+    Each node's text is passed through `annotate_inline_subsections` before
+    inclusion. For nodes whose text is already well-structured (e.g. already
+    split into child nodes by the hop expander), the function is a no-op and
+    returns the text unchanged.
+    """
     blocks = []
     for node in batch_nodes:
-        blocks.append(f"Source: {node.breadcrumb} <!-- ID: {node.node_id} -->\n{node.text_content}")
+        annotated_text = annotate_inline_subsections(node.text_content)
+        blocks.append(f"Source: {node.breadcrumb} <!-- ID: {node.node_id} -->\n{annotated_text}")
     return "\n\n".join(blocks)
 
 async def run_compressor(ctx: QueryPipelineContext) -> QueryPipelineContext:

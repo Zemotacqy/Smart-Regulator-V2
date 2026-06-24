@@ -6,8 +6,10 @@ Questions:
 - Can a Banking Unit conduct business in Indian Rupees (INR) with non-resident persons?
 - What is the timeframe for an applicant to comply with the regulations after receiving in-principle approval?
 - What is the purpose of recovering fines or penalties?
-- Which section allows ifsca to draw carve outs?
+- How does ifsca draw carve outs for regulating entities in GIFT IFSC?
 - What is the process of recovering fine or penalties in IFSCA?
+- Can an entity settle penalty transactions with IFSCA in INR?
+- Explain the difference between GIFT and IFSC
 
 DPDP
 

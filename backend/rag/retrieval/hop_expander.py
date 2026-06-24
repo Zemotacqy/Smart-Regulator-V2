@@ -16,7 +16,12 @@ async def run_hop_expander(ctx: QueryPipelineContext) -> QueryPipelineContext:
     2. Fallbacks to the candidate node itself if no section/subsection parent exists.
     3. Recursively fetches all descendant nodes for those anchor section nodes.
     4. Merges text contents sorted by physical tuple order (ctid) to preserve visual hierarchy.
-    5. Indents descendant nodes by two spaces per level of relative depth.
+    5. Formats descendant nodes using Markdown headers (##, ###, ####...) scaled by depth,
+       so each sub-section is visually discrete in the generator's context window.
+       This prevents the generator from conflating adjacent numbered sub-sections
+       (e.g. mistaking Section 13(6) for the answer to a question answered by Section 13(5)).
+       Blocks are joined with double newlines so compressor.split_large_section() splits
+       at clean sub-section boundaries rather than mid-sentence when the section is large.
     6. Fetches refers_to references and glossary definitions for the section context.
     """
     start_time = time.monotonic()
@@ -95,24 +100,37 @@ async def run_hop_expander(ctx: QueryPipelineContext) -> QueryPipelineContext:
                 anchor_row = next((r for r in descendants if r["node_id"] == anchor_id), descendants[0])
                 anchor_level = anchor_row["level"]
                 
-                # Merge descendants with relative hierarchy indentation
+                # Merge descendants using Markdown headers scaled by relative depth.
+                #
+                # Anchor node   (indent_level=0) → ## heading
+                # First child   (indent_level=1) → ### heading  (e.g. sub-sections (1), (2)...)
+                # Second child  (indent_level=2) → #### heading (e.g. clauses (a), (b)...)
+                # Deeper levels capped at ###### (valid Markdown maximum).
+                #
+                # Using "\n\n" as the block separator means compressor.split_large_section(),
+                # which already splits on "\n\n", will split at sub-section boundaries
+                # rather than arbitrarily mid-sentence when a section exceeds MAX_SINGLE_SECTION_CHARS.
                 lines = []
                 for d in descendants:
                     all_descendant_ids.add(d["node_id"])
                     content = (d["text_content"] or "").strip()
                     title = (d["title"] or "").strip()
-                    
+
                     indent_level = max(0, d["level"] - anchor_level)
-                    indent = "  " * indent_level
-                    
+                    # Clamp to valid Markdown header depth (## through ######).
+                    header_depth = min(2 + indent_level, 6)
+                    header_prefix = "#" * header_depth
+
                     if title and content:
-                        lines.append(f"{indent}{title}: {content}")
+                        lines.append(f"{header_prefix} {title}\n{content}")
                     elif title:
-                        lines.append(f"{indent}{title}")
+                        lines.append(f"{header_prefix} {title}")
                     elif content:
-                        lines.append(f"{indent}{content}")
-                        
-                rolled_text = "\n".join(lines)
+                        # Content-only node (e.g. BODY_TEXT): emit without a header
+                        # to avoid imposing spurious structure on plain prose blocks.
+                        lines.append(content)
+
+                rolled_text = "\n\n".join(lines)
                 
                 rolled_up_candidates.append(NodeCandidate(
                     node_id=anchor_id,

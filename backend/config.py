@@ -17,7 +17,7 @@ BOUNDARY_MODEL = os.getenv("BOUNDARY_MODEL", "ifsca-boundary-3b")
 EXTRACTOR_MODEL = os.getenv("EXTRACTOR_MODEL", "ifsca-extractor-3b")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "snowflake-arctic-embed2")
 EXPANDER_MODEL = os.getenv("EXPANDER_MODEL", "ifsca-expander-3b")
-GENERATOR_MODEL = os.getenv("GENERATOR_MODEL", "ifsca-saullm-7b-ft")
+GENERATOR_MODEL = os.getenv("GENERATOR_MODEL", "ifsca-saullm-7b-ft") # phi4:14b
 MERGE_MODEL = os.getenv("MERGE_MODEL", "ifsca-saullm-7b-ft")
 EVAL_MODEL = os.getenv("EVAL_MODEL", "mistral-nemo:12b")
 

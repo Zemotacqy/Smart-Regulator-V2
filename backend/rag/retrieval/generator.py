@@ -113,24 +113,47 @@ async def check_model_exists(model_name: str) -> bool:
         logger.error("check_model_exists_failed", error=str(e))
         return False
 
+def load_system_prompt() -> str:
+    """Loads the system prompt from Modelfile.saullm dynamically at runtime."""
+    try:
+        import os
+        modelfile_path = os.path.join(os.path.dirname(__file__), "../../../modelfiles/Modelfile.saullm")
+        if not os.path.exists(modelfile_path):
+            modelfile_path = "modelfiles/Modelfile.saullm"
+            
+        with open(modelfile_path, "r", encoding="utf-8") as f:
+            content = f.read()
+            
+        start_marker = 'SYSTEM """'
+        end_marker = '"""'
+        start_idx = content.find(start_marker)
+        if start_idx == -1:
+            return ""
+        start_idx += len(start_marker)
+        end_idx = content.find(end_marker, start_idx)
+        if end_idx == -1:
+            return ""
+        return content[start_idx:end_idx].strip()
+    except Exception as e:
+        logger.error("failed_to_load_system_prompt_from_modelfile", error=str(e))
+        return ""
+
 async def generate_once(context_block: str, glossary_text: str, query: str, model: str) -> str:
-    """Helper to run a single non-streaming generator call for overflow map batches.
-    
-    NOTE: No system prompt is injected here. The model's system instructions are
-    compiled into Modelfile.saullm and served by Ollama at the model level.
-    To change behavior, update Modelfile.saullm and recompile via:
-        ollama create ifsca-saullm-7b-ft -f modelfiles/Modelfile.saullm
-    """
+    """Helper to run a single non-streaming generator call for overflow map batches."""
     user_content = (
         f"GLOSSARY DEFINITIONS:\n{glossary_text or 'None'}\n\n"
         f"CONTEXT:\n{context_block}\n\n"
         f"QUERY: {query}"
     )
+    system_prompt = load_system_prompt()
+    messages = []
+    if system_prompt:
+        messages.append({"role": "system", "content": system_prompt})
+    messages.append({"role": "user", "content": user_content})
+
     response = await _client.chat(
         model=model,
-        messages=[
-            {"role": "user", "content": user_content}
-        ],
+        messages=messages,
         options={"temperature": 0.0}
     )
     return response.message.content.strip()
@@ -225,6 +248,7 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
     has_overflow = len(ctx.overflow_batches) > 0
     
     accumulated_response = []
+    system_prompt = load_system_prompt()
     
     try:
         if not has_context:
@@ -236,12 +260,15 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
                 "\"I do not know the answer as no regulation was found in the available corpus.\" "
                 "Then, provide the definitions of any key terms from the GLOSSARY DEFINITIONS to help the user."
             )
+            messages = []
+            if system_prompt:
+                messages.append({"role": "system", "content": system_prompt})
+            messages.append({"role": "user", "content": user_content})
+            
             response_stream = await asyncio.wait_for(
                 _client.chat(
                     model=model_to_use,
-                    messages=[
-                        {"role": "user", "content": user_content}
-                    ],
+                    messages=messages,
                     stream=True,
                     options={"temperature": 0.0}
                 ),
@@ -261,12 +288,15 @@ async def run_generator(ctx: QueryPipelineContext) -> AsyncGenerator[str, None]:
                 f"CONTEXT:\n{ctx.compressed_context}\n\n"
                 f"QUERY: {ctx.original_query}"
             )
+            messages = []
+            if system_prompt:
+                messages.append({"role": "system", "content": system_prompt})
+            messages.append({"role": "user", "content": user_content_1})
+            
             response_stream = await asyncio.wait_for(
                 _client.chat(
                     model=model_to_use,
-                    messages=[
-                        {"role": "user", "content": user_content_1}
-                    ],
+                    messages=messages,
                     stream=True,
                     options={"temperature": 0.0}
                 ),

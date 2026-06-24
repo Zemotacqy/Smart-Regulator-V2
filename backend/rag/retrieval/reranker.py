@@ -89,7 +89,7 @@ def _build_map_input(node: NodeCandidate, chunk_text: str) -> str:
 MAX_CANDIDATES = 10
 
 # Top-N sections forwarded to the generator after reranking.
-TOP_K = 5
+TOP_K = 3
 
 
 async def run_reranker(ctx: QueryPipelineContext) -> QueryPipelineContext:
