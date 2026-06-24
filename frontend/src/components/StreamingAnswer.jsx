@@ -15,6 +15,7 @@ const KEYWORDS = [
 
 export default function StreamingAnswer({ text, timings, citations, onViewCitations, isStreaming }) {
   const [keywordIndex, setKeywordIndex] = useState(0);
+  const [quoteExpanded, setQuoteExpanded] = useState(false);
 
   useEffect(() => {
     if (!text && isStreaming) {
@@ -25,14 +26,129 @@ export default function StreamingAnswer({ text, timings, citations, onViewCitati
     }
   }, [text, isStreaming]);
 
-  const htmlContent = useMemo(() => {
-    try {
-      return { __html: markedInstance.parse(text || '') };
-    } catch (e) {
-      console.error('Failed to parse markdown:', e);
-      return { __html: text || '' };
+  // Parse response text to identify first answer, status indicator, and final answer segments
+  const parsedResponse = useMemo(() => {
+    const result = {
+      firstAnswerBody: '',
+      firstAnswerQuote: '',
+      refiningText: '',
+      finalAnswerBody: '',
+      finalAnswerQuote: '',
+      hasFinalAnswer: false,
+      hasRefining: false
+    };
+
+    if (!text) return result;
+
+    const refiningIndex = text.indexOf('*Refining answer using additional retrieved contexts...*');
+    const finalAnswerHeaderIndex = text.indexOf('# Synthesized Final Answer');
+    const fallbackHeaderIndex = text.indexOf('# Synthesized Answer (Fallback)');
+    
+    const hasRefining = refiningIndex !== -1;
+    const finalHeaderIndex = finalAnswerHeaderIndex !== -1 ? finalAnswerHeaderIndex : fallbackHeaderIndex;
+    const hasFinalAnswer = finalHeaderIndex !== -1;
+    
+    result.hasRefining = hasRefining;
+    result.hasFinalAnswer = hasFinalAnswer;
+
+    // Helper to split a section into body and quote
+    const splitBodyAndQuote = (sectionText) => {
+      // Ordered H3 → H2 → H1 → bold — most specific first so that `###`
+      // never accidentally matches inside a longer `#` search.
+      // Plain-text triggers (no leading `#` or `**`) are intentionally
+      // excluded: they match naturally-occurring prose and would incorrectly
+      // split the answer body at innocent sentences.
+      const triggers = [
+        '### Verbatim Regulatory Quote',
+        '### Verbatim Regulator Quote',
+        '## Verbatim Regulatory Quote',
+        '## Verbatim Regulator Quote',
+        '# Verbatim Regulatory Quote',
+        '# Verbatim Regulator Quote',
+        '**Verbatim Regulatory Quote**',
+        '**Verbatim Regulator Quote**',
+        '# exact regulation quote',
+        '# verbatim quote',
+        '# exact quote',
+      ];
+      
+      let splitIndex = -1;
+      let matchedTrigger = '';
+      
+      for (const trigger of triggers) {
+        const idx = sectionText.toLowerCase().indexOf(trigger.toLowerCase());
+        if (idx !== -1) {
+          splitIndex = idx;
+          matchedTrigger = sectionText.substring(idx, idx + trigger.length);
+          break;
+        }
+      }
+      
+      if (splitIndex === -1) {
+        return { body: sectionText, quote: '' };
+      }
+      
+      const body = sectionText.substring(0, splitIndex).trim();
+      const quote = sectionText.substring(splitIndex + matchedTrigger.length).trim();
+      return { body, quote };
+    };
+
+    if (!hasRefining && !hasFinalAnswer) {
+      // Standard single pass: everything belongs to the first answer
+      const split = splitBodyAndQuote(text);
+      result.firstAnswerBody = split.body;
+      result.firstAnswerQuote = split.quote;
+    } else {
+      // Map-Reduce flow: separate first answer, status indicator, and final answer
+      let firstAnswerEndIndex = refiningIndex;
+      if (firstAnswerEndIndex === -1) {
+        firstAnswerEndIndex = finalHeaderIndex;
+      }
+      
+      // Look for the preceding horizontal line separator '---'
+      const separatorIdx = text.lastIndexOf('---', firstAnswerEndIndex);
+      if (separatorIdx !== -1 && (firstAnswerEndIndex - separatorIdx) < 20) {
+        firstAnswerEndIndex = separatorIdx;
+      }
+      
+      const firstAnswerSection = text.substring(0, firstAnswerEndIndex).trim();
+      const splitFirst = splitBodyAndQuote(firstAnswerSection);
+      result.firstAnswerBody = splitFirst.body;
+      result.firstAnswerQuote = splitFirst.quote;
+      
+      if (hasRefining) {
+        result.refiningText = '*Refining answer using additional retrieved contexts...*';
+      }
+      
+      if (hasFinalAnswer) {
+        const headerLength = finalAnswerHeaderIndex !== -1 ? '# Synthesized Final Answer'.length : '# Synthesized Answer (Fallback)'.length;
+        const finalSection = text.substring(finalHeaderIndex + headerLength).trim();
+        const splitFinal = splitBodyAndQuote(finalSection);
+        result.finalAnswerBody = splitFinal.body;
+        result.finalAnswerQuote = splitFinal.quote;
+      }
     }
+
+    return result;
   }, [text]);
+
+  const firstAnswerHtml = useMemo(() => {
+    return { __html: markedInstance.parse(parsedResponse.firstAnswerBody || '') };
+  }, [parsedResponse.firstAnswerBody]);
+
+  const refiningHtml = useMemo(() => {
+    return { __html: markedInstance.parse(parsedResponse.refiningText ? '---\n' + parsedResponse.refiningText : '') };
+  }, [parsedResponse.refiningText]);
+
+  const finalAnswerHtml = useMemo(() => {
+    const header = parsedResponse.hasFinalAnswer ? '### Synthesized Final Answer\n' : '';
+    return { __html: markedInstance.parse(header + parsedResponse.finalAnswerBody) };
+  }, [parsedResponse.finalAnswerBody, parsedResponse.hasFinalAnswer]);
+
+  const quoteHtml = useMemo(() => {
+    const quoteText = parsedResponse.hasFinalAnswer ? parsedResponse.finalAnswerQuote : parsedResponse.firstAnswerQuote;
+    return { __html: markedInstance.parse(quoteText || '') };
+  }, [parsedResponse.hasFinalAnswer, parsedResponse.finalAnswerQuote, parsedResponse.firstAnswerQuote]);
 
   return (
     <div className="streaming-answer-container" style={{
@@ -84,10 +200,91 @@ export default function StreamingAnswer({ text, timings, citations, onViewCitati
           <span className="pipeline-status-text">{KEYWORDS[keywordIndex]}</span>
         </div>
       ) : (
-        <div 
-          className="markdown-content"
-          dangerouslySetInnerHTML={htmlContent}
-        />
+        <>
+          {/* First Answer Body */}
+          <div 
+            className="markdown-content"
+            dangerouslySetInnerHTML={firstAnswerHtml}
+          />
+          
+          {/* Refining Status Indicator */}
+          {parsedResponse.hasRefining && (
+            <div 
+              className="markdown-content refining-status"
+              style={{ color: 'var(--text-muted, #64748b)', fontStyle: 'italic', margin: '12px 0' }}
+              dangerouslySetInnerHTML={refiningHtml}
+            />
+          )}
+
+          {/* Final Answer Body */}
+          {parsedResponse.hasFinalAnswer && (
+            <div 
+              className="markdown-content final-answer"
+              style={{ borderTop: '1px solid var(--border-color, #e2e8f0)', paddingTop: '16px', marginTop: '16px' }}
+              dangerouslySetInnerHTML={finalAnswerHtml}
+            />
+          )}
+          
+          {/* Verbatim Quote Dropdown */}
+          {((!parsedResponse.hasRefining && parsedResponse.firstAnswerQuote) || 
+            (parsedResponse.hasFinalAnswer && parsedResponse.finalAnswerQuote)) && (
+            <div style={{
+              marginTop: '16px',
+              border: '1px solid var(--border-color, #e2e8f0)',
+              borderRadius: '8px',
+              overflow: 'hidden',
+              backgroundColor: 'var(--bg-hover, #f8fafc)',
+              transition: 'all 0.2s ease'
+            }}>
+              <button
+                onClick={() => setQuoteExpanded(!quoteExpanded)}
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  padding: '10px 14px',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontWeight: '600',
+                  fontSize: '13px',
+                  color: 'var(--text-secondary, #475569)',
+                  textAlign: 'left',
+                  outline: 'none'
+                }}
+              >
+                <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  📜 Verbatim Regulatory Quote Reference
+                </span>
+                <span style={{ 
+                  fontSize: '10px', 
+                  transform: quoteExpanded ? 'rotate(180deg)' : 'rotate(0deg)', 
+                  transition: 'transform 0.2s ease',
+                  color: 'var(--text-muted, #94a3b8)'
+                }}>
+                  ▼
+                </span>
+              </button>
+              
+              {quoteExpanded && (
+                <div style={{
+                  padding: '14px',
+                  borderTop: '1px solid var(--border-color, #e2e8f0)',
+                  fontSize: '13px',
+                  lineHeight: '1.6',
+                  color: 'var(--text-primary, #1e293b)',
+                  backgroundColor: 'var(--bg-card, #ffffff)'
+                }}>
+                  <div 
+                    className="markdown-content quote-section"
+                    dangerouslySetInnerHTML={quoteHtml}
+                  />
+                </div>
+              )}
+            </div>
+          )}
+        </>
       )}
 
       {/* Citations toggle and stage timings */}

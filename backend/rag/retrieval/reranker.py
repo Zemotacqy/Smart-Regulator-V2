@@ -89,7 +89,7 @@ def _build_map_input(node: NodeCandidate, chunk_text: str) -> str:
 MAX_CANDIDATES = 10
 
 # Top-N sections forwarded to the generator after reranking.
-TOP_K = 4
+TOP_K = 5
 
 
 async def run_reranker(ctx: QueryPipelineContext) -> QueryPipelineContext:
@@ -194,5 +194,13 @@ async def run_reranker(ctx: QueryPipelineContext) -> QueryPipelineContext:
     # --- 4. Write top-K to context ---
     ctx.reranked_nodes = final_ranked[:TOP_K]
     logger.info("reranking_complete", top_count=len(ctx.reranked_nodes))
+    
+    # Clear MPS cache to prevent memory build-up on macOS
+    if torch.backends.mps.is_available():
+        try:
+            torch.mps.empty_cache()
+        except Exception as cache_err:
+            logger.warning("failed_to_empty_mps_cache", error=str(cache_err))
+            
     ctx.stage_timings["reranker"] = time.monotonic() - start_time
     return ctx

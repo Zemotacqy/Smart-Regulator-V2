@@ -10,6 +10,7 @@ export default function QAPage({ documents, setCitations, setRightPanelOpen }) {
   const messagesEndRef = useRef(null);
   const chatContainerRef = useRef(null);
   const shouldScrollRef = useRef(true);
+  const eventSourceRef = useRef(null);
 
   // Auto scroll to bottom, but only if the user is near the bottom or shouldScroll is active
   useEffect(() => {
@@ -17,6 +18,15 @@ export default function QAPage({ documents, setCitations, setRightPanelOpen }) {
       messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages]);
+
+  // Clean up streaming connection on component unmount
+  useEffect(() => {
+    return () => {
+      if (eventSourceRef.current) {
+        eventSourceRef.current.close();
+      }
+    };
+  }, []);
 
   const handleScroll = () => {
     if (chatContainerRef.current) {
@@ -62,6 +72,7 @@ export default function QAPage({ documents, setCitations, setRightPanelOpen }) {
     }
 
     const eventSource = new EventSource(url);
+    eventSourceRef.current = eventSource;
 
     eventSource.addEventListener('token', (event) => {
       try {
@@ -127,6 +138,7 @@ export default function QAPage({ documents, setCitations, setRightPanelOpen }) {
       );
       setIsStreaming(false);
       eventSource.close();
+      eventSourceRef.current = null;
     });
 
     eventSource.addEventListener('error', (event) => {
@@ -154,7 +166,33 @@ export default function QAPage({ documents, setCitations, setRightPanelOpen }) {
       );
       setIsStreaming(false);
       eventSource.close();
+      eventSourceRef.current = null;
     });
+  };
+
+  const handleStopGenerating = () => {
+    if (eventSourceRef.current) {
+      eventSourceRef.current.close();
+      eventSourceRef.current = null;
+    }
+    
+    setMessages((prev) => 
+      prev.map((msg) => {
+        if (msg.role === 'bot' && msg.isStreaming) {
+          const stoppedText = msg.text 
+            ? msg.text + '\n\n⏹ *Generation stopped by user.*' 
+            : '⏹ *Generation stopped by user.*';
+          return {
+            ...msg,
+            text: stoppedText,
+            isStreaming: false
+          };
+        }
+        return msg;
+      })
+    );
+    
+    setIsStreaming(false);
   };
 
   const handleViewCitations = (msgCitations) => {
@@ -290,20 +328,53 @@ export default function QAPage({ documents, setCitations, setRightPanelOpen }) {
               height: '38px'
             }}
           />
-          <button 
-            type="submit"
-            className="btn btn-primary"
-            disabled={!query.trim() || isStreaming}
-            style={{ 
-              borderRadius: '20px', 
-              padding: '8px 20px', 
-              height: '36px',
-              fontSize: '13px',
-              flexShrink: 0
-            }}
-          >
-            Send
-          </button>
+          {isStreaming ? (
+            <button 
+              type="button"
+              onClick={handleStopGenerating}
+              style={{ 
+                borderRadius: '20px', 
+                padding: '8px 20px', 
+                height: '36px',
+                fontSize: '13px',
+                flexShrink: 0,
+                backgroundColor: 'rgba(239, 68, 68, 0.12)',
+                color: 'var(--color-non-compliant, #ef4444)',
+                border: '1px solid rgba(239, 68, 68, 0.25)',
+                fontWeight: '600',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(239, 68, 68, 0.2)';
+                e.currentTarget.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(239, 68, 68, 0.12)';
+                e.currentTarget.style.borderColor = 'rgba(239, 68, 68, 0.25)';
+              }}
+            >
+              <span style={{ fontSize: '10px' }}>⏹</span> Stop
+            </button>
+          ) : (
+            <button 
+              type="submit"
+              className="btn btn-primary"
+              disabled={!query.trim()}
+              style={{ 
+                borderRadius: '20px', 
+                padding: '8px 20px', 
+                height: '36px',
+                fontSize: '13px',
+                flexShrink: 0
+              }}
+            >
+              Send
+            </button>
+          )}
         </div>
       </form>
     </div>

@@ -7,6 +7,7 @@ Questions:
 - What is the timeframe for an applicant to comply with the regulations after receiving in-principle approval?
 - What is the purpose of recovering fines or penalties?
 - Which section allows ifsca to draw carve outs?
+- What is the process of recovering fine or penalties in IFSCA?
 
 DPDP
 
@@ -16,9 +17,6 @@ DPDP
 
 Techfin
 
-- What currencies am I required to use for my daily business transactions and official reporting?
-- What everyday business activities or services are completely banned under this framework?
-- What kinds of business setups are allowed to apply, and are there any restrictions on who can own them?
 - I already run an authorized TechFin or supporting service business here. Do I need to re-register, and how much time do I have?
 
 ESR

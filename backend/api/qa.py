@@ -88,6 +88,9 @@ async def qa_endpoint(
             # Signal done
             yield "event: done\ndata: {}\n\n"
             
+        except asyncio.CancelledError:
+            logger.info("qa_pipeline_cancelled_by_client", query=query)
+            raise
         except Exception as e:
             logger.error("qa_pipeline_failed", query=query, error=str(e))
             yield f"event: error\ndata: {json.dumps({'error': str(e)})}\n\n"
